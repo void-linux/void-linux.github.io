@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title> Void Linux - Enter the void</title>
+<style type="text/css">
+body {
+	margin-top: 1.0em;
+	background-color: #FFFFFF;
+	font-family: Helvetica, Arial, FreeSans, san-serif;
+	color: #000000;
+}
+#container {
+	margin: 0 auto;
+	width: 900px;
+}
+h1 { font-size: 3.8em; color: #000000; margin-bottom: 3px; }
+h1 .small { font-size: 0.4em; }
+h1 a { text-decoration: none }
+h2 { font-size: 1.0em; color: #000000; }
+h3 { text-align: center; color: #000000; }
+.description { font-size: 1.5em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+.download { float: right; }
+pre { background: #000; color: #fff; padding: 15px;}
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+.footer { text-align:center; padding-top:30px; font-style: italic; }
+</style>
+</head>
+
+<body>
+<div id="container">
+	<img src="http://xbps.nopcode.org/live/void-logo.png"/>
+<div class="description">"We are the void, we use linux"</div>
+Void Linux is a lightweight and simple distribution fully built from the source package tree available for the <b>xbps-src build system</b> and that can be customized in many ways through the use of virtual packages. Currently there are <b>~2000 packages</b> available in repositories to build and install from. There is support for <b>i686</b> and <b>x86_64</b> architectures, more may be added in a future (i.e. ARM) but it's not a high priority.
+<p>Features:
+<ul>
+<li><b>It's not a fork or customized version of any distro</b>, it has been created from scratch making it an extremely lightweight distro. Base system packages can be customized with your preferred virtual packages.</li>
+<li>A rolling release with continuos package updates.</li>
+<li>Uses the latest stable Linux kernel. The development snapshot from kernel.org can also be installed in parallel.</li>
+<li>Kernel images/modules are never removed, providing an always-bootable system.</li>
+<li>Uses a modified <b>initramfs-tools</b> package from Debian to handle initial ramdisk images.</li>
+<li>Uses a modified <b>casper</b> package from Ubuntu to boot from live images.</li>
+<li>Uses <b>systemd as system and session manager</b>, no SysV compatibility!</li>
+<li>Uses a <b>simplified DKMS</b> package to handle easy installation of Linux kernel modules.</li>
+<li>Uses its <b>own binary package system: XBPS</b> -- A faster/leaner alternative to dpkg/apt, RPM, Pacman, etc.</li>
+<li>You don't need wrappers of wrappers for the XBPS utils to rebuild/reinstall packages. The provided tools are all that you need.</li>
+<li>Uses a BSD port-like system to build binary packages in chroot jails without requiring root permissions. This allows building packages as a regular user without interfering with your installed system!</li>
+</ul>	
+</p>
+<h2>Download installable live images</h2>
+<p>
+<ul>
+	<li>For i686 compatible CPUs: <a href="http://xbps.goodluckwith.us/live">http://xbps.goodluckwith.us/live</a></li>
+	<li>For x86_64 compatible CPUs: <a href="http://xbps.nopcode.org/live">http://xbps.nopcode.org/live</a></li>
+</ul>
+Make sure to check the image integrity by matching the SHA256 hash in the <b>.sha256</b> file.
+</p>
+</div>
+<div class="footer">
+	Void Linux is brought to you by <b>Juan RP (xtraeme)</b> and <b>Dave Elusive (xdave)</b>.
+</div>
+</body>
+</html>
