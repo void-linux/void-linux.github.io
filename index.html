@@ -5,7 +5,6 @@
 		<title>Void Linux - Enter the void</title>
 		<style type="text/css">
 body {
-	margin-top: 1.0em;
 	background-color: #FFFFFF;
 	font-family: Helvetica, Arial, FreeSans, san-serif;
 	color: #000000;
@@ -19,7 +18,7 @@ h1 .small { font-size: 0.4em; }
 h1 a { text-decoration: none }
 h2 { font-size: 1.0em; color: #000000; }
 h3 { text-align: center; color: #000000; }
-.description { font-size: 1.5em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+.description { font-size: 1.5em; font-style: italic;}
 .download { float: right; }
 pre { background: #000; color: #fff; padding: 15px;}
 hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
@@ -37,18 +36,18 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
 				<p>
 					Features:
 				<ul>
-					<li>It's not a <b>fork or customized/modified version of any distro</b>, it has been created from scratch.</li>
-					<li>It's a rolling release with continuos package updates.</li>
-					<li>The installed base system only provides applications for text console usage, adapt it to your needs!</li>
-					<li>Uses the latest stable Linux kernel. The development snapshot from kernel.org can also be installed in parallel.</li>
-					<li>Kernel images/modules are never removed, providing an always-bootable system.</li>
+					<li>It's not a <b>fork or customized/modified version of any current distribution</b>, it has been created from scratch.</li>
+					<li>It's a rolling release with <b>continuos package updates</b>.</li>
+					<li>The installed base system only provides required utilities for text console usage, <b>adapt it to your needs!</b></li>
+					<li>Kernel images/modules are never removed, providing an <b>always-bootable system</b>.</li>
 					<li>Uses a modified <b>initramfs-tools</b> package from Debian to handle initial ramdisk images.</li>
 					<li>Uses a modified <b>casper</b> package from Ubuntu to boot from live images.</li>
 					<li>Uses a modified <b>DKMS</b> package to handle easy installation of Linux kernel modules.</li>
-					<li>Uses <b>systemd as system and session manager</b>, no SysV compatibility!</li>
+					<li>Uses <b>systemd</b> as system and session manager without SysV init compatibility!</li>
 					<li>Uses an alternative and fast binary package system: <b>XBPS</b> (<a href="http://code.google.com/p/xbps">http://code.google.com/p/xbps</a>)</li>
-					<li>The package build system is able to build packages in multiple chroots, without requiring <b>root privileges</b>.
-Required dependencies can be resolved from <b>local/remote repositories</b> or directly from the <b>source packages</b> tree.</li>
+					<li>The binary package builder (<b>xbps-src</b>) always builds packages in <i>chroots</i>, without requiring <b>root privileges</b>.
+					Required dependencies can be resolved from <b>local/remote repositories</b> or directly from the <b>source packages</b> tree.</li>
+					<li>It's possible to build binary packages for Void Linux from your favourite linux distribution.</b>
 				</ul>
 			</p>
 			<h2>Source repositories</h2>
@@ -67,13 +66,13 @@ Required dependencies can be resolved from <b>local/remote repositories</b> or d
 				<li>For x86 compatible CPUs: <a href="http://xbps.goodluckwith.us/live">http://xbps.goodluckwith.us/live</a></li>
 				<li>For x86_64 compatible CPUs: <a href="http://xbps.nopcode.org/live">http://xbps.nopcode.org/live</a></li>
 			</ul>
-			<p>
-				Make sure to check the image integrity by matching the SHA256 hash in the <b>.sha256</b> file.
-			</p>
+			<p>Make sure to check the image integrity by matching the SHA256 hash in the <b>.sha256</b> file.</p>
+			<h2>Contact/Help</h2>
+			<p>Meet us at #xbps on irc.freenode.net</p>
 		</div>
 		<div class="footer">
 			Void Linux is brought to you by <b>Juan RP</b> (<a href="https://github.com/xtraeme">xtraeme</a>)
-			and <b>Dave Elusive</b> (<a href="https://github.com/davehome">xdave</a>).
+			and <b>Dave Elusive</b> (<a href="https://github.com/davehome">xdave</a>)
 		</div>
 	</body>
 </html>
