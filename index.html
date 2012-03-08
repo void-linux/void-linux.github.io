@@ -34,17 +34,17 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
 Void Linux is a lightweight and simple distribution fully built from the source package tree available for the <b>xbps-src build system</b> and that can be customized in many ways through the use of virtual packages. Currently there are <b>~2000 packages</b> available in repositories to build and install from. There is support for <b>i686</b> and <b>x86_64</b> architectures, more may be added in a future (i.e. ARM) but it's not a high priority.
 <p>Features:
 <ul>
-<li><b>It's not a fork or customized version of any distro</b>, it has been created from scratch making it an extremely lightweight distro. Base system packages can be customized with your preferred virtual packages.</li>
-<li>A rolling release with continuos package updates.</li>
+<li>It's not a <b>fork or customized/modified version of any distro</b>, it has been created from scratch.</li>
+<li>It's a rolling release with continuos package updates.</li>
 <li>Uses the latest stable Linux kernel. The development snapshot from kernel.org can also be installed in parallel.</li>
 <li>Kernel images/modules are never removed, providing an always-bootable system.</li>
 <li>Uses a modified <b>initramfs-tools</b> package from Debian to handle initial ramdisk images.</li>
 <li>Uses a modified <b>casper</b> package from Ubuntu to boot from live images.</li>
+<li>Uses a modified <b>DKMS</b> package to handle easy installation of Linux kernel modules.</li>
 <li>Uses <b>systemd as system and session manager</b>, no SysV compatibility!</li>
-<li>Uses a <b>simplified DKMS</b> package to handle easy installation of Linux kernel modules.</li>
-<li>Uses its <b>own binary package system: XBPS</b> -- A faster/leaner alternative to dpkg/apt, RPM, Pacman, etc.</li>
-<li>You don't need wrappers of wrappers for the XBPS utils to rebuild/reinstall packages. The provided tools are all that you need.</li>
-<li>Uses a BSD port-like system to build binary packages in chroot jails without requiring root permissions. This allows building packages as a regular user without interfering with your installed system!</li>
+<li>Uses an alternative and fast binary package system: <b>XBPS</b> (<a href="http://code.google.com/p/xbps">http://code.google.com/p/xbps</a>)</li>
+<li>The package build system is able to build packages in multiple chroots, without requiring <b>root privileges</b>.
+Required dependencies can be resolved from <b>local/remote repositories</b> or directly from the <b>source packages</b> tree.</li>
 </ul>	
 </p>
 <h2>Download installable live images</h2>
