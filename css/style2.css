@@ -1,0 +1,44 @@
+body {
+	background-color: #dc8;
+	font-family: arial, freesans, san-serif;
+	/* font-size: 16px; */
+	margin: 0;
+	padding: 0;
+}
+
+.header_logo {
+	height: 150px;
+}
+
+#header {
+	/*background-color: #333;*/
+	/* background-color: #eec; */
+	background-color: #abc2ac;
+	height: 150px;
+}
+
+#left {
+	float:left;
+	width: 206px;
+	background-color: #478062;
+	font-weight: bold;
+	min-height: 650px; /* for modern browsers */
+	height: auto !important; /* for modern browsers */
+	height: 650px; /* for IE5.x and IE6 */
+}
+
+#center {
+	margin-left: 200px;
+	/* background-color: #eec; */
+	background-color: #333;
+	color: #FFF;
+	min-height: 650px; /* for modern browsers */
+	height: auto !important; /* for modern browsers */
+	height: 650px; /* for IE5.x and IE6 */
+}
+
+#footer {
+	clear: both;
+	background-color: #000;
+	height: 50px;
+}
