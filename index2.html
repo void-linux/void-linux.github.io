@@ -4,6 +4,7 @@
 	<title>Welcome to the Void</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="css/style2.css" />
+	<link rel="stylesheet" href="css/navlist.css" />
 </head>
 <body>
 	<a name="home"></a>
@@ -22,7 +23,8 @@
 		</p>
 	</div>
 	<div id="left">
-		<ul>
+	<div id="navcontainer">
+		<ul id="navlist">
 			&nbsp;
 			<li><a href="#home">Home</a></li>
 			<li><a href="#features">Features</a></li>
@@ -30,6 +32,7 @@
 			<li><a href="#download">Download</a></li>
 			<li><a href="#contact">Contact/Help</a></li>
 		</ul>
+	</div>
 		<hr />
 		Currently there are
 		<a href="https://github.com/xtraeme/xbps-packages/tree/master/srcpkgs">~2000 packages</a>
@@ -46,7 +49,7 @@
 		</p>
 		<p>
 		With lightning-fast and useful tools such as the
-		<abbr title="X Binary Package System">XBPS<abbr> package manager,
+		<abbr title="X Binary Package System">XBPS</abbr> package manager,
 		systemd, and the GNOME3 Desktop (among others), this distribution
 		clearly has <i>all your base</i>, and they rightly <i>belong to us</i>.
 		</p>
@@ -65,9 +68,9 @@
 		a freakin' Canonical clone.
 		</p>
 		<p>
-		We just hope that you like it, are able to contribute to it to
-		it as your needs require; and, that if we don't like your
-		contributions, they will be bitterly critizied until you fix it.
+		We just hope that you like it, are able to contribute to it as
+		your needs require; and, that if we don't like your contributions,
+		they will be bitterly criticized until you fix it.
 		No Warranties. :)
 		</p>
 		<p>
@@ -110,7 +113,47 @@
 			favourite linux distribution.</b>
 		</li>
 		</ul>
+		<a name="source"></a>
+		<h2>Source repositories</h2>
+		<a href="#home">(goto top)</a>
+		<ul>
+		<li>xbps (package manager) -- 
+			<a href="https://github.com/xtraeme/xbps">github.com/xtraeme/xbps</a>
+		</li>
+		<li>xbps-src (binary package builder) -- 
+			<a href="https://github.com/xtraeme/xbps-src">github.com/xtraeme/xbps-src</a>
+		</li>
+		<li>xbps-packages (source packages tree) -- 
+			<a href="https://github.com/xtraeme/xbps-packages">github.com/xtraeme/xbps-packages</a>
+		</li>
+		<li>void-installer -- 
+			<a href="https://github.com/voidlinux/void-installer">github.com/voidlinux/void-installer</a>
+		</li>
+		<li>
+			void-mklive -- <a href="https://github.com/voidlinux/void-mklive">github.com/voidlinux/void-mklive</a>
+		</li>
+		</ul>
+		<a name="download"></a>
+		<h2>Download installable live images</h2>
+		<a href="#home">(goto top)</a>
+		<p>
+			NOTE: 128MB of RAM are required to boot and 500MB to install the base system.<br/>
+			NOTE: installation from network requires an ethernet device, manual configuration is required for WIFI.
+		</p>
+		<ul>
+			<li>For x86 compatible CPUs: <a href="http://xbps.hosting-unlimited.org/live">xbps.hosting-unlimited.org/live</a></li>
+			<li>For x86_64 compatible CPUs: <a href="http://xbps.nopcode.org/live">xbps.nopcode.org/live</a></li>
+		</ul>
+		<p>Make sure to check the image integrity by matching the SHA256 hash in the <b>.sha256</b> file.</p>
+		<a name="contact"></a>
+		<h2>Contact/Help</h2>
+		<a href="#home">(goto top)</a>
+		<p>Meet us at #xbps on irc.freenode.net</p>
 	</div>
-	<div id="footer"></div>
+	<div id="footer">
+		<hr />
+		Void Linux is brought to you by <b>Juan RP</b> (<a href="https://github.com/xtraeme">xtraeme</a>)
+		and <b>Dave Elusive</b> (<a href="https://github.com/davehome">xdave</a>)
+	</div>
 </body>
 </html>
