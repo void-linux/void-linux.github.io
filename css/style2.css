@@ -1,40 +1,36 @@
 body {
-	background-color: #dc8;
+	background-color: #fff;
 	font-family: arial, freesans, san-serif;
-	/* font-size: 16px; */
+	font-size: 18px;
 	margin: 0;
 	padding: 0;
 }
 
-.header_logo {
-	height: 150px;
-}
+.header_logo { height: 150px; float: left; }
+.header_title { padding-top: 7px; font-size: 2.5em; font-style: italic; }
+.header_description { font-size: 1.1em; font-style: italic; }
 
-#header {
-	/*background-color: #333;*/
-	/* background-color: #eec; */
-	background-color: #abc2ac;
-	height: 150px;
-}
+#header { background-color: #abc2ac; height: 150px; }
 
 #left {
-	float:left;
-	width: 206px;
+	float: left;
+	width: 201px;
 	background-color: #478062;
 	font-weight: bold;
 	min-height: 650px; /* for modern browsers */
 	height: auto !important; /* for modern browsers */
 	height: 650px; /* for IE5.x and IE6 */
+	padding-left: 5px;
 }
 
 #center {
 	margin-left: 200px;
-	/* background-color: #eec; */
-	background-color: #333;
-	color: #FFF;
+	background-color: #fff;
+	color: #000;
 	min-height: 650px; /* for modern browsers */
 	height: auto !important; /* for modern browsers */
 	height: 650px; /* for IE5.x and IE6 */
+	padding-left: 15px;
 }
 
 #footer {
