@@ -34,6 +34,7 @@ a:hover { color: #27408B; font-style: underline; }
 	height: auto !important;
 	padding-left: 1em;
 	padding-right: 1em;
+	padding-bottom: 1em;
 	-moz-border-radius: 1.2em;
 	border-radius: 1.2em;
 }
