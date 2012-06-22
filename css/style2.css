@@ -17,7 +17,8 @@ a:hover { color: #27408B; font-style: underline; }
 .header_description { font-size: 1.1em; font-style: italic; }
 
 #header {
-	background-color: #abc2ac;
+	/*background-color: #abc2ac; */
+	background-color: #8dad8f;
 	height: 10.5em;
 	clear: both;
 	-moz-border-radius: 1.2em;
