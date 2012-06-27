@@ -1,8 +1,8 @@
 #navlist {
 	padding: 0 1px 1px;
 	margin-left: 30px;
-	font: bold 12px Verdana, sans-serif;
-	background: gray;
+	font: bold 12px verdana,sans-serif;
+	background: black;
 	width: 13em;
 }
 
@@ -16,8 +16,8 @@
 #navlist li a {
 	display: block;
 	padding: 0.25em 0.5em 0.25em 0.75em;
-	border-left: 1em solid #AAB;
-	background: #CCD;
+	border-left: 1em solid white;
+	background: white;
 	text-decoration: none;
 }
 
@@ -27,5 +27,5 @@
 #navlist li a:hover {
 	border-color: #FE3;
 	color: #FFF;
-	background: #332;
+	background: black;
 }
