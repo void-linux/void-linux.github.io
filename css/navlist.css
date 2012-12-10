@@ -2,14 +2,12 @@
 	padding: 0 1px 1px;
 	margin-left: 4px;
 	font: bold 12px verdana,sans-serif;
-	background: black;
-	width: 13em;
+	width: 14em;
 }
 
 #navlist li {
 	list-style: none;
-	margin: 0;
-	border-top: 1px solid gray;
+	padding-top: 4px;
 	text-align: left;
 }
 
@@ -17,6 +15,7 @@
 	display: block;
 	padding: 0.25em 0.5em 0.25em 0.75em;
 	border-left: 1em solid white;
+	border-radius: 10px;
 	background: white;
 	text-decoration: none;
 }
