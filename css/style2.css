@@ -7,8 +7,8 @@ body {
 }
 
 a:link,a:visited { color: #27408B; }
-a:active { color: #27408B font-weight: bold; }
-a:hover { color: #27408B; font-style: underline; }
+a:active { color: #27408B; font-weight: bold; }
+a:hover { color: #27408B; }
 
 .header_logo {
 	height: 10.5em;
@@ -16,7 +16,6 @@ a:hover { color: #27408B; font-style: underline; }
 	border-top-right-radius: 50px;
 	border-bottom-right-radius: 50px;
 	border-color: black;
-	box-shadow: 1px;
 	background-color: white;
 }
 
@@ -24,7 +23,7 @@ a:hover { color: #27408B; font-style: underline; }
 	padding-top: 0.2em;
 	font-size: 2.4em;
 	font-style: italic;
-	clear left;
+	clear: left;
 }
 
 .header_description {
@@ -51,7 +50,6 @@ a:hover { color: #27408B; font-style: underline; }
 	padding-right: 1em;
 	padding-bottom: 1em;
 	border-radius: 1.5em;
-	border-image-width: black;
 }
 
 #center {
@@ -66,7 +64,6 @@ a:hover { color: #27408B; font-style: underline; }
 	background-color: #abc2ac;
 	border-radius: 1.2em;
 	border-top-right-radius: 90px;
-	border-style: line;
 	border-bottom-right-radius: 90px;
 	border-color: black;
 }
