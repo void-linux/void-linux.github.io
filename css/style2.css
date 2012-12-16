@@ -13,10 +13,8 @@ a:hover { color: #27408B; }
 .header_logo {
 	height: 10.5em;
 	float: left;
-	border-top-right-radius: 50px;
-	border-bottom-right-radius: 50px;
-	border-color: black;
-	background-color: white;
+	border-radius: 100px;
+	background-color: #abc2ac;
 }
 
 .header_title {
@@ -33,9 +31,11 @@ a:hover { color: #27408B; }
 #header {
 	height: 10.5em;
 	clear: both;
-	border-radius: 120px;
+	border-radius: 30px;
+	border-style: solid;
 	background-color: #abc2ac;
 	margin-bottom: 10px;
+	margin-top: 20px;
 }
 
 #left {
@@ -49,6 +49,7 @@ a:hover { color: #27408B; }
 	padding-right: 1em;
 	padding-bottom: 1em;
 	border-radius: 1.5em;
+	border-style: solid;
 }
 
 #center {
@@ -65,6 +66,7 @@ a:hover { color: #27408B; }
 	border-top-right-radius: 90px;
 	border-bottom-right-radius: 90px;
 	border-color: black;
+	border-style: solid;
 }
 
 #footer {
@@ -76,4 +78,5 @@ a:hover { color: #27408B; }
 	border-radius: 24px;
 	background-color: #abc2ac;
 	margin-left: 14.9em;
+	border-style: solid;
 }
