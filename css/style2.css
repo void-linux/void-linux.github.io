@@ -63,8 +63,6 @@ a:hover { color: #27408B; }
 	padding-top: 10px;
 	background-color: #abc2ac;
 	border-radius: 1.2em;
-	border-top-right-radius: 90px;
-	border-bottom-right-radius: 90px;
 	border-color: black;
 	border-style: solid;
 }
@@ -80,8 +78,6 @@ a:hover { color: #27408B; }
 	padding-top: 10px;
 	background-color: #abc2ac;
 	border-radius: 1.2em;
-	border-top-right-radius: 90px;
-	border-bottom-right-radius: 90px;
 	border-color: black;
 	border-style: solid;
 }
