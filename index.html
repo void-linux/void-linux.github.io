@@ -6,6 +6,27 @@
 		<link rel="shortcut icon" href="favicon.ico" />
 		<link rel="stylesheet" href="css/style2.css" />
 		<link rel="stylesheet" href="css/navlist.css" />
+		<script>
+function GET (uri, fn) {
+        var x = new XMLHttpRequest ();
+        x.open ("GET", "http://void-builder.uni.me:8080"+uri, false);
+        x.setRequestHeader ('Accept', 'text/plain');
+        x.onreadystatechange = function (y) {
+                if (x.status == 200) {
+                        if (fn) fn (x.responseText);
+                } else alert ("ajax "+x.status)
+        }
+	x.send ();
+}
+
+function doSearch () {
+	var inp = document.getElementById ('input');
+	GET ("/xbps-query/-R/"+inp.value, function(res) {
+		var out = document.getElementById ('result');
+		out.innerHTML = "<pre>"+res+"</pre>";
+	});
+}
+		</script>
 	</head>
 	<body>
 		<a id="home"></a>
@@ -24,6 +45,7 @@
 					<li><a href="#source">Source</a></li>
 					<li><a href="#download">Download</a></li>
 					<li><a href="#contact">Contact/Help</a></li>
+					<li><a href="#pkgquery">Package query</a></li>
 					<li><a href="https://github.com/voidlinux/documentation/wiki">Wiki</a></li>
 				</ul>
 			</div>
@@ -151,6 +173,11 @@
 			</li>
 		</ul>
 		Need help? want to contribute? want to make a donation? join <b>#xbps</b> on <b>irc.freenode.net</b>
+	</div>
+	<div id="pkgquery">
+		<h2>Show package information</h2>
+		<input id="input">
+		<input type=button name="accept" onclick="doSearch()"> <div id="result"></div>
 	</div>
 	<div id="footer">
 		<b>Copyright (c) 2008-2012 Juan RP and contributors.</b>

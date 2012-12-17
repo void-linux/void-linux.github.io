@@ -69,6 +69,23 @@ a:hover { color: #27408B; }
 	border-style: solid;
 }
 
+#pkgsearch {
+	margin-left: 15em;
+	color: #000;
+	min-height: 50%;
+	height: auto !important;
+	padding-bottom: 20px;
+	padding-left: 28px;
+	padding-right: 40px;
+	padding-top: 10px;
+	background-color: #abc2ac;
+	border-radius: 1.2em;
+	border-top-right-radius: 90px;
+	border-bottom-right-radius: 90px;
+	border-color: black;
+	border-style: solid;
+}
+
 #footer {
 	text-align: center;
 	height: 10%;
