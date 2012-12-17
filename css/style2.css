@@ -68,6 +68,7 @@ a:hover { color: #27408B; }
 }
 
 #pkgquery {
+	margin-top: 10px;
 	margin-left: 15em;
 	color: #000;
 	min-height: 50%;
