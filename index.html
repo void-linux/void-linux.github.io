@@ -9,7 +9,7 @@
 		<script>
 function GET (uri, fn) {
         var x = new XMLHttpRequest ();
-        x.open ("GET", "http://void-builder.uni.me"+uri, false);
+        x.open ("GET", "http://www.voidlinux.eu"+uri, false);
         x.setRequestHeader ('Accept', 'text/plain');
         x.onreadystatechange = function (y) {
                 if (x.status == 200) {
@@ -49,6 +49,7 @@ function ShowPkg () {
 					<li><a href="#download">Download</a></li>
 					<li><a href="#contact">Contact/Help</a></li>
 					<li><a href="#pkgquery">Package query</a></li>
+					<li><a href="http://build.voidlinux.eu">Package builder</a></li>
 					<li><a href="https://github.com/voidlinux/documentation/wiki">Wiki</a></li>
 				</ul>
 			</div>
@@ -127,7 +128,7 @@ function ShowPkg () {
 				</li>
 				<li><b>Realtime Package Building</b>: packages are built in VMs as soon as the changes
 				are pushed to the git source repository; we can see in realtime when a change is problematic.
-				See <a href="http://void-builder.uni.me:8010">void-builder.uni.me:8010</a>.<br/></li>
+				</li>
 				<li>It is possible to build binary packages for Void Linux from your
 				favourite linux distribution.<br/>
 			</li>
