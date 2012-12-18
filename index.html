@@ -19,11 +19,14 @@ function GET (uri, fn) {
 	x.send ();
 }
 
-function doSearch () {
+function ShowPkg () {
 	var inp = document.getElementById ('input');
 	GET ("/xbps-query/-R/"+inp.value, function(res) {
 		var out = document.getElementById ('result');
-		out.innerHTML = "<pre>"+res+"</pre>";
+		if (res == "") {
+			res = "Haven't found any package matching " + inp.value;
+		}
+		out.innerHTML = "<h4>Found a match for "+inp.value+"</h4>"+"<pre>"+res.fontsize(4)+"</pre>";
 	});
 }
 		</script>
@@ -178,9 +181,9 @@ function doSearch () {
 		Need help? want to contribute? want to make a donation? join <b>#xbps</b> on <b>irc.freenode.net</b>
 	</div>
 	<div id="pkgquery">
-		<h2>Show package information</h2>
+		<h2>Query a package by name</h2>
 		<input id="input">
-		<input type="button" value="accept" onclick="doSearch()"> <div id="result"></div>
+		<input type="button" value="accept" onclick="ShowPkg()"> <div id="result"></div>
 	</div>
 	<div id="footer">
 		<b>Copyright (c) 2008-2012 Juan RP and contributors.</b>
