@@ -9,7 +9,7 @@
 		<script>
 function GET (uri, fn) {
         var x = new XMLHttpRequest ();
-        x.open ("GET", "http://void-builder.uni.me:8080"+uri, false);
+        x.open ("GET", "http://void-builder.uni.me"+uri, false);
         x.setRequestHeader ('Accept', 'text/plain');
         x.onreadystatechange = function (y) {
                 if (x.status == 200) {
