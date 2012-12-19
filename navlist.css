@@ -1,8 +1,10 @@
 #navlist {
 	padding: 0 1px 1px;
 	margin-left: 4px;
-	font: bold 12px verdana,sans-serif;
-	width: 14em;
+	font-family: "Iceland", cursive;
+	font-size: 16px;
+	text-align: justify;
+	width: 10em;
 }
 
 #navlist li {
