@@ -4,8 +4,7 @@
 		<title>Welcome to the Void</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<link rel="shortcut icon" href="favicon.ico" />
-		<link rel="stylesheet" href="style2.css" />
-		<link rel="stylesheet" href="navlist.css" />
+		<link rel="stylesheet" href="style.css" />
 		<link href='http://fonts.googleapis.com/css?family=Strait' rel='stylesheet' type='text/css'>
 		<script>
 function GET (uri, fn) {
@@ -47,16 +46,12 @@ function ShowPkg () {
 					<li><a href="#source">Source</a></li>
 					<li><a href="#download">Download</a></li>
 					<li><a href="#contact">Contact/Help</a></li>
-					<li><a href="#pkgquery">Package query</a></li>
+					<li><a href="#pkgcommits">Package commits</a></li>
+					<!-- disabled for now <li><a href="#pkgquery">Package query</a></li> -->
 					<li><a href="http://build.voidlinux.eu">Package builder</a></li>
 					<li><a href="https://github.com/voidlinux/documentation/wiki">Wiki</a></li>
 				</ul>
 			</div>
-			<hr />
-			Currently there are
-			<a href="https://github.com/xtraeme/xbps-packages/tree/master/srcpkgs">+2200 packages</a>
-			available in the public repositories to build and/or install from.
-
 		</div>
 		<div id="center">
 			<h2>The Goods</h2>
@@ -159,9 +154,9 @@ function ShowPkg () {
 		NOTE: installation from network requires an ethernet device, manual configuration is required for WIFI.
 		</p>
 		<ul>
-			<li><b><a href="http://xbps.nopcode.org/live/void-live-x86_64-3.6.10_1-20121215.iso">void-live-x86_64-3.6.10_1-20121215.iso</a></b><br/>
+			<li><a href="http://xbps.nopcode.org/live/void-live-x86_64-3.6.10_1-20121215.iso">void-live-x86_64-3.6.10_1-20121215.iso</a><br/>
 			SHA256: <b>219821331080a9a0f480488678e3e0ebffbcd3cc14bc6c280a36f19668d1a5fb</b><br/><br/></li>
-			<li><b><a href="http://xbps.nopcode.org/live/void-live-i686-3.6.10_1-20121216.iso">void-live-i686-3.6.10_1-20121216.iso</a></b><br/>
+			<li><a href="http://xbps.nopcode.org/live/void-live-i686-3.6.10_1-20121216.iso">void-live-i686-3.6.10_1-20121216.iso</a><br/>
 			SHA256: <b>cfcc46159dda958ad637f085936469803fb6bd72ad264283b44c581620cdc315</b><br/></li>
 		</ul>
 		<a id="contact"></a>
@@ -169,22 +164,27 @@ function ShowPkg () {
 		<p>
 		<ul>
 			<li>
-			<b><a href="https://github.com/xtraeme">Juan RP</a></b> -- Main developer and founder.
+			<a href="https://github.com/xtraeme">Juan RP</a> -- Main developer and founder.
 			</li>
 			<li>
-			<b><a href="https://github.com/davehome">Dave Elusive</a></b> -- Trusted developer and contributor.<br/>
+			<a href="https://github.com/davehome">Dave Elusive</a> -- Trusted developer and contributor.<br/>
 			</li>
 			<li>
-			<b><a href="https://github.com/radare">pancake</a></b> -- Trusted developer and contributor.<br/>
+			<a href="https://github.com/radare">pancake</a> -- Trusted developer and contributor.<br/>
 			</li>
 		</ul>
 		Need help? want to contribute? want to make a donation? join <b>#xbps</b> on <b>irc.freenode.net</b>
+		</p>
+		<a id="pkgcommits"></a>
+		<h2>Latest package commits</h2>
+		<script language="javascript" src="http://www.generateit.net/rss-javascript/feed2js.php?src=https%3A%2F%2Fgithub.com%2Fxtraeme%2Fxbps-packages%2Fcommits%2Fmaster.atom&amp;num=10&amp;targ=y&amp;utf=y" type="text/javascript"></script>
 	</div>
+	<!-- disabled for now
 	<div id="pkgquery">
 		<h2>Query a package by name</h2>
 		<input id="input">
 		<input type="button" value="accept" onclick="ShowPkg()"> <div id="result"></div>
-	</div>
+	</div> -->
 	<div id="footer">
 		<b>Copyright (c) 2008-2012 Juan RP and contributors.</b>
 		<p>

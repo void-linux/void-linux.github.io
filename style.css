@@ -1,0 +1,92 @@
+body {
+	margin-left: 1%;
+	margin-right: 1%;
+	font-family: 'Strait', sans-serif;
+	text-align: justify;
+}
+
+a:link,a:visited { color: #27408B; }
+a:active { color: #27408B; font-weight: bold; }
+a:hover { font-weight: bold; color: #27408B; }
+
+.header_logo {
+	height: 10.5em;
+	float: left;
+}
+
+.header_title {
+	padding-top: 2.8em;
+	font-size: 1.4em;
+	font-style: italic;
+}
+
+.header_description {
+	font-size: 1.1em;
+	font-style: italic;
+}
+
+#header {
+	height: 10.5em;
+	clear: both;
+}
+
+#left {
+	float: left;
+	font-weight: bold;
+	min-height: 100%;
+	height: auto !important;
+	padding-left: 1em;
+}
+
+#center {
+	margin-left: 10em;
+	color: #000;
+	min-height: 50%;
+	height: auto !important;
+	padding-bottom: 20px;
+	padding-left: 28px;
+	padding-right: 40px;
+}
+
+#pkgquery {
+	margin-left: 10em;
+	color: #000;
+	min-height: 50%;
+	height: auto !important;
+	padding-left: 28px;
+}
+
+#footer {
+	padding-top: 2em;
+	float: center;
+	text-align: center;
+}
+
+#navlist {
+	padding: 0 1px 1px;
+	margin-left: 4px;
+	font-family: "Strait", cursive;
+	font-size: 12px;
+	text-align: justify;
+	width: 12em;
+}
+
+#navlist li {
+	list-style: none;
+	padding-top: 4px;
+	text-align: left;
+}
+
+#navlist li a {
+	display: block;
+	padding: 0.25em 0.5em 0.25em 0.75em;
+	border-style: solid;
+	border-radius: 10px;
+	background: white;
+	text-decoration: none;
+}
+
+#navlist li a:hover {
+	color: #FFF;
+	background: black;
+}
