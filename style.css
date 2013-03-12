@@ -7,8 +7,8 @@ body {
 }
 
 a:link,a:visited { color: #27408B; }
-a:active { color: #27408B; font-weight: bold; }
-a:hover { font-weight: bold; color: #27408B; }
+a:active { color: #aa7408; }
+a:hover { color: #ff408B; }
 
 .logo {
 	width: 10%;
