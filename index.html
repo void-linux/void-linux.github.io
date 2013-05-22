@@ -117,21 +117,21 @@ out.innerHTML = "<h4>Found a match for "+inp.value+"</h4>"+"<pre>"+res+"</pre>";
 			<p>Currently there are installable live images for the <b>x86</b> and <b>x86_64</b>
 			architectures and there is support to make a local installation (with the included
 			packages) or a network installation (packages are downloaded from official repository).</p>
+			<ul>
+				<li><a href="http://xbps.nopcode.org/live/void-live-x86_64-3.9.3_3-20130522.iso">void-live-x86_64-3.9.3_3-20130522.iso</a><br/>
+				SHA256: <b>524e7585a08fb82a7a517ee119ce33cc0282609a3db320e7060b7d4118912589</b><br/>
+				Requirements: <b>EM64T CPU, 256MB RAM, 350MB disk, Ethernet/WiFi for network installation.</b><br/><br/></li>
+				<li><a href="http://xbps.nopcode.org/live/void-live-i686-3.9.3_3-20130522.iso">void-live-i686-3.9.3_3-20130522.iso</a><br/>
+				SHA256: <b>4614d76cbdaa26e89e717287f9831cf4f6dda5cefae28bde134d703ce25f0f99</b><br/>
+				Requirements: <b>Pentium II, 128MB RAM, 350MB disk, Ethernet/WiFi for network installation.</b><br/><br/></li>
+				<li><a href="http://xbps.nopcode.org/live/void-live-gnome-i686-3.9.3_3-20130521.iso">void-live-gnome-i686-3.9.3_3-20130521.iso</a> [GNOME 3.8.2 live image]<br/>
+				SHA256: <b>0e6e1d202150c6d1a4dca6e7fab3677f536e06781e2d6db1575dbdd095494a19</b><br/>
+				Requirements: <b>Pentium III, 512MB RAM, Ethernet/WiFI for network installation.</b><br/>
+			</ul>
 			<p>After booting, the user <b>anon</b> will be autologged in; this user has full access to
 			execute any command through the <a href="http://www.sudo.ws/">sudo</a> utility.<br/>
 			To start the installer just execute the <i>void-installer</i> utility with enough
-			permissions (i.e <i>sudo</i>).
-			<p>
-			NOTE: 128MB of RAM are required to boot and ~400MB to install the base system.<br/>
-			NOTE: installation from network requires an ethernet device, manual configuration is required for WIFI.
-			</p>
-			<p>
-			<ul>
-				<li><a href="http://xbps.nopcode.org/live/void-live-x86_64-3.9.3_3-20130522.iso">void-live-x86_64-3.9.3_3-20130522.iso</a><br/>
-				SHA256: <b>524e7585a08fb82a7a517ee119ce33cc0282609a3db320e7060b7d4118912589</b><br/><br/></li>
-				<li><a href="http://xbps.nopcode.org/live/void-live-i686-3.9.3_3-20130522.iso">void-live-i686-3.9.3_3-20130522.iso</a><br/>
-				SHA256: <b>4614d76cbdaa26e89e717287f9831cf4f6dda5cefae28bde134d703ce25f0f99</b><br/></li>
-			</ul></p>
+			permissions (i.e <i>sudo</i>).</p>
 			<h3>Download ready to boot images</h3>
 			<p>Currently the only supported way to run Void Linux on the Raspberry PI is by using a <i>prepared image</i>
 			or a <i>rootfs tarball</i> that can be written/unpacked onto the SD card. This method allows you to have
