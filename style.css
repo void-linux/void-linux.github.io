@@ -11,7 +11,7 @@ a:active { color: #aa7408; }
 a:hover { color: #ff408B; }
 
 .logo {
-	width: 12%;
+	width: 14%;
 	float: left;
 }
 
@@ -23,12 +23,11 @@ a:hover { color: #ff408B; }
 
 #center {
 	color: #000;
-	padding-top: 10px;
-	padding-bottom: 20px;
 }
 
 #center h2 {
-	padding: 10px 0 10px 20px;
+	margin-top: 6px;
+	padding: 10px 10px 10px 20px;
 	border-style: solid;
 	border-radius: 10px;
 	background: black;
@@ -36,6 +35,7 @@ a:hover { color: #ff408B; }
 }
 
 #center h3 {
+	margin: 0;
 	padding: 2px 2px 2px 18px;
 	border-style: solid;
 	border-radius: 10px;
