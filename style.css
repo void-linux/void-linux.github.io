@@ -1,7 +1,7 @@
 body {
-	margin-left: 10%;
-	margin-right: 10%;
-	min-width: 800px;
+	margin-left: 5%;
+	margin-right: 5%;
+	min-width: 80%;
 	font-family: 'Strait', sans-serif;
 	text-align: left;
 }
@@ -11,10 +11,8 @@ a:active { color: #aa7408; }
 a:hover { color: #ff408B; }
 
 .logo {
-	width: 10%;
+	width: 12%;
 	float: left;
-	padding-bottom: 10px;
-	padding-right: 10px;
 }
 
 #title {
@@ -30,8 +28,6 @@ a:hover { color: #ff408B; }
 	height: auto !important;
 	padding-top: 10px;
 	padding-bottom: 20px;
-	padding-left: 28px;
-	padding-right: 40px;
 }
 
 #center h2 {
