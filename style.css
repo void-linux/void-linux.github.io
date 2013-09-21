@@ -16,38 +16,31 @@ a:hover { color: #ff408B; }
 }
 
 #title {
-	float: right;
-	margin-right: 4em;
+	margin-left: 2em;
 	font-size: 1em;
 	font-style: italic;
 }
 
 #center {
 	color: #000;
-	min-height: 60%;
-	height: auto !important;
 	padding-top: 10px;
 	padding-bottom: 20px;
 }
 
 #center h2 {
-	padding: 10px 0 10px 22px;
+	padding: 10px 0 10px 20px;
 	border-style: solid;
 	border-radius: 10px;
 	background: black;
 	color: white;
-	text-decoration: none;
 }
 
 #center h3 {
-	padding-left: 10px;
-	margin-left: 10px;
-	margin-right: 10px;
+	padding: 2px 2px 2px 18px;
 	border-style: solid;
 	border-radius: 10px;
 	background: black;
 	color: white;
-	text-decoration: none;
 }
 
 #center p {
@@ -58,13 +51,6 @@ a:hover { color: #ff408B; }
 #center ul {
 	padding-left: 60px;
 	padding-right: 60px;
-}
-
-#pkgquery {
-	color: #000;
-	min-height: 50%;
-	height: auto !important;
-	padding-left: 28px;
 }
 
 #footer {
