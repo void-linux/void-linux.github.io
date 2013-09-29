@@ -27,11 +27,13 @@ a:hover { color: #ff408B; }
 
 #center h2 {
 	margin-top: 6px;
-	padding: 10px 10px 10px 20px;
+	padding: 10px 10px 10px 10px;
 	border-style: solid;
 	border-radius: 10px;
 	background: black;
 	color: white;
+	text-indent: 1em;
+	font-size: 2em;
 }
 
 #center h3 {
