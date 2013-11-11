@@ -65,9 +65,6 @@ always builds packages in <i>chroots</i>, without requiring
 <b>root privileges</b>. Required dependencies can be resolved
 from <b>local/remote repositories</b> or directly from the
 <b>source packages</b> tree. Support to cross build packages is also possible.</li>
-<li><b>Realtime Package Building</b>: packages are built in VMs as soon as the changes
-are pushed to the git source repository; we can see in realtime when a change is problematic.
-</li>
 <li>It is possible to build binary packages for Void Linux from your
 favourite linux distribution.</li>
 <li>Supports installation on <b>BIOS</b> and <b>UEFI 64bit</b> systems.</li>
@@ -113,13 +110,18 @@ a system ready to boot/use, once it's written/unpacked onto the target device.</
 <p>
 <ul>
 <li>
-Raspberry Pi image for 2GB SD card (82MB):
-<a href="http://xbps.nopcode.org/live/void-rpi-20130921.img.xz">void-rpi-20130921.img.xz</a>
- <a href="http://xbps.nopcode.org/live/void-rpi-20130921.img.xz.sha256.txt">[SHA256]</a><br/></li>
+Raspberry Pi image for 2GB SD card (83MB, EXT4):
+<a href="http://xbps.nopcode.org/live/void-rpi-20131111.img.xz">void-rpi-20131111.img.xz</a>
+ <a href="http://xbps.nopcode.org/live/void-rpi-20131111.img.xz.sha256.txt">[SHA256]</a><br/></li>
 <li>
-Raspberry Pi rootfs (81MB):
-<a href="http://xbps.nopcode.org/rootfs/void-rpi-rootfs-20130921.tar.xz">void-rpi-rootfs-20130921.tar.xz</a>
- <a href="http://xbps.nopcode.org/rootfs/void-rpi-rootfs-20130921.tar.xz.sha256.txt">[SHA256]</a><br/>
+<li>
+Raspberry Pi image for 2GB SD card (83MB, F2FS):
+<a href="http://xbps.nopcode.org/live/void-rpi-20131111-f2fs.img.xz">void-rpi-20131111-f2fs.img.xz</a>
+ <a href="http://xbps.nopcode.org/live/void-rpi-20131111-f2fs.img.xz.sha256.txt">[SHA256]</a><br/></li>
+<li>
+Raspberry Pi rootfs (82MB):
+<a href="http://xbps.nopcode.org/rootfs/void-rpi-rootfs-20131111.tar.xz">void-rpi-rootfs-20131111.tar.xz</a>
+ <a href="http://xbps.nopcode.org/rootfs/void-rpi-rootfs-20131111.tar.xz.sha256.txt">[SHA256]</a><br/>
 Please read the documentation to prepare the SD card
 <a href="https://github.com/voidlinux/documentation/wiki/raspberrypi#rootfs-install">HERE</a><br/></li>
 </ul></p>
