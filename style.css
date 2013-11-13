@@ -1,7 +1,10 @@
 body {
-	margin-left: 5%;
-	margin-right: 5%;
-	min-width: 80%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	overflow: hidden;
+	height: 100%;
+	max-height: 100%;
 	font-family: 'Raleway', sans-serif;
 	text-align: left;
 }
@@ -15,6 +18,19 @@ a:hover { color: #ff408B; }
 	float: left;
 }
 
+#left {
+	position: absolute;
+	top: 40px;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	width: 100px;
+	height: 100%;
+	overflow: hidden;
+	background: white;
+	color: white;
+}
+
 #title {
 	margin-left: 2em;
 	font-size: 1em;
@@ -22,6 +38,13 @@ a:hover { color: #ff408B; }
 }
 
 #center {
+	position: fixed;
+	top: 10px;
+	left: 120px;
+	right: 10px;
+	bottom: 10px;
+	overflow: auto;
+	background: #fff;
 	color: #000;
 }
 
