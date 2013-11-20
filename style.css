@@ -32,6 +32,7 @@ body {
 	padding: 0px 0px 6px 0px;
 	margin-bottom: 6px;
 	border: 1px;
+	border-radius: 6px;
 	border-style: solid;
 	border-color: black;
 	background: white;
