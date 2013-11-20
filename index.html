@@ -8,139 +8,137 @@
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css' />
 </head>
 <body>
-<div id="left" align="center">
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QMV62MDXJ955N">
-<img alt="" border="0" width="70" height="20" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" /></a><br/>
-<a href="https://plus.google.com/communities/113949500587973059533"><img src="img/g+42.png" width="70" height="60" /></a><br/>
-<a href="http://webchat.freenode.net/?channels=%23xbps&uio=d4"><img src="img/androIRCicon.png" width="80" height="80" /></a><br/>
-</div>
 <div id="center">
-<div id="title">
-<b>A modern and experimental linux distribution created from scratch</b>&nbsp;
-<i>(&copy; 2008-2013 Juan RP and contributors)</i>
+	<div id="title">
+		<b>A modern and experimental linux distribution created from scratch</b>&nbsp;
+		<i>(&copy; 2008-2013 Juan RP and contributors)</i>
+	</div>
+	<div id="box">
+		<h2>The Void Linux distribution</h2>
+		<p>Speed, reliability, and flexibility. That's the
+		battle-cry of today's disgruntled computer geeks. This is what
+		people want with a Linux distribution, and this is what Void Linux provides.
+		With lightning-fast and useful tools such as the
+		<abbr title="X Binary Package System">xbps</abbr> package manager,
+		and <a href="http://www.freedesktop.org/wiki/Software/systemd">systemd</a>
+		(among others), this distribution clearly has <i>all your base</i>, and they
+		rightly <i>belong to us</i>.<br/><br/>
+		The spirit of Void is such that we keep things default, necessary,
+		and minimal as possible (while trying not to leave features out).<br/><br/>
+		Currently there are over
+		<a href="https://github.com/xtraeme/xbps-packages/tree/master/srcpkgs">
+			3000 optimized packages</a> for the <b>x86</b>,
+		<b>x86_64</b> and <b>ARMv6 hard float</b>
+		(Raspberry PI and compatibles) architectures, and there's support to cross build
+		the <i>base system</i> packages easily with the
+		<abbr title="XBPS binary package builder">xbps-src</abbr> utility.<br/><br/>
+		Please check out our <a href="https://github.com/voidlinux/documentation/wiki/News">NEWS</a>
+		and the <a href="https://github.com/voidlinux/documentation/wiki/">Wiki</a> for documentation.</p>
+	</div>
+	<div id="box">
+		<h3>Features</h3>
+		<ul>
+			<li>It is not a <b>fork or customized/modified version of any current
+				distribution</b>, it has been created from scratch.</li>
+			<li>It is a rolling release with <b>continuous package updates</b>.</li>
+			<li>The installed base system only provides required utilities for text
+			console usage, <b>adapt it to your needs!</b></li>
+			<li>Kernel images/modules are never removed, providing an
+			<b>always-bootable system</b>.</li>
+			<li><a href="https://dracut.wiki.kernel.org">dracut</a> handles
+			initial ramdisk images.</li>
+			<li><a href="http://linux.dell.com/dkms/">dkms</a>
+			to simplify the management of third party linux kernel modules.</li>
+			<li><a href="http://www.freedesktop.org/wiki/Software/systemd">systemd</a>
+			as system and session manager without <i>SysV init</i> compatibility.</li>
+			<li><a href="http://www.voidlinux.eu/xbps">xbps</a> as native package manager.</li>
+			<li>The binary package builder (<b>xbps-src</b>)
+			always builds packages in <i>chroots</i>, without requiring
+			<b>root privileges</b>. Required dependencies can be resolved
+			from <b>local/remote repositories</b> or directly from the
+			<b>source packages</b> tree. Support to cross build packages is also possible.</li>
+			<li>It is possible to build binary packages for Void Linux from your
+			favourite linux distribution.</li>
+			<li>Supports installation on <b>BIOS</b> and <b>UEFI 64bit</b> systems.</li>
+		</ul>
+	</div>
+	<div id="box">
+		<h2>Source repositories</h2>
+		<ul>
+			<li>xbps (package manager) --
+			<a href="https://github.com/voidlinux/xbps">github.com/voidlinux/xbps</a>
+			</li>
+			<li>xbps-src (binary package builder) --
+			<a href="https://github.com/voidlinux/xbps-src">github.com/voidlinux/xbps-src</a>
+			</li>
+			<li>xbps-packages (source packages tree) --
+			<a href="https://github.com/voidlinux/xbps-packages">github.com/voidlinux/xbps-packages</a>
+			</li>
+			<li>
+			void-mklive (live image maker, installer) -- <a href="https://github.com/voidlinux/void-mklive">github.com/voidlinux/void-mklive</a>
+			</li>
+		</ul>
+	</div>
+	<div id="box">
+		<h3>Download installable live images</h3>
+		<p>Currently there are installable live images for the <b>x86</b> and <b>x86_64</b>
+		architectures and there is support to make a local installation (with the included
+		packages) or a network installation (packages are downloaded from official repository).</p>
+		<ul>
+			<li><a href="http://xbps.nopcode.org/live/void-live-x86_64-3.10.19_1-20131114.iso">void-live-x86_64-3.10.19_1-20131114.iso</a><br/>
+			Requirements: <b>EM64T CPU, 96MB RAM, 350MB disk, Ethernet/WiFi for network installation.</b><br/><br/></li>
+			<li><a href="http://xbps.nopcode.org/live/void-live-i686-3.10.19_1-20131114.iso">void-live-i686-3.10.19_1-20131114.iso</a><br/>
+			Requirements: <b>Pentium III CPU, 96MB RAM, 350MB disk, Ethernet/WiFi for network installation.</b><br/></li>
+		</ul>
+		<p>After booting, the user <b>anon</b> will be autologged in; this user has full access to
+		execute any command through the <a href="http://www.sudo.ws/">sudo</a> utility.<br/>
+		To start the installer just execute the <i>void-installer</i> utility with enough
+		permissions (i.e <i>sudo</i>).</p>
+	</div>
+	<div id="box">
+		<h3>Download ready to boot images</h3>
+		<p>
+		Currently the only supported way to run Void Linux on the Raspberry PI is by using a <i>prepared image</i>
+		or a <i>rootfs tarball</i> that can be written/unpacked onto the SD card. This method allows you to have
+		a system ready to boot/use, once it's written/unpacked onto the target device.</p>
+		<ul>
+			<li>
+			Raspberry Pi image for 2GB SD card (83MB, EXT4):
+			<a href="http://xbps.nopcode.org/live/void-rpi-20131114.img.xz">void-rpi-20131114.img.xz</a><br/>
+			</li>
+			<li>
+			Raspberry Pi image for 2GB SD card (83MB, F2FS):
+			<a href="http://xbps.nopcode.org/live/void-rpi-20131114-f2fs.img.xz">void-rpi-20131114-f2fs.img.xz</a><br/>
+			</li>
+			<li>
+			Raspberry Pi rootfs (82MB):
+			<a href="http://xbps.nopcode.org/live/void-rpi-rootfs-20131114.tar.xz">void-rpi-rootfs-20131114.tar.xz</a><br/></li>
+		</ul>
+		<p>Please read the documentation to prepare the SD card
+		<a href="https://github.com/voidlinux/documentation/wiki/raspberrypi#rootfs-install">HERE</a>.<br/>
+		Log in as <b>root</b>, password <b>voidlinux</b>.</p>
+	</div>
 </div>
-<h2>
-The Void Linux distribution</h2>
-<img class="logo" alt="voidlinux logo" src="img/void-logo-transparent.png" />
-<p>
-Speed, reliability, and flexibility. That's the
-battle-cry of today's disgruntled computer geeks. This is what
-people want with a Linux distribution, and this is what Void Linux provides.
-With lightning-fast and useful tools such as the
-<abbr title="X Binary Package System">xbps</abbr> package manager,
-and <a href="http://www.freedesktop.org/wiki/Software/systemd">systemd</a>
-(among others), this distribution clearly has <i>all your base</i>, and they
-rightly <i>belong to us</i>.</p>
-</p>
-<p>The spirit of Void is such that we keep things default, necessary,
-and minimal as possible (while trying not to leave features out).</p>
-<p>Currently there are over
-<a href="https://github.com/xtraeme/xbps-packages/tree/master/srcpkgs">
-	3000 optimized packages</a> for the <b>x86</b>,
-<b>x86_64</b> and <b>ARMv6 hard float</b>
-(Raspberry PI and compatibles) architectures, and there's support to cross build
-the <i>base system</i> packages easily with the
-<abbr title="XBPS binary package builder">xbps-src</abbr> utility.
-</p>
-<p>Please check out our <a href="https://github.com/voidlinux/documentation/wiki/News">NEWS</a>
-and the <a href="https://github.com/voidlinux/documentation/wiki/">Wiki</a> for documentation.</p>
-<h3>Features</h3>
-<p>
-<ul>
-<li>It is not a <b>fork or customized/modified version of any current
-distribution</b>, it has been created from scratch.</li>
-<li>It is a rolling release with <b>continuous package updates</b>.</li>
-<li>The installed base system only provides required utilities for text
-console usage, <b>adapt it to your needs!</b></li>
-<li>Kernel images/modules are never removed, providing an
-<b>always-bootable system</b>.</li>
-<li><a href="https://dracut.wiki.kernel.org">dracut</a> handles
-initial ramdisk images.</li>
-<li><a href="http://linux.dell.com/dkms/">dkms</a>
-to simplify the management of third party linux kernel modules.</li>
-<li><a href="http://www.freedesktop.org/wiki/Software/systemd">systemd</a>
-as system and session manager without <i>SysV init</i> compatibility.</li>
-<li><a href="http://www.voidlinux.eu/xbps">xbps</a> as native package manager.</li>
-<li>The binary package builder (<b>xbps-src</b>)
-always builds packages in <i>chroots</i>, without requiring
-<b>root privileges</b>. Required dependencies can be resolved
-from <b>local/remote repositories</b> or directly from the
-<b>source packages</b> tree. Support to cross build packages is also possible.</li>
-<li>It is possible to build binary packages for Void Linux from your
-favourite linux distribution.</li>
-<li>Supports installation on <b>BIOS</b> and <b>UEFI 64bit</b> systems.</li>
-</ul>
-</p>
-<a id="source"></a>
-<h3>Source repositories</h3>
-<p><ul>
-<li>xbps (package manager) --
-<a href="https://github.com/voidlinux/xbps">github.com/voidlinux/xbps</a>
-</li>
-<li>xbps-src (binary package builder) --
-<a href="https://github.com/voidlinux/xbps-src">github.com/voidlinux/xbps-src</a>
-</li>
-<li>xbps-packages (source packages tree) --
-<a href="https://github.com/voidlinux/xbps-packages">github.com/voidlinux/xbps-packages</a>
-</li>
-<li>
-void-mklive (live image maker, installer) -- <a href="https://github.com/voidlinux/void-mklive">github.com/voidlinux/void-mklive</a>
-</li>
-</ul></p>
-<a id="download"></a>
-<h3>Download installable live images</h3>
-<p>Currently there are installable live images for the <b>x86</b> and <b>x86_64</b>
-architectures and there is support to make a local installation (with the included
-packages) or a network installation (packages are downloaded from official repository).</p>
-<ul>
-<li><a href="http://xbps.nopcode.org/live/void-live-x86_64-3.10.19_1-20131114.iso">void-live-x86_64-3.10.19_1-20131114.iso</a><br/>
-Requirements: <b>EM64T CPU, 96MB RAM, 350MB disk, Ethernet/WiFi for network installation.</b><br/></li>
-<li><a href="http://xbps.nopcode.org/live/void-live-i686-3.10.19_1-20131114.iso">void-live-i686-3.10.19_1-20131114.iso</a><br/>
-Requirements: <b>Pentium III CPU, 96MB RAM, 350MB disk, Ethernet/WiFi for network installation.</b><br/></li>
-</ul>
-<p>After booting, the user <b>anon</b> will be autologged in; this user has full access to
-execute any command through the <a href="http://www.sudo.ws/">sudo</a> utility.<br/>
-To start the installer just execute the <i>void-installer</i> utility with enough
-permissions (i.e <i>sudo</i>).</p>
-<h3>Download ready to boot images</h3>
-<p>Currently the only supported way to run Void Linux on the Raspberry PI is by using a <i>prepared image</i>
-or a <i>rootfs tarball</i> that can be written/unpacked onto the SD card. This method allows you to have
-a system ready to boot/use, once it's written/unpacked onto the target device.</p>
-<p>
-<ul>
-<li>
-Raspberry Pi image for 2GB SD card (83MB, EXT4):
-<a href="http://xbps.nopcode.org/live/void-rpi-20131114.img.xz">void-rpi-20131114.img.xz</a><br/>
-</li>
-<li>
-Raspberry Pi image for 2GB SD card (83MB, F2FS):
-<a href="http://xbps.nopcode.org/live/void-rpi-20131114-f2fs.img.xz">void-rpi-20131114-f2fs.img.xz</a><br/>
-</li>
-<li>
-Raspberry Pi rootfs (82MB):
-<a href="http://xbps.nopcode.org/live/void-rpi-rootfs-20131114.tar.xz">void-rpi-rootfs-20131114.tar.xz</a><br/>
-Please read the documentation to prepare the SD card
-<a href="https://github.com/voidlinux/documentation/wiki/raspberrypi#rootfs-install">HERE</a><br/></li>
-</ul></p>
-<p>Log in as <b>root</b>, password <b>voidlinux</b>.</p>
-<a id="contact"></a>
-<h3>Contact/Help</h3>
-<ul>
-<li>
-<a href="https://github.com/xtraeme">Juan RP</a> -- Main developer and founder.
-</li>
-</ul>
-<p>
-Need help? want to contribute? join us via IRC (<b>#xbps</b> on <b>irc.freenode.net</b>),
-or the <b>google+</b> community.<br/><br/>
-If you think this project is useful, please contribute a small monetary donation to
-support development. Maintaining a distribution and a complete package system requires lots
-of time and dedication; the donations will be used to maintain the domain
-and required hardware.</p>
-<a id="pkgcommits"></a>
-<h3>Latest package commits</h3>
-<p>
-<script language="javascript" src="http://www.generateit.net/rss-javascript/feed2js.php?src=https%3A%2F%2Fgithub.com%2Fxtraeme%2Fxbps-packages%2Fcommits%2Fmaster.atom&amp;num=10&amp;targ=y&amp;utf=y" type="text/javascript"></script></p>
+<div id="right">
+	<img class="logo" alt="voidlinux logo" src="img/void-logo-transparent.png" />
+	<div id="box">
+		<h3>Latest package commits</h3>
+		<script language="javascript" src="http://www.generateit.net/rss-javascript/feed2js.php?src=https%3A%2F%2Fgithub.com%2Fxtraeme%2Fxbps-packages%2Fcommits%2Fmaster.atom&amp;num=10&amp;targ=y&amp;utf=y" type="text/javascript"></script>
+	</div>
+	<div id="box">
+		<h3>Help me! don't let me die.</h3>
+		<p>
+		<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QMV62MDXJ955N">
+			<img alt="" border="0" width="70" height="20" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" /></a>
+		</p>
+	</div>
+	<div id="box">
+		<h3>Join our community</h3>
+		<p>
+		<a href="https://plus.google.com/communities/113949500587973059533"><img src="img/g+42.png" /></a>
+		<a href="http://webchat.freenode.net/?channels=%23xbps&uio=d4"><img src="img/androIRCicon.png" height="42px" width="48px" /></a>
+		</p>
+	</div>
 </div>
 </body>
 </html>
