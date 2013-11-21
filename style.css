@@ -16,7 +16,7 @@ body {
 #right {
 	position: absolute;
 	right: 1%;
-	width: 15%;
+	width: 25%;
 	font-size: 12px;
 
 }
@@ -40,7 +40,7 @@ body {
 
 #center {
 	position: absolute;
-	width: 82%;
+	width: 72.5%;
 	left: 1%;
 	padding-bottom: 4px;
 }
