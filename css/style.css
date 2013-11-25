@@ -57,6 +57,7 @@ nav {
 	right:0;
 	padding:20px;
 	box-shadow:0 1px 4px #555;
+	z-index:9999;
 }
 #navwrap {
 	max-width:1000px;
