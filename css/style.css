@@ -1,0 +1,159 @@
+/* BY YPNOSE, FOR XTRAEMEAT */
+@font-face {
+	font-family:"Carme";
+	src:url('/fonts/Carme-Regular.ttf');
+	font-weight:normal;
+	font-style:normal;
+}
+
+body {
+	font-family:'Carme', sans-serif;
+	font-size:18px;
+}
+/* MERGE */
+body,nav {
+	background-color:#FFF;
+}
+nav,header,article h1,article h2, article h3 {
+	border-bottom:1px solid #D2D2D2;
+}
+#links,#title h1 {
+	text-transform:uppercase;
+}
+#links ul,#social ul {
+	padding:0;
+	list-style-type:none;
+}
+#links ul li,#social ul li {
+	display:inline;
+	padding:0 8px;
+}
+body,#links ul,#social ul {
+	margin:0;
+}
+#navwrap,#voidwrap,article,article h1, article h2, article h3,#davoid,#xtraemewrap {
+	margin:0 auto;
+}
+#voidwrap,article h1, article h2, article h3,footer {
+	text-align:center;
+}
+/* --- */
+a,a:visited {
+	color:#478061;
+	text-decoration:none;
+	outline:none;
+	white-space:nowrap;
+}
+a:hover {
+	color:#99C2A3;
+	text-decoration:underline;
+}
+nav {
+	font-size:16px;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	padding:20px;
+	box-shadow:0 1px 4px #555;
+}
+#navwrap {
+	max-width:1000px;
+	line-height:24px;
+}
+#links {
+	display:inline-block;
+}
+#social {
+	float:right;
+}
+header {
+	margin:90px 0 0;
+}
+#voidwrap {
+	max-width:800px;
+	padding:30px 24px;
+}
+#davoid {
+	background:url("/img/voidlogo.png") no-repeat;
+	width:206px;
+	height:151px;
+	display:block;
+}
+#title h1 {
+	font-size:28px;
+	font-weight:normal;
+	line-height:44px;
+	color:#606060;
+	padding-top:20px;
+}
+article {
+	max-width:900px;
+	padding:16px 24px;
+	text-align:justify;
+	line-height:34px;
+}
+article h1, article h2, article h3 {
+	max-width:74%;
+	padding-bottom:10px;
+}
+article h2 {
+	padding-top:90px;
+}
+article ul {
+	list-style-type:circle;
+	padding-left:25px;
+}
+pre,p code {
+	font-family:Consolas, "Liberation Mono", Courier, monospace;
+	font-size:17px;
+}
+pre {
+	background-color:#EEE;
+	padding:4px 12px;
+	border:1px solid #D0D0D0;
+	border-radius:4px;
+}
+/* FUCK YOU STUPID MESSAGE _|_ */
+.rss-box span {
+	display:none;
+}
+footer {
+	background-color:#BDD7BD;
+	border-top:1px solid #92A692;
+}
+#xtraemewrap {
+	max-width:600px;
+	font-size:16px;
+	line-height:30px;
+	padding:30px 16px 16px;
+}
+#xtraemewrap a:hover {
+	color:#569C76;
+}
+@media screen and (max-width:950px) {
+	nav {
+		padding:10px 14px;
+	}
+	#navwrap {
+		text-align:center;
+	}
+	#social {
+		float:none;
+		margin-top:8px;
+	}
+}
+@media screen and (max-width:760px) {
+	#social {
+		display:none;
+	}
+}
+@media screen and (max-width:500px) {
+	body,#xtraemewrap {
+		font-size:15px;
+	}
+	#title h1 {
+		font-size:24px;
+		line-height:34px;
+	}
+}
