@@ -43,6 +43,7 @@ a,a:visited {
 	text-decoration:none;
 	outline:none;
 	white-space:nowrap;
+	transition:all .35s ease;
 }
 a:hover {
 	color:#99C2A3;
@@ -79,12 +80,12 @@ header {
 	width:206px;
 	height:151px;
 	display:block;
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	-webkit-transition:all 1s ease-in-out;
+	transition:all 1s ease-in-out;
 }
 #davoid:hover {
-	-webkit-transform: rotate(360deg);
-	transform: rotate(360deg);
+	-webkit-transform:rotate(360deg);
+	transform:rotate(360deg);
 }
 #title h1 {
 	font-size:28px;
