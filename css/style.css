@@ -79,6 +79,12 @@ header {
 	width:206px;
 	height:151px;
 	display:block;
+	-webkit-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+#davoid:hover {
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
 }
 #title h1 {
 	font-size:28px;
