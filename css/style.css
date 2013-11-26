@@ -12,34 +12,6 @@
 	font-weight:normal;
 	font-style:normal;
 }
-.fa {
-	display:inline-block;
-	font-family:FontAwesome;
-	font-style:normal;
-	font-weight:normal;
-	line-height:1;
-	/* SEEMS TO BE A DEPRECATED PROPERTY, BUT I'M NOT SURE */
-	-webkit-font-smoothing:antialiased;
-	-moz-osx-font-smoothing:grayscale;
-}
-.fa-lg {
-	font-size:1.3333333333333333em;
-	line-height:0.75em;
-	vertical-align:-15%;
-}
-.fa-google-plus-square:before {
-	content:"\f0d4";
-}
-.fa-comments:before {
-	content:"\f086";
-}
-.fa-github-alt:before {
-	content:"\f113";
-}
-.fa-gift:before {
-	content:"\f06b";
-}
-/* ----- */
 body {
 	font-family:'Carme', sans-serif;
 	font-size:18px;
@@ -71,6 +43,15 @@ body,#links ul,#social ul {
 #voidwrap,article h1, article h2, article h3,footer {
 	text-align:center;
 }
+.fa,#title h1 {
+	font-weight:normal;
+}
+#links,.fa {
+	display:inline-block;
+}
+nav,#xtraemewrap {
+	font-size:16px;
+}
 /* --- */
 a,a:visited {
 	color:#478061;
@@ -84,7 +65,6 @@ a:hover {
 	text-decoration:underline;
 }
 nav {
-	font-size:16px;
 	position:fixed;
 	top:0;
 	left:0;
@@ -97,11 +77,33 @@ nav {
 	max-width:1000px;
 	line-height:24px;
 }
-#links {
-	display:inline-block;
-}
 #social {
 	float:right;
+}
+.fa {
+	font-family:FontAwesome;
+	font-style:normal;
+	line-height:1;
+	/* SEEMS TO BE A DEPRECATED PROPERTY, BUT I'M NOT SURE */
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+.fa-lg {
+	font-size:1.3333333333333333em;
+	line-height:0.75em;
+	vertical-align:-15%;
+}
+.fa-google-plus-square:before {
+	content:"\f0d4";
+}
+.fa-comments:before {
+	content:"\f086";
+}
+.fa-github-alt:before {
+	content:"\f113";
+}
+.fa-gift:before {
+	content:"\f06b";
 }
 header {
 	margin:90px 0 0;
@@ -124,7 +126,6 @@ header {
 }
 #title h1 {
 	font-size:28px;
-	font-weight:normal;
 	line-height:44px;
 	color:#606060;
 	padding-top:20px;
@@ -166,7 +167,6 @@ footer {
 }
 #xtraemewrap {
 	max-width:600px;
-	font-size:16px;
 	line-height:30px;
 	padding:30px 16px 16px;
 }
