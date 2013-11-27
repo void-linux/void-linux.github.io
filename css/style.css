@@ -105,6 +105,9 @@ nav {
 .fa-gift:before {
 	content:"\f06b";
 }
+.fa-cog:before {
+	content:"\f013";
+}
 header {
 	margin:90px 0 0;
 }
@@ -156,6 +159,7 @@ pre {
 	padding:4px 12px;
 	border:1px solid #D0D0D0;
 	border-radius:4px;
+	overflow-x:auto;
 }
 /* FUCK YOU STUPID MESSAGE _|_ */
 .rss-box span {
@@ -173,7 +177,7 @@ footer {
 #xtraemewrap a:hover {
 	color:#569C76;
 }
-@media screen and (max-width:950px) {
+@media screen and (max-width:970px) {
 	nav {
 		padding:10px 14px;
 	}
