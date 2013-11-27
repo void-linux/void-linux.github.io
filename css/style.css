@@ -57,7 +57,6 @@ a,a:visited {
 	color:#478061;
 	text-decoration:none;
 	outline:none;
-	white-space:nowrap;
 	transition:all .35s ease;
 }
 a:hover {
