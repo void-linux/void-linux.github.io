@@ -5,13 +5,15 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-	<title>Welcome to the Void!</title>
+	<title>Void news</title>
+	<subtitle>Follow Void Linux news</subtitle>
 	<link href="http://voidlinux.eu/"/>
-	<id>http://voidlinux.eu/</id>
+	<link type="application/atom+xml" rel="self" href="http://voidlinux.eu/atom.xml"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
 	<author>
 		<name>xtraeme</name>
 	</author>
+	<id>http://voidlinux.eu/</id>
 
 {% for post in site.posts limit:20 %}
 	<entry>
