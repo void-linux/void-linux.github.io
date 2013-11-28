@@ -1,0 +1,107 @@
+---
+layout: default
+---
+	<nav>
+		<div id="navxbps">
+			<div id="links">
+				<ul>
+					<li><a href="#wtf">What is XBPS?</a></li>
+					<li><a href="#src">Sources</a></li>
+					<li><a href="#deps">Build it</a></li>
+					<li><a href="#commits">Commits</a></li>
+					<li><a href="https://github.com/voidlinux/documentation/wiki/xbps">Wiki</a></li>
+					<li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=QMV62MDXJ955N">Donate</a></li>
+				</ul>
+			</div>
+			<div id="social">
+				<ul>
+					<li><a href="https://plus.google.com/communities/113949500587973059533" title="Google +"><i class="fa fa-google-plus-square fa-lg"></i></a></li>
+					<li><a href="http://webchat.freenode.net/?channels=%23xbps&amp;uio=d4" title="Join us on IRC!"><i class="fa fa-comments fa-lg"></i></a></li>
+					<li><a href="https://github.com/voidlinux/xbps" title="Fork xbps"><i class="fa fa-github-alt fa-lg"></i></a></li>
+					<li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=QMV62MDXJ955N" title="Donate!"><i class="fa fa-gift fa-lg"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<header>
+		<div id="voidwrap">
+			<div id="davoid"></div>
+			<div id="title"><h1>The X Binary Package System</h1></div>
+		</div>
+	</header>
+
+	<article>
+
+		<!-- README -->
+		<!-- @xtraemoo: Don't use <br/>, this is ugly / dirty. Separate paragraphs by using <p></p> -->
+		<!-- @xtraemoo: If you want bold, use <strong></strong> (as requested by W3C with HTML5) instead of <b></b>. Thanks -->
+		<!-- @xtraemoo: If you want italic, use <em></em> instead of <i></i>. Thanks -->
+
+		<div id="wtf">
+			<h2 class="cattitle">XBPS</h2>
+			<p>A <em>relatively new</em> binary package system designed and implemented from scratch. Its goal is to be fast, easy to use, bug-free, featureful and portable as much as possible.
+			The code is totally compatible with <strong>POSIX/SUSv2/C99</strong> standards, and released with a <strong>Simplified BSD</strong> license (2 clause).
+			There is a well documented API provided by the XBPS Library that is the basis for its frontends to handle binary packages and repositories. Some highlights:</p>
+			<ul>
+				<li>Supports multiple local/remote repositories (HTTP/HTTPS/FTP).</li>
+				<li>RSA signed remote repositories (NEW in 0.27).</li>
+				<li>SHA256 hashes for package metadata, files and binary packages.</li>
+				<li>Supports package states (ala dpkg) to mitigate broken package installs/updates.</li>
+				<li>Ability to resume partial package install/updates.</li>
+				<li>Ability to unpack only files that have been modified in package updates.</li>
+				<li>Ability to use virtual packages.</li>
+				<li>Ability to replace packages.</li>
+				<li>Ability to put packages on hold (to never update them. NEW in 0.16).</li>
+				<li>Ability to preserve/update configuration files.</li>
+				<li>Ability to force reinstallation of any installed package.</li>
+				<li>Ability to downgrade any installed package.</li>
+				<li>Ability to execute pre/post install/remove/update scriptlets.</li>
+				<li>Ability to check package integrity: missing files, hashes, missing or unresolved (reverse)dependencies, dangling or modified symlinks, etc.</li>
+			</ul>
+			<p>The latest stable version <strong>0.26.2</strong> was released on <strong>September 30th, 2013</strong>.</p>
+			<p>XBPS is the package manager used by the <a href="http://www.voidlinux.eu">Void Linux distribution</a> also created by the same author: <a href="https://github.com/xtraeme">Juan RP</a>.</p>
+		</div>
+
+		<div id="src">
+			<h2 class="cattitle">Getting source code</h2>
+			<p>Starting with <strong>0.26</strong> there are not source tarballs anymore. <strong>git</strong> must be used to clone the repository with the appropiate tag. The latest stable version can be fetched with:</p>
+			<pre><code>$ git clone -b &lt;version&gt; git://github.com/xtraeme/xbps.git</code></pre>
+			<p>Run <strong>git tag -l</strong> to list all available stable releases.</p>
+			<p style="text-align:center;"><strong>Latest stable version: 0.26.2</strong></p>
+		</div>
+
+		<div id="deps">
+			<h2 class="cattitle">Build requirements</h2>
+			<p>To build this you'll need:</p>
+			<ul>
+				<li><a href="http://www.gnu.org/software/make/">GNU make</a></li>
+				<li><a href="http://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</a></li>
+				<li><a href="http://www.zlib.net/">zlib</a></li>
+				<li><a href="http://www.openssl.org/">OpenSSL</a></li>
+				<li><a href="http://www.libarchive.org/">libarchive</a></li>
+				<li><a href="http://www.nongnu.org/confuse">confuse</a></li>
+			</ul>
+			<p>And optionally:</p>
+			<ul>
+				<li><a href="http://www.graphviz.org/">graphviz</a> and <a href="http://www.doxygen.org/">doxygen</a> (--with-api-docs) to build the API documentation.</li>
+				<li><a href="http://code.google.com/p/kyua">ATF</a> (--with-tests) to build the Kyua test suite.</li>
+			</ul>
+		</div>
+
+		<div id="build">
+			<h2 class="cattitle">Build instructions</h2>
+			<p>Standard configure script (not generated by GNU autoconf).</p>
+			<pre><code>$ ./configure --prefix=/blah
+$ make -jX
+$ make install</code></pre>
+			<p>By default PREFIX is set <em>/usr/local</em> and may be changed by setting <em>--prefix</em> in the configure script. The <em>DESTDIR</em> variable is also supported at the install stage.</p>
+			<p>There are some more options that can be tweaked, see them with <em>./configure --help</em>.</p>
+		</div>
+
+		<div id="commits">
+			<h2 class="cattitle">Latest commits <span class="rssdev"><a href="https://github.com/voidlinux/xbps/commits/master.atom" title="Subscribe to the commits"><i class="fa fa-rss fa-lg"></i></a></span></h2>
+			<script src="http://www.generateit.net/rss-javascript/feed2js.php?src=https%3A%2F%2Fgithub.com%2Fvoidlinux%2Fxbps%2Fcommits%2Fmaster.atom&amp;num=10&amp;targ=y&amp;utf=y" type="text/javascript"></script>
+		</div>
+
+	</article>

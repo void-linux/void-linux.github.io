@@ -1,14 +1,15 @@
-/* BY YPNOSE, FOR XTRAEMEAT */
+/* BY YPNOSE, FOR XTRAEMEAT (DON'T DELETE THIS LINE BRO!) */
+/* IF YOU DO IT, I COME TO SPAIN AND I SLAP YA :D */
 @font-face {
 	font-family:"Carme";
-	src:url('/fonts/Carme-Regular.ttf');
+	src:url('/assets/fonts/Carme-Regular.ttf');
 	font-weight:normal;
 	font-style:normal;
 }
 @font-face {
 	font-family:'FontAwesome';
-	src:url('../fonts/fontawesome-webfont.eot?v=4.0.3');
-	src:url('../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+	src:url('/assets/fonts/fontawesome-webfont.eot?v=4.0.3');
+	src:url('/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('/assets/fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('/assets/fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('/assets/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
 	font-weight:normal;
 	font-style:normal;
 }
@@ -37,10 +38,10 @@ nav,header,article h1,article h2, article h3 {
 body,#links ul,#social ul {
 	margin:0;
 }
-#navwrap,#voidwrap,article,article h1, article h2, article h3,#davoid,#xtraemewrap {
+#navwrap,#navpost,#navxbps,#voidwrap,article,article h1, article h2, article h3,#davoid,#xtraemewrap {
 	margin:0 auto;
 }
-#voidwrap,article h1, article h2, article h3,footer {
+#voidwrap,article h1, article h2, article h3,.postarticle,footer {
 	text-align:center;
 }
 .fa,#title h1 {
@@ -52,12 +53,17 @@ body,#links ul,#social ul {
 nav,#xtraemewrap {
 	font-size:16px;
 }
+#title h1,.postarticle h2 {
+	padding-top:20px;
+}
+#navwrap,#navpost,#navxbps {
+	line-height:24px;
+}
 /* --- */
 a,a:visited {
 	color:#478061;
 	text-decoration:none;
 	outline:none;
-	white-space:nowrap;
 	transition:all .35s ease;
 }
 a:hover {
@@ -75,7 +81,12 @@ nav {
 }
 #navwrap {
 	max-width:1000px;
-	line-height:24px;
+}
+#navpost {
+	max-width:560px;
+}
+#navxbps {
+	max-width:760px;
 }
 #social {
 	float:right;
@@ -93,9 +104,95 @@ nav {
 	line-height:0.75em;
 	vertical-align:-15%;
 }
-#rssdev a i {
+header {
+	margin:90px 0 0;
+}
+#voidwrap {
+	max-width:800px;
+	padding:30px 24px;
+}
+#davoid {
+	background:url("/assets/img/voidlogo.png") no-repeat;
+	width:206px;
+	height:151px;
+	display:block;
+	-webkit-transition:all 1s ease-in-out;
+	transition:all 1s ease-in-out;
+}
+#davoid:hover {
+	-webkit-transform:rotate(360deg);
+	transform:rotate(360deg);
+}
+#title h1 {
+	font-size:28px;
+	line-height:44px;
+	color:#606060;
+}
+article {
+	max-width:900px;
+	padding:16px 24px 46px;
+	text-align:justify;
+	line-height:34px;
+}
+article h1, article h2 {
+	max-width:74%;
+	padding-bottom:10px;
+}
+article h3 {
+	max-width:58%;
+	padding:36px 0 10px;
+}
+.cattitle {
+	padding-top:90px;
+}
+article ul {
+	list-style-type:circle;
+	padding-left:25px;
+}
+.postarticle {
+	padding-top:40px;
+}
+.postarticle div {
+	font-weight:bold;
+}
+pre,p code {
+	font-family:Consolas, "Liberation Mono", Courier, monospace;
+	font-size:17px;
+	background-color:#EEE;
+	border:1px solid #D0D0D0;
+	border-radius:4px;
+}
+pre {
+	padding:4px 12px;
+	overflow-x:auto;
+}
+p code {
+	padding:2px 6px;
+}
+blockquote {
+	margin-left:20px;
+	border-left:6px solid grey;
+}
+blockquote p {
+	font-style:italic;
+	padding-left:10px;
+}
+.rssdev a i {
 	font-size:1em;
 	vertical-align:-8%;
+}
+/* FUCK YOU STUPID MESSAGE _|_ I'M STRONGER THAN U */
+.rss-box span {
+	display:none;
+}
+footer {
+	background-color:#BDD7BD;
+	border-top:1px solid #92A692;
+}
+#xtraemewrap {
+	max-width:600px;
+	line-height:30px;
+	padding:36px 16px 16px;
 }
 .fa-google-plus-square:before {
 	content:"\f0d4";
@@ -115,71 +212,14 @@ nav {
 .fa-rss:before {
 	content:"\f143";
 }
-header {
-	margin:90px 0 0;
+.fa-home:before {
+	content:"\f015";
 }
-#voidwrap {
-	max-width:800px;
-	padding:30px 24px;
+.fa-previous:before {
+	content:"\f190";
 }
-#davoid {
-	background:url("/img/voidlogo.png") no-repeat;
-	width:206px;
-	height:151px;
-	display:block;
-	-webkit-transition:all 1s ease-in-out;
-	transition:all 1s ease-in-out;
-}
-#davoid:hover {
-	-webkit-transform:rotate(360deg);
-	transform:rotate(360deg);
-}
-#title h1 {
-	font-size:28px;
-	line-height:44px;
-	color:#606060;
-	padding-top:20px;
-}
-article {
-	max-width:900px;
-	padding:16px 24px;
-	text-align:justify;
-	line-height:34px;
-}
-article h1, article h2, article h3 {
-	max-width:74%;
-	padding-bottom:10px;
-}
-article h2 {
-	padding-top:90px;
-}
-article ul {
-	list-style-type:circle;
-	padding-left:25px;
-}
-pre,p code {
-	font-family:Consolas, "Liberation Mono", Courier, monospace;
-	font-size:17px;
-}
-pre {
-	background-color:#EEE;
-	padding:4px 12px;
-	border:1px solid #D0D0D0;
-	border-radius:4px;
-	overflow-x:auto;
-}
-/* FUCK YOU STUPID MESSAGE _|_ */
-.rss-box span {
-	display:none;
-}
-footer {
-	background-color:#BDD7BD;
-	border-top:1px solid #92A692;
-}
-#xtraemewrap {
-	max-width:600px;
-	line-height:30px;
-	padding:30px 16px 16px;
+.fa-next:before {
+	content:"\f18e";
 }
 #xtraemewrap a:hover {
 	color:#569C76;
@@ -188,7 +228,7 @@ footer {
 	nav {
 		padding:10px 14px;
 	}
-	#navwrap {
+	#navwrap,#navpost,#navxbps {
 		text-align:center;
 	}
 	#social {
@@ -202,8 +242,11 @@ footer {
 	}
 }
 @media screen and (max-width:500px) {
-	body,#xtraemewrap {
+	body {
 		font-size:15px;
+	}
+	pre,p code,#xtraemewrap {
+		font-size:14px;
 	}
 	#title h1 {
 		font-size:24px;

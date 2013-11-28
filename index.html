@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<!--[if lt IE 9]>
-	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<meta charset="utf-8" />
-	<meta name="author" content="Ypnose" />
-	<meta name="viewport" content="width=device-width" />
-	<title>Welcome to the Void!</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-</head>
-<body>
+---
+layout: default
+---
 	<nav>
 		<div id="navwrap">
 			<div id="links">
 				<ul>
 					<li><a href="#wtf">What is Void?</a></li>
-					<li><a href="https://github.com/voidlinux/documentation/wiki/news">News</a></li>
+					<li><a href="#news">News</a></li>
 					<li><a href="#features">Features</a></li>
 					<li><a href="#download">Download</a></li>
 					<li><a href="#src">Sources</a></li>
@@ -25,46 +15,37 @@
 					<li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=QMV62MDXJ955N">Donate</a></li>
 				</ul>
 			</div>
-			<div id="social">
-				<ul>
-					<li><a href="https://plus.google.com/communities/113949500587973059533" title="Google +"><i class="fa fa-google-plus-square fa-lg"></i></a></li>
-					<li><a href="http://webchat.freenode.net/?channels=%23xbps&amp;uio=d4" title="Join us on IRC!"><i class="fa fa-comments fa-lg"></i></a></li>
-					<li><a href="https://github.com/voidlinux" title="Fork Void Linux"><i class="fa fa-github-alt fa-lg"></i></a></li>
-					<li><a href="http://build.voidlinux.eu/console" title="See latest pkg builds"><i class="fa fa-cog fa-lg"></i></a></li>
-					<li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=QMV62MDXJ955N" title="Donate!"><i class="fa fa-gift fa-lg"></i></a></li>
-				</ul>
-			</div>
+{% include navicon.html %}
 		</div>
 	</nav>
 
-	<header>
-		<div id="voidwrap">
-			<div id="davoid"></div>
-			<div id="title"><h1>A modern distro based on the xbps packaging system</h1></div>
-		</div>
-	</header>
-
+{% include voidbanner.html %}
 	<article>
 
 		<!-- README -->
 		<!-- @xtraemoo: Don't use <br/>, this is ugly / dirty. Separate paragraphs by using <p></p> -->
 		<!-- @xtraemoo: If you want bold, use <strong></strong> (as requested by W3C with HTML5) instead of <b></b>. Thanks -->
 		<!-- @xtraemoo: If you want italic, use <em></em> instead of <i></i>. Thanks -->
+		<!-- Category title should be <h2></h2> and news title should be <h3></h3> -->
 
 		<div id="wtf">
-			<h2>The Void Linux distribution</h2>
+			<h2 class="cattitle">The Void Linux distribution</h2>
 			<p>Speed, reliability, and flexibility. That's the battle-cry of today's disgruntled computer geeks. This is what people want with a Linux distribution, and this is what Void Linux provides.
 			With lightning-fast and useful tools such as the xbps package manager, and <a href="http://www.freedesktop.org/wiki/Software/systemd">systemd</a> (among others), this distribution clearly has <em>all your base</em>, and they rightly <em>belong to us</em>.</p>
 			<p>The spirit of Void is such that we keep things default, necessary, and minimal as possible (while trying not to leave features out).</p>
 			<p>Currently there are over <a href="https://github.com/xtraeme/xbps-packages/tree/master/srcpkgs">3000 optimized packages</a> for the <strong>x86</strong>, <strong>x86_64</strong> and <strong>ARMv6 hard float</strong> (Raspberry Pi and compatibles) architectures, and there's support to cross build the <em>base system</em> packages easily with the xbps-src utility.</p>
 		</div>
 
-		<!-- <div id="news">
-			<h2>News</h2>
-		</div> -->
+		<div id="news">
+			<h2 class="cattitle">News <span class="rssdev"><a href="/atom.xml" title="Subscribe to the news"><i class="fa fa-rss fa-lg"></i></a></span></h2>
+			{% for post in site.posts limit:5 %}<div>
+				<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+				<div>{{ post.content }}</div>
+			</div>{% endfor %}
+		</div>
 
 		<div id="features">
-			<h2>Features</h2>
+			<h2 class="cattitle">Features</h2>
 			<ul>
 				<li>It is not a <strong>fork or customized / modified version of any current distribution</strong>, it has been created from scratch.</li>
 				<li>It is a rolling release with <strong>continuous package updates</strong>.</li>
@@ -82,7 +63,7 @@
 
 		<!-- Read the comments above when you modify your linkzzz ;) -->
 		<div id="download">
-			<h2>Download installable live images</h2>
+			<h2 class="cattitle">Download installable live images</h2>
 			<p>Currently there are installable live images for the <strong>x86</strong> and <strong>x86_64</strong> architectures and there is support to make a local installation (with the included packages) or a network installation (packages are downloaded from official repository).</p>
 			<ul>
 				<li><a href="http://xbps.nopcode.org/live/void-live-x86_64-3.10.19_1-20131114.iso">void-live-x86_64-3.10.19_1-20131114.iso</a><br/> Requirements: <strong>EM64T CPU, 96MB RAM, 350MB disk, Ethernet / WiFi for network installation.</strong></li>
@@ -92,8 +73,9 @@
 			To start the installer just execute the <em>void-installer</em> utility with enough permissions (i.e <em>sudo</em>).</p>
 		</div>
 
+		<!-- Same ^ -->
 		<div id="dlroot">
-			<h2>Download ready to boot images</h2>
+			<h2 class="cattitle">Download ready to boot images</h2>
 			<p>Currently the only supported way to run Void Linux on the Raspberry PI is by using a <em>prepared image</em> or a <em>rootfs tarball</em> that can be written / unpacked onto the SD card. This method allows you to have
 			a system ready to boot / use, once it's written / unpacked onto the target device.</p>
 			<ul>
@@ -106,7 +88,7 @@
 		</div>
 
 		<div id="src">
-			<h2>Source repositories</h2>
+			<h2 class="cattitle">Source repositories</h2>
 			<ul>
 				<li>xbps (package manager) -- <a href="https://github.com/voidlinux/xbps">github.com/voidlinux/xbps</a></li>
 				<li>xbps-src (binary package builder) -- <a href="https://github.com/voidlinux/xbps-src">github.com/voidlinux/xbps-src</a></li>
@@ -116,19 +98,8 @@
 		</div>
 
 		<div id="commits">
-			<h2>Latest package commits <span id="rssdev"><a href="https://github.com/voidlinux/xbps-packages/commits/master.atom" title="Subscribe to the commits"><i class="fa fa-rss fa-lg"></i></a></span></h2>
+			<h2 class="cattitle">Latest package commits <span class="rssdev"><a href="https://github.com/voidlinux/xbps-packages/commits/master.atom" title="Subscribe to the commits"><i class="fa fa-rss fa-lg"></i></a></span></h2>
 			<script src="http://www.generateit.net/rss-javascript/feed2js.php?src=https%3A%2F%2Fgithub.com%2Fvoidlinux%2Fxbps-packages%2Fcommits%2Fmaster.atom&amp;num=10&amp;targ=y&amp;utf=y" type="text/javascript"></script>
 		</div>
 
 	</article>
-
-	<footer>
-		<div id="xtraemewrap">
-			<div>Copyright 2008-2013 <a href="https://github.com/xtraeme">Juan RP</a> and contributors</div>
-			<div>Using some icons from <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></div>
-			<div>Design by <a href="http://tetedulinuxien.fr/">Ypnose</a></div>
-			<div>Valid <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fvoidlinux.eu">HTML</a> &amp; <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fvoidlinux.eu">CSS</a></div>
-		</div>
-	</footer>
-</body>
-</html>
