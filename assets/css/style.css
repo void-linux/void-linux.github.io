@@ -51,7 +51,7 @@ body,#links ul,#social ul {
 #links,.fa,.voiddate {
 	display:inline-block;
 }
-nav,#xtraemewrap {
+nav,pre,p code,#xtraemewrap {
 	font-size:16px;
 }
 #title h1,#readprevnews,.postarticle h2 {
@@ -59,6 +59,9 @@ nav,#xtraemewrap {
 }
 #navwrap,#navpost,#navxbps,#navnews {
 	line-height:24px;
+}
+nav a,p code {
+	white-space:nowrap;
 }
 /* --- */
 a,a:visited {
@@ -167,7 +170,6 @@ article ul {
 }
 pre,p code {
 	font-family:Consolas, "Liberation Mono", Courier, monospace;
-	font-size:17px;
 	background-color:#EEE;
 	border:1px solid #D0D0D0;
 	border-radius:4px;
