@@ -1,0 +1,26 @@
+---
+layout: default
+---
+	<nav>
+		<div id="navnews">
+			<div id="links">
+				<ul>
+					<li><a href="/" title="Main page"><i class="fa fa-home fa-lg"></i> Home</a></li>
+				</ul>
+			</div>
+{% include navicon.html %}
+		</div>
+	</nav>
+
+{% include voidbanner.html %}
+	<article>
+		<div>
+			<h2 class="postarticle">Void Linux News</h2>
+			<ul>
+{% for post in site.posts reverse %}{% if post.index != false %}
+				<li><span class="voiddate">{{ post.date | date: "%d.%m.%Y" }}</span><span class="sep">-</span><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endif %}{% endfor %}
+			</ul>
+		</div>
+
+	</article>

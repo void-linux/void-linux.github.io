@@ -38,25 +38,25 @@ nav,header,article h1,article h2, article h3 {
 body,#links ul,#social ul {
 	margin:0;
 }
-#navwrap,#navpost,#navxbps,#voidwrap,article,article h1, article h2, article h3,#davoid,#xtraemewrap {
+#navwrap,#navpost,#navxbps,#navnews,#voidwrap,article,article h1, article h2, article h3,#davoid,#xtraemewrap {
 	margin:0 auto;
 }
-#voidwrap,article h1, article h2, article h3,.postarticle,footer {
+#voidwrap,article h1, article h2, article h3,#readprevnews,.postarticle,footer {
 	text-align:center;
 }
 .fa,#title h1 {
 	font-weight:normal;
 }
-#links,.fa {
+#links,.fa,.voiddate {
 	display:inline-block;
 }
 nav,#xtraemewrap {
 	font-size:16px;
 }
-#title h1,.postarticle h2 {
+#title h1,#readprevnews,.postarticle h2 {
 	padding-top:20px;
 }
-#navwrap,#navpost,#navxbps {
+#navwrap,#navpost,#navxbps,#navnews {
 	line-height:24px;
 }
 /* --- */
@@ -87,6 +87,9 @@ nav {
 }
 #navxbps {
 	max-width:760px;
+}
+#navnews {
+	max-width:440px;
 }
 #social {
 	float:right;
@@ -149,11 +152,20 @@ article ul {
 	list-style-type:circle;
 	padding-left:25px;
 }
+#readprevnews {
+	
+}
 .postarticle {
 	padding-top:40px;
 }
 .postarticle div {
 	font-weight:bold;
+}
+.voiddate {
+	width:98px;
+}
+.sep {
+	margin:0 5px;
 }
 pre,p code {
 	font-family:Consolas, "Liberation Mono", Courier, monospace;
@@ -177,7 +189,7 @@ blockquote p {
 	font-style:italic;
 	padding-left:10px;
 }
-.rssdev a i {
+#readprevnews a i,.rssdev a i {
 	font-size:1em;
 	vertical-align:-8%;
 }
@@ -221,6 +233,9 @@ footer {
 .fa-next:before {
 	content:"\f18e";
 }
+.fa-go:before {
+	content:"\f064";
+}
 #xtraemewrap a:hover {
 	color:#569C76;
 }
@@ -228,7 +243,7 @@ footer {
 	nav {
 		padding:10px 14px;
 	}
-	#navwrap,#navpost,#navxbps {
+	#navwrap,#navpost,#navxbps,#navnews {
 		text-align:center;
 	}
 	#social {
@@ -254,5 +269,11 @@ footer {
 	}
 	article {
 		line-height:28px;
+	}
+	article ul {
+		text-align:left;
+	}
+	.voiddate {
+		width:78px;
 	}
 }
