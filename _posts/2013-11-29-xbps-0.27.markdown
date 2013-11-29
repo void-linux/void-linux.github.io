@@ -49,13 +49,13 @@ Release notes:
  - The testsuite now contains more tests than ever and will be extended as new
    issues appear.
 
- - Fixed issue #20: https://github.com/voidlinux/xbps/issues/20
+ - Fixed [issue #20](https://github.com/voidlinux/xbps/issues/20)
 
- - Fixed issue #19: https://github.com/voidlinux/xbps/issues/19
+ - Fixed [issue #19](https://github.com/voidlinux/xbps/issues/19)
 
- - Fixed issue #18: https://github.com/voidlinux/xbps/issues/18
+ - Fixed [issue #18](https://github.com/voidlinux/xbps/issues/18)
 
- - Fixed issue #6: https://github.com/voidlinux/xbps/issues/6
+ - Fixed [issue #6](https://github.com/voidlinux/xbps/issues/6)
 
  - `xbps-rindex(8)`: also understands the `XBPS_PASSPHRASE` environmental variable to
    supply the passphrase when signing repositories.
@@ -65,13 +65,13 @@ Release notes:
  - Support for RSA signed repositories. A repository can be signed with your
    preferred RSA key (any ssh key works) as follows:
 
-    $ xbps-rindex --sign --signedby "foobar <foo@bar>" --privkey /priv/key /path/to/repo
+      `$ xbps-rindex --sign --signedby "foobar <foo@bar>" --privkey /priv/key /path/to/repo`
 
    If `--privkey` is not specified, it defaults to `~/.ssh/id_rsa`.
 
    Public keys must be imported before using external remote repositories via `xbps-install(8)`:
 
-    $ xbps-install -S
+      `$ xbps-install -S`
 
    Starting from now on all remote repositories must be signed and verified.
    Local repos do not need to be signed and they will work as before.
