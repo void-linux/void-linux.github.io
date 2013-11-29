@@ -169,7 +169,6 @@ article ul {
 	margin:0 5px;
 }
 pre,p code {
-	font-family:Consolas, "Liberation Mono", Courier, monospace;
 	background-color:#EEE;
 	border:1px solid #D0D0D0;
 	border-radius:4px;
@@ -177,6 +176,9 @@ pre,p code {
 pre {
 	padding:4px 12px;
 	overflow-x:auto;
+}
+code {
+	font-family:Consolas, "Liberation Mono", Courier, monospace;
 }
 p code {
 	padding:2px 6px;

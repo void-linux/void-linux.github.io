@@ -23,7 +23,6 @@ $ xbps-query -vL
     2 http://xbps.nopcode.org/repos/current/nonfree (RSA signed, verified)
       Signed-by: Void Linux
       4096 60:ae:0c:d6:f0:95:17:80:bc:93:46:7a:89:af:a3:2d
-$
 ```
 
 Installing or updating packages from remote repositories will trigger a signature
@@ -35,7 +34,6 @@ verification, i.e:
 [*] Updating `http://xbps.nopcode.org/repos/current/nonfree/armv6l-repodata' ...
 [*] http://xbps.nopcode.org/repos/current: RSA signature verified
 [*] http://xbps.nopcode.org/repos/current/nonfree: RSA signature verified
-#
 ```
 
 External RSA public keys can be imported via `xbps-install -S`; just make sure to verify
