@@ -39,7 +39,7 @@ verification, i.e:
 ```
 
 External RSA public keys can be imported via `xbps-install -S`; just make sure to verify
-the validity of its fingerprint before accepting them blindly.
+the validity of their fingerprint before accepting them blindly.
 
 Release notes:
 
