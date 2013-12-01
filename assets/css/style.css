@@ -163,7 +163,7 @@ article ul {
 	font-weight:bold;
 }
 .voiddate {
-	width:98px;
+	width:90px;
 }
 .sep {
 	margin:0 5px;
@@ -276,6 +276,6 @@ footer {
 		text-align:left;
 	}
 	.voiddate {
-		width:78px;
+		width:70px;
 	}
 }
