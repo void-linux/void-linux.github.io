@@ -210,9 +210,10 @@ footer {
 	max-width:600px;
 	padding:36px 16px 16px;
 }
+/* JUNK */
 #disqus {
 	max-width:840px;
-	margin:40px auto 20px;
+	margin:44px auto 20px;
 }
 .fa-google-plus-square:before {
 	content:"\f0d4";
