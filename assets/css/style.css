@@ -51,8 +51,11 @@ body,#links ul,#social ul {
 #links,.fa,.voiddate {
 	display:inline-block;
 }
-nav,pre,p code,#xtraemewrap {
+nav,#xtraemewrap {
 	font-size:16px;
+}
+article,#xtraemewrap {
+	line-height:30px;
 }
 #title h1,#readprevnews,.postarticle h2 {
 	padding-top:20px;
@@ -139,7 +142,6 @@ article {
 	max-width:900px;
 	padding:16px 24px 46px;
 	text-align:justify;
-	line-height:30px;
 }
 article h1, article h2 {
 	max-width:74%;
@@ -172,6 +174,7 @@ pre,p code {
 	background-color:#EEE;
 	border:1px solid #D0D0D0;
 	border-radius:4px;
+	font-size:14px;
 }
 pre {
 	padding:4px 12px;
@@ -205,7 +208,6 @@ footer {
 }
 #xtraemewrap {
 	max-width:600px;
-	line-height:30px;
 	padding:36px 16px 16px;
 }
 .fa-google-plus-square:before {
