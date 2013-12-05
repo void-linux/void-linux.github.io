@@ -2,6 +2,7 @@
 layout: post
 title: "GNU libc locales disabled by default"
 date: 2013-05-20
+comments: true
 ---
 
 Starting with `glibc-locales-2.17_7` all locales that were enabled in `/etc/default/libc-locales` previously (de, en, es, fr, etc) are now disabled by default. The installer will enable the wanted locale for new installations.

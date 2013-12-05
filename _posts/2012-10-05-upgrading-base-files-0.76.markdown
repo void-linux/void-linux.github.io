@@ -2,6 +2,7 @@
 layout: post
 title: "Upgrading to base-files-0.76"
 date: 2012-10-05 02:00:00
+comments: true
 ---
 
 This package now owns some files in /etc that didn't have any owner, as follows:

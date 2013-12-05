@@ -2,6 +2,7 @@
 layout: post
 title: "New XBPS 0.25 repository format"
 date: 2013-07-05
+comments: true
 ---
 
 Starting with XBPS 0.25, the repository format has been changed to a single compressed file.

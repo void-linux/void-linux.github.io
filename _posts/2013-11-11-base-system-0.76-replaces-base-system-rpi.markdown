@@ -2,6 +2,7 @@
 layout: post
 title: "base-system-0.76 replaces base-system-rpi"
 date: 2013-11-11
+comments: true
 ---
 
 The `base-system` package has been updated to `0.76` and now it's the default for Raspberry Pi too.

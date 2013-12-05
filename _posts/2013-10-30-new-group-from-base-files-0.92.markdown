@@ -2,6 +2,7 @@
 layout: post
 title: "New group from base-files 0.92"
 date: 2013-10-30
+comments: true
 ---
 
 Starting with `base-files-0.92` a new group `xbuilder` with `gid 101` has been added

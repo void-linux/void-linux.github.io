@@ -2,6 +2,7 @@
 layout: post
 title: "Switch to util-linux kill(1) and procps-ng uptime(1)"
 date: 2013-02-20
+comments: true
 ---
 
 coreutils-8.21_3 does not provide the kill(1) and uptime(1) commands anymore. We now use util-linux kill(1) and procps-ng uptime(1). When upgrading there may be some conflicts as shown below:

@@ -2,6 +2,7 @@
 layout: post
 title: "gvfs plugins split"
 date: 2013-12-02
+comments: true
 ---
 
 Starting with `gvfs-1.18.3_2` many of the provided plug-ins have been splitted

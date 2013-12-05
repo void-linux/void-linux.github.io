@@ -2,6 +2,7 @@
 layout: post
 title: "New users/groups from base-files 0.81"
 date: 2013-02-25
+comments: true
 ---
 
 Starting from base-files-0.81, the dbus and avahi system accounts and the network groups are added by default to `/etc/passwd` and `/etc/group` as follows:

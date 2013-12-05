@@ -2,6 +2,7 @@
 layout: post
 title: "Mesa update to 10.0 and Software OpenGL"
 date: 2013-12-02
+comments: true
 ---
 
 The Mesa package (along with its subpackages) has been updated to 10.0. This provides

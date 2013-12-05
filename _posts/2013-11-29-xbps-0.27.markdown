@@ -2,6 +2,7 @@
 layout: post
 title: "XBPS 0.27 released"
 date: 2013-11-29
+comments: true
 ---
 
 The latest XBPS stable version for 2013 is finally out: 0.27. This release contains

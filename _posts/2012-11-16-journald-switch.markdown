@@ -2,6 +2,7 @@
 layout: post
 title: "Full switch to journald"
 date: 2012-11-16
+comments: true
 ---
 
 base-system-0.67 does not depend on "syslog-daemon" and "logrotate" anymore.

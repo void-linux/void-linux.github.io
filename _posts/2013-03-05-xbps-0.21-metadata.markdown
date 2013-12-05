@@ -2,6 +2,7 @@
 layout: post
 title: "New XBPS pkgdb 0.21 metadata format"
 date: 2013-03-05
+comments: true
 ---
 
 Starting from today, the xbps-git package and the upcoming 0.21 version contains incompatible changes for the package database format (pkgdb). Please upgrade manually the xbps package (or xbps-git) and then use `xbps-pkgdb(8)` from 0.21 to update the metadata format.

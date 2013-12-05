@@ -2,6 +2,7 @@
 layout: post
 title: "Switch to systemd-journal group"
 date: 2013-03-27
+comments: true
 ---
 
 Starting with `systemd-199` the group to access the systemd journal group has been changed to the upstream
