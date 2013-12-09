@@ -22,4 +22,4 @@ To install it simply install the `enlightenment` package:
 
 A screenshot of my E18 desktop:
 
-![E18 RC2 xtraeme desktop](https://github.com/voidlinux/voidlinux.github.com/raw/master/screenshots/e18-rc2-xtraeme.png "E18 RC2 xtraeme desktop")
+[![E18 RC2 xtraeme desktop](/assets/screenshots/e18-rc2-xtraeme.png "E18 RC2 xtraeme desktop")](/assets/screenshots/e18-rc2-xtraeme.png)
