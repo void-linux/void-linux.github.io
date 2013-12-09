@@ -9,10 +9,10 @@ currently in the Release Candidate 2 phase. To anticipate the release
 I've updated Enlightenment and EFL related components to the latest released
 versions available:
 
- - EFL-1.8.2
- - Elementary-1.8.1
- - Evas Generic Loaders 1.8.0
- - Emotion Generic Players 1.8.1
+ - EFL 1.8.2
+ - Elementary 1.8.1
+ - Evas Generic Loaders 1.8.1
+ - Emotion Generic Players 1.8.0
  - Enlightenment 0.18.0-rc2
  - Python EFL bindings 1.8.0
 
@@ -20,3 +20,6 @@ To install it simply install the `enlightenment` package:
 
     # xbps-install -Sy enlightenment
 
+A screenshot of my E18 desktop:
+
+![E18 RC2 xtraeme desktop](https://github.com/voidlinux/voidlinux.github.com/raw/master/screenshots/e18-rc2-xtraeme.png "E18 RC2 xtraeme desktop")
