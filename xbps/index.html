@@ -102,7 +102,21 @@ $ make install</code></pre>
 
 		<div id="commits">
 			<h2 class="cattitle">Latest commits <span class="rssdev"><a href="https://github.com/voidlinux/xbps/commits/master.atom" title="Subscribe to the commits"><i class="fa fa-rss fa-lg"></i></a></span></h2>
-			<script src="http://www.generateit.net/rss-javascript/feed2js.php?src=https%3A%2F%2Fgithub.com%2Fvoidlinux%2Fxbps%2Fcommits%2Fmaster.atom&amp;num=10&amp;targ=y&amp;utf=y" type="text/javascript"></script>
+			<ul class="dafeed">&nbsp;</ul>
+			<script type="text/html" id="xbpscommits">
+				<li><a class="link" href="<!=link!>" title="<!=title!>"><!=title!></a></li>
+			</script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+			<script src="/assets/js/jquery.feeds.min.js"></script>
+			<script>
+				$('.dafeed').feeds({
+					feeds: {
+					  github : 'https://github.com/voidlinux/xbps/commits/master.atom'
+					},
+					max: 10,
+					entryTemplate: 'xbpscommits',
+				});
+			</script>
 		</div>
 
 	</article>
