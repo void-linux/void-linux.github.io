@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "E18 RC2 has been pushed to the official repository"
+title: "E18 RC1 has been pushed to the official repository"
 comments: true
 ---
 
 The Enlightenment 0.18 release (aka E18) will be soon released and it's
-currently in the Release Candidate 2 phase. To anticipate the release
+currently in the Release Candidate 1 phase. To anticipate the release
 I've updated Enlightenment and EFL related components to the latest released
 versions available:
 
@@ -22,4 +22,4 @@ To install it simply install the `enlightenment` package:
 
 A screenshot of my E18 desktop:
 
-[![E18 RC2 xtraeme desktop](/assets/screenshots/e18-rc2-xtraeme.png "E18 RC2 xtraeme desktop")](/assets/screenshots/e18-rc2-xtraeme.png)
+[![E18 RC1 xtraeme desktop](/assets/screenshots/e18-rc2-xtraeme.png "E18 RC1 xtraeme desktop")](/assets/screenshots/e18-rc2-xtraeme.png)
