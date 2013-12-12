@@ -20,5 +20,4 @@ Also with that version, two new packages are also installed by default:
 
 If you have any of them installed manually, you can change its `installation type` to `automatic`:
 
-    # xbps-pkgdb -m auto f2fs-tools
-    # xbps-pkgdb -m auto openssh-server
+    # xbps-pkgdb -m auto f2fs-tools openssh-server
