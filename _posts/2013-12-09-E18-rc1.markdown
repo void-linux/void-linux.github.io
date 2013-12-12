@@ -13,7 +13,7 @@ versions available:
  - Elementary 1.8.1
  - Evas Generic Loaders 1.8.1
  - Emotion Generic Players 1.8.0
- - Enlightenment 0.18.0-rc2
+ - Enlightenment 0.18.0-rc1
  - Python EFL bindings 1.8.0
 
 To install it simply install the `enlightenment` package:
