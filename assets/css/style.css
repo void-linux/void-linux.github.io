@@ -154,9 +154,11 @@ article h1,article h2 {
 article h3 {
 	max-width:58%;
 	padding:36px 0 10px;
+	font-size:20px;
 }
 .cattitle {
 	padding-top:90px;
+	font-size:24px;
 }
 article ul {
 	list-style-type:circle;
@@ -169,7 +171,7 @@ article ul {
 	font-weight:bold;
 }
 .voiddate {
-	width:90px;
+	width:82px;
 }
 .sep {
 	margin:0 5px;
