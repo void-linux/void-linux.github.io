@@ -8,7 +8,7 @@ In this post I'll show a real and simple example of the XBPS API. The
 example allows you to find out which packages are being maintained by a 
 contributor (aka maintainer).
 
-```
+{% highlight C %}
 #define _GNU_SOURCE /* for strcasestr() */
 #include <stdio.h>
 #include <stdlib.h>
@@ -66,7 +66,7 @@ int main(int argc, char **argv)
 	rv = xbps_rpool_foreach(&xh, repo_foreach, argv[1]);
 	exit(rv);
 }
-```
+{% endhighlight %}
 
 To compile the example you'll have to install some additional packages:
 
@@ -89,8 +89,6 @@ http://xbps.nopcode.org/repos/current:
   emacs-24.3_2 (Philipp Hirsch <itself@hanspolo.net>)
   task-2.2.0_1 (Philipp Hirsch <itself@hanspolo.net>)
   vorbis-tools-1.4.0_1 (Philipp Hirsch <itself@hanspolo.net>)
-
-$
 ```
 
 Please check out `/usr/include/xbps.h` to know more about the XBPS API.

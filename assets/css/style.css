@@ -177,17 +177,19 @@ article ul {
 	margin:0 5px;
 }
 pre,p code {
-	background-color:#EEE;
+	background-color:#F2F2F2;
 	border:1px solid #D0D0D0;
 	border-radius:4px;
 	font-size:13px;
+	line-height:22px;
 }
 pre {
-	padding:4px 12px;
+	padding:8px 12px;
 	overflow-x:auto;
 }
 code {
 	font-family:Consolas, "Liberation Mono", Courier, monospace;
+	color:#222;
 }
 p code {
 	padding:2px 6px;
