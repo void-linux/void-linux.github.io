@@ -83,12 +83,12 @@ available repositories, i.e:
 ```
 $ ./a.out hans
 http://xbps.nopcode.org/repos/current:
-  abcde-2.5.4_2 (Philipp Hirsch <urself@hanscoco.net>)
-  abook-0.5.6_1 (Philipp Hirsch <urself@hanscoco.net>)
-  cd-discid-1.4_2 (Philipp Hirsch <urself@hanscoco.net>)
-  emacs-24.3_2 (Philipp Hirsch <urself@hanscoco.net>)
-  task-2.2.0_1 (Philipp Hirsch <urself@hanscoco.net>)
-  vorbis-tools-1.4.0_1 (Philipp Hirsch <urself@hanscoco.net>)
+  abcde-2.5.4_2 (Philip Morris <cancer@marlboro.us>)
+  abook-0.5.6_1 (Philip Morris <cancer@marlboro.us>)
+  cd-discid-1.4_2 (Philip Morris <cancer@marlboro.us>)
+  emacs-24.3_2 (Philip Morris <cancer@marlboro.us>)
+  task-2.2.0_1 (Philip Morris <cancer@marlboro.us>)
+  vorbis-tools-1.4.0_1 (Philip Morris <cancer@marlboro.us>)
 ```
 
 Please check out `/usr/include/xbps.h` to know more about the XBPS API.
