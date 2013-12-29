@@ -81,7 +81,7 @@ You can then specify a string to be matched in all packages registered in all
 available repositories, i.e:
 
 ```
-$ ./a.out hans
+$ ./a.out morris
 http://xbps.nopcode.org/repos/current:
   abcde-2.5.4_2 (Philip Morris <cancer@marlboro.us>)
   abook-0.5.6_1 (Philip Morris <cancer@marlboro.us>)
