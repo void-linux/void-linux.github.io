@@ -56,7 +56,7 @@ To compile the example you'll have to install some additional packages:
 
 And then to compile the C source code:
 
-    $ cc `pkg-config --cflags --libs libxbps` list_installed_pkgs_.c
+    $ cc `pkg-config --cflags --libs libxbps` list_installed_pkgs.c
 
 You can then specify a path to the root directory to list installed packages:
 
