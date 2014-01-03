@@ -176,7 +176,7 @@ article ul {
 .sep {
 	margin:0 5px;
 }
-pre,p code {
+pre,p code,ul li code {
 	background-color:#F2F2F2;
 	border:1px solid #D0D0D0;
 	border-radius:4px;
@@ -191,7 +191,7 @@ code {
 	font-family:Consolas, "Liberation Mono", Courier, monospace;
 	color:#222;
 }
-p code {
+p code,ul li code {
 	padding:2px 6px;
 }
 img {
