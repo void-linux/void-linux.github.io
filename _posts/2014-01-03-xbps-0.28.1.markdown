@@ -29,4 +29,5 @@ specified in a configuration file.
 
 - Fixed [issue #24](https://github.com/voidlinux/xbps/issues/24)
 
-Please report issues at https://github.com/voidlinux/xbps/issues
+Please report issues at
+[https://github.com/voidlinux/xbps/issues](https://github.com/voidlinux/xbps/issues)
