@@ -2,6 +2,7 @@
 layout: post
 title: "Create your repositories!"
 comments: true
+date: 2014-01-03 20:00:00
 ---
 
 Void Linux supports custom repositories. It's very easy to create your own signed repo

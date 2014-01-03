@@ -2,6 +2,7 @@
 layout: post
 title: "XBPS 0.28.1 released"
 comments: true
+date: 2014-01-03 12:00:00
 ---
 
 A new XBPS stable version has been released: 0.28.1. This release implements
