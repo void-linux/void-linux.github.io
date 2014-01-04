@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Create your repositories!"
+title: "Create your own XBPS repositories!"
 comments: true
 date: 2014-01-03 20:00:00
 ---
