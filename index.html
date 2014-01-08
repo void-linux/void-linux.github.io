@@ -6,8 +6,8 @@ layout: default
 			<div id="links">
 				<ul>
 					<li><a href="#wtf">What is Void?</a></li>
-					<li><a href="#news">News</a></li>
 					<li><a href="#features">Features</a></li>
+					<li><a href="#news">News</a></li>
 					<li><a href="#download">Download</a></li>
 					<li><a href="#src">Sources</a></li>
 					<li><a href="#findpkg">Pkg</a></li>
@@ -37,15 +37,6 @@ layout: default
 			<p>Currently there are over <a href="https://github.com/xtraeme/xbps-packages/tree/master/srcpkgs">3000 optimized packages</a> for the <strong>x86</strong>, <strong>x86_64</strong> and <strong>ARMv6 hard float</strong> (Raspberry Pi and compatibles) architectures, and there's support to cross build the <em>base system</em> packages easily with the xbps-src utility.</p>
 		</div>
 
-		<div id="news">
-			<h2 class="cattitle">News <span class="rssdev"><a href="/atom.xml" title="Subscribe to the news"><i class="fa fa-rss fa-lg"></i></a></span></h2>
-			{% for post in site.posts limit:5 %}<div>
-				<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-				<div>{{ post.content }}</div>
-			</div>{% endfor %}
-			<p id="readprevnews"><a href="/news"><strong>Read the previous news </strong><i class="fa fa-go fa-lg"></i></a></p>
-		</div>
-
 		<div id="features">
 			<h2 class="cattitle">Features</h2>
 			<ul>
@@ -61,6 +52,15 @@ layout: default
 				<li>It is possible to build binary packages for Void Linux from your favourite linux distribution.</li>
 				<li>Supports installation on <strong>BIOS</strong> and <strong>UEFI 64bit</strong> systems.</li>
 			</ul>
+		</div>
+
+		<div id="news">
+			<h2 class="cattitle">News <span class="rssdev"><a href="/atom.xml" title="Subscribe to the news"><i class="fa fa-rss fa-lg"></i></a></span></h2>
+			{% for post in site.posts limit:5 %}<div>
+				<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+				<div>{{ post.content }}</div>
+			</div>{% endfor %}
+			<p id="readprevnews"><a href="/news"><strong>Read the previous news </strong><i class="fa fa-go fa-lg"></i></a></p>
 		</div>
 
 		<!-- Read the comments above when you modify your linkzzz ;) -->
