@@ -33,4 +33,4 @@ You can then subscribe to the Nix packages channel to query or install any avail
 See [http://nixos.org/nix/manual/#chap-quick-start](http://nixos.org/nix/manual/#chap-quick-start)
 for more information.
 
-NixOS: [http://nixorg.org/](http://nixos.org/)
+NixOS website: [http://nixos.org/](http://nixos.org/)
