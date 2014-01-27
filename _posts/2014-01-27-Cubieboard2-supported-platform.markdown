@@ -19,4 +19,4 @@ The Cubieboard2 is a small low-cost device with the following specifications:
  - 1x IR, 1x line in, 1x line out
  - 96 extend pin interface, including I2C, SPI, RGB/LVDS, CSI/TS, FM-IN, ADC, CVBS, VGA, SPDIF-OUT, R-TP, and more
 
-You can find the image for 2GB SD cards and the rootfs in the [downloads section](http://voidlinux.eu/#downloads)
+You can find the image for 2GB SD cards and the rootfs in the [downloads section](http://voidlinux.eu/#download)
