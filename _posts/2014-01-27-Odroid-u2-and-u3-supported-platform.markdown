@@ -7,7 +7,7 @@ comments: true
 
 Thanks to *Enno Nymous (Gottox)* we now support the Odroid U2/U3 platform.
 
-The Odroid U2/U3 are small low-cost platforms with the following specifications:
+The Odroid U2/U3 are small low-cost devices with the following specifications:
 
 - CPU 1.7GHz Exynos4412 Prime Cortex-A9 Quad-core processor with PoP (Package on Package) 2Gbyte LPDDR2 880Mega Data Rate
 - PMIC MAX77686 Power Management IC from MAXIM
