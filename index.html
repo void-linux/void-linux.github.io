@@ -34,7 +34,7 @@ layout: default
 			<p>Speed, reliability, and flexibility. That's the battle-cry of today's disgruntled computer geeks. This is what people want with a Linux distribution, and this is what Void Linux provides.
 			With lightning-fast and useful tools such as the xbps package manager, and <a href="http://www.freedesktop.org/wiki/Software/systemd">systemd</a> (among others), this distribution clearly has <em>all your base</em>, and they rightly <em>belong to us</em>.</p>
 			<p>The spirit of Void is such that we keep things default, necessary, and minimal as possible (while trying not to leave features out).</p>
-			<p>Currently there are over <a href="https://github.com/xtraeme/xbps-packages/tree/master/srcpkgs">3000 optimized packages</a> for the <strong>x86</strong>, <strong>x86_64</strong> and <strong>ARMv6 hard float</strong> (Raspberry Pi and compatibles) architectures, and there's support to cross build the <em>base system</em> packages easily with the xbps-src utility.</p>
+			<p>Currently there are over <a href="https://github.com/xtraeme/xbps-packages/tree/master/srcpkgs">3000 optimized packages</a> for the <strong>x86</strong>, <strong>x86_64</strong>, <strong>ARMv6 hard float</strong> (Raspberry Pi), and <strong>ARMv7</strong> architectures; also there's support to cross compile <em>base system</em> packages easily with the xbps-src utility.</p>
 		</div>
 
 		<div id="features">
@@ -43,14 +43,14 @@ layout: default
 				<li>It is not a <strong>fork or customized / modified version of any current distribution</strong>, it has been created from scratch.</li>
 				<li>It is a rolling release with <strong>continuous package updates</strong>.</li>
 				<li>The installed base system only provides required utilities for text console usage, <strong>adapt it to your needs</strong>!</li>
-				<li>Kernel images / modules are never removed, providing an <strong>always-bootable system</strong>.</li>
+				<li>Kernel images / modules are never removed, providing an <strong>always-bootable system</strong> (x86 only).</li>
 				<li><a href="https://dracut.wiki.kernel.org/">dracut</a> handles initial ramdisk images.</li>
 				<li><a href="http://linux.dell.com/dkms/">dkms</a> to simplify the management of third party linux kernel modules.</li>
 				<li><a href="http://www.freedesktop.org/wiki/Software/systemd">systemd</a> as system and session manager without <em>SysV</em> init compatibility.</li>
 				<li><a href="http://www.voidlinux.eu/xbps">xbps</a> as native package manager.</li>
 				<li>The binary package builder (<strong>xbps-src</strong>) always builds packages in <em>chroots</em>, without requiring <strong>root privileges</strong>. Required dependencies can be resolved from <strong>local / remote repositories</strong> or directly from the <strong>source packages</strong> tree. Support to cross build packages is also possible.</li>
 				<li>It is possible to build binary packages for Void Linux from your favourite linux distribution.</li>
-				<li>Supports installation on <strong>BIOS</strong> and <strong>UEFI 64bit</strong> systems.</li>
+				<li>Supports installation on <strong>BIOS</strong> and <strong>UEFI 64bit</strong> systems (x86 only).</li>
 			</ul>
 		</div>
 
@@ -77,16 +77,27 @@ layout: default
 
 		<!-- Same ^ -->
 		<div id="dlroot">
-			<h2 class="cattitle">Download ready to boot images</h2>
-			<p>Currently the only supported way to run Void Linux on the Raspberry PI is by using a <em>prepared image</em> or a <em>rootfs tarball</em> that can be written / unpacked onto the SD card. This method allows you to have
+			<h2 class="cattitle">Download ready to boot images for ARM</h2>
+			The current supported ARM platforms are:
+			<ul>
+				<li>Raspberry Pi (ARMv6, hard float)</li>
+				<li>Cubieboard2 (ARMv7, hard float)</li>
+				<li>Odroid U2/U3 (ARMv7, hard float)</li>
+			</ul>
+			<p>You can install Void by using a <em>prepared image</em> or a <em>rootfs tarball</em> that can be written / unpacked onto the SD card. This method allows you to have
 			a system ready to boot / use, once it's written / unpacked onto the target device.</p>
 			<ul>
 				<li>Raspberry Pi image for 2GB SD card (83MB, EXT4): <a href="http://xbps.nopcode.org/live/void-rpi-20131114.img.xz">void-rpi-20131114.img.xz</a></li>
 				<li>Raspberry Pi image for 2GB SD card (83MB, F2FS): <a href="http://xbps.nopcode.org/live/void-rpi-20131114-f2fs.img.xz">void-rpi-20131114-f2fs.img.xz</a></li>
 				<li>Raspberry Pi rootfs (82MB): <a href="http://xbps.nopcode.org/live/void-rpi-rootfs-20131114.tar.xz">void-rpi-rootfs-20131114.tar.xz</a></li>
+				<li>Please read the documentation to prepare the SD card <a href="https://github.com/voidlinux/documentation/wiki/raspberrypi#rootfs-install">here</a>.</li>
 			</ul>
-			<p>Please read the documentation to prepare the SD card
-			<a href="https://github.com/voidlinux/documentation/wiki/raspberrypi#rootfs-install">here</a>. Log in as <strong>root</strong>, password <strong>voidlinux</strong>.</p>
+			<ul>
+				<li>Cubieboard2 image for 2GB SD card (50MB, EXT4): <a href="http://xbps.nopcode.org/live/void-cubieboard2-20130127.img.xz">void-cubieboard2-20130127.img.xz</a></li>
+				<li>Cubieboard2 rootfs (49MB): <a href="http://xbps.nopcode.org/live/void-cubieboard2-rootfs-20140127.tar.xz">void-cubieboard2-rootfs-20140127.tar.xz</a></li>
+				<li>Please read the documentation to prepare the SD card <a href="https://github.com/voidlinux/documentation/wiki/cubieboard2#rootfs-install">here</a>.</li>
+			</ul>
+			<p>Log in as <strong>root</strong>, password <strong>voidlinux</strong>.</p>
 		</div>
 
 		<div id="src">
