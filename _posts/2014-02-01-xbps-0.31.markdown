@@ -5,7 +5,7 @@ comments: true
 ---
 
 A new XBPS stable version has been released: 0.31. This is a major bugfix
-release that fixes concurrenty issues in xbps-rindex(8) (among others):
+release that fixes some concurrency issues in xbps-rindex(8) (among others):
 
 Release notes:
 
