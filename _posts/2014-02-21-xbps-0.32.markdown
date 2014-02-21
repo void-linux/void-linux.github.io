@@ -14,7 +14,7 @@ chars would result in a crash (reported by Gottox).
 
 - Do the package removal in two phases: the first phase checks the
 user has write permission to the entries being removed, if this
-ucceeds then the package removal is performed.
+succeeds then the package removal is performed.
 
 - xbps-remove(8): -O now also remove obsolete pkg signatures from
 cachedir, and ignores pkgs of other architectures.
