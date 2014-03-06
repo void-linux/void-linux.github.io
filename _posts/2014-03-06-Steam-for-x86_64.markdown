@@ -4,11 +4,11 @@ title: "Valve's steam client now available for x86_64"
 comments: true
 ---
 
-Valve's steam client is now available for x86_64. Thanks to the recent improvements
-made to xbps-src, we are now able to build 32bit pkgs for x86_64 by reusing the
+Valve's steam client is now available for x86\_64. Thanks to the recent improvements
+made to xbps-src, we are now able to build 32bit pkgs for x86\_64 by reusing the
 same unmodified build template files.
 
-To install and run steam with Void on x86_64, follow these steps:
+To install and run steam with Void on x86\_64, follow these steps:
 
     # Make sure that all pkgs are up-to-date.
     # xbps-install -Syu
