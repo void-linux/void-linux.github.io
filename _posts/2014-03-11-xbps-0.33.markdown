@@ -10,14 +10,16 @@ not need `confuse` (among other things).
 
 Release notes:
 
-- xbps-dgraph: fixed a segfault if rootdir wasn't set:
-fixes [issue #33](https://github.com/voidlinux/xbps/issues/33)
+- xbps-dgraph: fixed a segfault if rootdir wasn't set
+(fixes [issue #33](https://github.com/voidlinux/xbps/issues/33))
 
 - xbps-uhelper now supports downloading files with a defined destination.
 The syntax of fetch is `"URI>FILENAME"`. So if you run the following command,
 the output file will be named `"bar.tar.gz"` (contributed by Enno Boland (Gottox):
 
-    $ xbps-uhelper fetch "http://foobar.com/foo.tar.gz>bar.tar.gz"
+```
+$ xbps-uhelper fetch "http://foobar.com/foo.tar.gz>bar.tar.gz"
+```
 
 - Rather than performing a pkgdb write per package being unpacked, configured,
 or removed, issue the write only once after the transaction phase has finished.
