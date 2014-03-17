@@ -130,11 +130,9 @@ header {
 	background:url("/assets/img/voidlogo.png") no-repeat;
 	width:206px;
 	height:151px;
-	-webkit-transition:all 1s ease-in-out;
-	transition:all 1s ease-in-out;
+	transition:all 2s ease;
 }
 #davoid:hover {
-	-webkit-transform:rotate(360deg);
 	transform:rotate(360deg);
 }
 #title h1 {
