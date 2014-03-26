@@ -35,7 +35,7 @@ configured resulting in ENOENT. The configure phase now only uses the package
 name to perform the configuration rather than using package name/version tuple.
 
 - Pass another argument to package scripts with the native machine architecture
-(uname -m), which can be overrided via `XBPS\_ARCH` environment variable too
+(uname -m), which can be overrided via `XBPS_ARCH` environment variable too
 
 Please report issues at
 [https://github.com/voidlinux/xbps/issues](https://github.com/voidlinux/xbps/issues)
