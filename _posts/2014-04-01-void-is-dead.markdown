@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Void Linux distribution is dead (BSD is dying too)"
+date: 2014-04-01 18:00:00
 comments: true
 ---
 
