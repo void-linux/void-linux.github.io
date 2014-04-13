@@ -18,6 +18,8 @@ index can be used to be matched against to; the posibilities are countless:
 	- find out what packages are linked to a specific shared library
 	- etc etc etc
 
+You can see some [examples](https://plus.google.com/106812073015308749022/posts/ats22UZk1WU).
+
 - `xbps-query(8)`: in local mode now prints all objects stored on its pkgdb entry
 and its metaplist.
 
