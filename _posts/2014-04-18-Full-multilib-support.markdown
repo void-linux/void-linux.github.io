@@ -33,7 +33,7 @@ $ cd xbps
 $ CC="cc -m32" PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig ./configure && make
 ...
 $ file bin/xbps-query/xbps-query
-bin/xbps-query/xbps-query: ELF 32-bit LSB shared object, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.27, BuildID[sha1]=3b0105c93b2dce61b9b09f91a3c2372b5bc2f4c5, not stripped
+bin/xbps-query/xbps-query: ELF 32-bit LSB shared object, Intel 80386 ...
 $
 ```
 
