@@ -21,7 +21,7 @@ The URL for those repositories:
 - http://repo.voidlinux.eu/current/multilib/nonfree
 - http://repo.voidlinux.eu/current/debug
 
-and also available and any of the mirrors listed in the `xbps.conf` configuration file.
+Also available on any of the mirrors listed in the `xbps.conf` configuration file.
 
 Do not forget to update `/etc/xbps/xbps.conf` with the new URLs if you use them.
 
