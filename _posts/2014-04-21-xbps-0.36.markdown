@@ -17,13 +17,13 @@ or virtual packages.
 
 - xbps-uchroot(8): a manual page has been created.
 
-- xbps-install(8): the -n,--dry-run option does not acquire the pkgdb file lock
+- xbps-install(8): the `-n`,`--dry-run` option does not acquire the pkgdb file lock
 anymore, so that any user can use this mode even without write permission to
 the target pkgdb.
 
-- xbps-query(8): fix a segfault with '-vL' for local unsigned repositories.
+- xbps-query(8): fix a segfault with `-vL` for local unsigned repositories.
 
-- xbps-create(8): new option --compression to specify a compression format;
+- xbps-create(8): new option `--compression` to specify a compression format;
 defaults to xz.
 
 - xbps-checkvers(8): new utility merged from https://github.com/xdave/xbps-src-utils
