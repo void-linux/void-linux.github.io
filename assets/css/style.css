@@ -209,14 +209,6 @@ blockquote p {
 	font-size:1em;
 	vertical-align:-8%;
 }
-footer {
-	background-color:#BDD7BD;
-	border-top:1px solid #92A692;
-}
-#xtraemewrap {
-	max-width:600px;
-	padding:30px 16px 16px;
-}
 #findpkg form {
 	margin:40px 0;
 }
@@ -228,6 +220,22 @@ footer {
 }
 #findpkg input:focus {
 	border:solid 1px #478061;
+}
+#merchs p {
+	margin:6px 0 0;
+}
+.voidgpic {
+	margin:0 20px;
+	max-width:160px;
+	height:auto;
+}
+footer {
+	background-color:#BDD7BD;
+	border-top:1px solid #92A692;
+}
+#xtraemewrap {
+	max-width:600px;
+	padding:30px 16px 16px;
 }
 /* JUNK */
 #disqus {
@@ -311,10 +319,4 @@ footer {
 	.voiddate {
 		width:70px;
 	}
-}
-
-.voidgpic {
-	margin:0 20px;
-	max-width:200px;
-	height:auto;
 }
