@@ -11,22 +11,22 @@ that supports per-root overridable repo and virtualpkg configuration files
 
 Release notes:
 
- * Enabled syslog logging by default, may be still disabled via xbps.conf.
+* Enabled syslog logging by default, may be still disabled via xbps.conf.
 
- * Added support for system and configuration virtualpkg directories.
+* Added support for system and configuration virtualpkg directories.
 
-   The system virtualpkg directory set to `<rootdir>/usr/share/xbps/virtualpkg.d` contains
-   virtualpkg configuration files (.conf/.vpkg) that can be overrided by the admin
-   in `<rootdir>/etc/xbps/virtualpkg.d` bearing the same file name.
+    The system virtualpkg directory set to `<rootdir>/usr/share/xbps/virtualpkg.d` contains
+virtualpkg configuration files (.conf/.vpkg) that can be overrided by the admin
+in `<rootdir>/etc/xbps/virtualpkg.d` bearing the same file name.
 
-   This obsoletes the "virtualpkgdir" keyword support from the xbps configuration file.
+    This obsoletes the "virtualpkgdir" keyword support from the xbps configuration file.
 
  * Added support for system and configuration repository directories, as
    explained in GH #39 (https://github.com/voidlinux/xbps/issues/39).
 
-   The system repository directory set to `<rootdir>/usr/share/xbps/repo.d` contains
-   repository configuration files (.conf) that can be overrided by the admin
-   in `<rootdir>/etc/xbps/repo.d` bearing the same file name.
+    The system repository directory set to `<rootdir>/usr/share/xbps/repo.d` contains
+repository configuration files (.conf) that can be overrided by the admin
+in `<rootdir>/etc/xbps/repo.d` bearing the same file name.
 
  * xbps-create(8): new option `-t, --tags` to specify a list of tags
    (categories) the package should be part of. This is just for metadata
@@ -36,7 +36,9 @@ Release notes:
    installed) without using the -u, --update option. This implements
    GH #35 (https://github.com/voidlinux/xbps/issues/35).
 
-	$ xbps-install [-f] -y foo
+
+    `$ xbps-install [-f] -y foo`
+
 
     - if foo is installed, update it.
     - if foo not installed, install it.
@@ -50,13 +52,11 @@ Release notes:
    "ownedby (-o, --ownedby)" and "search (-s, --search)" modes to match
    Extended Regular Expressions against package properties.
 
-   This allows you to find packages by matching EREs in package properties,
-   for example to find out what packages were built between 2014-05-23 and
-   2014-05-25:
+    This allows you to find packages by matching EREs in package properties,
+for example to find out what packages were built between 2014-05-23 and
+2014-05-25:
 
-	$ xbps-query --regex -s 2014-05-2[35] -p build-date
-	...
-	$
+    `$ xbps-query --regex -s 2014-05-2[35] -p build-date`
 
  * Imported portable proplib 0.6.4 from https://github.com/xtraeme/portableproplib.
 
@@ -67,9 +67,7 @@ Release notes:
  * A new object is now recorded in the pkgdb to see the origin repository of
    which a package was installed from, i.e:
 
-	$ xbps-query --property=repository-origin pkg
-	...
-	$
+    `$ xbps-query --property=repository-origin pkg`
 
  * xbps-remove(8): the -n,--dry-run option does not acquire the pkgdb file lock
    anymore, so that any user can use this mode even without write permission to
@@ -81,9 +79,9 @@ Release notes:
  * xbps.conf: the keyword "include" now supports file globbing, so that multiple
    small configuration files can be included directly, i.e:
 
-	include=/etc/xbps/repo.d/*.conf
+    `include=/etc/xbps/repo.d/*.conf`
 
-   Contributed by Enno Boland.
+    Contributed by Enno Boland.
 
  * xbps-query(8): fixed a segfault with '-Rf' if pkg is in the repository data
    and its binary package does not exist.
