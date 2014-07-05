@@ -22,7 +22,7 @@ in `<rootdir>/etc/xbps/virtualpkg.d` bearing the same file name.
     This obsoletes the "virtualpkgdir" keyword support from the xbps configuration file.
 
 * Added support for system and configuration repository directories, as
-explained in GH #39 (https://github.com/voidlinux/xbps/issues/39).
+explained in GH [#39](https://github.com/voidlinux/xbps/issues/39).
 
     The system repository directory set to `<rootdir>/usr/share/xbps/repo.d` contains
 repository configuration files (.conf) that can be overrided by the admin
@@ -34,7 +34,7 @@ purposes and querying packages by tags in the future.
 
 * xbps-install(8): it's possible now to update a single package (if it's already
 installed) without using the -u, --update option. This implements
-GH #35 (https://github.com/voidlinux/xbps/issues/35).
+GH [#35](https://github.com/voidlinux/xbps/issues/35).
 
     `$ xbps-install [-f] -y foo`
 
@@ -56,7 +56,7 @@ for example to find out what packages were built between 2014-05-23 and
 
     `$ xbps-query --regex -s 2014-05-2[35] -p build-date`
 
-* Imported portable proplib 0.6.4 from https://github.com/xtraeme/portableproplib.
+* Imported portable proplib 0.6.4 from [portableproplib](https://github.com/xtraeme/portableproplib).
 
 * Fixed a new issue with virtual packages, if a pkg provides a virtual package
 that is already installed but with lesser version, do not update to it
