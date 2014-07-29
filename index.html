@@ -57,7 +57,8 @@ layout: default
 		<div id="news">
 			<h2 class="cattitle">News <span class="rssdev"><a href="/atom.xml" title="Subscribe to the news"><i class="fa fa-rss fa-lg"></i></a></span></h2>
 			{% for post in site.posts limit:5 %}<div>
-				<h3><a href="{{ post.url }}">{{ post.title }} [{{ post.date }}]</a></h3>
+				<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+				<h5>{{ post.date }}</h5>
 				<div>{{ post.content }}</div>
 			</div>{% endfor %}
 			<p id="readprevnews"><a href="/news"><strong>Read the previous news </strong><i class="fa fa-go fa-lg"></i></a></p>
