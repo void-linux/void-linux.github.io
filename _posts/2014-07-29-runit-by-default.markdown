@@ -24,13 +24,17 @@ that need *systemd* with the *systemd* package build option enabled:
 
 # xbps-install -S
 # xbps-install -y base-system-systemd
+
+## Put packages with the `systemd` build option on hold.
+
+# xbps-pkgdb -m hold <pkg> ...
 ```
 
 ```
 ## This enables the systemd build option globally for all supported pkgs.
 
 $ cd xbps-packages
-$ cat XBPS_PKG_OPTIONS=systemd >> etc/conf
+$ echo 'XBPS_PKG_OPTIONS=systemd' >> etc/conf
 $ ./xbps-src show-sys-updates
 ...
 ```
