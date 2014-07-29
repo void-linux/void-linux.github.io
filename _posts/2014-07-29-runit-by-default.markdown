@@ -12,7 +12,7 @@ base system.
 supported *optionally* and can be installed via the *base-system-systemd* package.
 
 After upgrading you'll have to customize system settings in the `/etc/rc.conf`
-configuration file; see https://github.com/voidlinux/documentation/wiki/runit
+configuration file; see [this wiki page](https://github.com/voidlinux/documentation/wiki/runit)
 for more information.
 
 All images have been switched to *runit*. If you are using a *Desktop Environment*
