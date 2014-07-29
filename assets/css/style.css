@@ -44,7 +44,7 @@ body,#links ul,#social ul {
 #navwrap,#navpost,#navxbps,#navnews,#voidwrap,article,article h1,article h2,article h3,#davoid,#xtraemewrap {
 	margin:0 auto;
 }
-#voidwrap,article h1,article h2,article h3,#readprevnews,.postarticle,#findpkg form,#goodies,footer {
+#voidwrap,article h1,article h2,article h3,.daxdate,#readprevnews,.postarticle,#findpkg form,#goodies,footer {
 	text-align:center;
 }
 .fa,#title h1 {
@@ -53,7 +53,10 @@ body,#links ul,#social ul {
 #links,.fa,.voiddate,.voidgpic {
 	display:inline-block;
 }
-nav,#xtraemewrap,#findpkg input {
+#title h1,.cattitle {
+	font-size:24px;
+}
+nav,#xtraemewrap,.daxdate,pre,p code,ul li code,#findpkg input {
 	font-size:14px;
 }
 article,#xtraemewrap {
@@ -123,7 +126,7 @@ header {
 	margin:90px 0 0;
 }
 #voidwrap {
-	padding:30px 24px;
+	padding:30px 24px 20px;
 }
 #davoid {
 	background:url("/assets/img/voidlogo.png") no-repeat;
@@ -137,7 +140,6 @@ header {
 	transform:rotate(360deg);
 }
 #title h1 {
-	font-size:26px;
 	line-height:44px;
 	color:#606060;
 }
@@ -152,12 +154,15 @@ article h1,article h2 {
 }
 article h3 {
 	max-width:58%;
-	padding:36px 0 10px;
 	font-size:20px;
+	padding-bottom:10px;
+}
+article h5 {
+	margin-bottom:10px;
+	padding-top:36px;
 }
 .cattitle {
 	padding-top:90px;
-	font-size:24px;
 }
 article ul {
 	list-style-type:circle;
@@ -179,7 +184,6 @@ pre,p code,ul li code {
 	background-color:#F2F2F2;
 	border:1px solid #D0D0D0;
 	border-radius:4px;
-	font-size:13px;
 	line-height:22px;
 }
 pre {
