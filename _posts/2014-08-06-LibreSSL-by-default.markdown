@@ -2,6 +2,7 @@
 layout: post
 title: "LibreSSL enabled by default"
 comments: true
+date: 2014-08-06 10:00:00
 ---
 
 The [LibreSSL](http://www.libressl.org) implementation is now used by default.
