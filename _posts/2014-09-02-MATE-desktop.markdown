@@ -2,7 +2,7 @@
 layout: post
 title: "MATE desktop 1.8.1 now available"
 comments: true
-date: 2014-08-06 10:50:00
+date: 2014-09-02 10:30:00
 ---
 
 The [MATE desktop environment](http://www.mate-desktop.org) has been packaged by yours truly
