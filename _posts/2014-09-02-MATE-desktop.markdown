@@ -8,7 +8,7 @@ date: 2014-08-06 10:50:00
 The [MATE desktop environment](http://www.mate-desktop.org) has been packaged by yours truly
 and we've got now the latest available version: **1.8.1**.
 
-This DE supports**suspend/hibernation/fast-user-switching** with no additional changes, thanks
+This DE supports **suspend/hibernation/fast-user-switching** with no additional changes, thanks
 to **ConsoleKit** and **upower (0.9.x)**.
 
 The minimal **MATE** desktop is available in the **mate** meta-package, and all its
