@@ -121,7 +121,8 @@ layout: default
 			<h2 class="cattitle">Find a source package</h2>
 			<p>Search for source packages, matching a keyword by looking at the xbps-packages github repository. You can verify if the repository includes a specific package.</p>
 			<form method="GET" action="https://github.com/voidlinux/xbps-packages/search">
-				<input type="text" name="q" placeholder="Package name" />
+				<input type="hidden" name="q[]" value="filename:template path:/srcpkgs" />
+				<input type="text" name="q[]" placeholder="Package name" />
 				<input type="hidden" name="s" value="indexed" />
 			</form>
 		</div>
