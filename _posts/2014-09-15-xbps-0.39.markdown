@@ -101,6 +101,7 @@ as for the system and configuration directories:
 
     Full path to a file or globbing can be used:
 
+
 ```
 	- preserve=/usr/bin/blah
 	- preserve=/etc/blah/*.conf
