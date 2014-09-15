@@ -36,10 +36,10 @@ plus the pkgdb specific ones (automatic-install, install-date, metafile-sha256)
 with the pkg files list being the exception. The pkgdb code will automatically
 convert the pkgdb files to the new format the first time it's accesed.
 
-    This effectively implements a two phase upgrade, the first time to upgrade the
+This effectively implements a two phase upgrade, the first time to upgrade the
 pkgdb format and the second one to execute the real operation.
 
-    The pkg metadata files stored in metadir (`/var/db/xbps`) now just contains its
+The pkg metadata files stored in metadir (`/var/db/xbps`) now just contains its
 pkg files list objects, everything else is stored in pkgdb. This allows libxbps
 to speed up the process of checking for unmet shared libraries, among other things.
 
@@ -91,16 +91,20 @@ cache directory is empty.
 - Implemented support to preserve existent on-disk files, by always ignoring
 the pkg content if the file has been matched. Details [here](https://github.com/voidlinux/xbps/issues/51)
 
-    The new "preserve" keyword can be used in the xbps configuration file, as well
+The new "preserve" keyword can be used in the xbps configuration file, as well
 as for the system and configuration directories:
 
-	- <rootdir>/usr/share/xbps/preserve.d
-	- <rootdir>/etc/xbps/preserve.d
+```
+- <rootdir>/usr/share/xbps/preserve.d
+- <rootdir>/etc/xbps/preserve.d
+```
 
-    Full path to a file or globbing can be used:
+Full path to a file or globbing can be used:
 
-	- preserve=/usr/bin/blah
-	- preserve=`/etc/blah/*.conf`
+```
+- preserve=/usr/bin/blah
+- preserve=/etc/blah/*.conf
+```
 
 - Always preserve files that exist on disk, but are managed by a package.
 When such condition ocurrs install the pkg configuration file as `file.new-<version>`.
@@ -131,7 +135,6 @@ going to be installed or updated has invalid dependencies, i.e:
 $ xbps-install --repository=$HOME/repo -n foo
 ERROR: foo-1.0_1: can't guess pkgname for dependency '>=invalid-spec_1'
 Package `foo' contains invalid dependencies, exiting.
-$
 ```
 
 This fixes #43 (xbps-install: unhelpful message for invalid dependency)
