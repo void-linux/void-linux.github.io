@@ -36,10 +36,10 @@ plus the pkgdb specific ones (automatic-install, install-date, metafile-sha256)
 with the pkg files list being the exception. The pkgdb code will automatically
 convert the pkgdb files to the new format the first time it's accesed.
 
-This effectively implements a two phase upgrade, the first time to upgrade the
+  This effectively implements a two phase upgrade, the first time to upgrade the
 pkgdb format and the second one to execute the real operation.
 
-The pkg metadata files stored in metadir (/var/db/xbps) now just contains its
+  The pkg metadata files stored in metadir (/var/db/xbps) now just contains its
 pkg files list objects, everything else is stored in pkgdb. This allows libxbps
 to speed up the process of checking for unmet shared libraries, among other things.
 
@@ -92,16 +92,16 @@ cache directory is empty.
 the pkg content if the file has been matched. Details here:
 https://github.com/voidlinux/xbps/issues/51
 
-The new "preserve" keyword can be used in the xbps configuration file, as well
+  The new "preserve" keyword can be used in the xbps configuration file, as well
 as for the system and configuration directories:
 
-        - <rootdir>/usr/share/xbps/preserve.d
-        - <rootdir>/etc/xbps/preserve.d
+    - <rootdir>/usr/share/xbps/preserve.d
+     - <rootdir>/etc/xbps/preserve.d
 
-Full path to a file or globbing can be used:
+  Full path to a file or globbing can be used:
 
-        - preserve=/usr/bin/blah
-        - preserve=/etc/blah/*.conf
+    - preserve=/usr/bin/blah
+    - preserve=`/etc/blah/*.conf`
 
 - Always preserve files that exist on disk, but are managed by a package.
 When such condition ocurrs install the pkg configuration file as `file.new-<version>`.
@@ -110,7 +110,7 @@ This fixes GH issue #50 https://github.com/voidlinux/xbps/issues/50.
 - Implemented support for post-install and pre-remove messages, as explained
 in issue #44 https://github.com/voidlinux/xbps/issues/44.
 
-xbps-create(8) will read the {INSTALL,REMOVE}.msg files and will add its contents
+  xbps-create(8) will read the {INSTALL,REMOVE}.msg files and will add its contents
 into the `{install,remove}-msg` data objects on its metadata plist file.
 
 - xbps-install(8): added support to list packages that will be downloaded, if those
@@ -133,8 +133,8 @@ going to be installed or updated has invalid dependencies, i.e:
         Package `foo' contains invalid dependencies, exiting.
         $
 
-   This fixes #43 (xbps-install: unhelpful message for invalid dependency)
-   submitted by Dominik Honnef.
+  This fixes #43 (xbps-install: unhelpful message for invalid dependency)
+submitted by Dominik Honnef.
 
 - libxbps: fixed a new issue with packages that provide/replace the
 same virtual package that is going to be replaced. The issue could be
