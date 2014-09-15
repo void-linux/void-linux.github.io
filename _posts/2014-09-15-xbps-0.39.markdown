@@ -39,7 +39,7 @@ convert the pkgdb files to the new format the first time it's accesed.
     This effectively implements a two phase upgrade, the first time to upgrade the
 pkgdb format and the second one to execute the real operation.
 
-    The pkg metadata files stored in metadir (/var/db/xbps) now just contains its
+    The pkg metadata files stored in metadir (`/var/db/xbps`) now just contains its
 pkg files list objects, everything else is stored in pkgdb. This allows libxbps
 to speed up the process of checking for unmet shared libraries, among other things.
 
@@ -70,9 +70,9 @@ Operating Systems.
 	- libGL matches the virtual pkgname and therefore replaces the `nvidia` pkg.
 
 - xbps-query(8): added --fulldeptree long option to print a full dependency
-tree for a package; this supersedes -xx which was broken since 0.37.
+tree for a package; this supersedes `-xx` which was broken since 0.37.
 
-- xbps-query(8): fix a segfault with -Rf when there's no network connectivity.
+- xbps-query(8): fix a segfault with `-Rf` when there's no network connectivity.
 Reported by Gottox.
 
 - xbps-uchroot(8): do not remount / unnecessarily; just mount it as private
@@ -89,26 +89,25 @@ with the bold ANSI escape code.
 cache directory is empty.
 
 - Implemented support to preserve existent on-disk files, by always ignoring
-the pkg content if the file has been matched. Details here:
-https://github.com/voidlinux/xbps/issues/51
+the pkg content if the file has been matched. Details [here](https://github.com/voidlinux/xbps/issues/51)
 
     The new "preserve" keyword can be used in the xbps configuration file, as well
 as for the system and configuration directories:
 
-		- <rootdir>/usr/share/xbps/preserve.d
-		- <rootdir>/etc/xbps/preserve.d
+	- <rootdir>/usr/share/xbps/preserve.d
+	- <rootdir>/etc/xbps/preserve.d
 
     Full path to a file or globbing can be used:
 
-		- preserve=/usr/bin/blah
-		- preserve=`/etc/blah/*.conf`
+	- preserve=/usr/bin/blah
+	- preserve=`/etc/blah/*.conf`
 
 - Always preserve files that exist on disk, but are managed by a package.
 When such condition ocurrs install the pkg configuration file as `file.new-<version>`.
-This fixes GH issue #50 https://github.com/voidlinux/xbps/issues/50.
+This fixes GH issue [#50](https://github.com/voidlinux/xbps/issues/50).
 
 - Implemented support for post-install and pre-remove messages, as explained
-in issue #44 https://github.com/voidlinux/xbps/issues/44.
+in issue [#44](https://github.com/voidlinux/xbps/issues/44).
 
     xbps-create(8) will read the {INSTALL,REMOVE}.msg files and will add its contents
 into the `{install,remove}-msg` data objects on its metadata plist file.
@@ -128,14 +127,14 @@ and when a package has the "preserve" property.
 - libxbps: return ENXIO and a meaningful error message if a package that is
 going to be installed or updated has invalid dependencies, i.e:
 
-    ```
+```
 $ xbps-install --repository=$HOME/repo -n foo
 ERROR: foo-1.0_1: can't guess pkgname for dependency '>=invalid-spec_1'
 Package `foo' contains invalid dependencies, exiting.
 $
-    ```
+```
 
-    This fixes #43 (xbps-install: unhelpful message for invalid dependency)
+This fixes #43 (xbps-install: unhelpful message for invalid dependency)
 submitted by Dominik Honnef.
 
 - libxbps: fixed a new issue with packages that provide/replace the
@@ -146,7 +145,7 @@ which are providing/replacing the "awk" virtual package.
 - libfetch: synchronized with NetBSD pkgsrc/libfetch.
 
 - libfetch: add support for TLS SNI (Server Name Identification) from NetBSD, with
-some minor debug changes. This fixes GH issue #41 (https://github.com/voidlinux/xbps/issues/41).
+some minor debug changes. This fixes GH issue [#41](https://github.com/voidlinux/xbps/issues/41).
 
 Please report issues at
 [https://github.com/voidlinux/xbps/issues](https://github.com/voidlinux/xbps/issues)
