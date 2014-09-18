@@ -94,13 +94,13 @@ the pkg content if the file has been matched. Details [here](https://github.com/
     The new "preserve" keyword can be used in the xbps configuration file, as well
 as for the system and configuration directories:
 
-    - <rootdir>/usr/share/xbps/preserve.d
-    - <rootdir>/etc/xbps/preserve.d
+- <rootdir>/usr/share/xbps/preserve.d
+- <rootdir>/etc/xbps/preserve.d
 
     Full path to a file or globbing can be used:
 
-    - preserve=/usr/bin/blah
-    - preserve=/etc/blah/\*.conf
+- preserve=/usr/bin/blah
+- preserve=/etc/blah/\*.conf
 
 - Always preserve files that exist on disk, but are managed by a package.
 When such condition ocurrs install the pkg configuration file as `file.new-<version>`.
@@ -127,9 +127,11 @@ and when a package has the "preserve" property.
 - libxbps: return ENXIO and a meaningful error message if a package that is
 going to be installed or updated has invalid dependencies, i.e:
 
-        $ xbps-install --repository=$HOME/repo -n foo
-        ERROR: foo-1.0_1: can't guess pkgname for dependency '>=invalid-spec_1'
-        Package `foo' contains invalid dependencies, exiting.
+```
+$ xbps-install --repository=$HOME/repo -n foo
+ERROR: foo-1.0_1: can't guess pkgname for dependency '>=invalid-spec_1'
+Package `foo' contains invalid dependencies, exiting.
+```
 
     This fixes #43 (xbps-install: unhelpful message for invalid dependency)
 submitted by Dominik Honnef.
