@@ -19,16 +19,14 @@ files. Previous way of allocating heap memory as big as the file being
 processed wasn't a great idea.
 
 - xbps-{install,remove}: the post-install/pre-remove messages are now
-printed with some guards, i.e:
+printed with some guards, without the need to add them manually to the
+{INSTALL,REMOVE}.msg files in binary packages:
 
 ```
 ==================================================================
  msg
 ==================================================================
 ```
-
-    Without the need to add them manually to the {INSTALL,REMOVE}.msg files in
-binary packages.
 
 - Fixed a heap overflow when printing post-install/pre-remove messages.
 Noticed by Gottox.
