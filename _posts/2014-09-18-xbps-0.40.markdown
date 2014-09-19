@@ -20,7 +20,7 @@ processed wasn't a great idea.
 
 - xbps-{install,remove}: the post-install/pre-remove messages are now
 printed with some guards, without the need to add them manually to the
-{INSTALL,REMOVE}.msg files in binary packages:
+{INSTALL,REMOVE}.msg files in the source packages:
 
 ```
 ==================================================================
@@ -35,7 +35,7 @@ Noticed by Gottox.
 by Christian Neukirchen.
 
 - Updated bash completion with more properties for xbps-query(8). Contributed
-y Eivind Uggedal in [#58](https://github.com/voidlinux/xbps/issues/58).
+by Eivind Uggedal in [#58](https://github.com/voidlinux/xbps/issues/58).
 
 Please report issues at
 [https://github.com/voidlinux/xbps/issues](https://github.com/voidlinux/xbps/issues).
