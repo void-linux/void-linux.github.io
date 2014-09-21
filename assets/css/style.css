@@ -255,8 +255,8 @@ footer {
 .fa-github-alt:before {
 	content:"\f113";
 }
-.fa-gift:before {
-	content:"\f06b";
+.fa-paypal:before {
+  content: "\f1f4";
 }
 .fa-cog:before {
 	content:"\f013";
