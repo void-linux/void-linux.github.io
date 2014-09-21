@@ -102,7 +102,7 @@ as for the system and configuration directories:
 <rootdir>/etc/xbps/preserve.d
 ```
 
-    Full path to a file or globbing can be used:
+Full path to a file or globbing can be used:
 
 ```
 preserve=/usr/bin/blah
@@ -143,7 +143,7 @@ ERROR: foo-1.0_1: can't guess pkgname for dependency '>=invalid-spec_1'
 Package `foo' contains invalid dependencies, exiting.
 ```
 
-    This fixes #43 (xbps-install: unhelpful message for invalid dependency)
+This fixes #43 (xbps-install: unhelpful message for invalid dependency)
 submitted by Dominik Honnef.
 
 - libxbps: fixed a new issue with packages that provide/replace the
