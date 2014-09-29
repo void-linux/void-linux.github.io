@@ -252,6 +252,9 @@ footer {
 .fa-comments:before {
 	content:"\f086";
 }
+.fa-twitter:before {
+	content:"\f099";
+}
 .fa-github-alt:before {
 	content:"\f113";
 }
