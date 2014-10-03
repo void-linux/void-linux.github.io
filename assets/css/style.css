@@ -246,13 +246,13 @@ footer {
 	max-width:840px;
 	margin:50px auto 20px;
 }
-.fa-google:before {
+.fa-go:before {
 	content:"\f0d4";
 }
 .fa-comments:before {
 	content:"\f086";
 }
-.fa-twitter:before {
+.fa-tw:before {
 	content:"\f099";
 }
 .fa-github-alt:before {
