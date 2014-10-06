@@ -12,3 +12,6 @@ markdown:    redcarpet
 pygments:    true
 
 permalink:   /news/:year/:month/:title.html
+
+gems:
+  - jekyll-redirect-from
