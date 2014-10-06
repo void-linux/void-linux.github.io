@@ -120,11 +120,14 @@ layout: default
 		<div id="findpkg">
 			<h2 class="cattitle">Find a source package</h2>
 			<p>Search for source packages, matching a keyword by looking at the void-packages github repository. You can verify if the repository includes a specific package.</p>
-			<form method="GET" action="https://github.com/voidlinux/void-packages/search">
+			<form method="GET" action="https://github.com/voidlinux/void-packages/search" onkeypress="return event.keyCode != 13;">
 				<input type="hidden" name="q[]" value="filename:template path:/srcpkgs" />
-				<input type="text" name="q[]" placeholder="Package name" />
+				<input type="text" name="q[]" placeholder="Package name" id="voidSearch_box" onkeyup="if(window.voidSearch)window.voidSearch()" />
 				<input type="hidden" name="s" value="indexed" />
+				<table align="center" id="voidSearch_result"></table>
+				<button type="submit">Search on Github</button>
 			</form>
+			<script src="/assets/js/voidsearch.js" async></script>
 		</div>
 
 		<div id="commits">
