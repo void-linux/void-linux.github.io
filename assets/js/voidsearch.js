@@ -4,12 +4,14 @@
 		"http://repo.voidlinux.eu/current/",
 		"http://repo.voidlinux.eu/current/multilib/",
 		"http://repo.voidlinux.eu/current/nonfree/",
+		"http://repo.voidlinux.eu/current/multilib/nonfree/",
 		"http://repo.voidlinux.eu/current/debug/"
 	];
 	var repoNames = [
 		"current",
 		"multilib",
 		"nonfree",
+		"multilib/nonfree",
 		"debug"
 	]
 	var currentRepo = 0;
@@ -36,7 +38,7 @@
 		while(match = reg.exec(r.responseText)) {
 			idx = reg.lastIndex;
 			results.push({
-				haystack: (match[1]+" "+match[2]+" "+match[3]+" "+match[4] + repoNames[currentRepo]).toLowerCase(),
+				haystack: (match[1]+" "+match[2]+" "+match[3]+" "+match[4]+" "+repoNames[currentRepo]).toLowerCase(),
 				name: match[1],
 				version: match[2],
 				revision: match[3],
