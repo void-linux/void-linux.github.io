@@ -347,9 +347,21 @@ footer {
 #voidSearch_result td.version,
 #voidSearch_result td.revision,
 #voidSearch_result td.size {
-	color:#555;
 	text-align:right;
 }
+
+#voidSearch_result tr td {
+	color:#555;
+}
+
+#voidSearch_result tr:hover td {
+	color:#000;
+}
+
 #voidSearch_result tr:nth-child(even) {
 	background:#ddd;
+}
+
+#voidSearch_result tr th {
+	background:transparent !important;
 }
