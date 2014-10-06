@@ -1,5 +1,6 @@
 (function(w,d){
 	var minsize = 2;
+	var timeout = -1;
 	var repos = [
 		"http://repo.voidlinux.eu/current/",
 		"http://repo.voidlinux.eu/current/multilib/",
@@ -60,7 +61,7 @@
 			return;
 		}
 		tbody.innerHTML = "<tr><th>Name</th><th>Version</th><th>Revision</th><th>Arch</th><th>Repository</th><th>Size (bytes)</th></tr>"
-		for(i = 0; i < results.length; i++) {
+		if(timeout == -1) for(i = 0; i < results.length; i++) {
 			found=0
 			for(j = 0; j < needle.length; j++)
 				if(results[i].haystack.indexOf(needle[j]) == -1) break;
@@ -85,7 +86,9 @@
 		table.innerHTML = "";
 		table.appendChild(tbody);
 		tr = document.createElement("tr");
-		if(r.readyState != 4)
+		if(timeout != -1)
+			tr.innerHTML = "<th colspan='6'>Typing...</th>";
+		else if(r.readyState != 4)
 			tr.innerHTML = "<th colspan='6'>Loading...</th>";
 		else if(empty && r.readyState == 4)
 			tr.innerHTML="<th colspan='6'>No Results</th>";
@@ -107,7 +110,12 @@
 		needle = box.value.toLowerCase().trim().split(/\s+/);
 
 		if(r) {
-			render();
+			if(timeout != -1)
+				clearTimeout(timeout);
+			timeout = setTimeout(function() {
+				timeout = -1;
+				render();
+			}, 500);
 		}
 		else {
 			startSearch();
