@@ -118,8 +118,8 @@ layout: default
 		</div>
 
 		<div id="findpkg">
-			<h2 class="cattitle">Find a source package</h2>
-			<p>Search for packages, matching a keyword by looking at the repository index.</p>
+			<h2 class="cattitle">Find binary package</h2>
+			<p>Search for available binary packages in the official repository index, matching a keyword.</p>
 			<form method="GET" action="https://github.com/voidlinux/void-packages/search" onkeypress="return event.keyCode != 13;">
 				<input type="hidden" name="q[]" value="filename:template path:/srcpkgs" />
 				<input type="text" name="q[]" placeholder="Package name" id="voidSearch_box" onkeyup="if(window.voidSearch)window.voidSearch()" />
