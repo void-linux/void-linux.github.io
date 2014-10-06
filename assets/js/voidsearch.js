@@ -1,6 +1,8 @@
 (function(w,d){
 	var minsize = 2;
 	var timeout = -1;
+	var maxResults = 500;
+	var showAll = false;
 	var repos = [
 		"http://repo.voidlinux.eu/current/",
 		"http://repo.voidlinux.eu/current/multilib/",
@@ -51,7 +53,7 @@
 	}
 
 	function render() {
-		var a, tr, i, j, found
+		var a, tr, i, j, found = 0
 		  , tbody = document.createElement("tbody")
 		  , table = document.getElementById("voidSearch_result")
 		  , empty = true
@@ -62,11 +64,13 @@
 		}
 		tbody.innerHTML = "<tr><th>Name</th><th>Version</th><th>Revision</th><th>Arch</th><th>Repository</th><th>Size (bytes)</th></tr>"
 		for(i = 0; i < results.length; i++) {
-			found=0
+			if(found > maxResults && !showAll)
+				break;
 			for(j = 0; j < needle.length; j++)
 				if(results[i].haystack.indexOf(needle[j]) == -1) break;
 			if(j != needle.length)
 				continue;
+			found++;
 
 			empty = false;
 			tr = document.createElement('tr');
@@ -88,6 +92,8 @@
 		tr = document.createElement("tr");
 		if(r.readyState != 4)
 			tr.innerHTML = "<th colspan='6'>Loading...</th>";
+		else if(found > maxResults)
+			tr.innerHTML="<th colspan='6'>More than "+maxResults+" results. <a href='javascript:void(window.voidSearch(true));'>show all</a></th>";
 		else if(empty && r.readyState == 4)
 			tr.innerHTML="<th colspan='6'>No Results</th>";
 		else
@@ -103,9 +109,10 @@
 		box.className = 'loading';
 		r.send();
 	}
-	w.voidSearch = function() {
+	w.voidSearch = function(sa) {
 		var box = d.getElementById('voidSearch_box');
 		needle = box.value.toLowerCase().trim().split(/\s+/);
+		showAll = !!sa;
 
 		if(r) {
 			if(timeout != -1)
