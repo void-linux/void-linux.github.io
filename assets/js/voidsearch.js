@@ -36,7 +36,7 @@
 		while(match = reg.exec(r.responseText)) {
 			idx = reg.lastIndex;
 			results.push({
-				haystack: (match[1]+" "+match[2]+" "+match[3]+" "+match[4]).toLowerCase(),
+				haystack: (match[1]+" "+match[2]+" "+match[3]+" "+match[4] + repoNames[currentRepo]).toLowerCase(),
 				name: match[1],
 				version: match[2],
 				revision: match[3],
