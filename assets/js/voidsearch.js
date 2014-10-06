@@ -61,7 +61,7 @@
 			return;
 		}
 		tbody.innerHTML = "<tr><th>Name</th><th>Version</th><th>Revision</th><th>Arch</th><th>Repository</th><th>Size (bytes)</th></tr>"
-		if(timeout == -1) for(i = 0; i < results.length; i++) {
+		for(i = 0; i < results.length; i++) {
 			found=0
 			for(j = 0; j < needle.length; j++)
 				if(results[i].haystack.indexOf(needle[j]) == -1) break;
@@ -86,9 +86,7 @@
 		table.innerHTML = "";
 		table.appendChild(tbody);
 		tr = document.createElement("tr");
-		if(timeout != -1)
-			tr.innerHTML = "<th colspan='6'>Typing...</th>";
-		else if(r.readyState != 4)
+		if(r.readyState != 4)
 			tr.innerHTML = "<th colspan='6'>Loading...</th>";
 		else if(empty && r.readyState == 4)
 			tr.innerHTML="<th colspan='6'>No Results</th>";
