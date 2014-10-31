@@ -107,7 +107,8 @@ nav {
 	max-width:440px;
 }
 #social {
-	float:center;
+	float:left;
+	margin: 60px;
 }
 .fa {
 	font-family:FontAwesome;
