@@ -2,7 +2,7 @@
 layout: post
 title: "LXQt 0.8.0 Desktop Environment now available"
 comments: true
-date: 2014-09-02 10:30:00
+date: 2014-11-03 15:00:00
 ---
 
 The [LXQt desktop environment](http://www.lxqt.org) has been packaged by yours truly
