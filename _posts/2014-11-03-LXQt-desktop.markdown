@@ -6,7 +6,7 @@ date: 2014-11-03 15:00:00
 ---
 
 The [LXQt desktop environment](http://www.lxqt.org) has been packaged by yours truly
-and we've got now the latest available version: **0.8.0**.
+and we've now got the latest available version: **0.8.0**.
 
 To install a complete **LXQt** package with full functionality:
 
