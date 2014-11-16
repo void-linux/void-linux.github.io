@@ -55,8 +55,7 @@
 	function render() {
 		var a, tr, i, j, found = 0
 		  , tbody = document.createElement("tbody")
-		  , table = document.getElementById("voidSearch_result")
-		  , empty = true
+		  , table = document.getElementById("voidSearch_result");
 
 		if(needle.join("").length < minsize) {
 			table.innerHTML = "";
@@ -72,7 +71,6 @@
 				continue;
 			found++;
 
-			empty = false;
 			tr = document.createElement('tr');
 			tr.innerHTML = "<td class=name></td><td class=version></td><td class=revision></td><td class=arch></td><td class=repo></td><td class=size></td>";
 
@@ -92,9 +90,9 @@
 		tr = document.createElement("tr");
 		if(r.readyState != 4)
 			tr.innerHTML = "<th colspan='6'>Loading...</th>";
-		else if(found > maxResults)
+		else if(found > maxResults && !showAll)
 			tr.innerHTML="<th colspan='6'>More than "+maxResults+" results. <a href='javascript:void(window.voidSearch(true));'>show all</a></th>";
-		else if(empty && r.readyState == 4)
+		else if(found == 0 && r.readyState == 4)
 			tr.innerHTML="<th colspan='6'>No Results</th>";
 		else
 			return;
