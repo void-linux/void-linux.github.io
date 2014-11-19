@@ -341,6 +341,10 @@ footer {
 	background-position:center right;
 }
 
+#voidSearch_result {
+	margin:auto;
+}
+
 #voidSearch_result td {
 	padding:10px;
 }

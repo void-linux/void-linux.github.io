@@ -1,7 +1,7 @@
 (function(w,d){
 	var minsize = 2;
 	var timeout = -1;
-	var maxResults = 200;
+	var maxResults = 100;
 	var showAll = false;
 	var repos = [
 		"http://repo.voidlinux.eu/current/",
