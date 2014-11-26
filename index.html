@@ -134,21 +134,10 @@ layout: default
 
 		<div id="commits">
 			<h2 class="cattitle">Latest package commits <span class="rssdev"><a href="https://github.com/voidlinux/void-packages/commits/master.atom" title="Subscribe to the commits"><i class="fa fa-rss fa-lg"></i></a></span></h2>
-			<ul class="dafeed"></ul>
-			<script type="text/html" id="pkgcommits">
-				<li><a class="link" href="<!=link!>" title="<!=title!>"><!=title!></a></li>
-			</script>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-			<script src="/assets/js/jquery.feeds.min.js"></script>
-			<script>
-				$('.dafeed').feeds({
-					feeds: {
-						github : 'https://github.com/voidlinux/void-packages/commits/master.atom'
-					},
-					max: 10,
-					entryTemplate: 'pkgcommits',
-				});
-			</script>
+			<ul>
+				<script src="/assets/js/voidcommits.js"></script>
+				<script src="https://api.github.com/repos/voidlinux/void-packages/commits?page=1&per_page=10&callback=voidcommits&sha=master"></script>
+			</ul>
 			<p>See latest package <a href="http://build.voidlinux.eu/console">builds</a>.</p>
 		</div>
 
