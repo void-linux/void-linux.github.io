@@ -95,7 +95,7 @@ nav {
 	z-index:9999;
 }
 #navwrap {
-	max-width:980px;
+	text-align:center;
 }
 #navpost {
 	max-width:560px;
@@ -107,8 +107,7 @@ nav {
 	max-width:440px;
 }
 #social {
-	float:left;
-	margin-left: 180px;
+	float:right;
 }
 .fa {
 	font-family:FontAwesome;
