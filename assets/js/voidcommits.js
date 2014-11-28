@@ -8,7 +8,7 @@ function voidcommits(response) {
 	for(i = 0; i < response.data.length; i++) {
 		commit = response.data[i];
 		html += '<li><a href="'+esc(commit.html_url)+'">'+
-			esc(commit.commit.message) + "</a></li>"
+			esc(commit.commit.message.split('\n')[0]) + "</a></li>"
 	}
 	document.write(html);
 }
