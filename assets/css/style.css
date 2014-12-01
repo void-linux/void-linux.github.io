@@ -147,7 +147,7 @@ header {
 	opacity:1.0;
 }
 #davoid > div.lens0 {
-	background: radial-gradient(ellipse at center, rgba(46,34,24,0.2) 30%, rgba(201,80,32,0.6) 100%);
+	background: radial-gradient(ellipse at center, rgba(34,24,46,0.2) 30%, rgba(80,32,201,0.6) 100%);
 	width: 30px;
 	height: 30px;
 	margin: -15px 0 0 -15px;
@@ -161,7 +161,7 @@ header {
 	left: 56%;
 }
 #davoid > div.lens1 {
-	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(51,255,102,0.3) 35%, rgba(51,255,102,0.1) 55%, rgba(51,255,102,0) 75%);
+	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,102,51,0.3) 35%, rgba(255,102,51,0.1) 55%, rgba(255,102,51,0) 75%);
 	width: 160px;
 	height: 160px;
 	margin: -80px 0 0 -80px;
@@ -175,7 +175,7 @@ header {
 	left: 62.5%;
 }
 #davoid > div.lens2 {
-	background: radial-gradient(ellipse at center, rgba(80,212,13,0) 40%, rgba(80,212,13,0.5) 45%, rgba(80,212,13,0) 50%, rgba(1,239,124,0) 100%);
+	background: radial-gradient(ellipse at center, rgba(212,13,80,0) 40%, rgba(212,13,80,0.5) 45%, rgba(212,13,80,0) 50%, rgba(239,124,1,0) 100%);
 	width: 80px;
 	height: 80px;
 	margin: -40px 0 0 -40px;
@@ -189,7 +189,7 @@ header {
 	left: 62.5%;
 }
 #davoid > div.lens3 {
-	background: radial-gradient(ellipse at center, rgba(80,212,13,0) 40%, rgba(80,212,13,0.4) 60%, rgba(80,212,13,0) 65%);
+	background: radial-gradient(ellipse at center, rgba(212,13,80,0) 40%, rgba(212,13,80,0.4) 60%, rgba(212,13,80,0) 65%);
 	width: 140px;
 	height: 140px;
 	margin: -70px 0 0 -70px;
@@ -203,7 +203,7 @@ header {
 	left: 91.5%;
 }
 #davoid > div.lens4 {
-	background: radial-gradient(ellipse at center, rgba(46,34,24,0.2) 30%, rgba(201,80,32,0.5) 100%);
+	background: radial-gradient(ellipse at center, rgba(34,24,46,0.2) 30%, rgba(80,32,201,0.5) 100%);
 	width: 60px;
 	height: 60px;
 	margin: -30px 0 0 -30px;
@@ -217,7 +217,7 @@ header {
 	left: 86.5%;
 }
 #davoid > div.lens5 {
-	background: radial-gradient(ellipse at center, rgba(61,24,173,0) 10%, rgba(61,24,173,0.2) 60);
+	background: radial-gradient(ellipse at center, rgba(24,173,61,0) 10%, rgba(24,173,61,0.2) 60);
 	width: 20px;
 	height: 20px;
 	margin: -10px 0 0 -10px;
@@ -231,7 +231,7 @@ header {
 	left: 70%;
 }
 #davoid > div.lens6 {
-	background: radial-gradient(ellipse at center, rgba(80,212,13,0) 30%, rgba(80,212,13,0.15) 100%);
+	background: radial-gradient(ellipse at center, rgba(212,13,80,0) 30%, rgba(212,13,80,0.15) 100%);
 	width: 12px;
 	height: 12px;
 	margin: -6px 0 0 -6px;
@@ -245,7 +245,7 @@ header {
 	left: 79%;
 }
 #davoid > div.lens7 {
-	background: radial-gradient(ellipse at center, rgba(61,24,173,0) 10%, rgba(61,24,173,0.11) 60%);
+	background: radial-gradient(ellipse at center, rgba(24,173,61,0) 10%, rgba(24,173,61,0.11) 60%);
 	width: 30px;
 	height: 30px;
 	margin: -15px 0 0 -15px;
@@ -287,7 +287,7 @@ header {
 	left: 55%;
 }
 #davoid > div.lens10 {
-	background: radial-gradient(ellipse at center, rgba(80,212,13,0) 30%, rgba(80,212,13,0.1) 100);
+	background: radial-gradient(ellipse at center, rgba(212,13,80,0) 30%, rgba(212,13,80,0.1) 100);
 	width: 38px;
 	height: 38px;
 	margin: -19px 0 0 -19px;
