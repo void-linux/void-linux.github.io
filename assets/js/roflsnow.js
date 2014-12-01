@@ -384,6 +384,7 @@ var snowStorm = (function(window, document) {
     this.o.style.overflow = 'hidden';
     this.o.style.fontWeight = 'normal';
     this.o.style.zIndex = storm.zIndex;
+    this.o.style.pointerEvents = 'none';
     docFrag.appendChild(this.o);
 
     this.refresh = function() {
