@@ -48,5 +48,12 @@
 		<i><b>&#x2744;</b></i>
 		<i><b>&#x2744;</b></i>
 	</div>
+	<script>
+function i_hate_snow() {
+	document.getElementById('snow').style.display = 'none';
+	document.cookie = 'i_hate_snow=1';
+}
+if(document.cookie.indexOf('i_hate_snow') !== -1) i_hate_snow();
+	</script>
 </body>
 </html>
