@@ -15,5 +15,5 @@ automatically to be able to connect to it via `ssh` (log in as `root`, password 
 
 Check the [downloads](http://www.voidlinux.eu/#download) section to grab them!
 
-[http://en.wikipedia.org/wiki/BeagleBoard#BeagleBone](http://en.wikipedia.org/wiki/BeagleBoard#BeagleBone)
-[http://en.wikipedia.org/wiki/BeagleBoard#BeagleBone_Black](http://en.wikipedia.org/wiki/BeagleBoard#BeagleBone_Black)
+- [http://en.wikipedia.org/wiki/BeagleBoard#BeagleBone](http://en.wikipedia.org/wiki/BeagleBoard#BeagleBone)
+- [http://en.wikipedia.org/wiki/BeagleBoard#BeagleBone_Black](http://en.wikipedia.org/wiki/BeagleBoard#BeagleBone_Black)
