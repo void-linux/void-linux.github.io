@@ -94,7 +94,7 @@ to the previous mode otherwise.
 that was made in `xbps_transaction_prepare()` with a simple implementation
 that fixes 2 bugs and makes xbps 2x faster to resolve dependencies.
 
-Packages that don't have `provides` obj but were declared as virtual packages,
+      Packages that don't have `provides` obj but were declared as virtual packages,
 were not detected correctly and lead me to rewrite this code.
 
 - Fixed issue [#62](https://github.com/voidlinux/xbps/issues/62) (Dup replaced pkgs in transaction).
