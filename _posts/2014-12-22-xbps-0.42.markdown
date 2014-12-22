@@ -11,10 +11,10 @@ Release notes:
 
 - xbps-reconfigure(8): new option -i, --ignore to ignore packages
 while performing configuration of all packages with -a, --all.
-Fixes [https://github.com/voidlinux/xbps/issues/67](#67).
+Fixes [#67](https://github.com/voidlinux/xbps/issues/67).
 
 - xbps-{install,query}: fix alignment in the column output mode
-when pkgname is shorter than 4 chars. Fixes [https://github.com/voidlinux/xbps/issues/71](#71).
+when pkgname is shorter than 4 chars. Fixes [#71](https://github.com/voidlinux/xbps/issues/71).
 
 - xbps.d(5): new manual page detailing the configuration settings.
 
@@ -32,11 +32,11 @@ need to be the `superuser` to synchronize the repository archives.
 repositories defined in configuration files (xbps.d). Only repos specified
 by the command line will be used (--repository).
 
-- Implemented issue [https://github.com/voidlinux/xbps/issues/69](#69) (No way to set globally a custom architecture)
+- Implemented issue [#69](https://github.com/voidlinux/xbps/issues/69) (No way to set globally a custom architecture)
 A new configuration keyword "architecture" has been added to override
 the native machine architecture (uname -m).
 
-- Fixed issue [https://github.com/voidlinux/xbps/issues/68](#68)
+- Fixed issue [#68](https://github.com/voidlinux/xbps/issues/68)
 `"xbps_binpkg_arch() asserts if arch contains a dash"`.
 
 - xbps-query(8): added `--cat=FILE` mode to print FILE stored in a binary package
@@ -52,7 +52,7 @@ package is in cachedir, no network connection to the remote server will be
 established. This reduces the size of the main x86\_64 repository (4000 packages)
 to 700KB, compared to 4.5MB previously.
 
-- xbps-create(8): fixed issue [https://github.com/voidlinux/xbps/issues/64](#64)
+- xbps-create(8): fixed issue [#64](https://github.com/voidlinux/xbps/issues/64)
  "xbps-create(8) incorrect installed-size with hardlinks".
 
 - Added a new configuration keyword `bestmatching`, which expects `true` or `false`
@@ -86,7 +86,7 @@ that installed packages do not need to have a virtualpkg configuration
 file in the system virtualpkg.d directory.
 
 - xbps-{install,remove}: implemented a column/wide output mode
-as requested in [https://github.com/voidlinux/xbps/issues/63](#63).
+as requested in [#63](https://github.com/voidlinux/xbps/issues/63).
 If the terminal has enough columns it will use this and falling back
 to the previous mode otherwise.
 
@@ -97,7 +97,7 @@ that fixes 2 bugs and makes xbps 2x faster to resolve dependencies.
 Packages that don't have `provides` obj but were declared as virtual packages,
 were not detected correctly and lead me to rewrite this code.
 
-- Fixed issue [https://github.com/voidlinux/xbps/issues/62](#62) (Dup replaced pkgs in transaction).
+- Fixed issue [#62](https://github.com/voidlinux/xbps/issues/62) (Dup replaced pkgs in transaction).
 
 - If removing a package and euid==0 do not check for file owner, being root
 means that all files can be removed properly. This fixes package removal
