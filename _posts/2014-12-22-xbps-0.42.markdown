@@ -4,7 +4,7 @@ title: "XBPS 0.42 is out"
 comments: true
 ---
 
-A new XBPS stable version has been released: 0.41. This is a major release
+A new XBPS stable version has been released: 0.42. This is a major release
 that contains some new features and multiple bugfixes.
 
 Release notes:
