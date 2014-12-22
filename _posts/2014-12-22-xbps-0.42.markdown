@@ -78,7 +78,7 @@ By default set to `<sysconfdir>/xbps.d` and `<sharedir>/xbps.d`:
     - /usr/local/etc/xbps.d         <- configuration directory
     - /usr/local/share/xbps.d       <- system configuration directory
 
-Files bearing the same filename in the configuration directory override
+      Files bearing the same filename in the configuration directory override
 those available in the system configuration directory.
 
 - Virtual packages are now collected directly from pkgdb, that means
