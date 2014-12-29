@@ -71,7 +71,7 @@ article,#xtraemewrap {
 nav a,p code {
 	white-space:nowrap;
 }
-img,#davoid {
+img,#davoid,.video {
 	display:block;
 }
 /* --- */
