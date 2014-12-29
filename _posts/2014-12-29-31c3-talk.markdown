@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Void Linux 31c3 talk"
+comments: true
+---
+
+We are proud to announce that [Gottox](https://github.com/Gottox) did
+a talk about The Void Linux project at the "Chaos Communication Congress"
+31c3.
+
+You should definetely watch the presentation if you're interested.
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/ZHKKYHoG4bo" frameborder="0" allowfullscreen></iframe>
