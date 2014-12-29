@@ -41,7 +41,7 @@ nav,header,article h1,article h2,article h3 {
 body,#links ul,#social ul {
 	margin:0;
 }
-#navwrap,#navpost,#navxbps,#navnews,#voidwrap,article,article h1,article h2,article h3,#davoid,#xtraemewrap {
+#navwrap,#navpost,#navxbps,#navnews,#voidwrap,article,article h1,article h2,article h3,.video,#davoid,#xtraemewrap {
 	margin:0 auto;
 }
 #voidwrap,article h1,article h2,article h3,.daxdate,#readprevnews,.video,.postarticle,#findpkg form,#donations,footer {
