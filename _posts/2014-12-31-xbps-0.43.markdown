@@ -16,7 +16,7 @@ to match any virtual package version. Example:
 
 	`virtualpkg=foo:bar`
 
-would match any version of the virtual package `foo` to be resolved as `bar`.
+      would match any version of the virtual package `foo` to be resolved as `bar`.
 
 - libxbps: when resolving virtual packages in repositories, make sure to initialize
 pkgdb to match any virtualpkg declared there. Regression introduced in 0.42.
