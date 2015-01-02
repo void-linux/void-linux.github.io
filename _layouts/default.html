@@ -18,9 +18,7 @@
 <body>
 {{ content }}
 
-{% if site.snow == '1' %}
-	{% include snow.html %}
-{% endif %}
+{% if site.snow == '1' %}{% include snow.html %}{% endif %}
 	<footer>
 		<div id="xtraemewrap">
 			<div>Copyright 2008-{{ site.time | date: "%Y" }} <a href="https://www.openhub.net/accounts/xtraeme">Juan RP</a> and contributors</div>
