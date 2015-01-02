@@ -13,7 +13,7 @@ pygments:    true
 
 permalink:   /news/:year/:month/:title.html
 
-snow:        1
+snow:        0
 
 gems:
   - jekyll-redirect-from
