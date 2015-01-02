@@ -11,13 +11,16 @@
 	<link rel="icon" type="image/png" href="/assets/img/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
 	<link rel="stylesheet" type="text/css" href="/assets/css/syntax.css" />
-	<!--<link rel="stylesheet" type="text/css" href="/assets/css/snow.css" />-->
+	{% if site.snow == '1' %}<link rel="stylesheet" type="text/css" href="/assets/css/snow.css" />{% endif %}
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml" />
 	<link rel="alternate" href="https://flattr.com/submit/auto?user_id=xtraeme&amp;url=http://voidlinux.eu{{ page.url | uri_escape }}" type="text/html" />
 </head>
 <body>
 {{ content }}
 
+{% if site.snow == '1' %}
+	{% include snow.html %}
+{% endif %}
 	<footer>
 		<div id="xtraemewrap">
 			<div>Copyright 2008-{{ site.time | date: "%Y" }} <a href="https://www.openhub.net/accounts/xtraeme">Juan RP</a> and contributors</div>
