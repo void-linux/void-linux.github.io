@@ -137,6 +137,10 @@ header {
 }
 #davoid:hover {
 	transform:rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
 }
 #title h1 {
 	line-height:44px;
