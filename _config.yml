@@ -1,15 +1,9 @@
 host:        127.0.0.1
 port:        4000
-baseurl:     /
 
 name:        "Welcome to the Void"
-
-source:      .
-destination: ./_site
-layouts:     ./_layouts
-
 markdown:    redcarpet
-pygments:    true
+highlighter: pygments
 
 permalink:   /news/:year/:month/:title.html
 
