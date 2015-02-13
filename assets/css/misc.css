@@ -137,4 +137,7 @@ img, #davoid, .video {
 #merchs p {
 	margin:6px 0 0;
 }
-
+.nav form {
+	margin-top: 4px;
+	padding-right: 8em;
+}
