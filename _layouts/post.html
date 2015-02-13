@@ -1,26 +1,24 @@
 ---
 layout: default
 ---
-	<nav>
-		<div id="navpost">
-			<div id="links">
-				<ul>
-					<li><a href="/" title="Main page"><i class="fa fa-home fa-lg"></i> Home</a></li>
-					{% if page.previous %}<li><a href="{{ page.previous.url }}" title="Previous news: {{ page.previous.title }}"><i class="fa fa-previous fa-lg"></i> Previous</a></li>{% endif %}
-					{% if page.next %}<li><a href="{{ page.next.url }}" title="Next news: {{ page.next.title }}">Next <i class="fa fa-next fa-lg"></i></a></li>{% endif %}
-				</ul>
-			</div>
-{% include navicon.html %}
-		</div>
-	</nav>
 
-{% include voidbanner.html %}
-	<article>
-		<div class="postarticle">
-			<div>{{ page.date | date: "%d.%m.%Y" }}</div>
-			<h2>{{ page.title }}</h2>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			{% if page.previous %}<h5><a href="{{ page.previous.url }}" title="Previous news: {{ page.previous.title }}"><i class="fa fa-previous fa-lg"></i> Previous</a></h5>{% endif %}
 		</div>
-{{ content }}
-
-{% if page.comments %}{% include disqus.html %}{% endif %}
-	</article>
+		<div class="col-md-6">
+			<h5><a href="{{ site.url }}/news" title="Back to news index"><i class="fa fa-home fa-lg"></i> Back to news</a></h5>
+		</div>
+		<div class="col-md-3">
+			{% if page.next %}<h5><a href="{{ page.next.url }}" title="Next news: {{ page.next.title }}"><i class="fa fa-next fa-lg"></i> Next</a></h5>{% endif %}
+		</div>
+	</div>
+	<div class="post">
+		<h4>{{ page.date | date: "%d.%m.%Y" }}</h4>
+		<h2>{{ page.title }}</h2>
+		<p>{{ content }}</p>
+	</div>
+	<hr>
+	<p>{% if page.comments %}{% include disqus.html %}{% endif %}</p>
+</div>

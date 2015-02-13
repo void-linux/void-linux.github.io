@@ -1,0 +1,141 @@
+@font-face {
+	font-family:'OpenS';
+	src: url('/assets/fonts/OpenSans-Regular-webfont.eot');
+	src: url('/assets/fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/OpenSans-Regular-webfont.woff') format('woff'), url('/assets/fonts/OpenSans-Regular-webfont.ttf') format('truetype'), url('/assets/fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:'FontAwesome';
+	src:url('/assets/fonts/fontawesome-webfont.eot?v=4.0.3');
+	src:url('/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('/assets/fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('/assets/fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('/assets/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+a {
+	color:#478061;
+}
+a:hover {
+	font-weight:bold;
+	text-decoration:none;
+	color:black;
+}
+.fa {
+	font-family:FontAwesome;
+	font-style:normal;
+	line-height:1;
+	/* SEEMS TO BE A DEPRECATED PROPERTY, BUT I'M NOT SURE */
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+.fa-lg {
+	font-size:1.3333333333333333em;
+	line-height:0.75em;
+	vertical-align:-15%;
+}
+
+.fa-gog:before {
+	content:"\f0d4";
+}
+.fa-comments:before {
+	content:"\f086";
+}
+.fa-twr:before {
+	content:"\f099";
+}
+.fa-github-alt:before {
+	content:"\f113";
+}
+.fa-paypal:before {
+	content: "\f1f4";
+}
+.fa-cog:before {
+	content:"\f013";
+}
+.fa-rss:before {
+	content:"\f143";
+}
+.fa-home:before {
+	content:"\f015";
+}
+.fa-previous:before {
+	content:"\f190";
+}
+.fa-next:before {
+	content:"\f18e";
+}
+.fa-go:before {
+	content:"\f064";
+}
+#davoid {
+	position:relative;
+	background:url("/assets/img/voidlogo.png") no-repeat;
+	width:206px;
+	height:151px;
+	transition:transform 2s ease;
+}
+#davoid:hover {
+	transform:rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+}
+img {
+	max-width: 95%;
+	margin: 30px auto;
+
+}
+img, #davoid, .video {
+	display: inline;
+
+}
+#voidSearch_box {
+	border:1px inset;
+	background:white;
+	padding:5pt;
+}
+#voidSearch_box.loading {
+	background-image:url(../img/loading.gif);
+	background-repeat:no-repeat;
+	background-position:center right;
+}
+
+#voidSearch_result {
+	padding:10px;
+	margin:left;
+}
+
+#voidSearch_result td {
+	padding:10px;
+}
+#voidSearch_result td.version,
+#voidSearch_result td.revision,
+#voidSearch_result td.size {
+	padding:10px;
+	text-align:right;
+}
+
+#voidSearch_result tr td {
+	color:#555;
+}
+
+#voidSearch_result tr:hover td {
+	color:#000;
+}
+
+#voidSearch_result tr:nth-child(even) {
+	background:#ddd;
+}
+
+#voidSearch_result tr th {
+	background:transparent !important;
+}
+#donations {
+	text-align:center;
+}
+#merchs p {
+	margin:6px 0 0;
+}
+

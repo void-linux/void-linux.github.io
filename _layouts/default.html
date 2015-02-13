@@ -1,30 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<!--[if lt IE 9]>
-	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<meta charset="utf-8" />
-	<meta name="author" content="Ypnose" />
-	<meta name="viewport" content="width=device-width" />
-	<title>Enter the void</title>
-	<link rel="icon" type="image/png" href="/assets/img/favicon.ico" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/syntax.css" />
-	{% if site.snow == 1 %}<link rel="stylesheet" type="text/css" href="/assets/css/snow.css" />{% endif %}
-	<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml" />
-	<link rel="alternate" href="https://flattr.com/submit/auto?user_id=xtraeme&amp;url=http://voidlinux.eu{{ page.url | uri_escape }}" type="text/html" />
-</head>
-<body>
-{{ content }}
-{% if site.snow == 1 %}{% include snow.html %}{% endif %}
-	<footer>
-		<div id="xtraemewrap">
-			<div>Copyright 2008-{{ site.time | date: "%Y" }} <a href="https://www.openhub.net/accounts/xtraeme">Juan RP</a> and contributors</div>
-			<div>Website &amp; design by <a href="http://ywstd.fr/">Ypnose</a> using <a href="http://jekyllrb.com/">Jekyll</a></div>
-			<div>Using some icons from <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></div>
-			<div>Valid <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fvoidlinux.eu{{ page.url }}">HTML</a> &amp; <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fvoidlinux.eu">CSS</a></div>
-		</div>
-	</footer>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{ page.title }}</title>
+		<link rel="icon" type="image/png" href="{{site.url}}/assets/img/favicon.ico" />
+		<link rel="stylesheet" href="{{site.url}}/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="{{site.url}}/assets/css/screen.css">
+		<link rel="stylesheet" href="{{site.url}}/assets/css/solarized.css">
+		<link rel="stylesheet" href="{{site.url}}/assets/css/misc.css">
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu:300,700' rel='stylesheet' type='text/css'>
+		{% if site.snow == 1 %}<link rel="stylesheet" type="text/css" href="{{site.url}}/assets/css/snow.css" />{% endif %}
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="{{site.url}}/atom.xml" />
+		<link rel="alternate" href="https://flattr.com/submit/auto?user_id=xtraeme&amp;url=http://voidlinux.eu{{ page.url | uri_escape }}" type="text/html" />
+	</head>
+	<body role="document">
+		<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsed-navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-justified navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+								<input type="hidden" name="cmd" value="_s-xclick">
+								<input type="hidden" name="hosted_button_id" value="QMV62MDXJ955N">
+								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" name="submit" alt="PayPal">
+								<img alt="Paypal icon" src="https://www.paypalobjects.com/es_ES/i/scr/pixel.gif">
+							</form></li>
+							<li>&nspr;</li>
+							<li>&nspr;</li>
+							<li><a href="{{site.url}}/">Home</a></li>
+							<li><a href="{{site.url}}/news/">News</a></li>
+							<li><a href="{{site.url}}/download/">Download</a></li>
+							<li><a href="{{site.url}}/packages/">Packages</a></li>
+							<li><a href="{{site.url}}/donations/">Donations</a></li>
+							<li><a href="https://github.com/voidlinux/documentation/wiki">Wiki</a></li>
+							<li><a href="https://github.com/voidlinux">GitHub</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<img id="davoid" src="{{site.url}}/assets/img/voidlogo.png" class="img-responsive">
+				</div>
+				<div class="col-md-9">
+					<h2>The Void (Linux) distribution</h2>
+					<p>
+					Void is a general purpose operating system, based on the monolithic <a href="https://www.kernel.org">Linux&#174;</a> kernel. Its package system allows you to quickly install, update and remove software; software is provided in binary packages or can be built directly from sources with the help of the XBPS source packages collection.
+					</p>
+					<p>Currently there are over 4500 optimized binary packages for the x86, x86_64, ARMv6, ARMv7 architectures; also there's support to build (natively or cross compiling) from sources any package easily that is available in the <a href="https://github.com/voidlinux/void-packages">XBPS source packages collection</a>.
+					</p>
+					<p>
+					<a href="https://plus.google.com/communities/113949500587973059533" title="Void on Google+"><i class="fa fa-gog fa-lg"></i></a>
+					<a href="https://twitter.com/voidlinux" title="Void on Twitter"><i class="fa fa-twr fa-lg"></i></a>
+					<a href="https://github.com/voidlinux" title="Void on GitHub"><i class="fa fa-github-alt fa-lg"></i></a>
+					<a href="irc://irc.freenode.net/#xbps" title="Void on IRC"><i class="fa fa-comments fa-lg"></i></a>
+					<a href="http://build.voidlinux.eu/console" title="Void builder"><i class="fa fa-cog fa-lg"></i></a>
+					</p>
+				</div>
+			</div>
+			<hr/>
+			{{ content }}
+			{% if site.snow == 1 %}{% include snow.html %}{% endif %}
+			<div class="container col-md-8 col-md-offset-2">
+				<hr>
+				<footer class="footer">
+					<p class="text-center">Copyright 2008-{{ site.time | date: "%Y" }} <a href="https://www.openhub.net/accounts/xtraeme">Juan RP</a> and contributors</p>
+					<p class="text-center">Linux&#174; is a registered trademark of Linus Tolvards (<a href="http://www.linuxfoundation.org/programs/legal/trademark/attribution">info</a>)</p>
+				</footer>
+			</div>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+			<script src="{{site.url}}/assets/js/bootstrap.min.js"></script>
+	</body>
 </html>
