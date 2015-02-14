@@ -48,7 +48,7 @@ title: Enter the void
 		<div class="col-md-6">
 			<h4>{{ post.date | date: "%B %d, %Y" }}</h4>
 			<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-			<p>{{ post.content }}</p>
+			{{ post.content }}
 		</div>
 		{% endfor %}
 	</div>
