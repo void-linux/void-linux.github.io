@@ -34,6 +34,9 @@ a:hover {
 	vertical-align:-15%;
 }
 
+.fa-list:before {
+	content:"\f03a";
+}
 .fa-gog:before {
 	content:"\f0d4";
 }
