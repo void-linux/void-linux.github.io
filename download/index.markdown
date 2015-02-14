@@ -1,5 +1,6 @@
 ---
 layout: std
+title: Enter the void - Downloads
 ---
 
 ## Download installable base live images (x86)

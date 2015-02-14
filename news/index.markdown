@@ -1,5 +1,6 @@
 ---
 layout: std
+title: Enter the void - News
 ---
 
 <h2>Latest 10 recent news (<a href="{{ site.url }}/news/archive.html">see index</a>)</h2>

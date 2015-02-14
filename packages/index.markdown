@@ -1,5 +1,6 @@
 ---
 layout: std
+title: Enter the void - Packages
 ---
 
 <h2>Find binary packages</h2>

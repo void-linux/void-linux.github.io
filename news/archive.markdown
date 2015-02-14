@@ -1,5 +1,6 @@
 ---
 layout: std
+title: Enter the void - News archive
 ---
 
 <div class="page-header">

@@ -1,5 +1,6 @@
 ---
 layout: std
+title: Enter the void - Donations
 ---
 
 <h2>Help the project with a donation!</h2>
