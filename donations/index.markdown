@@ -17,9 +17,21 @@ there will be organized events, as well as feature bounties or alike.
 <p>Do you want to support Void Linux? Donations can be made via <a href="https://flattr.com/submit/auto?user_id=xtraeme&amp;url=http%3A%2F%2Fwww.voidlinux.eu" target="_blank">Flattr</a>,
 <a href="https://patreon.com/xtraeme">Patreon</a> or <a href="https://www.paypal.com">Paypal</a>.</p>
 
-<div class="page-header text-left">
+<div class="row">
+<div class="col-md-4">
  <a href="https://flattr.com/submit/auto?user_id=xtraeme&amp;url=http%3A%2F%2Fwww.voidlinux.eu" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this"></a>
+</div>
+<div class="col-md-4">
  <a href="https://patreon.com/xtraeme"><img src="/assets/img/patreon-logo.png" alt="Become a Patron!" title="Patron me!" /></a>
+</div>
+<div class="col-md-4">
+ <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick">
+  <input type="hidden" name="hosted_button_id" value="QMV62MDXJ955N">
+  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" name="submit" alt="PayPal">
+  <img alt="Paypal icon" src="https://www.paypalobjects.com/es_ES/i/scr/pixel.gif">
+ </form>
+</div>
 </div>
 
 Additionally there are is some merchandising also available:
