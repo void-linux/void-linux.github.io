@@ -141,3 +141,7 @@ img, #davoid, .video {
 	margin-top: 1.1em;
 	padding-right: 8em;
 }
+.navbar {
+	background-color:#478061;
+	border:0;
+}
