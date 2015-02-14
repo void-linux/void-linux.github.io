@@ -10,4 +10,4 @@ a talk about The Void Linux project at the "Chaos Communication Congress"
 
 You should definetely watch the presentation if you're interested.
 
-<iframe class="video" width="560" height="315" src="//www.youtube.com/embed/ZHKKYHoG4bo" frameborder="0" allowfullscreen></iframe>
+<iframe class="video" src="//www.youtube.com/embed/ZHKKYHoG4bo" frameborder="0" allowfullscreen></iframe>
