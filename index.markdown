@@ -25,7 +25,7 @@ title: Enter the void
                 <div class="col-md-4">
                         <h3>LibreSSL</h3>
                         <p>We were the first distribution to switch to <em>LibreSSL</em> by default, replacing <em>OpenSSL</em>.</p>
-			<p>Due to the <a href="http://en.wikipedia.org/wiki/Heartbleed">Hearbleed</a> fiasco we believe that the <a href="http://www.openbsd.org">OpenBSD</a> project has qualified and <em>pro-active</em> developers to provide a more secure alternative.</p>
+			<p>Due to the <a href="http://en.wikipedia.org/wiki/Heartbleed">Heartbleed</a> fiasco we believe that the <a href="http://www.openbsd.org">OpenBSD</a> project has qualified and <em>pro-active</em> developers to provide a more secure alternative.</p>
 		</div>
                 <div class="col-md-4">
                         <h3>xbps</h3>
