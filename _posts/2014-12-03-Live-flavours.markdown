@@ -20,7 +20,7 @@ time via `QEMU`:
 
 [![xtraeme desktop](/assets/screenshots/live-flavours.jpg "xtraeme desktop")](/assets/screenshots/live-flavours.jpg)
 
-Check the [downloads](http://www.voidlinux.eu/#download) section to grab them!
+Check the [downloads](http://www.voidlinux.eu/download/) section to grab them!
 
 Don't forget to help us improving `Void` with your donations and/or contributions
 to the `wiki`, `void-packages` or any available repository.
