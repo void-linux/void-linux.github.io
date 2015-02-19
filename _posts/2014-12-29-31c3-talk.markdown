@@ -12,4 +12,3 @@ You should definetely watch the presentation if you're interested.
 
 <div class="embed-responsive embed-responsive-item embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="//www.youtube.com/embed/ZHKKYHoG4bo" frameborder="0" allowfullscreen></iframe>
-</div>
