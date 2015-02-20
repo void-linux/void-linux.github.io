@@ -9,4 +9,4 @@ a lightning talk about The Void Linux project at the **Chaos Communication Congr
 
 You should definetely watch the presentation if you're interested.
 
-<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/ZHKKYHoG4bo" frameborder="0" allowfullscreen></iframe>
+<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/ZHKKYHoG4bo" allowfullscreen></iframe>
