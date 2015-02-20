@@ -44,12 +44,12 @@ title: Enter the void
 		<h2>Recent news <a href="/atom.xml" title="Subscribe to the news"><i class="fa fa-rss fa-lg"></i></a></h2>
 	</div>
 	<div class="row">
-		{% for post in site.posts limit:2 %}
-		<div class="col-md-6">
-			<h4>{{ post.date | date: "%B %d, %Y" }}</h4>
-			<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-			{{ post.content }}
-		</div>
-		{% endfor %}
+			{% for post in site.posts limit:2 %}
+			<div class="col-md-6">
+				<h4>{{ post.date | date: "%B %d, %Y" }}</h4>
+				<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+				{{ post.content }}
+			</div>
+			{% endfor %}
 	</div>
 </div>

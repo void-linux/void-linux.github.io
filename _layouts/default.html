@@ -42,7 +42,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3">
-					<img id="davoid" src="{{site.url}}/assets/img/voidlogo.png" class="img-responsive">
+					<img id="davoid" alt="void logo" src="{{site.url}}/assets/img/voidlogo.png" class="img-responsive">
 				</div>
 				<div class="col-md-9">
 					<h2>The Void (Linux) distribution</h2>
@@ -51,16 +51,14 @@
 					</p>
 					<p>Currently there are over 4500 optimized binary packages for the x86, x86_64, ARMv6, ARMv7 architectures; also there's support to build (natively or cross compiling) from sources any package easily that is available in the <a href="https://github.com/voidlinux/void-packages">XBPS source packages collection</a>.
 					</p>
-					<p>
 					<h3><a href="https://plus.google.com/communities/113949500587973059533" title="Void on Google+"><i class="fa fa-gog fa-lg"></i></a>
 					<a href="https://twitter.com/voidlinux" title="Void on Twitter"><i class="fa fa-twr fa-lg"></i></a>
 					<a href="https://groups.google.com/forum/#!forum/voidlinux" title="Void Forum/Mailing list"><i class="fa fa-list fa-lg"></i></a>
 					<a href="irc://irc.freenode.net/#xbps" title="Void on IRC"><i class="fa fa-comments fa-lg"></i></a>
 					<a href="http://build.voidlinux.eu/console" title="Void builder"><i class="fa fa-cog fa-lg"></i></a></h3>
-					</p>
 				</div>
 			</div>
-			<hr/>
+			<hr>
 			{{ content }}
 			{% if site.snow == 1 %}{% include snow.html %}{% endif %}
 			<div class="container col-md-8 col-md-offset-2">
@@ -72,5 +70,6 @@
 			</div>
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 			<script src="{{site.url}}/assets/js/bootstrap.min.js"></script>
+		</div>
 	</body>
 </html>
