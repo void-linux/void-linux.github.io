@@ -3,6 +3,7 @@ layout: std
 title: Enter the void - Packages
 ---
 
+<div>
 <h2>Find binary packages</h2>
  <p>Search for available binary packages in the official repository index matching simple keywords.</p>
  <form method="GET" action="https://github.com/voidlinux/void-packages/search" onkeypress="return event.keyCode != 13;">
@@ -19,3 +20,4 @@ title: Enter the void - Packages
   <script src="{{site.url}}/assets/js/voidcommits.js"></script>
   <script src="https://api.github.com/repos/voidlinux/void-packages/commits?page=1&amp;per_page=10&amp;callback=voidcommits&amp;sha=master"></script>
  </ul>
+</div>
