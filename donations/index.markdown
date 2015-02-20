@@ -3,6 +3,7 @@ layout: std
 title: Enter the void - Donations
 ---
 
+<div>
 <h2>Help the project with a donation!</h2>
 <hr>
 
@@ -54,3 +55,4 @@ Additionally there are is some merchandising also available:
  <div class="col-md-4">
   <a href="http://camisetasfrikis.es/camisetas/505-dddd.html"><img src="/assets/img/voidbshirt3.png" alt="bshirt3" class="voidgpic" /></a>
  </div>
+</div>
