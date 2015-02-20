@@ -4,7 +4,7 @@ title: Enter the void - Donations
 ---
 
 <h2>Help the project with a donation!</h2>
-<hr/>
+<hr>
 
 Maintaining a complete package system and a distribution takes a lot of time. Void is a project
 developed entirely by volunteers, i.e developers don't get paid when contributing changes or

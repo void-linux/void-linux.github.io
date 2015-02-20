@@ -39,7 +39,7 @@ title: Enter the void
 			<p>Additionally xbps-src can build natively or cross compile for the target machine, and supports multiple <em>C libraries</em> (glibc and musl currently).</p>
 		</div>
 	</div>
-	<hr/>
+	<hr>
 	<div class="page-header">
 		<h2>Recent news <a href="/atom.xml" title="Subscribe to the news"><i class="fa fa-rss fa-lg"></i></a></h2>
 	</div>
