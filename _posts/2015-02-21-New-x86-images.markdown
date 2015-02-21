@@ -1,0 +1,18 @@
+---
+layout: post
+title: "New x86 live images"
+comments: true
+---
+
+New x86 (32/64 bits) ISO live images are now available for public consumption.
+All images (including the minimal one with **base-system**) now include the following
+software:
+
+- cryptsetup
+- lvm2
+- mdadm
+
+Additionally there's now an additional flavour containing the latest [Cinnamon](http://cinnamon.linuxmint.com/)
+Desktop Environment.
+
+Check out the [Download](http://www.voidlinux.eu/download/) section to grab them.
