@@ -25,6 +25,8 @@ available:
 
 - [Void live with Enlightenment for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-enlightenment.iso)
 - [Void live with Enlightenment for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-enlightenment.iso)
+- [Void live with Cinnamon for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-cinnamon.iso)
+- [Void live with Cinnamon for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-cinnamon.iso)
 - [Void live with Mate for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-mate.iso)
 - [Void live with Mate for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-mate.iso)
 - [Void live with xfce for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-xfce.iso)
