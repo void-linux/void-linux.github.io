@@ -12,7 +12,11 @@ software:
 - lvm2
 - mdadm
 
-Additionally there's now an additional flavour containing the latest [Cinnamon](http://cinnamon.linuxmint.com/)
+The installer now has an option to not install the bootloader, if the user decides
+to not install it. However, note that if you don't install the bootloader it's your
+problem to update it.
+
+Additionally there's now a new flavour containing the latest [Cinnamon](http://cinnamon.linuxmint.com/)
 Desktop Environment.
 
 Check out the [Download](http://www.voidlinux.eu/download/) section to grab them.
