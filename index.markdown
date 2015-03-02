@@ -30,7 +30,7 @@ title: Enter the void
                 <div class="col-md-4">
                         <h3>xbps</h3>
 			<p><a href="https://github.com/voidlinux/xbps">xbps</a> is the native system package manager, written from scratch with a <em>2-clause BSD</em> license.</p>
-			<p><em>xbps</em> allows you to quickly install/update/remove software in your system and features detection of <em>incompatible shared libraries</em> and <em>dependencies</em> while updating or removing packages (among others).</p>
+			<p><em>xbps</em> allows you to quickly install/update/remove software in your system and features detection of <em>incompatible shared libraries</em> and <em>dependencies</em> while updating or removing packages (among others). See the <a href="/usage/xbps/">usage page</a> for a brief introduction.</p>
 		</div>
 		<div class="col-md-4">
 			<h3>xbps-src</h3>
