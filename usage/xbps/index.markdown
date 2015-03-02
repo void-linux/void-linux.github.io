@@ -117,7 +117,7 @@ This utility can be used to remove installed packages and clean the cache direct
 
     # xbps-remove pkg
 
-#### Removing a single package and recursively all packages that were installeda
+#### Removing a single package and recursively all packages that were installed as dependencies
 
     # xbps-remove -R pkg
 
