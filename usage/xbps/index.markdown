@@ -1,6 +1,6 @@
 ---
 layout: std
-title:
+title: Enter the void - xbps
 ---
 
 ## xbps - example usage
