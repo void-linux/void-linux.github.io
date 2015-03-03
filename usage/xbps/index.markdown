@@ -37,6 +37,20 @@ Where `url` can be a path to a directory (local) or an URL to the repository (re
 System repositories can be available at `/usr/share/xbps.d`, files bearing the same filename
 available in `/etc/xbps.d` override those defined in `/usr/share/xbps.d`.
 
+#### Official Repositories
+
+- http://repo.voidlinux.eu
+- http://repo2.voidlinux.eu
+- http://repo3.voidlinux.eu (Dallas, TX)
+
+#### Archives
+
+Repository archives are available at http://archive.voidlinux.eu/YYYY-MM-DD, where
+the datestamp is the date of the archive you wish to use as a repository.
+
+    # xbps-query -repository=http://archive.voidlinux.eu/2015-02-27 -Rs vim
+
+
 ### xbps-install(8)
 
 This utility can be used to install, update, reinstall, or downgrade a package,
