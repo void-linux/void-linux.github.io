@@ -45,7 +45,7 @@ Note how each service is managed by its own runsv process, further explanation b
 
 ### Framework
 
-runit employes a concept of a service directory, responsible for an individual service,
+runit employs a concept of a service directory, responsible for an individual service,
 which is a process to monitor and an optional log service.
 
 #### void runit directories
