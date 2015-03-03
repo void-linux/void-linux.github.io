@@ -48,7 +48,7 @@ available in `/etc/xbps.d` override those defined in `/usr/share/xbps.d`.
 Repository archives are available at http://archive.voidlinux.eu/YYYY-MM-DD, where
 the datestamp is the date of the archive you wish to use as a repository.
 
-    $ xbps-query --repository=http://archive.voidlinux.eu/2015-02-27/current -MiS \*
+    $ xbps-query --repository=http://archive.voidlinux.eu/2015-02-27/current -Mis \*
 
 To list all packages stored on that repository.
 
