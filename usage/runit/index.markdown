@@ -157,7 +157,8 @@ Removing the symlink will also stop the service.
 # Run Levels
 
 runit supports an unlimited amount of run levels, implemented as directories located under `/etc/runit/runsvdir/`.
-The default runlevels shipped with void are `default` and `single`.
+
+The default runlevels shipped with void are `default` and `single`:
 
 - The `single` runlevel is meant to be used as `rescue` or `single user` target and it will only start `sulogin(8)`
 by default.
@@ -170,13 +171,13 @@ symlinks to service directories to create the runlevel you desire.
     # rm /etc/runit/runsvdir/my_runlevel/agetty-tty[3456] # remove all gettys except for tty1 and tty2
     # ln -s /etc/sv/dcron /etc/runit/runsvdir/my_runlevel/ # add the cron service
 
-To change runlevels, use the `runsvchdir(8)` command.
+To change the runlevel use the `runsvchdir(8)` command:
 
     # runsvchdir my_runlevel
 
 To make this runlevel the default runlevel, append it to your bootloader's kernel command line.
 
-For GRUB edit `/etc/default/grub`, adding
+For GRUB edit `/etc/default/grub`, adding:
 
     GRUB_CMDLINE_LINUX_DEFAULT="loglevel=4 my_runlevel"
 
