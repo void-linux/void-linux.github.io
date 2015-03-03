@@ -39,17 +39,18 @@ available in `/etc/xbps.d` override those defined in `/usr/share/xbps.d`.
 
 #### Official Repositories
 
-- http://repo.voidlinux.eu
-- http://repo2.voidlinux.eu
-- http://repo3.voidlinux.eu (Dallas, TX)
+- http://repo.voidlinux.eu (Germany, EU *default*)
+- http://repo2.voidlinux.eu (Germany, EU)
+- http://repo3.voidlinux.eu (Dallas, TX, US)
 
 #### Archives
 
 Repository archives are available at http://archive.voidlinux.eu/YYYY-MM-DD, where
 the datestamp is the date of the archive you wish to use as a repository.
 
-    # xbps-query -repository=http://archive.voidlinux.eu/2015-02-27 -Rs vim
+    $ xbps-query --repository=http://archive.voidlinux.eu/2015-02-27/current -MiS \*
 
+To list all packages stored on that repository.
 
 ### xbps-install(8)
 
