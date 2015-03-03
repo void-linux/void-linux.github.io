@@ -3,7 +3,10 @@ layout: std
 title: Enter the void - xbps
 ---
 
-## xbps - example usage
+* TOC
+{:toc}
+
+# Introduction
 
 xbps contains some utilities to accomplish a certain task for package management
 (additional utilities not listed here were omitted for simplicity):
@@ -244,7 +247,7 @@ to the `--repository` option or be declared in `/etc/xbps.d/`.
 
 #### Signing packages stored in a repository
 
-    $ xbps-rindex --signedby "I'm Groot" -s /path/to/dir
+    $ xbps-rindex --signedby "I'm Groot" --sign /path/to/dir
 
 Signs all binary packages stored in repository with your specified RSA key.
 If the `--privkey` argument not set, it defaults to `~/.ssh/id_rsa`.

@@ -2,7 +2,7 @@ host:        127.0.0.1
 port:        4000
 
 name:        "Welcome to the Void"
-markdown:    redcarpet
+markdown:    kramdown
 highlighter: pygments
 
 permalink:   /news/:year/:month/:title.html

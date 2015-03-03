@@ -2,20 +2,20 @@
 layout: std
 title: Enter the void - runit
 ---
+* TOC
+{:toc}
 
 # Overview
-
-### Design
 
 runit is a suite of tools which include a PID 1 init as well as a
 daemontools-compatible process supervision framework, along with utilities
 which streamline creation and maintenance of services.
 
-#### Example Process Tree
+## Example Process Tree
 
 Example of a basic running system with runit as PID 1
 
-```
+~~~
 # pstree -a
 runit
   `-runsvdir -P /run/runit/runsvdir/current...
@@ -37,22 +37,22 @@ runit
       |   `-agetty tty6 38400 linux
       `-runsv udevd
           `-udevd
-```
+~~~
 
 Note how each service is managed by its own runsv process, further explanation below.
 
-### Framework
+## Framework
 
 runit employs a concept of a service directory, responsible for an individual service,
 which is a process to monitor and an optional log service.
 
-#### void runit directories
+### void runit directories
 
-- /var/service - always linked to the currently active runlevel
-- /etc/sv - directory containing service files placed by xbps
-- /etc/runit/runsvdir - directory containing all available runlevels
+- `/var/service` - always linked to the currently active runlevel
+- `/etc/sv` - directory containing service files placed by xbps
+- `/etc/runit/runsvdir` - directory containing all available runlevels
 
-#### Service Directory layout
+### Service Directory layout
 
 A service directory requires only one file, an executable named `run` which is expected
 to exec a process in the foreground. If the service directory contains a directory named
@@ -62,43 +62,42 @@ to the input of the `run` process in the `log` directory.
 The `sshd(8)` run service:
 
 
-```
+~~~
 #!/bin/sh
 ssh-keygen -A >/dev/null 2>&1 # Will generate host keys if they don't already exist
 [ -r conf ] && . ./conf
 exec /usr/sbin/sshd -D $OPTS 2>&1
-```
+~~~
 
 will run the sshd process in the foreground, making sure all output (stderr, stdout) are directed
 to stdout, which will be piped to the log below (`/etc/sv/sshd/log/run`):
 
-```
+~~~
 #!/bin/sh
 [ -d /var/log/sshd ] || mkdir -p /var/log/sshd
 exec chpst -u root:adm svlogd -t /var/log/sshd
-```
+~~~
 
-#### User Commands
+### User Commands
 
 - `chpst(8)` - runit process environment manipulator
 - `sv(8)` - runit utility to manage and inspect services
 - `svlogd(8)` - runit logging utility
 - `runsvchdir(8)` - runit "runlevel" switcher
 
-#### System Commands
+### System Commands
 
 - `runit(8)` - a UNIX process number 1
 - `runsvdir(8)` - starts and monitors a collection of runsv(8) processes
 - `runsv(8)` - starts and monitors a service and optionally an appendant log service
 
-# Usage
 
-### Examples
+## Examples
 
 System services require root access for most of these operations. Use `sudo(8)` with these
 commands as a normal user for the desired system-level behavior.
 
-#### Service Status
+### Service Status
 
 To see the status of a supervised service use `sv s <service_name>`
 
@@ -112,7 +111,7 @@ returns
 
 To see the status of all services, use `sv s /var/service/*`.
 
-#### Stop/Start/Restart
+### Stop/Start/Restart
 
 Start a service
 
@@ -137,7 +136,7 @@ More verbose forms of the above
 
 Each of these will also return the status of the service upon exit.
 
-#### Enabling a service
+### Enabling a service
 
 void-provided service directories live in `/etc/sv`. To enable a service in the current runlevel,
 create a symlink from it to `/var/service`.
@@ -146,7 +145,7 @@ create a symlink from it to `/var/service`.
 
 Once a service is linked it will always start on boot and restart if it stops (unless administratively downed).
 
-#### Disabling a service
+### Disabling a service
 
 To disable a service in the current runlevel remove the symlink to its service directory from `/var/service`.
 
@@ -154,7 +153,7 @@ To disable a service in the current runlevel remove the symlink to its service d
 
 Removing the symlink will also stop the service.
 
-# Run Levels
+## Run Levels
 
 runit supports an unlimited amount of run levels, implemented as directories located under `/etc/runit/runsvdir/`.
 
