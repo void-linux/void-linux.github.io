@@ -7,7 +7,7 @@ title: Enter the void - runit
 
 ### Design
 
-runit is a suite of tools which include a unix init (PID1) as well as a
+runit is a suite of tools which include a PID 1 init as well as a
 daemontools-compatible process supervision framework, along with utilities
 which streamline creation and maintenance of services.
 
@@ -19,8 +19,6 @@ Example of a basic running system with runit as PID 1
 # pstree -a
 runit
   `-runsvdir -P /run/runit/runsvdir/current...
-      |-runsv agetty-console
-      |   `-agetty console 38400 linux
       |-runsv dhcpcd-eth0
       |   `-dhcpcd -B eth0
       |-runsv sshd
@@ -61,17 +59,19 @@ to exec a process in the foreground. If the service directory contains a directo
 `log`, a pipe will be opened from the output of the `run` process in the service directory
 to the input of the `run` process in the `log` directory.
 
-/etc/sv/sshd/run
+The `sshd(8)` run service:
+
+
 ```
 #!/bin/sh
 ssh-keygen -A >/dev/null 2>&1 # Will generate host keys if they don't already exist
 [ -r conf ] && . ./conf
 exec /usr/sbin/sshd -D $OPTS 2>&1
 ```
-will run the sshd process in the foreground, making sure all output (stderr, stdout) are directed
-to stdout, which will be piped to the log below.
 
-/etc/sv/sshd/log/run
+will run the sshd process in the foreground, making sure all output (stderr, stdout) are directed
+to stdout, which will be piped to the log below (`/etc/sv/sshd/log/run`):
+
 ```
 #!/bin/sh
 [ -d /var/log/sshd ] || mkdir -p /var/log/sshd
@@ -80,9 +80,9 @@ exec chpst -u root:adm svlogd -t /var/log/sshd
 
 #### User Commands
 
+- `chpst(8)` - runit process environment manipulator
 - `sv(8)` - runit utility to manage and inspect services
 - `svlogd(8)` - runit logging utility
-- `chpst(8)` - runit process environment manipulator
 - `runsvchdir(8)` - runit "runlevel" switcher
 
 #### System Commands
@@ -104,11 +104,11 @@ To see the status of a supervised service use `sv s <service_name>`
 
 for example, 
 
-`sv s sshd`
+    # sv s sshd
 
 returns
 
-`run: sshd: (pid 42) 1587s`
+    run: sshd: (pid 42) 1587s
 
 To see the status of all services, use `sv s /var/service/*`.
 
@@ -116,26 +116,24 @@ To see the status of all services, use `sv s /var/service/*`.
 
 Start a service
 
-`sv u sshd`
+    # sv u sshd
 
-Stop A service
+Stop a service
 
-`sv d sshd`
+    # sv d sshd
 
 Restart a service
 
-`sv t sshd`
+    # sv t sshd
 
 Each of these is a shortcut, for 'up', 'down', and 'terminate', respectively. Only the first letter
 of each word is recognized (see `sv(8)`).
 
 More verbose forms of the above
 
-`sv start sshd`
-
-`sv stop sshd`
-
-`sv restart sshd`
+    # sv start sshd
+    # sv stop sshd
+    # sv restart sshd
 
 Each of these will also return the status of the service upon exit.
 
@@ -144,7 +142,7 @@ Each of these will also return the status of the service upon exit.
 void-provided service directories live in `/etc/sv`. To enable a service in the current runlevel,
 create a symlink from it to `/var/service`.
 
-`ln -s /etc/sv/sshd /var/service/`
+    # ln -s /etc/sv/sshd /var/service/
 
 Once a service is linked it will always start on boot and restart if it stops (unless administratively downed).
 
@@ -152,35 +150,36 @@ Once a service is linked it will always start on boot and restart if it stops (u
 
 To disable a service in the current runlevel remove the symlink to its service directory from `/var/service`.
 
-`rm /var/service/sshd`
+    # rm /var/service/sshd
 
 Removing the symlink will also stop the service.
 
 # Run Levels
 
-runit support an unlimited amount of run levels, implemented as directories located under `/etc/runit/runsvdir/`. The default runlevel
-that ships with void is `/etc/runit/runsvdir/default`. In order to create a new runlevel, it is best to start by copying
-this default and removing/adding symlinks to service directories to create the runlevel you desire.
+runit supports an unlimited amount of run levels, implemented as directories located under `/etc/runit/runsvdir/`.
+The default runlevels shipped with void are `default` and `single`.
 
-```
-cp -a /etc/runit/runsvdir/default /etc/runit/runsvdir/my_runlevel
-rm /etc/runit/runsvdir/my_runlevel/agetty-tty[3456] # remove all gettys except for tty1 and tty2
-ln -s /etc/sv/dcron /etc/runit/runsvdir/my_runlevel/ # add the cron service
-```
-To change runlevels, use the `runsvdir` command.
-```
-runsvdir my_runlevel
-```
+- The `single` runlevel is meant to be used as `rescue` or `single user` target and it will only start `sulogin(8)`
+by default.
+- The `default` runlevel will start `agetty(8)` and some more services; it's the `multi-user` target by default.
+
+In order to create a new runlevel, it is best to start by copying this `default` and removing/adding
+symlinks to service directories to create the runlevel you desire.
+
+    # cp -a /etc/runit/runsvdir/default /etc/runit/runsvdir/my_runlevel
+    # rm /etc/runit/runsvdir/my_runlevel/agetty-tty[3456] # remove all gettys except for tty1 and tty2
+    # ln -s /etc/sv/dcron /etc/runit/runsvdir/my_runlevel/ # add the cron service
+
+To change runlevels, use the `runsvchdir(8)` command.
+
+    # runsvchdir my_runlevel
+
 To make this runlevel the default runlevel, append it to your bootloader's kernel command line.
 
-Example for grub, edit `/etc/default/grub`, adding
-```
-GRUB_CMDLINE_LINUX_DEFAULT="loglevel=4 my_runlevel"
-```
-and rebuild grub.cfg (`xbps-reconfigure -f linux-3.18.7`)
+For GRUB edit `/etc/default/grub`, adding
 
-Now your default runlevel will be "my\_runlevel"
+    GRUB_CMDLINE_LINUX_DEFAULT="loglevel=4 my_runlevel"
 
-# See Also
+and rebuild the grub configuration file (`update-grub`)
 
-- [sv-helper](/usage/runit/sv-helper) - Utilities to simplify building and managing runit services.
+Now your default runlevel will be `my_runlevel`.

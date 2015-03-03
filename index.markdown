@@ -18,7 +18,7 @@ title: Enter the void
 		<div class="col-md-4">
 			<h3>runit</h3>
 			<p>We do use <a href="http://smarden.org/runit/">runit</a> as native init system and service supervisor.</p>
-			<p>A simple and effective approach to initialize the system with reliable service supervision.</p>
+			<p>A simple and effective approach to initialize the system with reliable service supervision. See the <a href="/usage/runit">usage page</a> for a brief introduction.</p>
 		</div>
 	</div>
         <div class="row">
