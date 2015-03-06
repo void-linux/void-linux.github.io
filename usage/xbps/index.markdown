@@ -40,6 +40,15 @@ Where `url` can be a path to a directory (local) or an URL to the repository (re
 System repositories can be available at `/usr/share/xbps.d`, files bearing the same filename
 available in `/etc/xbps.d` override those defined in `/usr/share/xbps.d`.
 
+### Subrepositories
+
+Additional sub repositories exist in the official repositories:
+
+- debug (contains -dbg pkgs for debugging)
+- nonfree (contains pkgs that don't have free licenses)
+- multilib (contains 32bit pkgs for 64bit platforms)
+- multilib/nonfree (contains non free 32bit pkgs for 64bit platforms)
+
 #### Official Repositories
 
 - http://repo.voidlinux.eu (Germany, EU *default*)
@@ -54,6 +63,14 @@ the datestamp is the date of the archive you wish to use as a repository.
     $ xbps-query --repository=http://archive.voidlinux.eu/2015-02-27/current -Mis \*
 
 To list all packages stored on that repository.
+
+#### Binaries
+
+Static binaries built with the *musl C library* are available at:
+
+- [armv6hf](http://repo.voidlinux.eu/static/xbps-static-latest.armv6l-musl.tar.xz)
+- [i686](http://repo.voidlinux.eu/static/xbps-static-latest.i686-musl.tar.xz)
+- [x86\_64](http://repo.voidlinux.eu/static/xbps-static-latest.x86_64-musl.tar.xz)
 
 ### xbps-install(8)
 
