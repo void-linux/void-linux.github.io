@@ -66,7 +66,7 @@ To list all packages stored on that repository.
 
 ### Download static binaries
 
-Static binaries built with the *musl C library* are available at:
+Static binaries for Linux built with the *musl C library* are available at:
 
 - [armv6hf](http://repo.voidlinux.eu/static/xbps-static-latest.armv6l-musl.tar.xz)
 - [i686](http://repo.voidlinux.eu/static/xbps-static-latest.i686-musl.tar.xz)
