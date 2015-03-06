@@ -40,7 +40,7 @@ Where `url` can be a path to a directory (local) or an URL to the repository (re
 System repositories can be available at `/usr/share/xbps.d`, files bearing the same filename
 available in `/etc/xbps.d` override those defined in `/usr/share/xbps.d`.
 
-### Subrepositories
+#### Subrepositories
 
 Additional sub repositories exist in the official repositories:
 
@@ -64,7 +64,7 @@ the datestamp is the date of the archive you wish to use as a repository.
 
 To list all packages stored on that repository.
 
-#### Binaries
+### Download static binaries
 
 Static binaries built with the *musl C library* are available at:
 
