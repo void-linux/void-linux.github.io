@@ -15,12 +15,12 @@ to perform the container setup.
 - `xbps-pkgdb(8)`: added a new mode to set in installed packages: `repolock`.
 If that mode is set with `-m repo(un)lock`, a package will only be updated
 if there's an update in the same repository that was used for installing.
-This implements [https://github.com/voidlinux/xbps/issues/77](#77).
+This implements [#77](https://github.com/voidlinux/xbps/issues/77).
 
 - `libxbps`: globally check for unresolved reverse dependencies and shared libraries
 while installing/updating/removing packages.
 
-And more... see the [https://github.com/voidlinux/xbps/blob/master/NEWS](NEWS) file
+And more... see the [NEWS](https://github.com/voidlinux/xbps/blob/master/NEWS) file
 for more details.
 
 Please report issues at
