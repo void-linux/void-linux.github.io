@@ -17,7 +17,7 @@ while internalizing plists.
 replaces the execution environment with cmd instead.
 
 - `xbps-uunshare(8)`: do not fail if we cannot disable setgroups; some kernels
-might not support it. Found by @cheneukirchen on 3.16.
+might not support it. Found by Christian Neukirchen on 3.16.
 
 - `xbps-reconfigure(8)`: added `-i/--ignore` to `usage()`, by Christian Neukirchen.
 
