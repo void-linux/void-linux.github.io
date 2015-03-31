@@ -130,7 +130,6 @@ header {
 }
 #davoid {
 	position:relative;
-	background:url("/assets/img/voidlogo.png") no-repeat;
 	width:206px;
 	height:151px;
 	transition:transform 2s ease;
