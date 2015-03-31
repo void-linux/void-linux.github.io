@@ -1,42 +1,35 @@
 ---
 layout: default
-title: Enter the void
+title: Enter the Xibeca
 ---
 
 <div class="container">
         <div class="row">
                 <div class="col-md-4">
                         <h3>Not a fork!</h3>
-                        <p>Void Linux is an independent distribution, developed entirely by volunteers.</p>
-			<p>Unlike trillions of other existing distros, this is not a modification of an existing distribution, its package manager and build system have been written from scratch.</p>
+			<p>Unlike other things you find in the kitchen Xibeca isn't a fork. - It's beer.</p>
 		</div>
                 <div class="col-md-4">
-                        <h3>Rolling release</h3>
-			<p>Install once, update daily. Your system will always be up-to-date.</p>
-			<p>Thanks to our <a href="http://build.voidlinux.eu">continuous build system</a>, new software is built into binary packages as soon as the changes are pushed to the <em>github</em> repositories.</p>
+                        <h3>Rofling release</h3>
+			<p>Drink once, buy daily. Your body will always be up-to-date.</p>
 		</div>
 		<div class="col-md-4">
-			<h3>runit</h3>
-			<p>We do use <a href="http://smarden.org/runit/">runit</a> as native init system and service supervisor.</p>
-			<p>A simple and effective approach to initialize the system with reliable service supervision. See the <a href="/usage/runit">usage page</a> for a brief introduction.</p>
+			<h3>systemd kernel</h3>
+			<p>We do use the systemd kernel as native distributor worlwide!</p>
 		</div>
 	</div>
         <div class="row">
                 <div class="col-md-4">
-                        <h3>LibreSSL</h3>
-                        <p>We were the first distribution to switch to <em>LibreSSL</em> by default, replacing <em>OpenSSL</em>.</p>
-			<p>Due to the <a href="http://en.wikipedia.org/wiki/Heartbleed">Heartbleed</a> fiasco we believe that the <a href="http://www.openbsd.org">OpenBSD</a> project has qualified and <em>pro-active</em> developers to provide a more secure alternative.</p>
+                        <h3>Get drunk daily!</h3>
+			<p>It's cheap and will make you happy all day!</p>
 		</div>
                 <div class="col-md-4">
-                        <h3>xbps</h3>
-			<p><a href="https://github.com/voidlinux/xbps">xbps</a> is the native system package manager, written from scratch with a <em>2-clause BSD</em> license.</p>
-			<p><em>xbps</em> allows you to quickly install/update/remove software in your system and features detection of <em>incompatible shared libraries</em> and <em>dependencies</em> while updating or removing packages (among others). See the <a href="/usage/xbps/">usage page</a> for a brief introduction.</p>
+                        <h3>Be cool with your friends</h3>
+			<p>What's better than drinking xibeca with your friends? nothing at all.</p>
 		</div>
 		<div class="col-md-4">
-			<h3>xbps-src</h3>
-			<p><a href="https://github.com/voidlinux/void-packages">xbps-src</a> is the xbps package builder, written from scratch with a <em>2-clause BSD</em> license.</p>
-			<p>This builds the software in <em>containers</em> through the use of <em>Linux namespaces</em>, providing isolation of processes and bind mounts (among others).</p>
-			<p>Additionally xbps-src can build natively or cross compile for the target machine, and supports multiple <em>C libraries</em> (glibc and musl currently).</p>
+			<h3>Be productive!</h3>
+			<p>Xibeca makes you stronger, faster and simply better.</p>
 		</div>
 	</div>
 	<hr>
