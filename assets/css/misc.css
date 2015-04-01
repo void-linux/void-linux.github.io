@@ -72,8 +72,6 @@ a:hover {
 }
 #davoid {
 	position:relative;
-	width:206px;
-	height:151px;
 	transition:transform 2s ease;
 }
 #davoid:hover {
