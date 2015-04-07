@@ -35,7 +35,7 @@ title: Enter the void
 		<div class="col-md-4">
 			<h3>xbps-src</h3>
 			<p><a href="https://github.com/voidlinux/void-packages">xbps-src</a> is the xbps package builder, written from scratch with a <em>2-clause BSD</em> license.</p>
-			<p>This builds the software in <em>containers</em> through the use of <em>Linux namespaces</em>, providing isolation of processes and bind mounts (among others).</p>
+			<p>This builds the software in <em>containers</em> through the use of <em>Linux namespaces</em>, providing isolation of processes and bind mounts (among others). No root required!</p>
 			<p>Additionally xbps-src can build natively or cross compile for the target machine, and supports multiple <em>C libraries</em> (glibc and musl currently).</p>
 		</div>
 	</div>
