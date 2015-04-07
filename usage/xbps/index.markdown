@@ -77,6 +77,14 @@ Static binaries for Linux built with the *musl C library* are available at:
 This utility can be used to install, update, reinstall, or downgrade a package,
 or all packages in your system, and to syncronize the remote repositories data.
 
+#### Synchronize remote repository data
+
+    # xbps-install -S
+
+Remote repositories in xbps contain an archive that stores metadata of all
+available packages in that repository. This data must be up-to-date. The `-S` flag
+can be used with other mode to always sync.
+
 #### Installing/updating a single package
 
     # xbps-install -S pkg
