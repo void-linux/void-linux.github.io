@@ -35,6 +35,8 @@ available:
 - [Void live with xfce for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-xfce.iso)
 - [Void live with xfce for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-xfce.iso)
 
+> NOTE: these images need at least 256 or 512 MB of RAM in order to work correctly.
+
 ## Download ready to boot images for ARM
 
 Install Void by using a *prepared image* or a *rootfs tarbal* that can be written/unpacked onto the SD card.
