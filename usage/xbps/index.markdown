@@ -53,7 +53,8 @@ Additional sub repositories exist in the official repositories:
 
 - http://repo.voidlinux.eu (Germany, EU *default*)
 - http://repo2.voidlinux.eu (Germany, EU)
-- http://repo3.voidlinux.eu (Dallas, TX, US)
+- http://repo3.voidlinux.eu (Los Angeles, CA, US)
+- http://repo.voidlinux.com (Los Angeles, CA, US) -- alias for repo3
 
 #### Archives
 
