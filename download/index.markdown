@@ -46,21 +46,25 @@ This method allows you to have a system ready to boot / use, once it's written /
  - [**2GB image**](http://repo.voidlinux.eu/live/void-beaglebone-latest.img.xz)
  - [**rootfs**](http://repo.voidlinux.eu/live/void-beaglebone-rootfs-latest.tar.xz) [instructions](https://github.com/voidlinux/documentation/wiki/beaglebone#rootfs-install)
 
-####  Cubieboard2 (ARMv7, hard float)
+#### Cubieboard2 (ARMv7, hard float)
  - [**2GB image**](http://repo.voidlinux.eu/live/void-cubieboard2-latest.img.xz)
  - [**rootfs**](http://repo.voidlinux.eu/live/void-cubieboard2-rootfs-latest.tar.xz) [instructions](https://github.com/voidlinux/documentation/wiki/cubieboard2#rootfs-install)
 
-####  Odroid U2/U3 (ARMv7, hard float)
+#### Odroid U2/U3 (ARMv7, hard float)
  - [**2GB image**](http://repo.voidlinux.eu/live/void-odroid-u2-latest.img.xz)
  - [**rootfs**](http://repo.voidlinux.eu/live/void-odroid-u2-rootfs-latest.tar.xz) [instructions](https://github.com/voidlinux/documentation/wiki/odroid-u2#rootfs-install)
 
-####  Raspberry Pi (ARMv6, hard float)
+#### Raspberry Pi (ARMv6, hard float)
  - [**2GB image**](http://repo.voidlinux.eu/live/void-rpi-latest.img.xz)
  - [**rootfs**](http://repo.voidlinux.eu/live/void-rpi-rootfs-latest.tar.xz) [instructions](https://github.com/voidlinux/documentation/wiki/Raspberry-Pi#rootfs-install)
 
 #### Raspberry Pi 2 (ARMv7, hard float)
    - [**2GB image**](http://repo.voidlinux.eu/live/void-rpi2-latest.img.xz)
    - [**rootfs**](http://repo.voidlinux.eu/live/void-rpi2-rootfs-latest.tar.xz) [instructions](https://github.com/voidlinux/documentation/wiki/Raspberry-Pi#rootfs-install)
+
+#### USB Armory (ARMv7, hard float)
+   - [**2GB image**](http://repo.voidlinux.eu/live/void-usbarmory-latest.img.xz)
+   - [**rootfs**](http://repo.voidlinux.eu/live/void-usbarmory-rootfs-latest.tar.xz) [instructions](https://github.com/voidlinux/documentation/wiki/USB-Armory#rootfs-install)
 
 Connect to it in virtual terminal or via ssh and log in as *root*, password **voidlinux**.
 
