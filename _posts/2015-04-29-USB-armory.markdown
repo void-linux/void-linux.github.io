@@ -15,15 +15,11 @@ In contrast to other supported platforms the USB armory has a static network
 configuration. Once the usb armory is plugged in and booted it will be registered
 as USB networking device. Configure the device as follows:
 
-```
-ip addr add 10.0.0.1/255.255.255.0 broadcast 10.0.0.255 dev enp0s20u2u3
-```
+    # ip addr add 10.0.0.1/255.255.255.0 broadcast 10.0.0.255 dev enp0s20u2u3
 
 Then log in using ssh:
 
-```
-ssh 10.0.0.1 -lroot
-```
+    # ssh 10.0.0.1 -lroot
 
 The default password is ```voidlinux```
 
