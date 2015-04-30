@@ -83,7 +83,7 @@ or in any known `PGP key server`. Follow these steps to verify the integrity and
 ~~~
 $ gpg --recv-keys 482F9368
 $ wget http://repo.voidlinux.eu/live/sha256sums.txt{,.asc}
-$ LANG=C gpg --verify < sha256sums.txt.asc
+$ LANG=C gpg --verify sha256sums.txt.asc
 gpg: Signature made Sun Feb  8 12:33:05 2015 CET using RSA key ID 482F9368
 gpg: Good signature from "Juan RP <xtraeme@gmail.com>" [unknown]
 gpg:                 aka "[jpeg image of size 3503]" [unknown]
