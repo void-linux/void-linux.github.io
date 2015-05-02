@@ -69,9 +69,11 @@ To list all packages stored on that repository.
 
 Static binaries for Linux built with the *musl C library* are available at:
 
+- [aarch64](http://repo.voidlinux.eu/static/xbps-static-latest.aarch64-musl.tar.xz)
 - [armv6hf](http://repo.voidlinux.eu/static/xbps-static-latest.armv6l-musl.tar.xz)
 - [i686](http://repo.voidlinux.eu/static/xbps-static-latest.i686-musl.tar.xz)
 - [x86\_64](http://repo.voidlinux.eu/static/xbps-static-latest.x86_64-musl.tar.xz)
+- [mips32]((http://repo.voidlinux.eu/static/xbps-static-latest.mips-musl.tar.xz)
 
 ### xbps-install(8)
 
