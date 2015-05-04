@@ -40,6 +40,13 @@ Where `url` can be a path to a directory (local) or an URL to the repository (re
 System repositories can be available at `/usr/share/xbps.d`, files bearing the same filename
 available in `/etc/xbps.d` override those defined in `/usr/share/xbps.d`.
 
+#### Official Repositories
+
+- http://repo.voidlinux.eu (Germany, EU *default*)
+- http://repo2.voidlinux.eu (Germany, EU)
+- http://repo3.voidlinux.eu (Los Angeles, CA, US)
+- http://repo.voidlinux.com (Los Angeles, CA, US) -- alias for repo3
+
 #### Subrepositories
 
 Additional sub repositories exist in the official repositories:
@@ -49,12 +56,19 @@ Additional sub repositories exist in the official repositories:
 - multilib (contains 32bit pkgs for 64bit platforms)
 - multilib/nonfree (contains non free 32bit pkgs for 64bit platforms)
 
-#### Official Repositories
+Packages for these repositories exist in the `main` repository, i.e:
 
-- http://repo.voidlinux.eu (Germany, EU *default*)
-- http://repo2.voidlinux.eu (Germany, EU)
-- http://repo3.voidlinux.eu (Los Angeles, CA, US)
-- http://repo.voidlinux.com (Los Angeles, CA, US) -- alias for repo3
+```
+$ xbps-query -Rs void-repo
+[*] void-repo-debug-5_1            Void Linux drop-in file for the debug repository
+[*] void-repo-multilib-5_1         Void Linux drop-in file for the multilib repository
+[*] void-repo-multilib-nonfree-5_1 Void Linux drop-in file for the multilib/nonfree repository
+[*] void-repo-nonfree-5_1          Void Linux drop-in file for the nonfree repository
+```
+
+After installing any of them don't forget to synchronize the repository data:
+
+    # xbps-install -S
 
 #### Archives
 
@@ -243,6 +257,12 @@ A package can also be put *on hold* mode to skip updates while performing a syst
 
     # xbps-pkgdb -m hold pkg
     # xbps-pkgdb -m unhold pkg
+
+A package can also be put in *repository locked mode* and will only be possible to update it
+if there's an update in the same *repository* that was used for installing:
+
+    # xbps-pkgdb -m repolock pkg
+    # xbps-pkgdb -m repounlock pkg
 
 ### xbps-rindex(8)
 
