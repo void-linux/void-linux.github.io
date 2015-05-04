@@ -58,13 +58,11 @@ Additional sub repositories exist in the official repositories:
 
 Packages for these repositories exist in the `main` repository, i.e:
 
-```
-$ xbps-query -Rs void-repo
-[*] void-repo-debug-5_1            Void Linux drop-in file for the debug repository
-[*] void-repo-multilib-5_1         Void Linux drop-in file for the multilib repository
-[*] void-repo-multilib-nonfree-5_1 Void Linux drop-in file for the multilib/nonfree repository
-[*] void-repo-nonfree-5_1          Void Linux drop-in file for the nonfree repository
-```
+    $ xbps-query -Rs void-repo
+    [*] void-repo-debug-5_1            Void Linux drop-in file for the debug repository
+    [*] void-repo-multilib-5_1         Void Linux drop-in file for the multilib repository
+    [*] void-repo-multilib-nonfree-5_1 Void Linux drop-in file for the multilib/nonfree repository
+    [*] void-repo-nonfree-5_1          Void Linux drop-in file for the nonfree repository
 
 After installing any of them don't forget to synchronize the repository data:
 
