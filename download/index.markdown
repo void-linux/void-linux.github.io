@@ -14,6 +14,9 @@ installation (packages are downloaded from official repository).
 * [Void live with base-system for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest.iso)
     - Requirements: EM64T CPU, 96MB RAM, 350MB disk, Ethernet/WiFi for network installation.
 
+* [Void live with base-system for x86\_64 and musl libc](http://repo.voidlinux.eu/live/void-live-x86_64-musl-latest.iso)
+    - Requirements: EM64T CPU, 96MB RAM, 350MB disk, Ethernet/WiFi for network installation.
+
 * [Void live with base-system for i686](http://repo.voidlinux.eu/live/void-live-i686-latest.iso)
     - Requirements: Pentium 4 CPU (SSE2), 96MB RAM, 350MB disk, Ethernet / WiFi for network installation.
 
@@ -31,8 +34,10 @@ available:
 - [Void live with Cinnamon for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-cinnamon.iso)
 - [Void live with Cinnamon for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-cinnamon.iso)
 - [Void live with Mate for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-mate.iso)
+- [Void live with Mate for x86\_64 and musl libc](http://repo.voidlinux.eu/live/void-live-x86_64-musl-latest-mate.iso)
 - [Void live with Mate for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-mate.iso)
 - [Void live with xfce for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-xfce.iso)
+- [Void live with xfce for x86\_64 and musl libc](http://repo.voidlinux.eu/live/void-live-x86_64-musl-latest-xfce.iso)
 - [Void live with xfce for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-xfce.iso)
 
 > NOTE: these images need at least 256 or 512 MB of RAM in order to work correctly.
