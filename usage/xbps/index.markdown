@@ -45,7 +45,11 @@ available in `/etc/xbps.d` override those defined in `/usr/share/xbps.d`.
 - http://repo.voidlinux.eu (Germany, EU *default*)
 - http://repo2.voidlinux.eu (Germany, EU)
 - http://repo3.voidlinux.eu (Los Angeles, CA, US)
-- http://repo.voidlinux.com (Los Angeles, CA, US) -- alias for repo3
+- http://repo4.voidlinux.eu (Paris, FR, EU)
+
+#### Official Repositories (musl)
+
+- http://muslrepo.voidlinux.eu (Paris, EU *default*)
 
 #### Subrepositories
 
