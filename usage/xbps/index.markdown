@@ -47,9 +47,27 @@ available in `/etc/xbps.d` override those defined in `/usr/share/xbps.d`.
 - http://repo3.voidlinux.eu (Los Angeles, CA, US)
 - http://repo4.voidlinux.eu (Paris, FR, EU)
 
+The official repositories (glibc) are signed with the following RSA key:
+
+    Signed-by: Void Linux
+    4096 60:ae:0c:d6:f0:95:17:80:bc:93:46:7a:89:af:a3:2d
+
+You can print the `repository` RSA public key fingerprint with `xbps-query`:
+
+    $ xbps-query -vL
+
 #### Official Repositories (musl)
 
 - http://muslrepo.voidlinux.eu (Paris, EU *default*)
+
+The musl repositories are signed with the following RSA key:
+
+    Signed-by: Void Linux
+    4096 3d:b9:c0:50:41:a7:68:4c:2e:2c:a9:a2:5a:04:b7:3f
+
+You can print the `repository` RSA public key fingerprint with `xbps-query`:
+
+    $ xbps-query -vL
 
 #### Subrepositories
 
