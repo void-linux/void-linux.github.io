@@ -35,8 +35,8 @@ other files, stop and return error immediately.
 - `xbps-remove(1)`: fixed regression while removing recursively packages, don't remove
 all package orphans, this task belongs to `-o` not `-R`.
 
-This closes #95 (`xbps-remove -R` pkg lists/removes orphans):
-[https://github.com/voidlinux/xbps/issues/95](https://github.com/voidlinux/xbps/issues/95)
+    This closes #95 (`xbps-remove -R` pkg lists/removes orphans):
+    [https://github.com/voidlinux/xbps/issues/95](https://github.com/voidlinux/xbps/issues/95)
 
 - `xbps-uunshare(1)`: replaced `-D`, `-H` and `-S` options with `-b src:dest`. This bind mounts
 src into dir/dest and allows unlimited mounts.
