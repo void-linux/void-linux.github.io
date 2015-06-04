@@ -11,12 +11,12 @@ title: Enter the void - xbps
 xbps contains some utilities to accomplish a certain task for package management
 (additional utilities not listed here were omitted for simplicity):
 
-- `xbps-install(8)` - XBPS utility to (re)install and update packages
-- `xbps-query(8)` - XBPS utility to query for package and repository information
-- `xbps-remove(8)` - XBPS utility to remove packages
-- `xbps-reconfigure(8)` - XBPS utility to configure installed packages
-- `xbps-pkgdb(8)` - XBPS utility to report/fix issues and modify the package database (pkgdb)
-- `xbps-rindex(8)` - XBPS utility to manage local binary package repositories
+- `xbps-install(1)` - XBPS utility to (re)install and update packages
+- `xbps-query(1)` - XBPS utility to query for package and repository information
+- `xbps-remove(1)` - XBPS utility to remove packages
+- `xbps-reconfigure(1)` - XBPS utility to configure installed packages
+- `xbps-pkgdb(1)` - XBPS utility to report/fix issues and modify the package database (pkgdb)
+- `xbps-rindex(1)` - XBPS utility to manage local binary package repositories
 
 This page shows brief examples for common usage, refer to the manual pages for more information.
 
@@ -109,7 +109,7 @@ Static binaries for Linux built with the *musl C library* are available at:
 - [x86\_64](http://repo.voidlinux.eu/static/xbps-static-latest.x86_64-musl.tar.xz)
 - [mips32](http://repo.voidlinux.eu/static/xbps-static-latest.mips-musl.tar.xz)
 
-### xbps-install(8)
+### xbps-install(1)
 
 This utility can be used to install, update, reinstall, or downgrade a package,
 or all packages in your system, and to syncronize the remote repositories data.
@@ -144,12 +144,12 @@ This will update all currently installed packages to the latest version found in
 registered repositories, performing a global system update. This is the recommended command
 to keep your system up to date daily.
 
-### xbps-query(8)
+### xbps-query(1)
 
 This utility can be used to query for information about packages installed in your system
 and in specific repositories.
 
-The `xbps-query(8)` has two working modes:
+The `xbps-query(1)` has two working modes:
 
 - **Local**: shows information of packages installed in the rootdir
 - **Repository**: shows information of packages stored in repositories
@@ -189,7 +189,7 @@ to work in `local` and `repository` mode.
 
     $ xbps-query [-R] -o "*/filename"
 
-### xbps-remove(8)
+### xbps-remove(1)
 
 This utility can be used to remove installed packages and clean the cache directory.
 
@@ -213,11 +213,11 @@ This utility can be used to remove installed packages and clean the cache direct
 
     # xbps-remove -Oo
 
-### xbps-reconfigure(8)
+### xbps-reconfigure(1)
 
 This utility can be used to configure or force reconfiguration of an installed package.
 
-When `xbps-install(8)` installs a package, it performs the task in two phases: *unpacking* and *configuration*.
+When `xbps-install(1)` installs a package, it performs the task in two phases: *unpacking* and *configuration*.
 The *unpacking* phase unpacks the package files of the binary package into disk, and the *configuration*
 phase performs additional steps necessary to execute the software.
 
@@ -239,7 +239,7 @@ are `uu`. In that case, those packages should be `reconfigured`:
     # xbps-reconfigure -f pkg
 
 
-### xbps-pkgdb(8)
+### xbps-pkgdb(1)
 
 This utility can be used to report errors in installed packages, as well as changing some of its
 properties.
@@ -268,7 +268,7 @@ or per-package:
 
     $ xbps-query -p automatic-install pkg
 
-It's possible to change this mode with `xbps-pkgdb(8)`:
+It's possible to change this mode with `xbps-pkgdb(1)`:
 
     # xbps-pkgdb -m auto pkg
     # xbps-pkgdb -m manual pkg
@@ -284,7 +284,7 @@ if there's an update in the same *repository* that was used for installing:
     # xbps-pkgdb -m repolock pkg
     # xbps-pkgdb -m repounlock pkg
 
-### xbps-rindex(8)
+### xbps-rindex(1)
 
 This utility can be used to generate local repositories, remove obsolete binary packages stored
 in them, and to sign the packages with a cryptographic key.
