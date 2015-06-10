@@ -81,6 +81,7 @@ Connect to it in virtual terminal or via ssh and log in as *root*, password **vo
 
 </div>
 </div>
+<br clear="both">
 
 ## Verifying file integrity and its digital signature
 
