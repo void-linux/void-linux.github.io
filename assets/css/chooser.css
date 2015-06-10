@@ -1,0 +1,26 @@
+/*
+ * chooser.css
+ * Copyright (C) 2015 tox
+ *
+ * Distributed under terms of the MIT license.
+ */
+
+.chooser {
+}
+
+.chooser .item {
+	float:left;
+	display: none;
+	background-color:#efefef;
+	border:1px solid grey;
+	padding:10px;
+	margin: 10px;
+}
+
+.chooser:target .item {
+	clear:both;
+	float:none;
+}
+.chooser .item:target, .chooser:target .item, .chooser .item_on {
+	display:block;
+}
