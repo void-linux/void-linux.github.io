@@ -57,6 +57,9 @@ title: Enter the void - Downloads
 #### musl:
 
 * none
+
+Connect to it in virtual terminal or via ssh and log in as *root*, password **voidlinux**.
+
 </div>
 <div markdown="1" id="images_armv7hf" class="item">
 ### armv7hf:
@@ -72,5 +75,41 @@ title: Enter the void - Downloads
 #### musl:
 
 * none
+
+Connect to it in virtual terminal or via ssh and log in as *root*, password **voidlinux**.
+
 </div>
 </div>
+
+## Verifying file integrity and its digital signature
+
+The [sha256sums.txt](http://repo.voidlinux.eu/live/sha256sums.txt) file contains the `SHA256` hashes to verify the integrity
+of the downloaded files; this file is digitally signed with **Juan RP's GPG** key.
+
+- Signer: `Juan RP <xtraeme@gmail.com>`
+- KeyID: `482F9368`
+- Fingerprint: `F469 EAEF 52F5 9627 75B8 20CD AF19 F6CB 482F 9368`
+
+My public key is available at [http://repo.voidlinux.eu/live/xtraeme.asc](http://repo.voidlinux.eu/live/xtraeme.asc)
+or in any known `PGP key server`. Follow these steps to verify the integrity and its digital signature:
+
+~~~
+$ gpg --recv-keys 482F9368
+$ wget http://repo.voidlinux.eu/live/sha256sums.txt{,.asc}
+$ LANG=C gpg --verify sha256sums.txt.asc
+gpg: Signature made Sun Feb  8 12:33:05 2015 CET using RSA key ID 482F9368
+gpg: Good signature from "Juan RP <xtraeme@gmail.com>" [unknown]
+gpg:                 aka "[jpeg image of size 3503]" [unknown]
+~~~
+
+Now that the signature has been verified, you should check the sha256 hash is valid for the file you've downloaded...
+use the sha256sum utility and compare it with what's stored in the `sha256sums.txt` file:
+
+~~~
+$ LANG=C sha256sum -c sha256sums.txt 2>/dev/null|grep void-beaglebone-latest.img.xz
+void-beaglebone-latest.img.xz: OK
+$
+~~~
+
+If the above command does not return `OK`, the downloaded file is corrupt or has been modified. Don't use it.
+
