@@ -17,7 +17,7 @@ title: Enter the void - Downloads
 
 <div class="chooser" id="images">
 <div markdown="1" id="images_x86_64" class="item">
-### x86\_64
+### x86\_64:
 
 #### glibc:
 
@@ -26,7 +26,7 @@ title: Enter the void - Downloads
 * [Void live with Cinnamon for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-cinnamon.iso)
 * [Void live with Mate for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-mate.iso)
 
-#### musl
+#### musl:
 
 * [Void live with base-system for x86\_64 and musl libc](http://repo.voidlinux.eu/live/void-live-x86_64-musl-latest.iso)
 * [Void live with Mate for x86\_64 and musl libc](http://repo.voidlinux.eu/live/void-live-x86_64-musl-latest-mate.iso)
