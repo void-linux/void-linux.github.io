@@ -11,71 +11,66 @@ Currently there are installable live images for the **x86** and **x86\_64** arch
 and there is support to make a local installation (with the included packages) or a network
 installation (packages are downloaded from official repository).
 
-* [Void live with base-system for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest.iso)
-    - Requirements: EM64T CPU, 96MB RAM, 350MB disk, Ethernet/WiFi for network installation.
+All support images are available at this url:
 
-* [Void live with base-system for x86\_64 and musl libc](http://repo.voidlinux.eu/live/void-live-x86_64-musl-latest.iso)
-    - Requirements: EM64T CPU, 96MB RAM, 350MB disk, Ethernet/WiFi for network installation.
+* [http://repo.voidlinux.eu/live/current](http://repo.voidlinux.eu/live/current)
 
-* [Void live with base-system for i686](http://repo.voidlinux.eu/live/void-live-i686-latest.iso)
-    - Requirements: Pentium 4 CPU (SSE2), 96MB RAM, 350MB disk, Ethernet / WiFi for network installation.
+The x86\_64 images have these requirements:
+
+- EM64T CPU, 96MB RAM, 350MB disk, Ethernet/WiFi for network installation.
+
+The i686 images have these requirements:
+
+-  Pentium 4 CPU (SSE2), 96MB RAM, 350MB disk, Ethernet / WiFi for network installation.
 
 Log in as **anon/root**, password **voidlinux**.
 
 To start the installer just execute the *void-installer* utility with enough permissions (i.e *sudo*).
 
-### live images with flavours (x86)
-
 Additional live images with *flavours* (an additional Desktop Environment with autologin) are also
 available:
 
-- [Void live with Enlightenment for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-enlightenment.iso)
-- [Void live with Enlightenment for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-enlightenment.iso)
-- [Void live with Cinnamon for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-cinnamon.iso)
-- [Void live with Cinnamon for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-cinnamon.iso)
-- [Void live with Mate for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-mate.iso)
-- [Void live with Mate for x86\_64 and musl libc](http://repo.voidlinux.eu/live/void-live-x86_64-musl-latest-mate.iso)
-- [Void live with Mate for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-mate.iso)
-- [Void live with xfce for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-xfce.iso)
-- [Void live with xfce for x86\_64 and musl libc](http://repo.voidlinux.eu/live/void-live-x86_64-musl-latest-xfce.iso)
-- [Void live with xfce for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-xfce.iso)
+- Enlightenment
+- Cinnamon
+- LXDE
+- MATE
+- XFCE
 
-> NOTE: these images need at least 256 or 512 MB of RAM in order to work correctly.
+These images need at least 256 or 512 MB of RAM in order to work correctly.
 
 ## Download ready to boot images for ARM
 
 Install Void by using a *prepared image* or a *rootfs tarbal* that can be written/unpacked onto the SD card.
 This method allows you to have a system ready to boot / use, once it's written / unpacked onto the target device.
 
-#### BeagleBone/BeagleBone Black (ARMv7, hard float)
- - [**2GB image**](http://repo.voidlinux.eu/live/void-beaglebone-latest.img.xz)
- - [**rootfs**](http://repo.voidlinux.eu/live/void-beaglebone-rootfs-latest.tar.xz) [instructions](https://github.com/voidlinux/documentation/wiki/beaglebone#rootfs-install)
+The images are prepared for 2GB SD cards, alternatively use the **rootfs tarball** if you want
+to customize the partitions and filesystems.
 
-#### Cubieboard2 (ARMv7, hard float)
- - [**2GB image**](http://repo.voidlinux.eu/live/void-cubieboard2-latest.img.xz)
- - [**rootfs**](http://repo.voidlinux.eu/live/void-cubieboard2-rootfs-latest.tar.xz) [instructions](https://github.com/voidlinux/documentation/wiki/cubieboard2#rootfs-install)
+The list of supported platforms currently is:
 
-#### Odroid U2/U3 (ARMv7, hard float)
- - [**2GB image**](http://repo.voidlinux.eu/live/void-odroid-u2-latest.img.xz)
- - [**rootfs**](http://repo.voidlinux.eu/live/void-odroid-u2-rootfs-latest.tar.xz) [instructions](https://github.com/voidlinux/documentation/wiki/odroid-u2#rootfs-install)
+- BeagleBone/BeagleBone Black (ARMv7, hard float)
+ - [rootfs instructions](https://github.com/voidlinux/documentation/wiki/beaglebone#rootfs-install)
 
-#### Raspberry Pi (ARMv6, hard float)
- - [**2GB image**](http://repo.voidlinux.eu/live/void-rpi-latest.img.xz)
- - [**rootfs**](http://repo.voidlinux.eu/live/void-rpi-rootfs-latest.tar.xz) [instructions](https://github.com/voidlinux/documentation/wiki/Raspberry-Pi#rootfs-install)
+- Cubieboard2 (ARMv7, hard float)
+ - [rootfs instructions](https://github.com/voidlinux/documentation/wiki/cubieboard2#rootfs-install)
 
-#### Raspberry Pi 2 (ARMv7, hard float)
-   - [**2GB image**](http://repo.voidlinux.eu/live/void-rpi2-latest.img.xz)
-   - [**rootfs**](http://repo.voidlinux.eu/live/void-rpi2-rootfs-latest.tar.xz) [instructions](https://github.com/voidlinux/documentation/wiki/Raspberry-Pi#rootfs-install)
+- Odroid U2/U3 (ARMv7, hard float)
+ - [rootfs instructions](https://github.com/voidlinux/documentation/wiki/odroid-u2#rootfs-install)
 
-#### USB Armory (ARMv7, hard float)
-   - [**2GB image**](http://repo.voidlinux.eu/live/void-usbarmory-latest.img.xz)
-   - [**rootfs**](http://repo.voidlinux.eu/live/void-usbarmory-rootfs-latest.tar.xz) [instructions](https://github.com/voidlinux/documentation/wiki/USB-Armory#rootfs-install)
+- Raspberry Pi (ARMv6, hard float)
+ - [rootfs instructions](https://github.com/voidlinux/documentation/wiki/Raspberry-Pi#rootfs-install)
+
+- Raspberry Pi 2 (ARMv7, hard float)
+   - [rootfs instructions](https://github.com/voidlinux/documentation/wiki/Raspberry-Pi#rootfs-install)
+
+- USB Armory (ARMv7, hard float)
+   - [rootfs instructions](https://github.com/voidlinux/documentation/wiki/USB-Armory#rootfs-install)
 
 Connect to it in virtual terminal or via ssh and log in as *root*, password **voidlinux**.
 
 ## Verifying file integrity and its digital signature
 
-The [sha256sums.txt](http://repo.voidlinux.eu/live/sha256sums.txt) file contains the `SHA256` hashes to verify the integrity
+The [sha256sums.txt](http://repo.voidlinux.eu/live/current/sha256sums.txt) file contains the `SHA256` hashes to verify the integrity
 of the downloaded files; this file is digitally signed with **Juan RP's GPG** key.
 
 - Signer: `Juan RP <xtraeme@gmail.com>`
