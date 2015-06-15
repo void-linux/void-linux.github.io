@@ -21,16 +21,15 @@ title: Enter the void - Downloads
 
 #### glibc:
 
-* [Void live with Cinnamon for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-cinnamon.iso)
-* [Void live with Enlightenment for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-enlightenment.iso)
-* [Void live with Mate for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-mate.iso)
 * [Void live with base-system for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest.iso)
-* [Void live with xfce for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-xfce.iso)
+* [Void live with Enlightenment for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-enlightenment.iso)
+* [Void live with Cinnamon for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-cinnamon.iso)
+* [Void live with Mate for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-mate.iso)
 
 #### musl:
 
-* [Void live with Mate for x86\_64 and musl libc](http://repo.voidlinux.eu/live/void-live-x86_64-musl-latest-mate.iso)
 * [Void live with base-system for x86\_64 and musl libc](http://repo.voidlinux.eu/live/void-live-x86_64-musl-latest.iso)
+* [Void live with Mate for x86\_64 and musl libc](http://repo.voidlinux.eu/live/void-live-x86_64-musl-latest-mate.iso)
 * [Void live with xfce for x86\_64 and musl libc](http://repo.voidlinux.eu/live/void-live-x86_64-musl-latest-xfce.iso)
 </div>
 <div markdown="1" id="images_i686" class="item">
@@ -38,10 +37,10 @@ title: Enter the void - Downloads
 
 #### glibc:
 
-* [Void live with Cinnamon for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-cinnamon.iso)
-* [Void live with Enlightenment for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-enlightenment.iso)
-* [Void live with Mate for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-mate.iso)
 * [Void live with xfce for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-xfce.iso)
+* [Void live with Enlightenment for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-enlightenment.iso)
+* [Void live with Cinnamon for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-cinnamon.iso)
+* [Void live with Mate for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-mate.iso)
 
 #### musl:
 
