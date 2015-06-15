@@ -7,7 +7,7 @@ title: Enter the void - Downloads
 <div markdown="1" class="item item_on">
 #### Architecture:
 
-* [x86\_64](#images_x86_64)
+* [x86_64](#images_x86_64)
 * [i686](#images_i686)
 * [armv6hf](#images_armv6hf)
 * [armv7hf](#images_armv7hf)
@@ -17,45 +17,45 @@ title: Enter the void - Downloads
 
 <div class="chooser" id="images">
 <div markdown="1" id="images_x86_64" class="item">
-### x86\_64
+### x86\_64:
 
-#### glibc
+#### glibc:
 
-* [Void live with base-system for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest.iso)
 * [Void live with Cinnamon for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-cinnamon.iso)
 * [Void live with Enlightenment for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-enlightenment.iso)
 * [Void live with Mate for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-mate.iso)
+* [Void live with base-system for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest.iso)
 * [Void live with xfce for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-latest-xfce.iso)
 
-#### musl
+#### musl:
 
-* [Void live with base-system for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-musl-latest.iso)
-* [Void live with Mate for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-musl-latest-mate.iso)
-* [Void live with xfce for x86\_64](http://repo.voidlinux.eu/live/void-live-x86_64-musl-latest-xfce.iso)
+* [Void live with Mate for x86\_64 and musl libc](http://repo.voidlinux.eu/live/void-live-x86_64-musl-latest-mate.iso)
+* [Void live with base-system for x86\_64 and musl libc](http://repo.voidlinux.eu/live/void-live-x86_64-musl-latest.iso)
+* [Void live with xfce for x86\_64 and musl libc](http://repo.voidlinux.eu/live/void-live-x86_64-musl-latest-xfce.iso)
 </div>
 <div markdown="1" id="images_i686" class="item">
-### i686
+### i686:
 
-#### glibc
+#### glibc:
 
 * [Void live with Cinnamon for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-cinnamon.iso)
 * [Void live with Enlightenment for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-enlightenment.iso)
 * [Void live with Mate for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-mate.iso)
 * [Void live with xfce for i686](http://repo.voidlinux.eu/live/void-live-i686-latest-xfce.iso)
 
-#### musl
+#### musl:
 
 * none
 </div>
 <div markdown="1" id="images_armv6hf" class="item">
-### armv6hf
+### armv6hf:
 
-#### glibc
+#### glibc:
 
 * [Raspberry Pi (ARMv6, hard float)](http://repo.voidlinux.eu/live/void-rpi-latest.img.xz) [rootfs](http://repo.voidlinux.eu/live/void-rpi-rootfs-latest.tar.xz) [instructions](https://github.com/voidlinux/documentation/wiki/Raspberry-Pi#rootfs-install)
 
 
-#### musl
+#### musl:
 
 * none
 
@@ -63,9 +63,9 @@ Connect to it in virtual terminal or via ssh and log in as *root*, password **vo
 
 </div>
 <div markdown="1" id="images_armv7hf" class="item">
-### armv7hf
+### armv7hf:
 
-#### glibc
+#### glibc:
 
 * [BeagleBone/BeagleBone Black (ARMv7, hard float)](http://repo.voidlinux.eu/live/void-beaglebone-latest.img.xz) [rootfs](http://repo.voidlinux.eu/live/void-beaglebone-rootfs-latest.tar.xz) [instructions](https://github.com/voidlinux/documentation/wiki/beaglebone#rootfs-install)
 * [Cubieboard2 (ARMv7, hard float)](http://repo.voidlinux.eu/live/void-cubieboard2-latest.img.xz) [rootfs](http://repo.voidlinux.eu/live/void-cubieboard2-rootfs-latest.tar.xz) [instructions](https://github.com/voidlinux/documentation/wiki/cubieboard2#rootfs-install)
@@ -73,7 +73,7 @@ Connect to it in virtual terminal or via ssh and log in as *root*, password **vo
 * [Raspberry Pi 2 (ARMv7, hard float)](http://repo.voidlinux.eu/live/void-rpi2-latest.img.xz) [rootfs](http://repo.voidlinux.eu/live/void-rpi2-rootfs-latest.tar.xz) [instructions](https://github.com/voidlinux/documentation/wiki/Raspberry-Pi#rootfs-install)
 * [USB Armory (ARMv7, hard float)](http://repo.voidlinux.eu/live/void-usbarmory-latest.img.xz) [rootfs](http://repo.voidlinux.eu/live/void-usbarmory-rootfs-latest.tar.xz) [instructions](https://github.com/voidlinux/documentation/wiki/USB-Armory#rootfs-install)
 
-#### musl
+#### musl:
 
 * none
 
