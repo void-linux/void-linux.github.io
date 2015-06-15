@@ -11,7 +11,7 @@ Currently there are installable live images for the **x86** and **x86\_64** arch
 and there is support to make a local installation (with the included packages) or a network
 installation (packages are downloaded from official repository).
 
-All support images are available at this url:
+All **live images** and **rootfs tarballs** are available at:
 
 * [http://repo.voidlinux.eu/live/current](http://repo.voidlinux.eu/live/current)
 
