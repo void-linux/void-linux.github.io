@@ -49,16 +49,16 @@ to customize the partitions and filesystems.
 The list of supported platforms currently is:
 
 - BeagleBone/BeagleBone Black (ARMv7, hard float)
- - [rootfs instructions](https://github.com/voidlinux/documentation/wiki/beaglebone#rootfs-install)
+   - [rootfs instructions](https://github.com/voidlinux/documentation/wiki/beaglebone#rootfs-install)
 
 - Cubieboard2 (ARMv7, hard float)
- - [rootfs instructions](https://github.com/voidlinux/documentation/wiki/cubieboard2#rootfs-install)
+   - [rootfs instructions](https://github.com/voidlinux/documentation/wiki/cubieboard2#rootfs-install)
 
 - Odroid U2/U3 (ARMv7, hard float)
- - [rootfs instructions](https://github.com/voidlinux/documentation/wiki/odroid-u2#rootfs-install)
+   - [rootfs instructions](https://github.com/voidlinux/documentation/wiki/odroid-u2#rootfs-install)
 
 - Raspberry Pi (ARMv6, hard float)
- - [rootfs instructions](https://github.com/voidlinux/documentation/wiki/Raspberry-Pi#rootfs-install)
+   - [rootfs instructions](https://github.com/voidlinux/documentation/wiki/Raspberry-Pi#rootfs-install)
 
 - Raspberry Pi 2 (ARMv7, hard float)
    - [rootfs instructions](https://github.com/voidlinux/documentation/wiki/Raspberry-Pi#rootfs-install)
