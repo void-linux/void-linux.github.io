@@ -9,7 +9,7 @@ that contains multiple bugfixes.
 
 * `xbps-*`: all utilities are now using `getopt_long()` rather than `getopt()`
 to avoid the differences with glibc and musl when processing arguments.
-Thanks to Chris M. Branon for #103.
+Thanks to Chris M. Brannon for [#103](https://github.com/voidlinux/xbps/pull/103)
 
 * `xbps_transaction_prepare()`: do not release the transaction dictionary
 if it returns ENOSPC, we need it to have access to this data to print
