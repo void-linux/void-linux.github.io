@@ -9,10 +9,10 @@ That means that void now contains just a single directory to store all executabl
 `/usr/bin`. `/bin`, `/sbin` and `/usr/sbin` are symlinks to `/usr/sbin`.
 
 This has some advantages because all applications will find the executables on any
-PATH, without rebuilding any package to change its location.
+`PATH`, without rebuilding any package to change its location.
 
 If your system still contains a `/usr/sbin` directory, upgrade your system with
 `xbps-install -Syuv` and then make sure that `/usr/sbin` only contains symlinks.
+
 After rebooting `runit-void` will move the existing `/usr/sbin` directory to `/usr/sbin.old`
 and will create the `/usr/sbin` symlink.
-
