@@ -16,3 +16,6 @@ If your system still contains a `/usr/sbin` directory, upgrade your system with
 
 After rebooting `runit-void` will move the existing `/usr/sbin` directory to `/usr/sbin.old`
 and will create the `/usr/sbin` symlink.
+
+> **NOTE** the images from `20150615` have `/usr/sbin` as a symlink already, so that you
+don't have to do anything.
