@@ -41,9 +41,19 @@ title: Enter the void
 	</div>
 	<hr>
 	<div class="row">
-		<div class="col-md-9">
+		<div class="col-md-4">
 			<a class="twitter-timeline" data-chrome="noborders noscrollbar transparent" width="520" height="300" href="https://twitter.com/VoidLinux" data-widget-id="621226324586328064">Tweets by @VoidLinux</a>
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+		<div class="col-md-4">
+			<h3>void-packages changes <span class="rssdev"><a href="https://github.com/voidlinux/void-packages/commits/master.atom" title="Subscribe to void-packages"><i class="fa fa-rss fa-lg"></i></a></span></h3>
+			<script src="{{site.url}}/assets/js/voidcommits.js"></script>
+			<script src="https://api.github.com/repos/voidlinux/void-packages/commits?page=1&amp;per_page=10&amp;callback=voidcommits&amp;sha=master"></script>
+		</div>
+		<div class="col-md-4">
+			<h3>xbps changes <span class="rssdev"><a href="https://github.com/voidlinux/xbps/commits/master.atom" title="Subscribe to xbps"><i class="fa fa-rss fa-lg"></i></a></span></h3>
+			<script src="{{site.url}}/assets/js/voidcommits.js"></script>
+			<script src="https://api.github.com/repos/voidlinux/xbps/commits?page=1&amp;per_page=10&amp;callback=voidcommits&amp;sha=master"></script>
 		</div>
 	</div>
 	<hr>
@@ -52,7 +62,7 @@ title: Enter the void
 	</div>
 	<div class="row">
 			{% for post in site.posts limit:2 %}
-			<div class="col-md-6">
+			<div class="col-md-10">
 				<h4>{{ post.date | date: "%B %d, %Y" }}</h4>
 				<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
 				{{ post.content }}
