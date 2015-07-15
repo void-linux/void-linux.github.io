@@ -145,3 +145,6 @@ img, #davoid, .video {
 	background-color:#478061;
 	border:0;
 }
+.nav li:hover {
+	background-color: black;
+}
