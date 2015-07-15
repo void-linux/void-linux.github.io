@@ -3,9 +3,7 @@ layout: std
 title: Enter the void - Donations
 ---
 
-<div>
-<h2>Help the project with a donation!</h2>
-<hr>
+# Help the project with a donation!
 
 Maintaining a complete package system and a distribution takes a lot of time. Void is a project
 developed entirely by volunteers, i.e developers don't get paid when contributing changes or
@@ -15,25 +13,16 @@ void or xbps, and you like it, please consider making a donation to help the pro
 The funds will be used for hardware, maintainability and domain costs, and if the quantity permits it
 there will be organized events, as well as feature bounties or alike.
 
-<p>Do you want to support Void Linux? Donations can be made via <a href="https://flattr.com/submit/auto?user_id=xtraeme&amp;url=http%3A%2F%2Fwww.voidlinux.eu" target="_blank">Flattr</a>,
-<a href="https://patreon.com/xtraeme">Patreon</a> or <a href="https://www.paypal.com">Paypal</a>.</p>
+<a href="https://flattr.com/submit/auto?user_id=xtraeme&amp;url=http%3A%2F%2Fwww.voidlinux.eu" target="_blank"><img src="/assets/img/flattr-black.svg" alt="Flattr this" title="Flattr this"></a>
 
-<div class="row">
-<div class="col-md-4">
- <a href="https://flattr.com/submit/auto?user_id=xtraeme&amp;url=http%3A%2F%2Fwww.voidlinux.eu" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this"></a>
-</div>
-<div class="col-md-4">
- <a href="https://patreon.com/xtraeme"><img src="/assets/img/patreon-logo.png" alt="Become a Patron!" title="Patron me!" /></a>
-</div>
-<div class="col-md-4">
- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<a href="https://patreon.com/xtraeme"><img src="/assets/img/patreon-logo.png" alt="Become a Patron!" title="Patron me!" /></a>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
   <input type="hidden" name="cmd" value="_s-xclick">
   <input type="hidden" name="hosted_button_id" value="QMV62MDXJ955N">
-  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" name="submit" alt="PayPal">
+  <input type="image" src="/assets/img/paypal.svg" name="submit" alt="PayPal">
   <img alt="Paypal icon" src="https://www.paypalobjects.com/es_ES/i/scr/pixel.gif">
- </form>
-</div>
-</div>
+</form>
 
 Additionally there are is some merchandising also available:
 
