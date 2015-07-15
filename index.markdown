@@ -40,6 +40,13 @@ title: Enter the void
 		</div>
 	</div>
 	<hr>
+	<div class="row">
+		<div class="col-md-9">
+			<a class="twitter-timeline" data-chrome="noborders noscrollbar transparent" width="520" height="300" href="https://twitter.com/VoidLinux" data-widget-id="621226324586328064">Tweets by @VoidLinux</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+	</div>
+	<hr>
 	<div class="page-header">
 		<h2>Recent news <a href="/atom.xml" title="Subscribe to the news"><i class="fa fa-rss fa-lg"></i></a></h2>
 	</div>
