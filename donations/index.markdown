@@ -26,22 +26,21 @@ there will be organized events, as well as feature bounties or alike.
 
 Additionally there are is some merchandising also available:
 
- <div class="col-md-4">
+<div class="col-md-4">
   <a href="http://voidlinux.spreadshirt.es/"><img src="/assets/img/voidshirt.png" class="voidgpic" alt="tshirts" title="Don't you think it's a nice tee-shirt?" /></a>
- </div>
- <div class="col-md-4">
+</div>
+<div class="col-md-4">
   <a href="http://voidlinux.spreadshirt.es/"><img src="/assets/img/voidshirt-keepcalm.png" class="voidgpic" alt="tshirts" title="Don't you think it's a nice tee-shirt?" /></a>
- </div>
- <div class="col-md-4">
+</div>
+<div class="col-md-4">
   <a href="http://voidlinux.spreadshirt.es/"><img src="/assets/img/voidmug.png" class="voidgpic" alt="mug" title="Needed for coffee and/or tea..." /></a>
- </div>
- <div class="col-md-4">
+</div>
+<div class="col-md-4">
   <a href="http://camisetasfrikis.es/camisetas/503-camiseta-void-linux-y-pack-pegatinas.html"><img src="/assets/img/voidbshirt1.png" alt="bshirt1" class="voidgpic" /></a>
- </div>
- <div class="col-md-4">
+</div>
+<div class="col-md-4">
   <a href="http://camisetasfrikis.es/camisetas/504-camiseta-void-linux-y-pack-pegatinas-modelo-2.html"><img src="/assets/img/voidbshirt2.png" alt="bshirt2" class="voidgpic" /></a>
- </div>
- <div class="col-md-4">
+</div>
+<div class="col-md-4">
   <a href="http://camisetasfrikis.es/camisetas/505-dddd.html"><img src="/assets/img/voidbshirt3.png" alt="bshirt3" class="voidgpic" /></a>
- </div>
 </div>
