@@ -80,19 +80,19 @@ a transaction when there are unresolved (reverse)dependencies.
 * libxbps: improved messages when reverse dependencies in a transaction
 are not satistfied. Close [#113](https://github.com/voidlinux/xbps/issues/113).
 
-	After
-	-----
-	$ xbps-install -un
-	re2-2015.07.01_1 (update) breaks installed pkg `chromium-44.0.2403.155_1'
-	Transaction aborted due to unresolved dependencies.
-	$
+        After
+        -----
+        $ xbps-install -un
+        re2-2015.07.01_1 (update) breaks installed pkg `chromium-44.0.2403.155_1'
+        Transaction aborted due to unresolved dependencies.
+        $
 
-	Before
-	------
-	$ xbps-install -un
-	chromium-44.0.2403.155_1 broken, needs `re2-2015.07.01_1'
-	Transaction aborted due to unresolved dependencies.
-	$
+        Before
+        ------
+        $ xbps-install -un
+        chromium-44.0.2403.155_1 broken, needs `re2-2015.07.01_1'
+        Transaction aborted due to unresolved dependencies.
+        $
 
 * Multiple minor issues found by Coverity scan were fixed.
 
