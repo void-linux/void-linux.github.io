@@ -39,7 +39,7 @@ and some environment variables override its behaviour:
         - SSL_NO_VERIFY_PEER: disable certificate verification.
         - SSL_NO_VERIFY_HOSTNAME: disable certificate hostname verification.
 
-* lixbps: use a sane umask if the pkgdb file needs to created for the first
+* lixbps: use a sane umask if the pkgdb file needs to be created for the first
 time. Thanks to Wolfgang Draxinger [#108](https://github.com/voidlinux/xbps/pull/108).
 
 * `xbps-install(1)`: `-n/--dry-run` mode now also prints `installed_size` and
@@ -61,11 +61,11 @@ Fixes [#116](https://github.com/voidlinux/xbps/issues/116).
 * libxbps: relative cachedir set via `xbps.d(5)` now work correctly.
 Fixes [#117](https://github.com/voidlinux/xbps/issues/117)
 
-* `xbps-create(1)`: --compression now accepts `none` to not use any
+* `xbps-create(1)`: `--compression` now accepts `none` to not use any
 compression format.
 
-* `xbps-create(1)`: it is now able to generate identical packages when its
-content does not differ. This is the first part required to the
+* `xbps-create(1)`: it is now able to generate identical packages when their
+contents do not differ. This is the first part required for the
 `100% reproducible builds` goal.
 
 * `xbps-create(1)`: do not add a build-date property to packages.
@@ -75,10 +75,10 @@ package to set build-date in the repo index.
 
 * libxbps: when using verbose mode `(-v)` also print pkgs that are being
 added to the transaction, this way we can know what pkg(s) are blocking
-a transaction when there are unresolved (reverse)dependencies.
+a transaction when there are unresolved (reverse) dependencies.
 
 * libxbps: improved messages when reverse dependencies in a transaction
-are not satistfied. Close [#113](https://github.com/voidlinux/xbps/issues/113).
+are not satistfied. Closes [#113](https://github.com/voidlinux/xbps/issues/113).
 
         After
         -----
