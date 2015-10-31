@@ -17,6 +17,7 @@ xbps contains some utilities to accomplish a certain task for package management
 - `xbps-reconfigure(1)` - XBPS utility to configure installed packages
 - `xbps-pkgdb(1)` - XBPS utility to report/fix issues and modify the package database (pkgdb)
 - `xbps-rindex(1)` - XBPS utility to manage local binary package repositories
+- `xbps-alternatives(1)` - XBPS utility to handle alternatives
 
 This page shows brief examples for common usage, refer to the manual pages for more information.
 
@@ -330,3 +331,26 @@ Signs all binary packages stored in repository with your specified RSA key.
 If the `--privkey` argument not set, it defaults to `~/.ssh/id_rsa`.
 
     $ xbps-rindex --signedby "I'm Groot" --sign-pkg /path/to/dir/*.xbps
+
+### xbps-alternatives(1)
+
+The `xbps-alternatives` utility lists or sets the alternatives provided by
+installed packages.  Alternatives are classified by groups, and a group
+contains a number of symbolic links which are applied when the group is
+set.
+
+#### List all alternatives
+
+    $ xbps-alternatives -l
+
+#### List alternatives for a specific package
+
+    $ xbps-alternatives -l foo
+
+#### Set all alternative groups
+
+    $ xbps-alternatives -s foo
+
+#### Set specific alternative groups
+
+    $ xbps-alternatives -g bar -s foo
