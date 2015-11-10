@@ -2,6 +2,7 @@
 layout: post
 title: "XBPS 0.50 is out"
 comments: true
+date: 2015-11-10 16:00:00
 ---
 
 A new XBPS stable version has been released: 0.50. This is a minor release

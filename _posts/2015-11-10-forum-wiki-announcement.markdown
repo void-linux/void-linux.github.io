@@ -2,6 +2,7 @@
 layout: post
 title: "Announcing the new Wiki & Forums"
 comments: true
+date: 2015-11-10 16:10:00
 ---
 
 For a while now we have used github for our wiki. We wanted to make contributing
