@@ -7,9 +7,9 @@ date: 2015-11-10 16:10:00
 
 For a while now we have used github for our wiki. We wanted to make contributing
 to the wiki easier, and be able to make it look better. Since most users are
-familiar with [mediawiki]https://www.mediawiki.org/wiki/MediaWiki) that is what
-we went with. All of the existing content was imported into the new wiki, and
-it is live at [wiki.voidlinux.eu](https://wiki.voidlinux.eu). Searching and
+familiar with [mediawiki](https://www.mediawiki.org/wiki/MediaWiki) that is
+what we went with. All of the existing content was imported into the new wiki,
+and it is live at [wiki.voidlinux.eu](https://wiki.voidlinux.eu). Searching and
 organization should be improved from the github experience. We look forward to
 seeing new contributors and your feedback.
 
