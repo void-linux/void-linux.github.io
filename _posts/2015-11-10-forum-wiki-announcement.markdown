@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Announcing the new Wiki & Forums"
+title: "Announcing the new Wiki and Forums"
 comments: true
 date: 2015-11-10 16:10:00
 ---
