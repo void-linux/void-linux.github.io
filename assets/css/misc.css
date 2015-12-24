@@ -71,10 +71,25 @@ a:hover {
 	content:"\f064";
 }
 #davoid {
+	margin: 30px auto;
+	position:relative;
+	text-align:center;
+	width:174px;
+	height:143px;
+}
+#davoid .bg {
+	margin:0 auto;
 	position:relative;
 	transition:transform 2s ease;
 }
-#davoid:hover {
+#davoid .fg {
+	position:absolute;
+	top:50%;
+	left:0;
+	right:0;
+	margin:-15px auto;
+}
+#davoid:hover .bg {
 	transform:rotate(360deg);
 	-moz-transform: rotate(360deg);
 	-ms-transform: rotate(360deg);
@@ -86,7 +101,7 @@ img {
 	margin: 30px auto;
 
 }
-img, #davoid, .video {
+img, .video {
 	display: inline;
 
 }
