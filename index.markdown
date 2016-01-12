@@ -8,17 +8,17 @@ title: Enter the void
                 <div class="col-md-4">
                         <h3>Not a fork!</h3>
                         <p>Void Linux is an independent distribution, developed entirely by volunteers.</p>
-			<p>Unlike trillions of other existing distros, this is not a modification of an existing distribution, its package manager and build system have been written from scratch.</p>
+			<p>Unlike trillions of other existing distros, Void is not a modification of an existing distribution.  Void's package manager and build system have been written from scratch.</p>
 		</div>
                 <div class="col-md-4">
                         <h3>Rolling release</h3>
 			<p>Install once, update daily. Your system will always be up-to-date.</p>
-			<p>Thanks to our <a href="http://build.voidlinux.eu">continuous build system</a>, new software is built into binary packages as soon as the changes are pushed to the <em>github</em> repositories.</p>
+			<p>Thanks to our <a href="http://build.voidlinux.eu">continuous build system</a>, new software is built into binary packages as soon as the changes are pushed to the <em>void-packages</em> repository.</p>
 		</div>
 		<div class="col-md-4">
 			<h3>runit</h3>
-			<p>We do use <a href="http://smarden.org/runit/">runit</a> as native init system and service supervisor.</p>
-			<p>A simple and effective approach to initialize the system with reliable service supervision. See the <a href="/usage/runit">usage page</a> for a brief introduction.</p>
+			<p>We use <a href="http://smarden.org/runit/">runit</a> as the init system and service supervisor.</p>
+			<p>runit is a simple and effective approach to initialize the system with reliable service supervision. See the <a href="/usage/runit">usage page</a> for a brief introduction.</p>
 		</div>
 	</div>
         <div class="row">
