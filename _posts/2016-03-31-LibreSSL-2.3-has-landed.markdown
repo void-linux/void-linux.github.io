@@ -7,9 +7,9 @@ comments: true
 We're proud to announce that yet again we are the first and currently only Linux
 distribution that ships [LibreSSL-2.3](http://www.libressl.org/) by default.
 
-In the last two days we rebuilt the whole package index with the latest stable
-release of LibreSSL. The process took more than 24 hours and needed several
-fixes to various packages. There are still some packages, that link against
-the older LibreSSL-2.2 but the will go away within a few days.
+In the last two days we rebuilt the whole repository with LibreSSL-2.3. The
+process took more than 24 hours and needed several fixes to various packages.
+There are still some packages that link against the older LibreSSL-2.2 but the
+will go away within a few days.
 
 Report any issues and thanks for using VoidLinux!
