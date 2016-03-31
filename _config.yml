@@ -3,7 +3,7 @@ port:        4000
 
 name:        "Welcome to the Void"
 markdown:    kramdown
-highlighter: pygments
+highlighter: rouge
 
 permalink:   /news/:year/:month/:title.html
 
