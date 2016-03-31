@@ -10,6 +10,6 @@ distribution that ships [LibreSSL-2.3](http://www.libressl.org/) by default.
 In the last two days we rebuilt the whole repository with LibreSSL-2.3. The
 process took more than 24 hours and needed several fixes to various packages.
 There are still some packages that link against the older LibreSSL-2.2 but the
-will be fixed within a few days.
+will be fixed to use the latest LibreSSL within a few days.
 
 Report any issues and thanks for using VoidLinux!
