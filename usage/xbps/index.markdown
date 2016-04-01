@@ -1,6 +1,6 @@
 ---
 layout: std
-title: Enter the void - xbps
+title: Enter the pony - xbps
 ---
 
 * TOC

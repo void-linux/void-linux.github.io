@@ -1,6 +1,6 @@
 ---
 layout: std
-title: Enter the void - News archive
+title: Enter the pony - News archive
 ---
 
 <div class="page-header">

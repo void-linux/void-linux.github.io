@@ -1,6 +1,6 @@
 ---
 layout: std
-title: Enter the void - Donations
+title: Enter the pony - Donations
 ---
 
 # Help the project with a donation!

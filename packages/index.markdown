@@ -1,6 +1,6 @@
 ---
 layout: std
-title: Enter the void - Packages
+title: Enter the pony - Packages
 ---
 
 <div>
