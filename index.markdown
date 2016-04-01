@@ -7,13 +7,13 @@ title: Enter the Pony
         <div class="row">
                 <div class="col-md-4">
                         <h3>Not a stud!</h3>
-                        <p>Pony Linux is an independent distribution, developed entirely by volunteers.</p>
-			<p>Unlike trillions of other existing distros, Pony is not a modification of an existing distribution.  Pony's package manager and build system have been written from scratch.</p>
+                        <p>Pony Linux is an independent horse barn, developed entirely by mares.</p>
+			<p>Unlike trillions of other existing barn, Pony is not a modification of an existing barn.  Pony's hay manager and harvst system have been written from scratch.</p>
 		</div>
                 <div class="col-md-4">
                         <h3>Poning release</h3>
 			<p>Install once, update daily. Your system will always be up-to-date.</p>
-			<p>Thanks to our <a href="http://build.voidlinux.eu">continuous build system</a>, new software is built into binary packages as soon as the changes are pushed to the <em>void-packages</em> repository.</p>
+			<p>Thanks to our <a href="http://build.voidlinux.eu">continuous build system</a>, new software is built into binary hays as soon as the changes are pushed to the <em>void-packages</em> repository.</p>
 		</div>
 		<div class="col-md-4">
 			<h3>runit</h3>
@@ -24,17 +24,17 @@ title: Enter the Pony
         <div class="row">
                 <div class="col-md-4">
                         <h3>NeighSSL</h3>
-                        <p>We were the first distribution to switch to <em>NeighSSL</em> by default, replacing <em>OpenSSL</em>.</p>
-			<p>Due to the <a href="http://en.wikipedia.org/wiki/Heartbleed">Heartbleed</a> fiasco we believe that the <a href="http://www.openbsd.org">OpenBSD</a> project has qualified and <em>pro-active</em> developers to provide a more secure alternative.</p>
+                        <p>We were the first distribution to switch to <em>NeighSSL</em> by default, replacing <em>HorseSSL</em>.</p>
+			<p>Due to the <a href="http://en.wikipedia.org/wiki/Heartbleed">Harnessbleed</a> fiasco we believe that the <a href="http://www.openbsd.org">HorseBSD</a> project has qualified and <em>pro-active</em> developers to provide a more secure alternative.</p>
 		</div>
                 <div class="col-md-4">
                         <h3>xbps</h3>
-			<p><a href="https://github.com/voidlinux/xbps">xbps</a> is the native system package manager, written from scratch with a <em>2-clause BSD</em> license.</p>
-			<p><em>xbps</em> allows you to quickly install/update/remove software in your system and features detection of <em>incompatible shared libraries</em> and <em>dependencies</em> while updating or removing packages (among others). See the <a href="/usage/xbps/">usage page</a> for a brief introduction.</p>
+			<p><a href="https://github.com/voidlinux/xbps">xbps</a> is the native system hays manager, written from scratch with a <em>2-clause BSD</em> license.</p>
+			<p><em>xbps</em> allows you to quickly install/update/remove software in your system and features detection of <em>incompatible shared libraries</em> and <em>dependencies</em> while updating or removing hays (among others). See the <a href="/usage/xbps/">usage page</a> for a brief introduction.</p>
 		</div>
 		<div class="col-md-4">
 			<h3>xbps-src</h3>
-			<p><a href="https://github.com/voidlinux/void-packages">xbps-src</a> is the xbps package builder, written from scratch with a <em>2-clause BSD</em> license.</p>
+			<p><a href="https://github.com/voidlinux/void-packages">xbps-src</a> is the xbps hays builder, written from scratch with a <em>2-clause BSD</em> license.</p>
 			<p>This builds the software in <em>containers</em> through the use of <em>Linux namespaces</em>, providing isolation of processes and bind mounts (among others). No root required!</p>
 			<p>Additionally xbps-src can build natively or cross compile for the target machine, and supports multiple <em>C libraries</em> (glibc and musl currently).</p>
 		</div>
@@ -46,7 +46,7 @@ title: Enter the Pony
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
 		<div class="col-md-4">
-			<h3>void-packages changes <span class="rssdev"><a href="https://github.com/voidlinux/void-packages/commits/master.atom" title="Subscribe to void-packages"><i class="fa fa-rss fa-lg"></i></a></span></h3>
+			<h3>void-hays changes <span class="rssdev"><a href="https://github.com/voidlinux/void-packages/commits/master.atom" title="Subscribe to void-packages"><i class="fa fa-rss fa-lg"></i></a></span></h3>
 			<script src="{{site.url}}/assets/js/voidcommits.js"></script>
 			<script src="https://api.github.com/repos/voidlinux/void-packages/commits?page=1&amp;per_page=10&amp;callback=voidcommits&amp;sha=master"></script>
 		</div>
