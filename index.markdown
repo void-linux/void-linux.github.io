@@ -8,7 +8,7 @@ title: Enter the Pony
                 <div class="col-md-4">
                         <h3>Not a stud!</h3>
                         <p>Pony Linux is an independent horse barn, developed entirely by mares.</p>
-			<p>Unlike trillions of other existing barn, Pony is not a modification of an existing barn.  Pony's hay manager and harvst system have been written from scratch.</p>
+			<p>Unlike trillions of other existing barn, Pony is not a modification of an existing barn.  Pony's hay manager and harvest system have been written from scratch.</p>
 		</div>
                 <div class="col-md-4">
                         <h3>Poning release</h3>
