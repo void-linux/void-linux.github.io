@@ -1,6 +1,6 @@
 ---
 layout: std
-title: Enter the pony - News
+title: Enter the void - News
 ---
 
 <div>

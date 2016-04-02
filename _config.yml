@@ -1,7 +1,7 @@
 host:        127.0.0.1
 port:        4000
 
-name:        "Welcome to the Pony"
+name:        "Welcome to the Void"
 markdown:    kramdown
 highlighter: rouge
 

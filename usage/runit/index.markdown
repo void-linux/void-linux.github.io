@@ -1,6 +1,6 @@
 ---
 layout: std
-title: Enter the pony - runit
+title: Enter the void - runit
 ---
 * TOC
 {:toc}
