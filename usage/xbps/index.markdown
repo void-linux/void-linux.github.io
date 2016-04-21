@@ -43,7 +43,7 @@ available in `/etc/xbps.d` override those defined in `/usr/share/xbps.d`.
 
 #### Official Repositories
 
-- http://repo.voidlinux.eu (Germany, EU *default*)
+- https://repo.voidlinux.eu (Germany, EU *default*)
 - http://repo2.voidlinux.eu (Germany, EU)
 - http://repo3.voidlinux.eu (Los Angeles, CA, US)
 - http://repo4.voidlinux.eu (Paris, FR, EU)
@@ -59,7 +59,7 @@ You can print the `repository` RSA public key fingerprint with `xbps-query`:
 
 #### Official Repositories (musl)
 
-- http://muslrepo.voidlinux.eu (Paris, EU *default*)
+- https://repo.voidlinux.eu/current/musl (Paris, EU *default*)
 
 The musl repositories are signed with the following RSA key:
 
