@@ -4,11 +4,11 @@
 	var maxResults = 100;
 	var showAll = false;
 	var repos = [
-		"http://repo.voidlinux.eu/current/",
-		"http://repo.voidlinux.eu/current/multilib/",
-		"http://repo.voidlinux.eu/current/nonfree/",
-		"http://repo.voidlinux.eu/current/multilib/nonfree/",
-		"http://repo.voidlinux.eu/current/debug/"
+		"https://repo.voidlinux.eu/current/",
+		"https://repo.voidlinux.eu/current/multilib/",
+		"https://repo.voidlinux.eu/current/nonfree/",
+		"https://repo.voidlinux.eu/current/multilib/nonfree/",
+		"https://repo.voidlinux.eu/current/debug/"
 	];
 	var repoNames = [
 		"current",
