@@ -8,7 +8,7 @@
 		"https://repo.voidlinux.eu/current/multilib/",
 		"https://repo.voidlinux.eu/current/nonfree/",
 		"https://repo.voidlinux.eu/current/multilib/nonfree/",
-		"https://repo.voidlinux.eu/current/debug/"
+		"https://repo.voidlinux.eu/current/debug/",
 
 		"https://repo.voidlinux.eu/current/musl/",
 		"https://repo.voidlinux.eu/current/musl/nonfree/",
