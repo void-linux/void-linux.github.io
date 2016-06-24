@@ -9,12 +9,20 @@
 		"https://repo.voidlinux.eu/current/nonfree/",
 		"https://repo.voidlinux.eu/current/multilib/nonfree/",
 		"https://repo.voidlinux.eu/current/debug/"
+
+		"https://repo.voidlinux.eu/current/musl/",
+		"https://repo.voidlinux.eu/current/musl/nonfree/",
+		"https://repo.voidlinux.eu/current/musl/debug/"
 	];
 	var repoNames = [
 		"current",
 		"multilib",
 		"nonfree",
 		"multilib/nonfree",
+		"debug",
+
+		"current",
+		"nonfree",
 		"debug"
 	]
 	var currentRepo = 0;
