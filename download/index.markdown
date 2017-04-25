@@ -7,7 +7,7 @@ title: Enter the void - Downloads
 
 ## Download installable base live images (x86)
 
-***PLEASE NOTE: To install the desktop enviroment, DON'T choose "install from network" choose the local install. VERY IMPORTANT!***
+***PLEASE NOTE: To install the desktop environment, DON'T choose "install from network" choose the local install. VERY IMPORTANT!***
 
 Currently there are installable live images for the **x86** and **x86\_64** architectures
 and there is support to make a local installation (with the included packages) or a network
