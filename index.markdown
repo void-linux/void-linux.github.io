@@ -47,12 +47,12 @@ title: Enter the void
 		</div>
 		<div class="col-md-4">
 			<h3>void-packages changes <span class="rssdev"><a href="https://github.com/voidlinux/void-packages/commits/master.atom" title="Subscribe to void-packages"><i class="fa fa-rss fa-lg"></i></a></span></h3>
-			<script src="{{site.url}}/assets/js/voidcommits.js"></script>
+			<script src="/assets/js/voidcommits.js"></script>
 			<script src="https://api.github.com/repos/voidlinux/void-packages/commits?page=1&amp;per_page=10&amp;callback=voidcommits&amp;sha=master"></script>
 		</div>
 		<div class="col-md-4">
 			<h3>xbps changes <span class="rssdev"><a href="https://github.com/voidlinux/xbps/commits/master.atom" title="Subscribe to xbps"><i class="fa fa-rss fa-lg"></i></a></span></h3>
-			<script src="{{site.url}}/assets/js/voidcommits.js"></script>
+			<script src="/assets/js/voidcommits.js"></script>
 			<script src="https://api.github.com/repos/voidlinux/xbps/commits?page=1&amp;per_page=10&amp;callback=voidcommits&amp;sha=master"></script>
 		</div>
 	</div>

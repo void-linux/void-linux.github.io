@@ -17,7 +17,7 @@ title: Enter the void - Packages
 
 <h2>Latest package commits <span class="rssdev"><a href="https://github.com/voidlinux/void-packages/commits/master.atom" title="Subscribe to void-packages"><i class="fa fa-rss fa-lg"></i></a></span></h2>
  <ul>
-  <script src="{{site.url}}/assets/js/voidcommits.js"></script>
+  <script src="/assets/js/voidcommits.js"></script>
   <script src="https://api.github.com/repos/voidlinux/void-packages/commits?page=1&amp;per_page=10&amp;callback=voidcommits&amp;sha=master"></script>
  </ul>
 </div>
