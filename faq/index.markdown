@@ -16,6 +16,7 @@ The following features are **not** supported by the installation script:
 
 * LVM
 * Luks
+* ZFS
 
 You can either install Void Linux from one of the live images using one of both installation methods or use another linux distribution and the manual installation method with static [xbps](/usage/xbps) binaries.
 
@@ -115,6 +116,35 @@ To disable them again you just remove the link.
 # rm /var/service/<service name>
 ```
 
+Activated services can be controlled with the `sv(8)` command, following commands are available and can be used like `sv <command> <services...>`.
+
+* `up` to start, `down` to stop and `once` to start services once.
+* `pause`, `cont`, `hup`, `alarm`, `interrupt`, `quit`, `1`, `2`, `term` and `kill` to send the corresponding signal.
+* `start`, `stop`, `reload` and `restart` for LSB init compatibility.
+
+See the `sv(8)` manual page for further informations.
+
+The `status` command can be used to retrieve the current status of one or more services.
+It accepts either service names or service directories, which makes it possible to use shell wildcards to retrieve the status for all activated services.
+
+```
+# sv status dhcpcd
+run: /var/service/dhcpcd: (pid 659) 561392s
+# sv status /var/service/*
+run: /var/service/agetty-tty1: (pid 658) 561392s
+run: /var/service/agetty-tty2: (pid 639) 561392s
+run: /var/service/agetty-tty3: (pid 662) 561392s
+run: /var/service/agetty-ttyS0: (pid 650) 561392s
+run: /var/service/dhcpcd: (pid 659) 561392s
+run: /var/service/nanoklogd: (pid 666) 561391s
+run: /var/service/ntpd: (pid 665) 561391s; run: log: (pid 664) 561391s
+run: /var/service/opensmtpd: (pid 661) 561392s
+run: /var/service/socklog-unix: (pid 646) 561392s; run: log: (pid 645) 561392s
+run: /var/service/sshd: (pid 674) 561391s
+run: /var/service/udevd: (pid 660) 561392s
+run: /var/service/uuidd: (pid 640) 561392s
+```
+
 Extra options can be passed to most services using a `conf` file in the service directory.
 
 ```
@@ -126,10 +156,23 @@ exec /usr/bin/sshd -D $OPTS
 # echo 'OPTS="-p 2222"' >>/etc/sv/sshd/conf
 ```
 
+Another example is the `wpa_supplicant` service which has other available variables.
+
+```
+# cat /etv/sv/wpa_supplicant/run
+#!/bin/sh
+[ -r ./conf ] && . ./conf
+exec 2>&1
+exec wpa_supplicant -c ${CONF_FILE:=/etc/wpa_supplicant/wpa_supplicant.conf} -i ${WPA_INTERFACE:=wlan0} ${OPTS:=-s}
+# echo WPA_INTERFACE=wlp3s0 >>/etc/sv/wpa_supplicant/conf
+```
+
 ### Cron
 
 Void Linux comes without a default cron daemon, you can choose one of multiple cron implementations, by installing the package and enabling the system service.
 Available choices include `cronie`, `dcron`, `fcron` and more.
+
+Last thing after installing the cron implementation of your choice you need to enable the system service.
 
 ### Logging
 
@@ -156,7 +199,9 @@ The default shell for users can be changed with the `chsh(1)` tool.
 $ chsh -s /bin/bash <user name>
 ```
 
-A list of available shells can be retrieved with the `chsh(1)` list command.
+Make sure to use the same path to the shell as its in `/etc/shells` or listed by the `chsh(1)` list command.
+
+A list of available installed shells can be retrieved with the `chsh(1)` list command.
 
 ```
 $ chsh -l
@@ -169,6 +214,23 @@ $ chsh -l
 /bin/oksh
 /bin/yash
 ```
+
+Following packages are available in the package repository and provide usable shells.
+
+* bash
+* dash
+* elvish
+* es
+* fish-shell
+* heirloom-sh
+* ksh
+* mksh
+* oksh
+* posh
+* rc
+* tcsh
+* yash
+* zsh
 
 ## Kernel
 ### Removing old kernels
