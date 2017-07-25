@@ -1,6 +1,6 @@
 ---
 layout: std
-title: Enter the void - runit
+title: Enter the void - FAQ
 ---
 * TOC
 {:toc}
@@ -99,21 +99,268 @@ The installer has to be executed as `root` user, if you logged in as `anon` you 
 
 # System Management
 
-## System daemons
+## System services and daemons
 
-Void uses the [runit](/usage/runit/)
+Void uses the [runit](/usage/runit/) supervision suite to run system services and daemons.
 
-### Introduction
+Services are enabled by simply linking them into the `/var/service` service directory.
+
+```
+# ln -s /etc/sv/<service name> /var/service/
+```
+
+To disable them again you just remove the link.
+
+```
+# rm /var/service/<service name>
+```
+
+Extra options can be passed to most services using a `conf` file in the service directory.
+
+```
+$ cat /etc/sv/sshd/run
+#!/bin/sh
+ssh-keygen -A >/dev/null 2>&1 # Will generate host keys if they don't already exist
+[ -r conf ] && . ./conf
+exec /usr/bin/sshd -D $OPTS
+# echo 'OPTS="-p 2222"' >>/etc/sv/sshd/conf
+```
+
 ### Cron
+
+Void Linux comes without a default cron daemon, you can choose one of multiple cron implementations, by installing the package and enabling the system service.
+Available choices include `cronie`, `dcron`, `fcron` and more.
+
 ### Logging
+
+#### Syslog
+
+The default installation comes with no syslog daemon, there are different implementations available.
+
+`socklog` is the implementation from the `runit(8)` author and Void Linux provides a package with some basic configuration for it, this makes it a good choice if you don't know which one to choose.
+
+```
+# xbps-install -S socklog-void
+# usermod -aG socklog <your username>
+# ln -s /etc/sv/socklog-unix /var/service/
+# ln -s /etc/sv/nanoklogd /var/service/
+```
+
+Other syslog implementations like `rsyslog` and `metalog` are available in the package repository too.
+
 ## Changing the default shell
+
+The default shell for users can be changed with the `chsh(1)` tool.
+
+```
+$ chsh -s /bin/bash <user name>
+```
+
+A list of available shells can be retrieved with the `chsh(1)` list command.
+
+```
+$ chsh -l
+/bin/sh
+/bin/bash
+/bin/mksh
+/bin/zsh
+/bin/rc
+/bin/ksh
+/bin/oksh
+/bin/yash
+```
+
+## Kernel
+### Removing old kernels
+
+```
+$ vkpurge list
+3.8.2_1
+```
+
+You can now remove a specific kernel version like `3.8.2_1` or `all` which removes all kernels  expect the latest kernel of each series and the kernel that is currently booted.
+
+```
+# vkpurge rm 3.8.2_1
+# vkpurge rm all
+```
+### Kernel modules
+#### Loading at boot
+
+To load kernel modules at boot time, a `.conf` file like `/etc/modules-load.d/virtio.conf` can be created.
+
+```
+# load virtio-net
+virtio-net
+```
+
+#### Blacklisting
+
+There are two different methods to blacklist kernel modules, for the initramfs and for the booted system.
+Some modules are loaded by the initramfs very early in the boot process, those have to be blacklisted in the initramfs.
+
+You can blacklist modules with a `.conf` file like `/etc/modprobe.d/radeon.conf`.
+
+```
+blacklist radeon
+```
+
+##### dracut
+
+To blacklist modules from being included in a dracut initramfs you need to create a `.conf` file like `/etc/dracut.conf.d/radeon.conf`.
+
+```
+omit_drivers+=" radeon "
+```
+
+Now you need to regenerate the initramfs to make the changes take effect on the next reboot.
+
+```
+# dracut --force
+```
+
+##### mkinitcpio
+
+XXX: add example of blacklisting kernel modules for mkinitcpio
+
+## Manual pages
+
+Void packages come with manual pages and the default installation includes the [mandoc](http://mandoc.bsd.lv/) manpage toolset.
+
+The `man(1)` command can be used to show manual pages.
+
+```
+$ man 1 chroot
+```
+
+The [mandoc](http://mandoc.bsd.lv/) toolset contains `apropos(1)` to search for manual pages, `apropos(1)` uses a database that can be updated and generated with the `makewhatis(1)` command.
+
+```
+# makewhatis -a
+$ apropos chroot
+chroot(1) - run command or interactive shell with special root directory
+xbps-uchroot(1) - XBPS utility to chroot and bind mount with Linux namespaces
+xbps-uchroot(1) - XBPS utility to chroot and bind mount with Linux namespaces
+xbps-uunshare(1) - XBPS utility to chroot and bind mount with Linux user namespaces
+xbps-uunshare(1) - XBPS utility to chroot and bind mount with Linux user namespaces
+chroot(2) - change root directory
+```
+
+There are two extra packages for development and POSIX manuals that are not installed by default.
+
+```
+$ xbps-query -Rs man-pages
+[*] man-pages-4.11_1        Linux Documentation Project (LDP) manual pages
+[-] man-pages-devel-4.11_1  Linux Documentation Project (LDP) manual pages - development pages
+[-] man-pages-posix-2013a_3 Manual pages about POSIX systems
+# xbps-install -S man-pages-devel man-pages-posix
+```
 
 # Packages
 
-## Introduction
+Void Linux uses its home grown package management system, `xbps`.
+
 ## Package Management
+### Searching a file
+
+To search a file in packages you can use one of two methods
+
+The first method is to use `xbps-query(1)` which is okay to use if you want to just look for local files, you can use it to search for remote files with the `-R` flag but its very slow compared to the second method using `xlocate`.
+
+```
+$ xbps-query -o /usr/bin/xlocate
+xtools-0.46_1: /usr/bin/xlocate (regular file)
+```
+
+The `xtools` package contains the `xlocate` utility that works like `locate(1)` but for all files in the void package repository.
+
+```
+# xbps-install -Su xtools
+$ xlocate -S
+From https://repo.voidlinux.eu/xlocate/xlocate
+ + 16d97bfe86...2ad1a4a8d1 master     -> master  (forced update)
+$ xlocate fizz
+nim-0.17.0_1	/usr/lib/nim/examples/fizzbuzz.nim
+ponysay-3.0.2_1	/usr/share/ponysay/ponies/cherryfizzy.pony -> /usr/share/ponysay/ponies/cherrycola.pony
+ponysay-3.0.2_1	/usr/share/ponysay/ttyponies/cherryfizzy.pony -> /usr/share/ponysay/ttyponies/cherrycola.pony
+supertux2-data-0.5.1_1	/usr/share/supertux2/sounds/fizz.wav
+```
+
 ## Building Packages
+
+The first step is to building xbps packages from source is to clone the `void-packages` `git(1)` repository.
+
+```
+$ git clone https://github.com/voidlinux/void-packages.git
+Cloning into 'void-packages'...
+remote: Counting objects: 398517, done.
+remote: Total 398517 (delta 0), reused 1 (delta 0), pack-reused 398516
+Receiving objects: 100% (398517/398517), 151.18 MiB | 5.10 MiB/s, done.
+Resolving deltas: 100% (227465/227465), done.
+```
+
+After cloning the repository it is necessary to setup the build environment by bootstrapping a container/chroot using the `xbps-src` script.
+
+To bootstrap a build environment using binary packages for the same architecture your host uses use `binary-bootstrap`.
+
+```
+$ ./xbps-src binary-bootstrap
+=> Installing bootstrap from binary package repositories...
+[...]
+=> Installed bootstrap successfully!
+```
+
+If you have the time and you want to build the bootstrap from source too, use the `bootstrap` command.
+
+```
+$ ./xbps-src bootstrap
+```
+
+In case you want to compile `i686` packages on your `x86_64` machine you can use one of the bootstrap commands with a different masterdir and the target architecture as second argument.
+
+```
+$ ./xbps-src -m masterdir-i686 binary-bootstrap i686
+=> Installing bootstrap from binary package repositories...
+[...]
+=> Installed bootstrap successfully!
+```
+
+You can now build packages using the `pkg` command.
+
+```
+$ ./xbps-src pkg vim
+[...]
+```
+
+Or in case you bootstrapped a different masterdir for another native architecture.
+
+```
+$ ./xbps-src -m masterdir-i686 pkg vim
+[...]
+```
+
 ## Contributing
+
+You can find an extensive contributing guide [CONTRIBUTING.md](https://github.com/voidlinux/void-packages/blob/master/CONTRIBUTING.md) in the `void-packages` git repository.
+
+## Debugging packages
+
+Void Linux packages come without debugging symbols, if you want to debug software or look at a coredump it is helpful to have the debugging symbols.
+To get debugging symbols for packages you need to activate the debug repo, afterwards its possible to install packages with the `-dbg` suffix.
+
+```
+$ xbps-install -S void-repo-debug
+$ xbps-install -S <package name>-dbg
+```
+
+The `xtools` package contains the `xdbg` utility to retrieve a list of debug packages including dependencies for a package.
+
+```
+$ xdbg bash
+bash-dbg
+glibc-dbg
+# xbps-install -S $(xdbg bash)
+```
 
 # Disk Setup
 
