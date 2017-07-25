@@ -98,6 +98,62 @@ The installer has to be executed as `root` user, if you logged in as `anon` you 
 ## Manual installation
 
 
+## Post installation
+
+### Audio setup
+
+To setup audio on your Void Linux system you have to decide if you want to use [PulseAudio](#pulseaudio) or just [alsa](#alsa).
+
+Some applications require PulseAudio, especially closed source programs.
+
+#### Alsa
+
+Install the `alsa-utils` package make sure your user is part of the `audio` group to access audio devices.
+
+```
+# xbps-install -S alsa-utils
+# usermod -a -G <username> audio
+```
+
+The `alsa-utils` package comes with the system service `/etc/sv/alsa` which can be activated to save and restore the state of alsa controls like the volume at shutdown and boot respectively.
+
+If the soundcard you want to use is not the default you can either use kernel module options or the alsa config to change the default card.
+
+The current module order can be retrieved from the procfs filesystem.
+
+```
+$ cat /proc/asound/modules
+ 0 snd_hda_intel
+ 1 snd_hda_intel
+ 2 snd_usb_audio
+```
+
+To use the kernel module options you can create a file like `/etc/modprobe.d/alsa.conf` with following content.
+
+```
+options snd_usb_audio index=0
+```
+
+Alternatively using the alsa configuration file `/etc/asound.conf` or the per-user configuration file `~/.asoundrc` to set a different card as the default.
+
+```
+defaults.ctl.card 2;
+defaults.pcm.card 2;
+```
+
+#### PulseAudio
+
+PulseAudio depends on `dbus` and `ConsoleKit2` after installing pulse you need to enable the corresponding system services.
+
+```
+# xbps-install -S alsa-utils pulseaudio ConsoleKit2
+# ln -s /etc/sv/dbus /var/service/
+# ln -s /etc/sv/cgmanager /var/service/
+# ln -s /etc/sv/consolekit /var/service/
+```
+
+To get PulseAudio working correctly you need to make sure that your session is started with a ConsoleKit seat and a dbus session bus. Some display managers do that for you, in other cases where you just start a Xorg session with `startx` you have to start them from `.xinitrc`.
+
 # System Management
 
 ## System services and daemons
