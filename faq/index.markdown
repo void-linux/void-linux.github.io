@@ -234,6 +234,27 @@ Following packages are available in the package repository and provide usable sh
 * zsh
 
 ## Kernel
+### Kernel series
+
+Void Linux provides many kernel series in the default repository,
+
+```
+$ xbps-query --regex -Rs 'linux[34]' | grep -Ev '(dbg|headers)'
+[-] linux3.14-3.14.79_1           The Linux kernel and modules (3.14 series)
+[-] linux3.18-3.18.60_1           The Linux kernel and modules (3.18 series)
+[-] linux4.1-4.1.41_1             The Linux kernel and modules (4.1 series)
+[-] linux4.10-4.10.17_1           The Linux kernel and modules (4.10 series)
+[*] linux4.11-4.11.11_1           The Linux kernel and modules (4.11 series)
+[-] linux4.12-4.12.3_1            The Linux kernel and modules (4.12 series)
+[-] linux4.13-4.13.0rc1_1         The Linux kernel and modules (4.13 series)
+[-] linux4.4-4.4.76_1             The Linux kernel and modules (4.4 series)
+[-] linux4.8-4.8.17_1             The Linux kernel and modules (4.8 series)
+[-] linux4.9-4.9.37_1             The Linux kernel and modules (4.9 series)
+```
+
+The `linux` meta package which is installed by default depends on one of the kernel packages, usually the latest mainline kernel that works with all dkms modules.
+
+
 ### Removing old kernels
 
 ```
@@ -247,8 +268,9 @@ You can now remove a specific kernel version like `3.8.2_1` or `all` which remov
 # vkpurge rm 3.8.2_1
 # vkpurge rm all
 ```
+
 ### Kernel modules
-#### Loading at boot
+#### Loading kernel modules at boot
 
 To load kernel modules at boot time, a `.conf` file like `/etc/modules-load.d/virtio.conf` can be created.
 
@@ -257,7 +279,7 @@ To load kernel modules at boot time, a `.conf` file like `/etc/modules-load.d/vi
 virtio-net
 ```
 
-#### Blacklisting
+#### Blacklisting kernel modules
 
 There are two different methods to blacklist kernel modules, for the initramfs and for the booted system.
 Some modules are loaded by the initramfs very early in the boot process, those have to be blacklisted in the initramfs.
@@ -285,6 +307,34 @@ Now you need to regenerate the initramfs to make the changes take effect on the 
 ##### mkinitcpio
 
 XXX: add example of blacklisting kernel modules for mkinitcpio
+
+### Kernel hooks
+
+Void Linux provides directories for kernel hooks in `/etc/kernel.d/{pre-install,post-install,pre-remove,post-remove}`.
+
+Bootloaders like `grub`, `gummiboot` and `lilo` use those hooks to update the bootmenu. Initramfs tools like `dracut` and `mkinitcpio` use the hooks to generate initramfs files for newly installed kernels.
+
+### Dynamic Kernel Module Support (dkms)
+
+There are kernel modules that are not part of the linux source tree that are build at install time using dkms and [kernel hooks](#kernel-hooks).
+
+```
+$ xbps-query -Rs dkms
+[-] acpi_call-dkms-1.2.0_2             Kernel module allowing calls to ACPI methods through /proc/acpi/call
+[-] dkms-2.4.0_2                       Dynamic Kernel Modules System
+[-] exfat-dkms-1.2.8_2                 Exfat kernel driver (nofuse)
+[-] spl-0.6.5.10_1                     Solaris Porting Layer -- userland and kernel modules (using DKMS)
+[-] tp_smapi-dkms-0.42_2               IBM ThinkPad hardware functions driver
+[-] virtualbox-ose-dkms-5.1.24_1       General-purpose full virtualizer for x86 hardware - kernel module sources for dkms
+[-] virtualbox-ose-guest-dkms-5.1.24_1 General-purpose full virtualizer for x86 hardware - guest addition module source for dkms
+[-] zfs-0.6.5.10_1                     Z File System -- userland and kernel modules (using DKMS)
+[-] zfs-32bit-0.6.5.10_1               Z File System -- userland and kernel modules (using DKMS) (32bit)
+[-] broadcom-wl-dkms-6.30.223.271_6    Broadcom proprietary wireless drivers for Linux - DKMS kernel module
+[-] catalyst-dkms-15.302_2             AMD catalyst driver 15.12 for Linux - DKMS kernel module
+[-] nvidia-dkms-381.22_2               NVIDIA drivers for linux (long-lived series) - DKMS kernel module
+[-] nvidia304-dkms-304.135_4           NVIDIA drivers (For GeForce 5 FX, 6, 7, 8 series) - DKMS kernel module
+[-] nvidia340-dkms-340.102_5           NVIDIA drivers (GeForce 8, 9, 9M, 100, 100M, 200, 300 series) - DKMS kernel module
+```
 
 ## Manual pages
 
