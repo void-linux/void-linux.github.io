@@ -170,9 +170,10 @@ exec wpa_supplicant -c ${CONF_FILE:=/etc/wpa_supplicant/wpa_supplicant.conf} -i 
 ### Cron
 
 Void Linux comes without a default cron daemon, you can choose one of multiple cron implementations, by installing the package and enabling the system service.
+
 Available choices include `cronie`, `dcron`, `fcron` and more.
 
-Last thing after installing the cron implementation of your choice you need to enable the system service.
+As alternative to the standard cron implementations you can use something like [snooze](https://github.com/chneukirchen/snooze) or `runwhen` which go hand in hand with service supervision.
 
 ### Logging
 
