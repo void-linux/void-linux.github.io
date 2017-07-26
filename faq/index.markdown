@@ -477,6 +477,41 @@ glibc-dbg
 # xbps-install -S $(xdbg bash)
 ```
 
+## Available Mirrors
+
+| Repository | Location |
+|:--------|:-------:|
+| [https://repo.voidlinux.eu/current/](https://repo.voidlinux.eu/current/) | DE |
+| [http://repo2.voidlinux.eu/current/](http://repo2.voidlinux.eu/current/) | DE |
+| [http://repo3.voidlinux.eu/current/](http://repo3.voidlinux.eu/current/) | US |
+| [http://repo4.voidlinux.eu/current/](http://repo4.voidlinux.eu/current/) | FR |
+| [http://mirror.clarkson.edu/voidlinux/current/](http://mirror.clarkson.edu/voidlinux/current/) | US |
+| [http://www.gtlib.gatech.edu/pub/VoidLinux/current/](http://www.gtlib.gatech.edu/pub/VoidLinux/current/) | US |
+| [https://lug.utdallas.edu/mirror/void/current/](https://lug.utdallas.edu/mirror/void/current/) | US |
+| [http://mirror.aarnet.edu.au/pub/voidlinux/current/](http://mirror.aarnet.edu.au/pub/voidlinux/current/) | AU |
+
+
+## Changing mirrors
+
+Copy all repository configuration files from `/usr/share/xbps.d` to `/etc/xbps.d` and then change the repository urls in `/etc/xbps.d`.
+
+```
+# mkdir -p /etc/xbps.d
+# cp /usr/share/xbps.d/*-repository-*.conf /etc/xbps.d/
+# sed -i 's|https://repo.voidlinux.eu/current|<repository>|g' /etc/xbps.d/*-repository-*.conf
+```
+
+You can use `xbps-query` to verify that all repositories are changed to the mirror you prefer.
+
+```
+$ xbps-query -L
+ 8175 https://repo.voidlinux.eu/current (RSA signed)
+   23 https://repo.voidlinux.eu/current/multilib/nonfree (RSA signed)
+ 3360 https://repo.voidlinux.eu/current/multilib (RSA signed)
+   44 https://repo.voidlinux.eu/current/nonfree (RSA signed)
+ 4357 https://repo.voidlinux.eu/current/debug (RSA signed)
+```
+
 # Disk Setup
 
 # Networking
