@@ -143,16 +143,16 @@ defaults.pcm.card 2;
 
 #### PulseAudio
 
-PulseAudio depends on `dbus` and `ConsoleKit2` after installing pulse you need to enable the corresponding system services.
+PulseAudio depends on a `dbus` system daemon, make sure its enabled.
 
 ```
-# xbps-install -S alsa-utils pulseaudio ConsoleKit2
+# xbps-install -S alsa-utils pulseaudio
 # ln -s /etc/sv/dbus /var/service/
-# ln -s /etc/sv/cgmanager /var/service/
-# ln -s /etc/sv/consolekit /var/service/
 ```
 
-To get PulseAudio working correctly you need to make sure that your session is started with a ConsoleKit seat and a dbus session bus. Some display managers do that for you, in other cases where you just start a Xorg session with `startx` you have to start them from `.xinitrc`.
+The PulseAudio package comes with a services file, which is not necessary in most setups and its [discouraged](https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/SystemWide/) by the PulseAudio maintainers to use the system wide setup.
+
+There are different methods that work with PulseAudio to allow access to the audio devices, the simplest one is to just the `audio` group alternatively you can use a session manager, like [elogind](#elogind) or [ConsoleKit2](#consolekit2).
 
 # System Management
 
@@ -557,3 +557,23 @@ ip route add default via 192.168.1.1
 ### dhclient
 ### NetworkManager
 ### wicd
+
+# Xorg
+
+# Drivers
+
+## Session and seat management
+
+Session and seat management is not necessary for every setup, it is used to provide device access on the fly for the currently active user session.
+
+For desktop environments like Gnome [elogind](#elogind) is necessary.
+
+### ConsoleKit
+
+```
+# xbps-install -S ConsoleKit2
+# ln -s /etc/sv/cgmanager /var/service/
+# ln -s /etc/sv/consolekit /var/service/
+```
+
+### elogind
