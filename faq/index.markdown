@@ -112,7 +112,7 @@ Install the `alsa-utils` package make sure your user is part of the `audio` grou
 
 ```
 # xbps-install -S alsa-utils
-# usermod -a -G <username> audio
+# usermod -a -G audio <username>
 ```
 
 The `alsa-utils` package comes with the system service `/etc/sv/alsa` which can be activated to save and restore the state of alsa controls like the volume at shutdown and boot respectively.
@@ -560,7 +560,9 @@ ip route add default via 192.168.1.1
 
 # Xorg
 
-# Drivers
+## Drivers
+
+## Display managers
 
 ## Session and seat management
 
