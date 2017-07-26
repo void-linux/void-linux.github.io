@@ -100,60 +100,6 @@ The installer has to be executed as `root` user, if you logged in as `anon` you 
 
 ## Post installation
 
-### Audio setup
-
-To setup audio on your Void Linux system you have to decide if you want to use [PulseAudio](#pulseaudio) or just [alsa](#alsa).
-
-Some applications require PulseAudio, especially closed source programs.
-
-#### Alsa
-
-Install the `alsa-utils` package make sure your user is part of the `audio` group to access audio devices.
-
-```
-# xbps-install -S alsa-utils
-# usermod -a -G audio <username>
-```
-
-The `alsa-utils` package comes with the system service `/etc/sv/alsa` which can be activated to save and restore the state of alsa controls like the volume at shutdown and boot respectively.
-
-If the soundcard you want to use is not the default you can either use kernel module options or the alsa config to change the default card.
-
-The current module order can be retrieved from the procfs filesystem.
-
-```
-$ cat /proc/asound/modules
- 0 snd_hda_intel
- 1 snd_hda_intel
- 2 snd_usb_audio
-```
-
-To use the kernel module options you can create a file like `/etc/modprobe.d/alsa.conf` with following content.
-
-```
-options snd_usb_audio index=0
-```
-
-Alternatively using the alsa configuration file `/etc/asound.conf` or the per-user configuration file `~/.asoundrc` to set a different card as the default.
-
-```
-defaults.ctl.card 2;
-defaults.pcm.card 2;
-```
-
-#### PulseAudio
-
-PulseAudio depends on a `dbus` system daemon, make sure its enabled.
-
-```
-# xbps-install -S alsa-utils pulseaudio
-# ln -s /etc/sv/dbus /var/service/
-```
-
-The PulseAudio package comes with a services file, which is not necessary in most setups and its [discouraged](https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/SystemWide/) by the PulseAudio maintainers to use the system wide setup.
-
-There are different methods that work with PulseAudio to allow access to the audio devices, the simplest one is to just the `audio` group alternatively you can use a session manager, like [elogind](#elogind) or [ConsoleKit2](#consolekit2).
-
 # System Management
 
 ## System services and daemons
@@ -570,7 +516,7 @@ Session and seat management is not necessary for every setup, it is used to prov
 
 For desktop environments like Gnome [elogind](#elogind) is necessary.
 
-### ConsoleKit
+### ConsoleKit2
 
 ```
 # xbps-install -S ConsoleKit2
@@ -579,3 +525,60 @@ For desktop environments like Gnome [elogind](#elogind) is necessary.
 ```
 
 ### elogind
+
+# Multimedia
+
+## Audio setup
+To setup audio on your Void Linux system you have to decide if you want to use [PulseAudio](#pulseaudio) or just [alsa](#alsa).
+
+Some applications require PulseAudio, especially closed source programs.
+
+### Alsa
+
+Install the `alsa-utils` package make sure your user is part of the `audio` group to access audio devices.
+
+```
+# xbps-install -S alsa-utils
+# usermod -a -G audio <username>
+```
+
+The `alsa-utils` package comes with the system service `/etc/sv/alsa` which can be activated to save and restore the state of alsa controls like the volume at shutdown and boot respectively.
+
+If the soundcard you want to use is not the default you can either use kernel module options or the alsa config to change the default card.
+
+The current module order can be retrieved from the procfs filesystem.
+
+```
+$ cat /proc/asound/modules
+ 0 snd_hda_intel
+ 1 snd_hda_intel
+ 2 snd_usb_audio
+```
+
+To use the kernel module options you can create a file like `/etc/modprobe.d/alsa.conf` with following content.
+
+```
+options snd_usb_audio index=0
+```
+
+Alternatively using the alsa configuration file `/etc/asound.conf` or the per-user configuration file `~/.asoundrc` to set a different card as the default.
+
+```
+defaults.ctl.card 2;
+defaults.pcm.card 2;
+```
+
+### PulseAudio
+
+PulseAudio depends on a `dbus` system daemon, make sure its enabled.
+
+```
+# xbps-install -S alsa-utils pulseaudio
+# ln -s /etc/sv/dbus /var/service/
+```
+
+The PulseAudio package comes with a services file, which is not necessary in most setups and its [discouraged](https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/SystemWide/) by the PulseAudio maintainers to use the system wide setup.
+
+There are different methods that work with PulseAudio to allow access to the audio devices, the simplest one is to just the `audio` group alternatively you can use a session manager, like [elogind](#elogind) or [ConsoleKit2](#consolekit2).
+
+
