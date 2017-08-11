@@ -102,3 +102,49 @@ $
 
 If the above command does not return `OK`, the downloaded file is corrupt or has been modified. Don't use it.
 
+
+## Mirrors
+
+Void Linux maintains mirrors in several geographic regions for you to
+use.  In normal use your traffic will be routed to the nearest mirror
+to you based on your IP Address.  If you would like to directly use a
+particular mirror you can set this manually.  This can also be handy
+if you are on a different continent than the primary mirror, or if you
+are not on the same continent as any officially managed mirrors.
+
+Our mirrors are seperated into two categories.  Tier 1 mirrors sync
+directly from the buildmaster and will always have the latest packages
+available.  These repositories are maintained by the Void Linux
+Infrastructure Team.  In rare occasions we may permit a mirror that we
+don't manage to sync directly from our primary servers if there are
+extenuating circumstances.  Tier 2 mirrors sync from a nearby tier 1
+mirror when possible, but there is no garuantee of a mirror being
+nearby.  These mirrors are not managed by Void nor do they have any
+specific garauntees for staleness or completeness of packages.  Tier 2
+mirrors are free to sync only specific architectures and exclude
+sub-repositories (nonfree/multilib).
+
+To change your mirrors to use a different set, you must create files
+in `/etc/xbps.d` with the same names as those in `/usr/share/xbps.d`.
+Once you have created such files, replace `http://repo.voidlinux.eu/`
+with one of the servers below.  If you wish to change this for all
+four repos on a 64-bit host you will need to edit 4 files.  Only the
+files containing 'repository' in the filename need to be duplicated to
+`/etc/xbps.d/`.
+
+### Tier 1 Mirrors
+
+  * http://repo.voidlinux.eu (EU: Germany)
+  * http://repo2.voidlinux.eu (EU: Germany)
+  * http://repo3.voidlinux.eu (USA: Kansas)
+  * http://lug.utdallas.edu/mirror/void/ (USA: Texas)
+
+### Tier 2 Mirrors
+
+  * http://www.gtlib.gatech.edu/pub/VoidLinux/ (USA: Georgia)
+  * http://mirror.aarnet.edu.au/pub/voidlinux/ (Australia)
+
+
+If you are operating a Tier 2 mirror and would like to be on this
+list, please either file a pull request or reach out to
+maldridge[at]voidlinux.eu.
