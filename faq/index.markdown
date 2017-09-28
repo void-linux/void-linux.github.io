@@ -97,7 +97,6 @@ The installer has to be executed as `root` user, if you logged in as `anon` you 
 
 ## Manual installation
 
-
 ## Post installation
 
 # System Management
@@ -168,6 +167,35 @@ exec 2>&1
 exec wpa_supplicant -c ${CONF_FILE:=/etc/wpa_supplicant/wpa_supplicant.conf} -i ${WPA_INTERFACE:=wlan0} ${OPTS:=-s}
 # echo WPA_INTERFACE=wlp3s0 >>/etc/sv/wpa_supplicant/conf
 ```
+
+### Per user service directory
+
+Sometimes it would be nice to have user-specific runit services. Services that,
+for example, open an ssh tunnel as your current user, run a virtual machine,
+or regularly run daemons on your behalf. The most common way to do this to ask
+a system-level runsv daemon to start a runsvdir daemon as your user for your
+personal service directory.
+
+Create a service as `/etc/sv/$username/run` with the below contents:
+
+```
+#!/bin/sh
+
+UID=$(pwd -P)
+UID=${UID##*/}
+
+if [ -d "/home/${UID}/service" ]; then
+	chpst -u"${UID}" runsvdir /home/${UID}/service
+fi
+```
+
+Then you can create runit services and symlink them under ${HOME}/service and
+then runit will take care of starting and restarting those services for you.
+
+One important caveat: if any services you have need group permissions instead
+of just your user permissions, you will want to append those groups in a colon
+separated list to your username, such as `/etc/sv/anon:void1:void2:void3/run`
+instead of just `/etc/sv/anon/run`.
 
 ### Cron
 
@@ -255,7 +283,6 @@ $ xbps-query --regex -Rs 'linux[34]' | grep -Ev '(dbg|headers)'
 ```
 
 The `linux` meta package which is installed by default depends on one of the kernel packages, usually the latest mainline kernel that works with all dkms modules.
-
 
 ### Removing old kernels
 
@@ -490,7 +517,6 @@ glibc-dbg
 | [https://lug.utdallas.edu/mirror/void/current/](https://lug.utdallas.edu/mirror/void/current/) | US |
 | [http://mirror.aarnet.edu.au/pub/voidlinux/current/](http://mirror.aarnet.edu.au/pub/voidlinux/current/) | AU |
 
-
 ## Changing mirrors
 
 Copy all repository configuration files from `/usr/share/xbps.d` to `/etc/xbps.d` and then change the repository urls in `/etc/xbps.d`.
@@ -582,7 +608,6 @@ fi
 
 exec $STARTUP <window manager>
 ```
-
 
 ### elogind
 
