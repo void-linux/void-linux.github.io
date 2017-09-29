@@ -365,6 +365,27 @@ $ xbps-query -Rs dkms
 [-] nvidia340-dkms-340.102_5           NVIDIA drivers (GeForce 8, 9, 9M, 100, 100M, 200, 300 series) - DKMS kernel module
 ```
 
+### cmdline
+
+#### grub
+
+Kernel command line arguments can be added through the grub bootloader by editing `/etc/drafult/grub` and changing the `GRUB_CMDLINE_LINUX_DEFAULT` variable and then regenerating the grub configuration.
+
+```
+# vi /etc/drafult/grub
+# grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+#### dracut
+
+Dracut can be configured to add additional cmdline arguments to the kernel by creating a configuration file and regenerating the initramfs, make sure to reconfigure the right kernel version like `linux4.12` as example.
+
+```
+# mkdir -p /etc/dracut.conf.d
+# echo 'kernel_cmdline+="<extra cmdline arguments>"' >> /etc/dracut.conf.d/cmdline.sh
+# xbps-reconfigure -f linux4.12
+```
+
 ## Manual pages
 
 Void packages come with manual pages and the default installation includes the [mandoc](http://mandoc.bsd.lv/) manpage toolset.
@@ -545,6 +566,11 @@ $ xbps-query -L
 The Network configuration in Void Linux can be done with different methods, the
 default installation comes with `dhcpcd(8)`.
 
+## Interface names
+
+In newer versions udev changed the well known traditional naming scheme (`eth0`, `eth0`, `wlan0`, ...).
+This behaviour can be reverted by adding `net.ifnames=0` to the [kernel cmdline](#cmdline).
+
 ## Static Setup
 
 A static network in Void Linux can be configured with `ip(8)`.
@@ -561,9 +587,32 @@ ip route add default via 192.168.1.1
 ## DHCP
 
 ### dhcpcd
+
+To run `dhcpcd` on all interfaces you can enable the `dhcpcd` service.
+
+```
+# ln -s /etc/sv/dhcpcd /var/service
+```
+
+If you want to run dhcpcd just on a specific interface you can use the `dhcpcd-eth0` service if this matches your interface name.
+Otherwise you can just copy `dhcpcd-eth0` and change it to match your interface.
+
+```
+$ ip link show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: enp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP mode DEFAULT group default qlen 1000
+        link/ether ff:ff:ff:ff:ff:ff brd ff:ff:ff:f
+# cp -R /etc/sv/dhcpcd-eth0 /etc/sv/dhcpcd-enp3s0
+# sed -i 's/eth0/enp3s0/' /etc/sv/dhcpcd-enp3s0/run
+# ln -s /etc/sv/dhcpcd-enp3s0 /var/service
+```
+
 ### dhclient
 ### NetworkManager
 ### wicd
+
+## wpa_supplicant
 
 # Xorg
 
