@@ -369,10 +369,10 @@ $ xbps-query -Rs dkms
 
 #### grub
 
-Kernel command line arguments can be added through the grub bootloader by editing `/etc/drafult/grub` and changing the `GRUB_CMDLINE_LINUX_DEFAULT` variable and then regenerating the grub configuration.
+Kernel command line arguments can be added through the grub bootloader by editing `/etc/default/grub` and changing the `GRUB_CMDLINE_LINUX_DEFAULT` variable and then regenerating the grub configuration.
 
 ```
-# vi /etc/drafult/grub
+# vi /etc/default/grub
 # grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
