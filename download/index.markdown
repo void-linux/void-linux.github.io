@@ -73,23 +73,41 @@ Connect to it in virtual terminal or via ssh and log in as *root*, password **vo
 ## Verifying file integrity and its digital signature
 
 The [sha256sums.txt](http://repo.voidlinux.eu/live/current/sha256sums.txt) file contains the `SHA256` hashes to verify the integrity
-of the downloaded files; this file is digitally signed with **Juan RP's GPG** key.
+of the downloaded files; this file is digitally signed with a gpg key.
+
+Images prior to 2017-10-07 were signed with Juan RP's key:
 
 - Signer: `Juan RP <xtraeme@gmail.com>`
 - KeyID: `482F9368`
 - Fingerprint: `F469 EAEF 52F5 9627 75B8 20CD AF19 F6CB 482F 9368`
 
-My public key is available at [http://repo.voidlinux.eu/live/xtraeme.asc](http://repo.voidlinux.eu/live/xtraeme.asc)
+His public key is available at [http://repo.voidlinux.eu/live/xtraeme.asc](http://repo.voidlinux.eu/live/xtraeme.asc)
 or in any known `PGP key server`. Follow these steps to verify the integrity and its digital signature:
 
+Images after 2017-10-07 are signed with a dedicated Void Images key.
+
+- Signer: `Void Linux Image Signing Key <images@voidlinux.eu>`
+- KeyID: `B48282A4`
+- Fingerprint: `CF24 B9C0 3809 7D8A 4495 8E2C 8DEB DA68 B482 82A4`
+
+This key is available
+at
+[http://repo.voidlinux.eu/live/current/void_images.asc](http://repo.voidlinux.eu/live/current/void_images.asc) or
+in most known `PGP key servers`.  Follow these steps to verify the
+integrity and signature.
+
 ~~~
-$ gpg --recv-keys 482F9368
-$ wget http://repo.voidlinux.eu/live/current/sha256sums.txt{,.asc}
-$ LANG=C gpg --verify sha256sums.txt.asc
+$ gpg --recv-keys <KEY_ID>
+$ wget http://repo.voidlinux.eu/live/current/sha256sums.txt{,.sig}
+$ LANG=C gpg --verify sha256sums.txt.sig
 gpg: Signature made Sun Feb  8 12:33:05 2015 CET using RSA key ID 482F9368
 gpg: Good signature from "Juan RP <xtraeme@gmail.com>" [unknown]
 gpg:                 aka "[jpeg image of size 3503]" [unknown]
 ~~~
+
+The important line in the output above is "Good signature from [...]".
+Make sure that you have this line and that the "from" field matches
+what you expect.
 
 Now that the signature has been verified, you should check the sha256 hash is valid for the file you've downloaded...
 use the sha256sum utility and compare it with what's stored in the `sha256sums.txt` file:
