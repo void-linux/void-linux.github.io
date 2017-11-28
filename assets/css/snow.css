@@ -49,6 +49,9 @@
 	-webkit-animation: flakeH 0s ease-in-out 0s infinite alternate; /* Chrome, Safari, Opera */
 	-moz-animation: flakeH 0s ease-in-out 0s infinite alternate; /* Chrome, Safari, Opera */
 }
+#snow b::after {
+	content: "*";
+}
 
 #snow i:nth-child(1) {
 	left:99%;
