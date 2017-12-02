@@ -1,4 +1,9 @@
-### The Advent of Void: Day 2: taskwarrior and friends
+---
+layout: post
+title: "The Advent of Void: Day 2: taskwarrior and friends"
+comments: true
+---
+
 
 Day 2! There are just so many tools we want to cover, so today we'll be covering two packages from the same upstream source, and mentioning related tools. These scratch many itches, are simple to start using, but have many more powerful and useful features as you need them. These are both from the taskwarrior project, are backed by organizations with money, and are both MIT licensed.
 
