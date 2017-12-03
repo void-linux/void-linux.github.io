@@ -4,13 +4,13 @@ layout: default
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-3">
+		<div class="col-md-3 text-left">
 			{% if page.previous %}<h5><a href="{{ page.previous.url }}" title="Previous news: {{ page.previous.title }}"><i class="fa fa-previous fa-lg"></i> Previous</a></h5>{% endif %}
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-6 text-center">
 			<h5><a href="/news" title="Back to news index"><i class="fa fa-home fa-lg"></i> Back to news</a></h5>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-3 text-right">
 			{% if page.next %}<h5><a href="{{ page.next.url }}" title="Next news: {{ page.next.title }}"><i class="fa fa-next fa-lg"></i> Next</a></h5>{% endif %}
 		</div>
 	</div>
