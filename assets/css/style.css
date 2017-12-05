@@ -242,10 +242,6 @@ footer {
 	padding:30px 16px 16px;
 }
 /* JUNK */
-#disqus {
-	max-width:840px;
-	margin:50px auto 20px;
-}
 .fa-gog:before {
 	content:"\f0d4";
 }
