@@ -19,7 +19,7 @@ The `containers` package leverages the same kernel features as Docker and LXC, b
 To setup a small void container we run `xbps-install` with `pseudo` to populate a directory with a base system where files that are usually owned by root are owned by our user outside the namespace. Inside the namespace they will appear as if those files are owned by root.
 
 ```
-$ pseudo xbps-install -R https://repo.voidlinux.eu/current/ -MSr /tmp/void base-voidst
+$ pseudo xbps-install -R https://repo.voidlinux.eu/current/ -MSr /tmp/void base-voidstrap
 [*] Updating `https://repo.voidlinux.eu/current//armv7l-repodata' ...
 armv7l-repodata: 1140KB [avg rate: 9126MB/s]
 `https://repo.voidlinux.eu/current/' repository has been RSA signed by "Void Linux"
