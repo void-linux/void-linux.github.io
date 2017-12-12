@@ -4,7 +4,7 @@ title: "The Advent of Void: Day 10: dvtm"
 comments: true
 ---
 
-You know windowmanagers, right? Like tiled window managers. There are plenty of them. But did you know that there's a tiled window manager for the shell?
+You know window managers, right? Like tiled window managers. There are plenty of them. But did you know that there's a tiled window manager for the shell?
 
 
 
