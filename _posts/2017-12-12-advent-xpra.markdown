@@ -37,7 +37,7 @@ To detach the session hit `Ctrl`+`C`.
 The real power of xpra comes with the remote attaching feature:
 
 ```
-xpra attach ssh:remote-server:14
+# xpra attach ssh:remote-server:14
 ```
 
 This command opens a ssh connections to `remote-server` and attaches
