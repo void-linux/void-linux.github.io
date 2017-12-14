@@ -5,7 +5,7 @@ comments: true
 ---
 
 Day 14, and a little treat for you pulseaudio users out there. Two
-underappreiated packages for an underappreiated workflow.
+underappreciated packages for an underappreciated workflow.
 
 I don't always use pulseaudio. But when I do, I don't like opening pavucontrol
 for any reason. After all, I live in the terminal for almost everything, and
