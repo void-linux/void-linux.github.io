@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Advent of Void: Day 16: dstat"
+title: "The Advent of Void: Day 17: dstat"
 comments: true
 ---
 
