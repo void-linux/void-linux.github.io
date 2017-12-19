@@ -4,15 +4,16 @@ title: "The Advent of Void: Day 18: mblaze"
 comments: true
 ---
 
-Today I want to Introduce [mblaze(7)](https://man.voidlinux.eu/mblaze.7), a set of Unix utilities to deal with mails stored in the maildir format.
+Today I want to introduce [mblaze(7)](https://man.voidlinux.eu/mblaze.7), a set of Unix utilities to deal with mails stored in the maildir format.
 
-It aims to be used for both interactive usage and scripting, similar to MH or nmh, except that `mblaze` is written from scratch.
+It aims to be used for both interactive usage and scripting, similar to MH or nmh.
+Except that its `mblaze` was written from scratch to be performant and memory efficient allowing to work with large amounts of mails.
 This results in a smaller and clean implementation which dropped support for (in our eyes) less useful features and improve usability.
 
-The basic concept of `mblaze` is to work with sequences, a sequence is a file with a list of mails.
-Each tool uses or creates those sequences and supports to select ranges or single mails from mail sequences.
+The basic concept of `mblaze` is to work with sequences which are newline separated list of mail files with optional indention to represent threading.
+Sequences can be used in memory by using pipes or as files which enabled further features as explained later in this post.
 
-There are tools to create, sort, filter and manipulate sequences.
+There are tools to create, sort, filter and manipulate sequences, other tools like `mshow`, `maddr` or `magrep` use those sequences to gather, address or show specific mails from sequences.
 
 [mlist(1)](https://man.voidlinux.eu/mlist.1) creates the initial sequence, It takes mail directories as argument and prints out all the mails it can find, it also has some arguments to filter mails by flags that are stored in the file name, as example `-S` and `-s` to show only seen or not seen mails respectively.
 
@@ -185,10 +186,10 @@ $ mpick -t 'subject =~~ "dmenu"' | mscan
 In the next example `mpick` only picks mails between two dates and tests if the replied flag is set or the seen flag is not set.
 
 ```
-pick -t 'date >= "2017-09-01" && date < "2017-10-01" && (replied || !seen)' | mscan
+$ mpick -t 'date >= "2017-09-01" && date < "2017-10-01" && (replied || !seen)' | mscan
  .  6   Thu Sep 14 lemmi               [voidlinux/void-packages] Replace caddy with wedge in light of caddy's new EULA (#7657)
 11 mails tested, 1 picked.
 1 mails scanned
 ```
 
-This is just a very small example, `mblaze` is capable of a lot more and has great man pages that are worth reading, see [mblaze(7)](https://man.voidlinux.eu/mblaze.7) as starting point if you want to learn more about it.
+This is just a very small example, `mblaze` is capable of a lot more and has great man pages that are worth reading, see [mblaze(7)](https://man.voidlinux.eu/mblaze.7) and the [git repository](https://github.com/chneukirchen/mblaze) as starting point if you want to learn more about it.
