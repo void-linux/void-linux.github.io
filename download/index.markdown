@@ -154,8 +154,9 @@ files containing 'repository' in the filename need to be duplicated to
 
   * http://repo.voidlinux.eu (EU: Germany)
   * http://repo2.voidlinux.eu (EU: Germany)
-  * http://repo3.voidlinux.eu (USA: Kansas)
+  * http://a.mci.us.mirrors.voidlinux.com (USA: Kansas)
   * http://lug.utdallas.edu/mirror/void/ (USA: Texas)
+  * http://mirror.clarkson.edu/voidlinux/ (USA: New York)
 
 ### Tier 2 Mirrors
 
