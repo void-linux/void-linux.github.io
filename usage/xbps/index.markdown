@@ -91,22 +91,6 @@ After installing any of them don't forget to synchronize the repository data:
 
     # xbps-install -S
 
-#### Archives
-
-Repository archives are available at 
-
-* http://archive.voidlinux.eu (Paris, FR - primary)
-* http://archive.voidlinux.com (California, US - mirror)
-
-Archive repository URIs would be http://archive.voidlinux.eu/musl/YYYY-MM-DD, where
-the datestamp is the date of the archive you wish to use as a repository, and either musl
-or glibc as the prefix directory.
-
-    $ xbps-query --repository=http://archive.voidlinux.eu/glibc/2015-06-15/current -Mis \*
-    $ xbps-query --repository=http://archive.voidlinux.com/musl/2015-06-14/current -Mis \*
-
-To list all packages stored on that repository.
-
 ### Download static binaries
 
 Static binaries for Linux built with the *musl C library* are available at:
