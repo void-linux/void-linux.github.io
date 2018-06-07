@@ -7,19 +7,19 @@ layout: nil
 
 	<title>Void news</title>
 	<subtitle>Follow Void Linux news</subtitle>
-	<link href="http://voidlinux.eu/"/>
-	<link type="application/atom+xml" rel="self" href="http://voidlinux.eu/atom.xml"/>
+	<link href="http://voidlinux.org/"/>
+	<link type="application/atom+xml" rel="self" href="http://voidlinux.org/atom.xml"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
 	<author>
 		<name>xtraeme</name>
 	</author>
-	<id>http://voidlinux.eu/</id>
+	<id>http://voidlinux.org/</id>
 
 {% for post in site.posts limit:20 %}
 	<entry>
 		<title>{{ post.title }}</title>
-		<link href="http://voidlinux.eu{{ post.url }}"/>
-		<id>http://voidlinux.eu{{ post.id }}</id>
+		<link href="http://voidlinux.org{{ post.url }}"/>
+		<id>http://voidlinux.org{{ post.id }}</id>
 		<published>{{ post.date | date_to_xmlschema }}</published>
 		<updated>{{ post.date | date_to_xmlschema }}</updated>
 	</entry>
