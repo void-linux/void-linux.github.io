@@ -504,7 +504,7 @@ $ ./xbps-src -m masterdir-i686 pkg vim
 
 ## Contributing
 
-You can find an extensive contributing guide [CONTRIBUTING.md](https://github.com/voidlinux/void-packages/blob/master/CONTRIBUTING.md) in the `void-packages` git repository.
+You can find an extensive contributing guide [CONTRIBUTING.md](https://github.com/void-linux/void-packages/blob/master/CONTRIBUTING.md) in the `void-packages` git repository.
 
 ## Debugging packages
 
