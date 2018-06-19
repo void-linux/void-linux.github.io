@@ -83,7 +83,7 @@
 			tr.innerHTML = "<td class=name></td><td class=version></td><td class=revision></td><td class=arch></td><td class=repo></td><td class=size></td>";
 
 			a = document.createElement('a');
-			a.href = 'https://github.com/voidlinux/void-packages/tree/master/srcpkgs/' + results[i].name;
+			a.href = 'https://github.com/void-linux/void-packages/tree/master/srcpkgs/' + results[i].name;
 			a.appendChild(document.createTextNode(results[i].name));
 			tr.childNodes[0].appendChild(a);
 			tr.childNodes[1].appendChild(document.createTextNode(results[i].version));
