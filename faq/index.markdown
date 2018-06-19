@@ -222,6 +222,19 @@ The default installation comes with no syslog daemon, there are different implem
 
 Other syslog implementations like `rsyslog` and `metalog` are available in the package repository too.
 
+### Console (tty, getty, agetty)
+
+#### Disabling default ttys
+
+Void Linux enables `agetty(8)` services for the ttys 1 to 6 by default.
+
+To disable agetty services remove the service symlink and create a `down` file in the agetty service directory to avoid that updates of the `runit-void` package re-enable the service.
+
+```
+# rm /var/service/agetty-tty6
+# touch /etc/sv/agetty-tty6/down
+```
+
 ## Changing the default shell
 
 The default shell for users can be changed with the `chsh(1)` tool.
