@@ -152,10 +152,11 @@ files containing 'repository' in the filename need to be duplicated to
 
 ### Tier 1 Mirrors
 
-  * http://repo.voidlinux.eu (EU: Germany)
+  * http://vm1.a-lej-de.m.voidlinux.org (EU: Germany)
   * http://repo2.voidlinux.eu (EU: Germany)
-  * http://a.mci.us.mirrors.voidlinux.com (USA: Kansas City)
+  * http://vm1.a-mci-us.m.voidlinux.org (USA: Kansas City)
   * http://mirror.clarkson.edu/voidlinux/ (USA: New York)
+  * http://mirrors.servercentral.com/voidlinux/ (USA: Chicago)
 
 ### Tier 2 Mirrors
 
@@ -163,7 +164,6 @@ files containing 'repository' in the filename need to be duplicated to
   * http://ftp.swin.edu.au/voidlinux/ (AU: Melbourne)
   * http://ftp.acc.umu.se/mirror/voidlinux.eu/ (EU: Sweden)
   * https://mirrors.dotsrc.org/voidlinux/ (EU: Denmark)
-  * http://mirrors.servercentral.com/voidlinux/ (USA: Chicago)
   * http://www.gtlib.gatech.edu/pub/VoidLinux/ (USA: Atlanta)
 
 If you are operating a Tier 2 mirror and would like to be on this
