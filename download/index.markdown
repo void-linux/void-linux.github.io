@@ -15,7 +15,7 @@ installation (packages are downloaded from official repository).
 
 All **live images** and **rootfs tarballs** are available at:
 
-* [http://repo.voidlinux.eu/live/current](http://repo.voidlinux.eu/live/current)
+* [http://alpha.de.repo.voidlinux.org/live/current](http://alpha.de.repo.voidlinux.org/live/current)
 
 The x86\_64 images have these requirements:
 
@@ -42,7 +42,7 @@ These images need at least 256 or 512 MB of RAM in order to work correctly.
 
 ## Download ready to boot images for ARM
 
-Install Void by using a *prepared image* or a *rootfs tarbal* that can be written/unpacked onto the SD card.
+Install Void by using a *prepared image* or a *rootfs tarball* that can be written/unpacked onto the SD card.
 This method allows you to have a system ready to boot / use, once it's written / unpacked onto the target device.
 
 The images are prepared for 2GB SD cards, alternatively use the **rootfs tarball** if you want
@@ -72,8 +72,10 @@ Connect to it in virtual terminal or via ssh and log in as *root*, password **vo
 
 ## Verifying file integrity and its digital signature
 
-The [sha256sums.txt](http://repo.voidlinux.eu/live/current/sha256sums.txt) file contains the `SHA256` hashes to verify the integrity
-of the downloaded files; this file is digitally signed with a gpg key.
+The
+[sha256sums.txt](http://alpha.de.repo.voidlinux.org/live/current/sha256sums.txt)
+file contains the `SHA256` hashes to verify the integrity of the
+downloaded files; this file is digitally signed with a gpg key.
 
 Images prior to 2017-10-07 were signed with Juan RP's key:
 
@@ -81,7 +83,7 @@ Images prior to 2017-10-07 were signed with Juan RP's key:
 - KeyID: `482F9368`
 - Fingerprint: `F469 EAEF 52F5 9627 75B8 20CD AF19 F6CB 482F 9368`
 
-His public key is available at [http://repo.voidlinux.eu/live/xtraeme.asc](http://repo.voidlinux.eu/live/xtraeme.asc)
+His public key is available at [http://alpha.de.repo.voidlinux.org/live/xtraeme.asc](http://alpha.de.repo.voidlinux.org/live/xtraeme.asc)
 or in any known `PGP key server`. Follow these steps to verify the integrity and its digital signature:
 
 Images after 2017-10-07 are signed with a dedicated Void Images key.
@@ -92,13 +94,13 @@ Images after 2017-10-07 are signed with a dedicated Void Images key.
 
 This key is available
 at
-[http://repo.voidlinux.eu/live/current/void_images.asc](http://repo.voidlinux.eu/live/current/void_images.asc) or
+[http://alpha.de.repo.voidlinux.org/live/current/void_images.asc](http://alpha.de.repo.voidlinux.org/live/current/void_images.asc) or
 in most known `PGP key servers`.  Follow these steps to verify the
 integrity and signature.
 
 ~~~
 $ gpg --recv-keys <KEY_ID>
-$ wget http://repo.voidlinux.eu/live/current/sha256sums.txt{,.sig}
+$ wget http://alpha.de.repo.voidlinux.org/live/current/sha256sums.txt{,.sig}
 $ LANG=C gpg --verify sha256sums.txt.sig
 gpg: Signature made Sun Feb  8 12:33:05 2015 CET using RSA key ID 482F9368
 gpg: Good signature from "Juan RP <xtraeme@gmail.com>" [unknown]
@@ -144,17 +146,17 @@ sub-repositories (nonfree/multilib).
 
 To change your mirrors to use a different set, you must create files
 in `/etc/xbps.d` with the same names as those in `/usr/share/xbps.d`.
-Once you have created such files, replace `http://repo.voidlinux.eu/`
-with one of the servers below.  If you wish to change this for all
-four repos on a 64-bit host you will need to edit 4 files.  Only the
-files containing 'repository' in the filename need to be duplicated to
-`/etc/xbps.d/`.
+Once you have created such files, replace
+`http://alpha.de.repo.voidlinux.org` with one of the servers below.
+If you wish to change this for all four repos on a 64-bit host you
+will need to edit 4 files.  Only the files containing 'repository' in
+the filename need to be duplicated to `/etc/xbps.d/`.
 
 ### Tier 1 Mirrors
 
-  * http://vm1.a-lej-de.m.voidlinux.org (EU: Germany)
+  * http://alpha.de.repo.voidlinux.org (EU: Germany)
   * http://repo2.voidlinux.eu (EU: Germany)
-  * http://vm1.a-mci-us.m.voidlinux.org (USA: Kansas City)
+  * http://alpha.us.repo.voidlinux.org (USA: Kansas City)
   * http://mirror.clarkson.edu/voidlinux/ (USA: New York)
   * http://mirrors.servercentral.com/voidlinux/ (USA: Chicago)
 
