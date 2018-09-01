@@ -26,10 +26,10 @@ You can either install Void Linux from one of the live images using one of both 
 
 ### Static XBPS binaries
 
-Static xbps images can be downloaded from [https://repo.voidlinux.eu/static/](https://repo.voidlinux.eu/static/).
+Static xbps images can be downloaded from [https://alpha.de.repo.voidlinux.org/static/](https://alpha.de.repo.voidlinux.org/static/).
 
 ```
-$ wget https://repo.voidlinux.eu/static/xbps-static-latest.$(uname -m)-musl.tar.xz
+$ wget https://alpha.de.repo.voidlinux.org/static/xbps-static-latest.$(uname -m)-musl.tar.xz
 ```
 
 After [verifying the integrity](#verifying-integrity) you can extract and use the binaries.
@@ -45,10 +45,10 @@ The image release directories contain a `sha256sums.txt` and a
 `sha256sums.txt.asc` file to verify the integrity of the downloaded images.
 
 ```
-$ wget http://repo.voidlinux.eu/live/current/sha256sums.txt{,.asc}
+$ wget http://alpha.de.repo.voidlinux.org/live/current/sha256sums.txt{,.asc}
 ```
 
-You can now verify the integrity of downloaded file using [sha256sum(1)](https://man.voidlinux.eu/sha256sum.1).
+You can now verify the integrity of downloaded file using [sha256sum(1)](https://man.voidlinux.org/sha256sum.1).
 
 ```
 $ sha256sum -c --ignore-missing sha256sums.txt
@@ -64,7 +64,7 @@ The file is signed with Juan RP’s GPG key:
 * KeyID: `482F9368`
 * Fingerprint: `F469 EAEF 52F5 9627 75B8  20CD AF19 F6CB 482F 9368`
 
-You can use [gpg(1)](https://man.voidlinux.eu/gpg.1) to receive the key from a keyserver using the following command or download it from [https://repo.voidlinux.eu/live/xtraeme.asc](https://repo.voidlinux.eu/live/xtraeme.asc).
+You can use [gpg(1)](https://man.voidlinux.org/gpg.1) to receive the key from a keyserver using the following command or download it from [https://alpha.de.repo.voidlinux.org/live/xtraeme.asc](https://alpha.de.repo.voidlinux.org/live/xtraeme.asc).
 
 ```
 $ gpg --recv-keys 482F9368
@@ -76,7 +76,7 @@ gpg: Total number processed: 1
 gpg:               imported: 1
 ```
 
-You can now verify the signature of the `sha256sums.txt` file with [gpg(1)](https://man.voidlinux.eu/gpg.1).
+You can now verify the signature of the `sha256sums.txt` file with [gpg(1)](https://man.voidlinux.org/gpg.1).
 
 ```
 $ gpg --verify sha256sums.txt.asc
@@ -93,7 +93,7 @@ Primary key fingerprint: F469 EAEF 52F5 9627 75B8  20CD AF19 F6CB 482F 9368
 
 ## Using the Installer
 
-The installer has to be executed as `root` user, if you logged in as `anon` you can use [sudo(8)](https://man.voidlinux.eu/sudo.8) to run the installer as `root`.
+The installer has to be executed as `root` user, if you logged in as `anon` you can use [sudo(8)](https://man.voidlinux.org/sudo.8) to run the installer as `root`.
 
 ## Manual installation
 
@@ -117,13 +117,13 @@ To disable them again you just remove the link.
 # rm /var/service/<service name>
 ```
 
-Activated services can be controlled with the [sv(8)](https://man.voidlinux.eu/sv.8) command, following commands are available and can be used like `sv <command> <services...>`.
+Activated services can be controlled with the [sv(8)](https://man.voidlinux.org/sv.8) command, following commands are available and can be used like `sv <command> <services...>`.
 
 * `up` to start, `down` to stop and `once` to start services once.
 * `pause`, `cont`, `hup`, `alarm`, `interrupt`, `quit`, `1`, `2`, `term` and `kill` to send the corresponding signal.
 * `start`, `stop`, `reload` and `restart` for LSB init compatibility.
 
-See the [sv(8)](https://man.voidlinux.eu/sv.8) manual page for further informations.
+See the [sv(8)](https://man.voidlinux.org/sv.8) manual page for further informations.
 
 The `status` command can be used to retrieve the current status of one or more services.
 It accepts either service names or service directories, which makes it possible to use shell wildcards to retrieve the status for all activated services.
@@ -211,7 +211,7 @@ As alternative to the standard cron implementations you can use something like [
 
 The default installation comes with no syslog daemon, there are different implementations available.
 
-`socklog` is the implementation from the [runit(8)](https://man.voidlinux.eu/runit.8) author and Void Linux provides a package with some basic configuration for it, this makes it a good choice if you don't know which one to choose.
+`socklog` is the implementation from the [runit(8)](https://man.voidlinux.org/runit.8) author and Void Linux provides a package with some basic configuration for it, this makes it a good choice if you don't know which one to choose.
 
 ```
 # xbps-install -S socklog-void
@@ -226,7 +226,7 @@ Other syslog implementations like `rsyslog` and `metalog` are available in the p
 
 #### Disabling default ttys
 
-Void Linux enables [agetty(8)](https://man.voidlinux.eu/agetty.8) services for the ttys 1 to 6 by default.
+Void Linux enables [agetty(8)](https://man.voidlinux.org/agetty.8) services for the ttys 1 to 6 by default.
 
 To disable agetty services remove the service symlink and create a `down` file in the agetty service directory to avoid that updates of the `runit-void` package re-enable the service.
 
@@ -237,15 +237,15 @@ To disable agetty services remove the service symlink and create a `down` file i
 
 ## Changing the default shell
 
-The default shell for users can be changed with the [chsh(1)](https://man.voidlinux.eu/chsh.1) tool.
+The default shell for users can be changed with the [chsh(1)](https://man.voidlinux.org/chsh.1) tool.
 
 ```
 $ chsh -s /bin/bash <user name>
 ```
 
-Make sure to use the same path to the shell as its in `/etc/shells` or listed by the [chsh(1)](https://man.voidlinux.eu/chsh.1) list command.
+Make sure to use the same path to the shell as its in `/etc/shells` or listed by the [chsh(1)](https://man.voidlinux.org/chsh.1) list command.
 
-A list of available installed shells can be retrieved with the [chsh(1)](https://man.voidlinux.eu/chsh.1) list command.
+A list of available installed shells can be retrieved with the [chsh(1)](https://man.voidlinux.org/chsh.1) list command.
 
 ```
 $ chsh -l
@@ -403,13 +403,13 @@ Dracut can be configured to add additional cmdline arguments to the kernel by cr
 
 Void packages come with manual pages and the default installation includes the [mandoc](http://mandoc.bsd.lv/) manpage toolset.
 
-The [man(1)](https://man.voidlinux.eu/man.1) command can be used to show manual pages.
+The [man(1)](https://man.voidlinux.org/man.1) command can be used to show manual pages.
 
 ```
 $ man 1 chroot
 ```
 
-The [mandoc](http://mandoc.bsd.lv/) toolset contains [apropos(1)](https://man.voidlinux.eu/apropos.1) to search for manual pages, [apropos(1)](https://man.voidlinux.eu/apropos.1) uses a database that can be updated and generated with the [makewhatis(1)](https://man.voidlinux.eu/makewhatis.1) command.
+The [mandoc](http://mandoc.bsd.lv/) toolset contains [apropos(1)](https://man.voidlinux.org/apropos.1) to search for manual pages, [apropos(1)](https://man.voidlinux.org/apropos.1) uses a database that can be updated and generated with the [makewhatis(1)](https://man.voidlinux.org/makewhatis.1) command.
 
 ```
 # makewhatis -a
@@ -441,19 +441,19 @@ Void Linux uses its home grown package management system, `xbps`.
 
 To search a file in packages you can use one of two methods
 
-The first method is to use [xbps-query(1)](https://man.voidlinux.eu/xbps-query.1) which is okay to use if you want to just look for local files, you can use it to search for remote files with the `-R` flag but its very slow compared to the second method using `xlocate`.
+The first method is to use [xbps-query(1)](https://man.voidlinux.org/xbps-query.1) which is okay to use if you want to just look for local files, you can use it to search for remote files with the `-R` flag but its very slow compared to the second method using `xlocate`.
 
 ```
 $ xbps-query -o /usr/bin/xlocate
 xtools-0.46_1: /usr/bin/xlocate (regular file)
 ```
 
-The `xtools` package contains the `xlocate` utility that works like [locate(1)](https://man.voidlinux.eu/locate.1) but for all files in the void package repository.
+The `xtools` package contains the `xlocate` utility that works like [locate(1)](https://man.voidlinux.org/locate.1) but for all files in the void package repository.
 
 ```
 # xbps-install -Su xtools
 $ xlocate -S
-From https://repo.voidlinux.eu/xlocate/xlocate
+From https://alpha.de.repo.voidlinux.org/xlocate/xlocate
  + 16d97bfe86...2ad1a4a8d1 master     -> master  (forced update)
 $ xlocate fizz
 nim-0.17.0_1	/usr/lib/nim/examples/fizzbuzz.nim
@@ -464,7 +464,7 @@ supertux2-data-0.5.1_1	/usr/share/supertux2/sounds/fizz.wav
 
 ## Building Packages
 
-The first step is to building xbps packages from source is to clone the `void-packages` [git(1)](https://man.voidlinux.eu/git.1) repository.
+The first step is to building xbps packages from source is to clone the `void-packages` [git(1)](https://man.voidlinux.org/git.1) repository.
 
 ```
 $ git clone https://github.com/void-linux/void-packages.git
@@ -542,13 +542,11 @@ glibc-dbg
 
 | Repository | Location |
 |:--------|:-------:|
-| [https://repo.voidlinux.eu/current/](https://repo.voidlinux.eu/current/) | DE |
-| [http://repo2.voidlinux.eu/current/](http://repo2.voidlinux.eu/current/) | DE |
-| [http://repo3.voidlinux.eu/current/](http://repo3.voidlinux.eu/current/) | US |
-| [http://repo4.voidlinux.eu/current/](http://repo4.voidlinux.eu/current/) | FR |
+| [https://alpha.de.repo.voidlinux.org/current/](https://alpha.de.repo.voidlinux.org/current/) | DE |
+| [http://beta.de.repo.voidlinux.org/current/](http://beta.de.repo.voidlinux.org/current/) | DE |
+| [http://alpha.us.repo.voidlinux.org/current/](http://alpha.us.repo.voidlinux.org/current/) | US |
 | [http://mirror.clarkson.edu/voidlinux/current/](http://mirror.clarkson.edu/voidlinux/current/) | US |
 | [http://www.gtlib.gatech.edu/pub/VoidLinux/current/](http://www.gtlib.gatech.edu/pub/VoidLinux/current/) | US |
-| [https://lug.utdallas.edu/mirror/void/current/](https://lug.utdallas.edu/mirror/void/current/) | US |
 | [http://mirror.aarnet.edu.au/pub/voidlinux/current/](http://mirror.aarnet.edu.au/pub/voidlinux/current/) | AU |
 
 ## Changing mirrors
@@ -558,18 +556,18 @@ Copy all repository configuration files from `/usr/share/xbps.d` to `/etc/xbps.d
 ```
 # mkdir -p /etc/xbps.d
 # cp /usr/share/xbps.d/*-repository-*.conf /etc/xbps.d/
-# sed -i 's|https://repo.voidlinux.eu/current|<repository>|g' /etc/xbps.d/*-repository-*.conf
+# sed -i 's|https://alpha.de.repo.voidlinux.org/current|<repository>|g' /etc/xbps.d/*-repository-*.conf
 ```
 
 You can use `xbps-query` to verify that all repositories are changed to the mirror you prefer.
 
 ```
 $ xbps-query -L
- 8175 https://repo.voidlinux.eu/current (RSA signed)
-   23 https://repo.voidlinux.eu/current/multilib/nonfree (RSA signed)
- 3360 https://repo.voidlinux.eu/current/multilib (RSA signed)
-   44 https://repo.voidlinux.eu/current/nonfree (RSA signed)
- 4357 https://repo.voidlinux.eu/current/debug (RSA signed)
+ 8175 https://alpha.de.repo.voidlinux.org/current (RSA signed)
+   23 https://alpha.de.repo.voidlinux.org/current/multilib/nonfree (RSA signed)
+ 3360 https://alpha.de.repo.voidlinux.org/current/multilib (RSA signed)
+   44 https://alpha.de.repo.voidlinux.org/current/nonfree (RSA signed)
+ 4357 https://alpha.de.repo.voidlinux.org/current/debug (RSA signed)
 ```
 
 # Disk Setup
@@ -577,7 +575,7 @@ $ xbps-query -L
 # Networking
 
 The Network configuration in Void Linux can be done with different methods, the
-default installation comes with [dhcpcd(8)](https://man.voidlinux.eu/dhcpcd.1).
+default installation comes with [dhcpcd(8)](https://man.voidlinux.org/dhcpcd.1).
 
 ## Interface names
 
@@ -586,9 +584,9 @@ This behaviour can be reverted by adding `net.ifnames=0` to the [kernel cmdline]
 
 ## Static Setup
 
-A static network in Void Linux can be configured with [ip(8)](https://man.voidlinux.eu/ip.8).
+A static network in Void Linux can be configured with [ip(8)](https://man.voidlinux.org/ip.8).
 
-A simple way to configure the static network at boot is to add the necessary [ip(8)](https://man.voidlinux.eu/ip.8) commands to the `/etc/rc.local` file.
+A simple way to configure the static network at boot is to add the necessary [ip(8)](https://man.voidlinux.org/ip.8) commands to the `/etc/rc.local` file.
 
 ```
 # Static IP configuration via iproute
