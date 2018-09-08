@@ -155,7 +155,7 @@ the filename need to be duplicated to `/etc/xbps.d/`.
 ### Tier 1 Mirrors
 
   * http://alpha.de.repo.voidlinux.org (EU: Germany)
-  * http://repo2.voidlinux.eu (EU: Germany)
+  * http://beta.de.repo.voidlinux.org (EU: Germany)
   * http://alpha.us.repo.voidlinux.org (USA: Kansas City)
   * http://mirror.clarkson.edu/voidlinux/ (USA: New York)
   * http://mirrors.servercentral.com/voidlinux/ (USA: Chicago)
