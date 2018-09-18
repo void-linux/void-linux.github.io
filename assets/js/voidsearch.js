@@ -4,15 +4,15 @@
 	var maxResults = 100;
 	var showAll = false;
 	var repos = [
-		"https://repo.voidlinux.eu/current/",
-		"https://repo.voidlinux.eu/current/multilib/",
-		"https://repo.voidlinux.eu/current/nonfree/",
-		"https://repo.voidlinux.eu/current/multilib/nonfree/",
-		"https://repo.voidlinux.eu/current/debug/",
+		"https://alpha.de.repo.voidlinux.org/current/",
+		"https://alpha.de.repo.voidlinux.org/current/multilib/",
+		"https://alpha.de.repo.voidlinux.org/current/nonfree/",
+		"https://alpha.de.repo.voidlinux.org/current/multilib/nonfree/",
+		"https://alpha.de.repo.voidlinux.org/current/debug/",
 
-		"https://repo.voidlinux.eu/current/musl/",
-		"https://repo.voidlinux.eu/current/musl/nonfree/",
-		"https://repo.voidlinux.eu/current/musl/debug/"
+		"https://alpha.de.repo.voidlinux.org/current/musl/",
+		"https://alpha.de.repo.voidlinux.org/current/musl/nonfree/",
+		"https://alpha.de.repo.voidlinux.org/current/musl/debug/"
 	];
 	var repoNames = [
 		"current",
