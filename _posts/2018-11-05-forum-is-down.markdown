@@ -25,6 +25,6 @@ channels:
     * Ask questions on [unix.stackexchange.com](https://unix.stackexchange.com)
     * Tag your questions with `void-linux`
   * Reddit
-    * r/voidlinux 
+    * [r/voidlinux ](https://www.reddit.com/r/voidlinux)
     * Also not managed/moderated by the Void team, but very likely to
       be up!
