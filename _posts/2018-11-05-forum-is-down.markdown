@@ -22,7 +22,7 @@ channels:
     * The wiki is currently in maintenence mode, help us replace it at
       [the docs repo](https://github.com/void-linux/void-docs/)
   * StackExchange
-    * Ask questions on [unix.stackexchange.com](unix.stackexchange.com)
+    * Ask questions on [unix.stackexchange.com](https://unix.stackexchange.com)
     * Tag your questions with `void-linux`
   * Reddit
     * r/voidlinux 
