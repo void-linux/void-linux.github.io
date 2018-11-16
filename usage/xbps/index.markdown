@@ -43,10 +43,13 @@ available in `/etc/xbps.d` override those defined in `/usr/share/xbps.d`.
 
 #### Official Repositories
 
-- https://repo.voidlinux.eu (Germany, EU *default*)
-- http://repo2.voidlinux.eu (Germany, EU)
-- http://repo3.voidlinux.eu (Los Angeles, CA, US)
-- http://repo4.voidlinux.eu (Paris, FR, EU)
+- http://alpha.de.repo.voidlinux.org (EU: Germany *default*)
+- http://beta.de.repo.voidlinux.org (EU: Germany)
+- http://alpha.us.repo.voidlinux.org (USA: Kansas City)
+- http://mirror.clarkson.edu/voidlinux/ (USA: New York)
+- http://mirrors.servercentral.com/voidlinux/ (USA: Chicago)
+
+You can find more about mirrors in the [Download page](https://voidlinux.org/download/#mirrors).
 
 The official repositories (glibc) are signed with the following RSA key:
 
@@ -59,7 +62,9 @@ You can print the `repository` RSA public key fingerprint with `xbps-query`:
 
 #### Official Repositories (musl)
 
-- https://repo.voidlinux.eu/current/musl (Paris, EU *default*)
+Musl repositories are in the /current/musl directory of the [mirrors](https://voidlinux.org/download/#mirrors), e.g.
+- http://alpha.de.repo.voidlinux.org/current/musl/ (EU: Germany)
+
 
 The musl repositories are signed with the following RSA key:
 
@@ -95,12 +100,12 @@ After installing any of them don't forget to synchronize the repository data:
 
 Static binaries for Linux built with the *musl C library* are available at:
 
-- [aarch64](http://repo.voidlinux.eu/static/xbps-static-latest.aarch64-musl.tar.xz)
-- [armv6hf](http://repo.voidlinux.eu/static/xbps-static-latest.armv6l-musl.tar.xz)
-- [i686](http://repo.voidlinux.eu/static/xbps-static-latest.i686-musl.tar.xz)
-- [x86\_64](http://repo.voidlinux.eu/static/xbps-static-latest.x86_64-musl.tar.xz)
-- [mipsel32](http://repo.voidlinux.eu/static/xbps-static-latest.mipsel-musl.tar.xz)
-- [mips32](http://repo.voidlinux.eu/static/xbps-static-latest.mips-musl.tar.xz)
+- [aarch64](http://alpha.de.repo.voidlinux.org/static/xbps-static-latest.aarch64-musl.tar.xz)
+- [armv6hf](http://alpha.de.repo.voidlinux.org/static/xbps-static-latest.armv6l-musl.tar.xz)
+- [i686](http://alpha.de.repo.voidlinux.org/static/xbps-static-latest.i686-musl.tar.xz)
+- [x86\_64](http://alpha.de.repo.voidlinux.org/static/xbps-static-latest.x86_64-musl.tar.xz)
+- [mipsel32](http://alpha.de.repo.voidlinux.org/static/xbps-static-latest.mipsel-musl.tar.xz)
+- [mips32](http://alpha.de.repo.voidlinux.org/static/xbps-static-latest.mips-musl.tar.xz)
 
 ### xbps-install(1)
 
