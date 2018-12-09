@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Advent of Void: Day 8: mdbook"
+title: "The Advent of Void: Day 9: mdbook"
 comments: true
 ---
 
