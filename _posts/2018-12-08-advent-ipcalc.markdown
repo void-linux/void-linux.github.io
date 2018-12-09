@@ -68,7 +68,8 @@ It even can detect invalid netmask. Then ipcalc assumes the default netmask for
 the IP range:
 
 ```
-$ WILDCARD
+$ ipcalc 148.251.199.112 0.255.255.0
+WILDCARD
 INVALID NETMASK
 INVALID MASK1:   0.255.255.0
 
