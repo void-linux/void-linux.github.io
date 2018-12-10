@@ -35,6 +35,7 @@ available:
 - Enlightenment
 - Cinnamon
 - LXDE
+- LXQT
 - MATE
 - XFCE
 
