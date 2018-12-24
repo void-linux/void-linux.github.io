@@ -11,7 +11,7 @@ layout: nil
 	<link type="application/atom+xml" rel="self" href="http://voidlinux.org/atom.xml"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
 	<author>
-		<name>xtraeme</name>
+		<name>Void Linux Team</name>
 	</author>
 	<id>http://voidlinux.org/</id>
 
