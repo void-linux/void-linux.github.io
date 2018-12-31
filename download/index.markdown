@@ -52,22 +52,22 @@ to customize the partitions and filesystems.
 The list of supported platforms currently is:
 
 - BeagleBone/BeagleBone Black (ARMv7, hard float)
-   - [rootfs instructions](https://wiki.voidlinux.eu/Beaglebone)
+   - [rootfs instructions](https://wiki.voidlinux.org/Beaglebone)
 
 - Cubieboard2 (ARMv7, hard float)
-   - [rootfs instructions](https://wiki.voidlinux.eu/Cubieboard2_SD-Card)
+   - [rootfs instructions](https://wiki.voidlinux.org/Cubieboard2_SD-Card)
 
 - Odroid U2/U3 (ARMv7, hard float)
-   - [rootfs instructions](https://wiki.voidlinux.eu/Odroid_U2)
+   - [rootfs instructions](https://wiki.voidlinux.org/Odroid_U2)
 
 - Raspberry Pi (ARMv6, hard float)
-   - [rootfs instructions](https://wiki.voidlinux.eu/Raspberry_Pi)
+   - [rootfs instructions](https://wiki.voidlinux.org/Raspberry_Pi)
 
 - Raspberry Pi 2 (ARMv7, hard float)
-   - [rootfs instructions](https://wiki.voidlinux.eu/Raspberry_Pi)
+   - [rootfs instructions](https://wiki.voidlinux.org/Raspberry_Pi)
 
 - USB Armory (ARMv7, hard float)
-   - [rootfs instructions](https://wiki.voidlinux.eu/USB_Armory)
+   - [rootfs instructions](https://wiki.voidlinux.org/USB_Armory)
 
 Connect to it in virtual terminal or via ssh and log in as *root*, password **voidlinux**.
 
