@@ -7,8 +7,6 @@ title: Enter the void - Downloads
 
 ## Download installable base live images (x86)
 
-***PLEASE NOTE: To install the desktop environment, DON'T choose "install from network" choose the local install. VERY IMPORTANT!***
-
 Currently there are installable live images for the **x86** and **x86\_64** architectures
 and there is support to make a local installation (with the included packages) or a network
 installation (packages are downloaded from official repository).
@@ -16,6 +14,10 @@ installation (packages are downloaded from official repository).
 All **live images** and **rootfs tarballs** are available at:
 
 * [http://alpha.de.repo.voidlinux.org/live/current](http://alpha.de.repo.voidlinux.org/live/current)
+
+Log in as **anon/root**, password **voidlinux**.
+
+To start the installer just execute the *void-installer* utility with enough permissions (i.e *sudo*).
 
 The x86\_64 images have these requirements:
 
@@ -25,21 +27,12 @@ The i686 images have these requirements:
 
 -  Pentium 4 CPU (SSE2), 96MB RAM, 350MB disk, Ethernet / WiFi for network installation.
 
-Log in as **anon/root**, password **voidlinux**.
-
-To start the installer just execute the *void-installer* utility with enough permissions (i.e *sudo*).
-
 Additional live images with *flavours* (an additional Desktop Environment with autologin) are also
-available:
-
-- Enlightenment
-- Cinnamon
-- LXDE
-- LXQT
-- MATE
-- XFCE
+available: Enlightenment, Cinnamon, LXDE, LXQT, MATE, XFCE.
 
 These images need at least 256 or 512 MB of RAM in order to work correctly.
+
+Note: To install the desktop environment choose local install. Don't use "install from network"!
 
 ## Download ready to boot images for ARM
 
