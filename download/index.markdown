@@ -172,4 +172,4 @@ the filename need to be duplicated to `/etc/xbps.d/`.
 
 If you are operating a Tier 2 mirror and would like to be on this
 list, please either file a pull request or reach out to
-maldridge[at]voidlinux.eu.
+maldridge[at]voidlinux.org.
