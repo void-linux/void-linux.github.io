@@ -1,139 +1,155 @@
-(function(w,d){
-	var minsize = 2;
-	var timeout = -1;
-	var maxResults = 100;
-	var showAll = false;
-	var repos = [
-		"https://alpha.de.repo.voidlinux.org/current/",
-		"https://alpha.de.repo.voidlinux.org/current/multilib/",
-		"https://alpha.de.repo.voidlinux.org/current/nonfree/",
-		"https://alpha.de.repo.voidlinux.org/current/multilib/nonfree/",
-		"https://alpha.de.repo.voidlinux.org/current/debug/",
+(function($, w, d) {
+    "use strict";
 
-		"https://alpha.de.repo.voidlinux.org/current/musl/",
-		"https://alpha.de.repo.voidlinux.org/current/musl/nonfree/",
-		"https://alpha.de.repo.voidlinux.org/current/musl/debug/"
-	];
-	var repoNames = [
-		"current",
-		"multilib",
-		"nonfree",
-		"multilib/nonfree",
-		"debug",
+    // Constants
+    const apiHost = "https://xq-api.voidlinux.org";
+    const maxResults = 100;
 
-		"current",
-		"nonfree",
-		"debug"
-	]
-	var currentRepo = 0;
-	var reg = /<a href=[^>]*>([^<]*)-([^<-]*)_([0-9]+)\.([^.]*)\.xbps<\/a>.*\s([0-9]+)$/gm;
-	var r;
-	var idx = 0;
-	var results = [];
-	function handleResponse() {
-		var box = d.getElementById('voidSearch_box');
-		if(r.readyState == 4) {
-			currentRepo++;
-			if(currentRepo != repos.length) {
-				startSearch();
-			}
-			else
-				box.className = '';
-		}
-		addResults();
-		render();
-	}
-	function addResults() {
-		var match;
-		reg.lastIndex = idx;
-		while(match = reg.exec(r.responseText)) {
-			idx = reg.lastIndex;
-			results.push({
-				haystack: (match[1]+" "+match[2]+" "+match[3]+" "+match[4]+" "+repoNames[currentRepo]).toLowerCase(),
-				name: match[1],
-				version: match[2],
-				revision: match[3],
-				arch: match[4],
-				size: match[5],
-				repo: repoNames[currentRepo]
-			});
-		}
-	}
+    const szByte = 1;
+    const szKilobyte = 1024 * szByte;
+    const szMegabyte = 1024 * szKilobyte;
+    const szGigabyte = 1024 * szMegabyte;
 
-	function render() {
-		var a, tr, i, j, found = 0
-		  , tbody = document.createElement("tbody")
-		  , table = document.getElementById("voidSearch_result");
+    // Package column fields and headers
+    const packageColumns = [
+        "name",
+        "version",
+        "revision",
+        "repository",
+        "filename_size",
+        "short_desc"
+    ];
 
-		if(needle.join("").length < minsize) {
-			table.innerHTML = "";
-			return;
-		}
-		tbody.innerHTML = "<tr><th>Name</th><th>Version</th><th>Revision</th><th>Arch</th><th>Repository</th><th>Size (bytes)</th></tr>"
-		for(i = 0; i < results.length; i++) {
-			if(found > maxResults && !showAll)
-				break;
-			for(j = 0; j < needle.length; j++)
-				if(results[i].haystack.indexOf(needle[j]) == -1) break;
-			if(j != needle.length)
-				continue;
-			found++;
+    const packageHeader = {
+        name: "Name",
+        version: "Version",
+        revision: "Revision",
+        repository: "Repository",
+        filename_size: "Size",
+        short_desc: "Description"
+    };
 
-			tr = document.createElement('tr');
-			tr.innerHTML = "<td class=name></td><td class=version></td><td class=revision></td><td class=arch></td><td class=repo></td><td class=size></td>";
+    let header;
+    let table;
+    let archs;
+    let query;
+    let form;
 
-			a = document.createElement('a');
-			a.href = 'https://github.com/void-linux/void-packages/tree/master/srcpkgs/' + results[i].name;
-			a.appendChild(document.createTextNode(results[i].name));
-			tr.childNodes[0].appendChild(a);
-			tr.childNodes[1].appendChild(document.createTextNode(results[i].version));
-			tr.childNodes[2].appendChild(document.createTextNode(results[i].revision));
-			tr.childNodes[3].appendChild(document.createTextNode(results[i].arch));
-			tr.childNodes[4].appendChild(document.createTextNode(results[i].repo));
-			tr.childNodes[5].appendChild(document.createTextNode(results[i].size));
-			tbody.appendChild(tr);
-		}
-		table.innerHTML = "";
-		table.appendChild(tbody);
-		tr = document.createElement("tr");
-		if(r.readyState != 4)
-			tr.innerHTML = "<th colspan='6'>Loading...</th>";
-		else if(found > maxResults && !showAll)
-			tr.innerHTML="<th colspan='6'>More than "+maxResults+" results. <a href='javascript:void(window.voidSearch(true));'>show all</a></th>";
-		else if(found == 0 && r.readyState == 4)
-			tr.innerHTML="<th colspan='6'>No Results</th>";
-		else
-			return;
-		tbody.appendChild(tr);
-	}
-	function startSearch() {
-		r = new XMLHttpRequest();
-		r.open("GET", repos[currentRepo], true);
-		idx = 0;
+    let packages = [];
 
-		r.onreadystatechange = handleResponse
-		box.className = 'loading';
-		r.send();
-	}
-	w.voidSearch = function(sa) {
-		var box = d.getElementById('voidSearch_box');
-		needle = box.value.toLowerCase().trim().split(/\s+/);
-		showAll = !!sa;
+    // Functions
 
-		if(r) {
-			if(timeout != -1)
-				clearTimeout(timeout);
-			timeout = setTimeout(function() {
-				timeout = -1;
-				render();
-			}, 500);
-		}
-		else {
-			startSearch();
-		}
-	}
-	var box = d.getElementById('voidSearch_box');
-	if(box && box.value)
-		w.voidSearch();
-})(window,document)
+    function init() {
+        header = packageCell(packageHeader, "<th>");
 
+        table = $("#voidSearch_result");
+        archs = $("#voidSearch_archs");
+        query = $("#voidSearch_query");
+        form = $("#voidSearch");
+        form.submit(packageQuery);
+
+        $.getJSON(uri("/v1/archs"))
+            .done((data) => setArchitectures(data.data.sort()));
+    }
+
+    function packageQuery(e) {
+        e.preventDefault();
+        query.addClass("loading");
+        const q = query.val().trim();
+        $.getJSON(uri("/v1/query/" + archs.val(), { q: q }))
+            .done((data) => {
+                packages = data.data || [];
+                showPackages(packages, false);
+            })
+            .always(() => { query.removeClass("loading"); });
+    }
+
+    function packageCell(pkg, cellType) {
+        cellType = cellType || "<td>";
+        let tr = $("<tr>");
+        packageColumns.forEach((col) => {
+            var cell = $(cellType);
+            cell.addClass(col).text(pkg[col] || "");
+            tr.append(cell);
+        });
+        return tr;
+    }
+
+    function showPackages(packages, showAll) {
+        packages = packages || [];
+        const tooMany = !showAll && packages.length > maxResults;
+        if (tooMany) {
+            packages = packages.slice(0, maxResults);
+        }
+
+        table.children().remove();
+        if (packages.length == 0) {
+            return;
+        }
+        table.append(
+            header,
+            packages.map((p) => {
+                p.filename_size = formatSize(p.filename_size);
+                return packageCell(p, "<td>");
+            })
+        );
+
+        if (tooMany) {
+            table.append(tooManyNotice());
+        }
+    }
+
+    function setArchitectures(archNames) {
+        // Get the current value of the select
+        const val = archs.val();
+        let found = false;
+        let seenX86_64 = false;
+        archs.children().remove();
+        archNames.forEach((arch) => {
+            found = found || arch === val;
+            seenX86_64 = seenX86_64 || arch === "x86_64";
+            const opt = $("<option>");
+            opt.val(arch).text(arch);
+            archs.append(opt);
+        });
+        if (!found) {
+            // If the current value wasn"t found, prefer x86_64 if it"s in the list.
+            val = seenX86_64 ? "x86_64" : archs.children().first().val();
+        }
+        archs.val(val);
+    }
+
+    function uri(path, params) {
+        const qs = params ? ("?" + $.param(params)) : "";
+        return apiHost + path + qs;
+    }
+
+    function formatSize(size) {
+        // NOTE: Doesn"t handle negative numbers.
+        if (typeof size !== "number") {
+            return "";
+        }
+        if (size < 10000) {
+            return (size >> 0) + "B";
+        } else if (size < szMegabyte) {
+            return (size / szKilobyte >> 0) + "k";
+        } else if (size < szGigabyte) {
+            return (size / szMegabyte).toFixed() + "M";
+        }
+        return (size / szGigabyte).toFixed(2).replace(/\.?0+$/, "") + "G";
+    }
+
+    function tooManyNotice() {
+        let notice = $("<tr>");
+        return notice.append(
+            $("<td>")
+            .addClass("toomany")
+            .attr("colspan", packageColumns.length)
+            .text("Too many results (over " + maxResults + "). ")
+            .append($("<a>").text("Show all.").click(() => showPackages(packages, true)))
+        );
+    }
+
+    // Start
+    init();
+}(jQuery, window, document));
