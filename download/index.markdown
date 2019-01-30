@@ -169,6 +169,8 @@ the filename need to be duplicated to `/etc/xbps.d/`.
   * https://mirrors.dotsrc.org/voidlinux/ (EU: Denmark)
   * http://www.gtlib.gatech.edu/pub/VoidLinux/ (USA: Atlanta)
   * https://void.webconverger.org/ (APAN: Singapore)
+  * http://ftp.lysator.liu.se/pub/voidlinux (EU: Sweden)
+  * http://lysator7eknrfl47rlyxvgeamrv7ucefgrrlhk7rouv3sna25asetwid.onion/pub/voidlinux (EU: Sweden)
 
 If you are operating a Tier 2 mirror and would like to be on this
 list, please either file a pull request or reach out to
