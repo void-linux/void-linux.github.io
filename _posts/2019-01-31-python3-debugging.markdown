@@ -12,4 +12,4 @@ troubleshooting happens, [maxice8]'s blog post is highly recommended
 as its a good intro into what its like to troubleshoot things from the
 perspective of a Void maintainer.
 
-Read the troubleshooting process [here](2019-01-23-dhcpcd-7.1.0.markdown).
+Read the troubleshooting process [here](https://maxice8.github.io/void-cpython3-cross-pt1/).
