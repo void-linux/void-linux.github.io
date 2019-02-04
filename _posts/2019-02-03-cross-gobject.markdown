@@ -10,7 +10,7 @@ depend on this tool. This is a big step forward to support more packages
 through cross compiling and stay future proof for glib development.
 
 maxice8 put together a comprehensive [post about his
-work](https://maxice8.github.io/997-cross-the-gir/). This article will be
+work](https://maxice8.github.io/8-cross-the-gir/). This article will be
 higher level overview of our work in this field.
 
 ### What are gobject and typelibs?
@@ -60,12 +60,12 @@ project](https://yoctoproject.org/) is already using this approach to cross
 compile Gnome Applications to other platform. We reused many of their tooling
 for void-packages. Nontheless, we hit many porting issues - our tooling must run
 on musl, too - , new bugs were triggered in void-packages - see for example
-[these](https://maxice8.github.io/void-cpython3-cross-pt1/)
-[two](https://maxice8.github.io/void-cpython3-cross-pt2/) posts at maxice8's
+[these](https://maxice8.github.io/1-void-cpython3-cross-pt1/)
+[two](https://maxice8.github.io/2-void-cpython3-cross-pt2/) posts at maxice8's
 blog, and many other small issues needed to be resolved.
 
 Basic support for cross compilation has already landed in void-packages, the
 musl port is not yet finished, but we expect it to work soon(tm).
 
 maxice8 also prepared a blog post about his porting work on
-[libgusb](https://maxice8.github.io/996-libgusb-meson-gir-cross/).
+[libgusb](https://maxice8.github.io/9-libgusb-meson-gir-cross/).
