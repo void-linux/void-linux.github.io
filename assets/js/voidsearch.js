@@ -69,7 +69,7 @@
         let tr = $("<tr>");
         packageColumns.forEach((col) => {
             var cell = $(cellType);
-            cell.addClass(col).text(pkg[col] || "");
+            cell.addClass(col).html(pkg[col] || "");
             tr.append(cell);
         });
         return tr;
@@ -89,6 +89,8 @@
         table.append(
             header,
             packages.map((p) => {
+                p.name = "<a href=\"https://github.com/void-linux/void-packages/tree/master/srcpkgs/"
+                    + p.name + "\" target=\"_blank\" title=\"View on GitHub\">" + p.name + "</a>";
                 p.filename_size = formatSize(p.filename_size);
                 return packageCell(p, "<td>");
             })
