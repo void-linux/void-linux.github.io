@@ -89,8 +89,9 @@
         table.append(
             header,
             packages.map((p) => {
+                let ghSlug = p.name.replace(/-(?:32bit|dbg)$/, "");
                 p.name = "<a href=\"https://github.com/void-linux/void-packages/tree/master/srcpkgs/"
-                    + p.name + "\" target=\"_blank\" title=\"View on GitHub\">" + p.name + "</a>";
+                    + ghSlug + "\" target=\"_blank\" title=\"View on GitHub\">" + p.name + "</a>";
                 p.filename_size = formatSize(p.filename_size);
                 return packageCell(p, "<td>");
             })
