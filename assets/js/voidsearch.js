@@ -12,7 +12,7 @@
 
     // Package column fields and headers
     const packageColumns = [
-        "name",
+        "anchor",
         "version",
         "revision",
         "repository",
@@ -89,7 +89,7 @@
         table.append(
             header,
             packages.map((p) => {
-                p.name = "<a href=\"https://github.com/void-linux/void-packages/tree/master/srcpkgs/"
+                p.anchor = "<a href=\"https://github.com/void-linux/void-packages/tree/master/srcpkgs/"
                     + p.name + "\" target=\"_blank\" title=\"View on GitHub\">" + p.name + "</a>";
                 p.filename_size = formatSize(p.filename_size);
                 return packageCell(p, "<td>");
