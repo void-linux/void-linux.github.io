@@ -11,7 +11,7 @@ function voidcommits(response) {
 		html += '<tr>'+
 				'    <td class="pkg-name"><span class="community">'+esc(commit.commit.message.split(':')[0])+'</span></td>'+
 				'    <td class="pkg-arch">'+
-				'        <a href="https://github.com/voidlinux/void-packages/blob/master/srcpkgs/'+esc(commit.commit.message.split(':')[0])+'" title="Details for '+esc(commit.commit.message.split(':')[0])+'">any</a>'+
+				'        <a href="https://github.com/void-linux/void-packages/blob/master/srcpkgs/'+esc(commit.commit.message.split(':')[0])+'" title="Details for '+esc(commit.commit.message.split(':')[0])+'">any</a>'+
 				'    </td>'+
 				'</tr>';
 		//html += '<li><a href="' + esc(commit.html_url) + '" title="' +
