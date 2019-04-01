@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <title>Void Linux</title>
     <link rel="stylesheet" type="text/css" href="index_files/voidweb.css" media="screen">
-		<link rel="icon" type="image/png" href="/index_files/favicon.ico" />
+    <link rel="icon" type="image/png" href="/index_files/favicon.ico" />
     
 </head>
 <body class="">
@@ -36,11 +36,11 @@
                     
 
 <div id="intro" class="box">
-	<h2>The Void (Linux) distribution</h2>
+  <h2>The Void (Linux) distribution</h2>
 
-	<p><strong>Void</strong> is a general purpose operating system, based on the monolithic Linux® kernel. Its package system allows you to quickly install, update and remove software; software is provided in binary packages or can be built directly from sources with the help of the XBPS source packages collection.</p>
+  <p><strong>Void</strong> is a general purpose operating system, based on the monolithic Linux® kernel. Its package system allows you to quickly install, update and remove software; software is provided in binary packages or can be built directly from sources with the help of the XBPS source packages collection.</p>
 
-	<p>It is available for the Intel x86®, ARM® and MIPS® processor architectures; Software packages can be built natively or cross compiling through the XBPS source packages collection.</p>
+  <p>It is available for the Intel x86®, ARM® and MIPS® processor architectures; Software packages can be built natively or cross compiling through the XBPS source packages collection.</p>
 
     <p>Currently we have official packages optimized for the x86® (both 32 and 64bit), ARM® (v6, v7, and v8)
     architectures. We don't complement our official package sets with a
@@ -64,11 +64,11 @@
 
     {% for post in site.posts limit:3 %}
     <h4>
-			<a href="{{post.url}}" title="View full article: {{post.title}}">{{post.title}}</a>
+      <a href="{{post.url}}" title="View full article: {{post.title}}">{{post.title}}</a>
     </h4>
-		<p class="timestamp">{{post.date | date: "%Y-%m-%d"}}</p>
+    <p class="timestamp">{{post.date | date: "%Y-%m-%d"}}</p>
     <div class="article-content">
-			{{ post.content }} 
+      {{ post.content }} 
     </div>
     {% endfor %}
     
@@ -81,7 +81,7 @@
     {% for post in site.posts limit:10 offset:3 %}
         <dt>{{post.date | date: "%Y-%m-%d"}}</dt>
         <dd>
-			      <a href="{{post.url}}" title="View full article: {{post.title}}">{{post.title}}</a>
+          <a href="{{post.url}}" title="View full article: {{post.title}}">{{post.title}}</a>
         </dd>
     {% endfor %}
     </dl>
@@ -111,8 +111,8 @@
     <table>
         
         <tbody>
-					<script src="/assets/js/voidcommits2.js"></script>
-					<script src="https://api.github.com/repos/void-linux/void-packages/commits?page=1&amp;per_page=15&amp;callback=voidcommits&amp;sha=master"></script>
+           <script src="/assets/js/voidcommits2.js"></script>
+           <script src="https://api.github.com/repos/void-linux/void-packages/commits?page=1&amp;per_page=15&amp;callback=voidcommits&amp;sha=master"></script>
 
     </tbody></table>
 </div>
