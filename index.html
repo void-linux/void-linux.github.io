@@ -1,193 +1,98 @@
 ---
+layout: default
+title: Enter the void
 ---
-<!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Void Linux</title>
-    <link rel="stylesheet" type="text/css" href="index_files/voidweb.css" media="screen">
-    <link rel="icon" type="image/png" href="/index_files/favicon.ico" />
-    
-</head>
-<body class="">
-    <div id="voidnavbar" class="anb-home">
-        <div id="voidnavbarlogo"><h1><a href="/" title="Return to the main page">Void Linux</a></h1></div>
-        <div id="voidnavbarmenu">
-            <ul id="voidnavbarlist">
-                <li id="anb-home"><a href="/" title="Void news, packages, projects and more">Home</a></li>
-                <li id="anb-packages"><a href="/packages/" title="Void Package Database">Packages</a></li>
-                <li id="anb-forums"><a href="https://reddit.com/r/voidlinux" title="Community forums">Forums</a></li>
-                <li id="anb-wiki"><a href="https://wiki.voidlinux.org/" title="Community documentation">Wiki</a></li>
-                <li id="anb-bugs"><a href="https://github.com/void-linux/void-packages/issues" title="Report and track bugs">Bugs</a></li>
-                <li id="anb-security"><a href="https://github.com/void-linux/void-packages/issues" title="Void Linux Security Tracker">Security</a></li>
-                <li id="anb-aur"><a href="https://www.reddit.com/r/archlinux/comments/b0m6q8/everything_is_wrong_with_aur_helpers/" title="Void Linux User Repository">VUR</a></li>
-                <li id="anb-download"><a href="/download/" title="Get Void Linux">Download</a></li>
-            </ul>
-        </div>
-    </div>
-    <div id="content">
-        <div id="voiddev-navbar">
-            
-        </div>
-        
-        
-            <div id="content-left-wrapper">
-                <div id="content-left">
-                    
 
-<div id="intro" class="box">
-  <h2>The Void (Linux) distribution</h2>
-
-  <p><strong>Void</strong> is a general purpose operating system, based on the monolithic Linux® kernel. Its package system allows you to quickly install, update and remove software; software is provided in binary packages or can be built directly from sources with the help of the XBPS source packages collection.</p>
-
-  <p>It is available for the Intel x86®, ARM® and MIPS® processor architectures; Software packages can be built natively or cross compiling through the XBPS source packages collection.</p>
-
-    <p>Currently we have official packages optimized for the x86® (both 32 and 64bit), ARM® (v6, v7, and v8)
-    architectures. We don't complement our official package sets with a
-        community-operated package repository that grows in size and
-    degrades quality each and every day.</p>
-
-    <p>Our strong community is diverse and helpful, and we pride ourselves
-    on the range of skillsets and uses for Void that stem from it. Please
-    check out our <a href="https://reddit.com/r/voidlinux" title="Void Forums">forums</a>
-    to get your feet wet. Also glance through our <a href="https://wiki.voidlinux.org/" title="Void Wiki">wiki</a>
-    if you want to learn more about Void.</p>
+<div class="row">
+	<div class="col-md-3">
+		<div id="davoid">
+			{% if site.snow == 1 %}
+			<img class="bg" alt="void logo" src="/assets/img/void_bg_christmas.png" class="img-responsive">
+			<img class="fg" alt="void logo" src="/assets/img/void_fg_christmas.png" style="margin:-38px 0;" class="img-responsive">
+			{% else %}
+			<img class="bg" alt="void logo" src="/assets/img/void_bg.png" class="img-responsive">
+			<img class="fg" alt="void logo" src="/assets/img/void_fg.png" class="img-responsive">
+			{% endif %}
+		</div>
+	</div>
+	<div class="col-md-9">
+		<h2>The Void (Linux) distribution</h2>
+		<p>
+		Void is a general purpose operating system, based on the monolithic <a href="https://www.kernel.org">Linux&#174;</a> kernel. Its package system allows you to quickly install, update and remove software; software is provided in binary packages or can be built directly from sources with the help of the XBPS source packages collection.
+		</p>
+		<p>It is available for the Intel x86&#174;, ARM&#174; and MIPS&#174; processor architectures; Software packages can be built natively or cross compiling through the <a href="https://github.com/void-linux/void-packages">XBPS source packages collection</a>.
+		</p>
+		<h3>
+		<a href="https://twitter.com/voidlinux" title="Void on Twitter"><i class="fa fa-twr fa-lg"></i></a>
+		<a href="irc://irc.freenode.net/#voidlinux" title="Void on IRC"><i class="fa fa-comments fa-lg"></i></a>
+		<a href="http://build.voidlinux.org/console" title="Void builder"><i class="fa fa-cog fa-lg"></i></a>
+	</div>
 </div>
-
-<div id="news">
-    <h3>
-        <a href="/news/" title="Browse the news archives">Latest News</a>
-        <span class="arrow"></span>
-    </h3>
-
-    <a href="/atom.xml" title="Void News RSS Feed" class="rss-icon"><img src="index_files/rss.png" alt="Atom Feed" width="16" height="16"></a>
-
-    {% for post in site.posts limit:3 %}
-    <h4>
-      <a href="{{post.url}}" title="View full article: {{post.title}}">{{post.title}}</a>
-    </h4>
-    <p class="timestamp">{{post.date | date: "%Y-%m-%d"}}</p>
-    <div class="article-content">
-      {{ post.content }} 
-    </div>
-    {% endfor %}
-    
-    <h3>
-        <a href="https://voidlinux.org/news/" title="Browse the news archives">Older News</a>
-        <span class="arrow"></span>
-    </h3>
-    <dl class="newslist">
-    
-    {% for post in site.posts limit:10 offset:3 %}
-        <dt>{{post.date | date: "%Y-%m-%d"}}</dt>
-        <dd>
-          <a href="{{post.url}}" title="View full article: {{post.title}}">{{post.title}}</a>
-        </dd>
-    {% endfor %}
-    </dl>
-    
+<hr>
+<div class="container">
+        <div class="row">
+                <div class="col-md-4">
+                        <h3>Not a fork!</h3>
+                        <p>Void Linux is an independent distribution, developed entirely by volunteers.</p>
+			<p>Unlike trillions of other existing distros, Void is not a modification of an existing distribution.  Void's package manager and build system have been written from scratch.</p>
+		</div>
+                <div class="col-md-4">
+                        <h3>Rolling release</h3>
+			<p>Install once, update daily. Your system will always be up-to-date.</p>
+			<p>Thanks to our <a href="http://build.voidlinux.org">continuous build system</a>, new software is built into binary packages as soon as the changes are pushed to the <em>void-packages</em> repository.</p>
+		</div>
+		<div class="col-md-4">
+			<h3>runit</h3>
+			<p>We use <a href="http://smarden.org/runit/">runit</a> as the init system and service supervisor.</p>
+			<p>runit is a simple and effective approach to initialize the system with reliable service supervision. See the <a href="/usage/runit">usage page</a> for a brief introduction.</p>
+		</div>
+	</div>
+        <div class="row">
+                <div class="col-md-4">
+                        <h3>LibreSSL</h3>
+                        <p>We were the first distribution to switch to <em>LibreSSL</em> by default, replacing <em>OpenSSL</em>.</p>
+			<p>Due to the <a href="http://en.wikipedia.org/wiki/Heartbleed">Heartbleed</a> fiasco we believe that the <a href="http://www.openbsd.org">OpenBSD</a> project has qualified and <em>pro-active</em> developers to provide a more secure alternative.</p>
+		</div>
+                <div class="col-md-4">
+                        <h3>xbps</h3>
+			<p><a href="https://github.com/void-linux/xbps">xbps</a> is the native system package manager, written from scratch with a <em>2-clause BSD</em> license.</p>
+			<p><em>xbps</em> allows you to quickly install/update/remove software in your system and features detection of <em>incompatible shared libraries</em> and <em>dependencies</em> while updating or removing packages (among others). See the <a href="/usage/xbps/">usage page</a> for a brief introduction.</p>
+		</div>
+		<div class="col-md-4">
+			<h3>xbps-src</h3>
+			<p><a href="https://github.com/void-linux/void-packages">xbps-src</a> is the xbps package builder, written from scratch with a <em>2-clause BSD</em> license.</p>
+			<p>This builds the software in <em>containers</em> through the use of <em>Linux namespaces</em>, providing isolation of processes and bind mounts (among others). No root required!</p>
+			<p>Additionally xbps-src can build natively or cross compile for the target machine, and supports multiple <em>C libraries</em> (glibc and musl currently).</p>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-md-4">
+			<a class="twitter-timeline" data-chrome="noborders noscrollbar transparent" width="520" height="300" href="https://twitter.com/VoidLinux" data-widget-id="621226324586328064">Tweets by @VoidLinux</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+		<div class="col-md-4">
+			<h3>void-packages changes <span class="rssdev"><a href="https://github.com/void-linux/void-packages/commits/master.atom" title="Subscribe to void-packages"><i class="fa fa-rss fa-lg"></i></a></span></h3>
+			<script src="/assets/js/voidcommits.js"></script>
+			<script src="https://api.github.com/repos/void-linux/void-packages/commits?page=1&amp;per_page=10&amp;callback=voidcommits&amp;sha=master"></script>
+		</div>
+		<div class="col-md-4">
+			<h3>xbps changes <span class="rssdev"><a href="https://github.com/void-linux/xbps/commits/master.atom" title="Subscribe to xbps"><i class="fa fa-rss fa-lg"></i></a></span></h3>
+			<script src="/assets/js/voidcommits.js"></script>
+			<script src="https://api.github.com/repos/void-linux/xbps/commits?page=1&amp;per_page=10&amp;callback=voidcommits&amp;sha=master"></script>
+		</div>
+	</div>
+	<hr>
+	<div class="page-header">
+		<h2>Recent news <a href="/atom.xml" title="Subscribe to the news"><i class="fa fa-rss fa-lg"></i></a></h2>
+	</div>
+	<div class="row">
+			{% for post in site.posts limit:2 %}
+			<div class="col-md-10">
+				<h4>{{ post.date | date: "%B %d, %Y" }}</h4>
+				<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+				{{ post.content }}
+			</div>
+			{% endfor %}
+	</div>
 </div>
-
-
-                </div>
-            </div>
-            <div id="content-right">
-                
-
-<div id="pkgsearch" class="widget">
-    <form id="pkgsearch-form" method="get" action="/packages/">
-        <fieldset>
-            <label for="pkgsearch-field">Package Search:</label>
-            <input id="pkgsearch-field" type="text" name="q" size="18" maxlength="200" autocomplete="off" readonly>
-        </fieldset>
-    </form>
-</div>
-
-<div id="pkg-updates" class="widget box">
-    <h3>Recent Updates <span class="more">(<a href="github.com/void-linux/void-packages/commits" title="Browse all of the latest packages">more</a>)</span></h3>
-
-    <a href="https://github.com/void-linux/void-packages/commits/master.atom" title="Void Package Updates RSS Feed" class="rss-icon"><img src="index_files/rss.png" alt="RSS Feed" width="16" height="16"></a>
-
-    <table>
-        
-        <tbody>
-           <script src="/assets/js/voidcommits2.js"></script>
-           <script src="https://api.github.com/repos/void-linux/void-packages/commits?page=1&amp;per_page=15&amp;callback=voidcommits&amp;sha=master"></script>
-
-    </tbody></table>
-</div>
-
-
-
-<div id="nav-sidebar" class="widget">
-    <h4>Documentation</h4>
-    <ul>
-        <li><a href="https://wiki.voidlinux.org/" title="Community documentation">Wiki</a></li>
-        <li><a href="https://wiki.voidlinux.org/index.php/Installation_guide" title="Installation guide">Installation Guide</a></li>
-    </ul>
-
-    <h4>Community</h4>
-    <ul>
-        <li><a href="https://wiki.voidlinux.org/#community" title="Official and regional IRC communities">IRC Channels</a></li>
-        <li><a href="/news" title="Void in the blogosphere">Planet Void</a></li>
-    </ul>
-
-    <h4>Tools</h4>
-    <ul>
-        <li><a href="#" title="Get a custom mirrorlist from our database">Mirrorlist Updater</a></li>
-        <li><a href="#" title="See a listing of all available mirrors">Mirror List</a></li>
-        <li><a href="#" title="Check the status of all known mirrors">Mirror Status</a></li>
-    </ul>
-
-    <h4>Development</h4>
-    <ul>
-        <li><a href="#" title="Getting involved">Getting involved</a></li>
-        <li><a href="https://github.com/void-linux" title="Official Void projects (git)">Projects in Git</a></li>
-        <li><a href="#" title="Developer Wiki articles">Developer Wiki</a></li>
-        <li><a href="#" title="View the available package groups">Package Groups</a></li>
-        <li><a href="#" title="Developer Todo Lists">Todo Lists</a></li>
-        <li><a href="#" title="Release Engineering ISO listing">ISO Release List</a></li>
-        <li><a href="#" title="View visualizations">Visualizations</a></li>
-        <li><a href="#" title="See differences in packages between available architectures">Differences Reports</a></li>
-    </ul>
-
-    <h4>People</h4>
-    <ul>
-        
-        <li><a href="#" title="More info about Developers">Developers</a></li>
-        
-        <li><a href="#" title="More info about Trusted Users">Trusted Users</a></li>
-        
-        <li><a href="#" title="More info about Support Staff">Support Staff</a></li>
-        
-        <li><a href="#" title="More info about Developer Fellows">Developer Fellows</a></li>
-        
-        <li><a href="#" title="More info about Trusted User Fellows">Trusted User Fellows</a></li>
-        
-        <li><a href="#" title="More info about Support Staff Fellows">Support Staff Fellows</a></li>
-        
-        <li><a href="#" title="Package/Database signing master keys">Signing Master Keys</a></li>
-    </ul>
-
-    <h4>More Resources</h4>
-    <ul>
-        <li><a href="#" title="Void Linux in the media">Press Coverage</a></li>
-        <li><a href="#" title="Void logos and other artwork for promotional use">Logos &amp; Artwork</a></li>
-        <li><a href="#" title="News Archives">News Archives</a></li>
-        <li><a href="#" title="Various RSS Feeds">RSS Feeds</a></li>
-    </ul>
-</div>
-
-
-            </div>
-        
-        <div id="footer">
-					<p class="text-center">Copyright {{ site.time | date: "%Y" }} <a href="https://github.com/orgs/void-linux/people">VoidLinux contributors</a></p>
-					<p class="text-center">Copyright 2008-2018 <a href="https://github.com/xtraeme">Juan RP</a> and contributors</p>
-					<p class="text-center">Linux&#174; is a registered trademark of Linus Torvalds (<a href="http://www.linuxfoundation.org/programs/legal/trademark/attribution">info</a>)</p>
-        </div>
-    </div>
-    
-
-
-</body></html>
