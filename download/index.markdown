@@ -169,6 +169,7 @@ the filename need to be duplicated to `/etc/xbps.d/`.
   * https://mirrors.dotsrc.org/voidlinux/ (EU: Denmark)
   * http://www.gtlib.gatech.edu/pub/VoidLinux/ (USA: Atlanta)
   * https://void.webconverger.org/ (APAN: Singapore)
+  * https://youngjin.io/voidlinux (APAN: South Korea)
   * http://ftp.lysator.liu.se/pub/voidlinux (EU: Sweden)
   * http://lysator7eknrfl47rlyxvgeamrv7ucefgrrlhk7rouv3sna25asetwid.onion/pub/voidlinux (EU: Sweden)
 
