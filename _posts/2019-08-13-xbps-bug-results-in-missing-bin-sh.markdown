@@ -7,7 +7,13 @@ Due to a bug in xbps there was an issue this morning where /bin/sh disappeared a
 
 The bug was fixed quickly, but there's a 2h window where an update may have resulted in a broken system.
 
-If you're affected by this issue, these are the following steps to recover your system:
+If you're affected by this issue you may experience error messages like these during boot:
+
+```
+runit: fatal: unable to start child: /etc/runit/1 file does not exist
+```
+
+These are the steps to recover your system:
 
 #### Case 1: System is still running and you have a working shell open
 
@@ -98,3 +104,7 @@ Once you've got a shell execute the following commands:
 Afterwards the system should work as expected.
 
 Please use `xbps-install -Su` to fetch the newest xbps version that fixes this bug.
+
+### If it doesn't help
+
+Join over on #voidlinux in freenode or [ask on reddit](https://www.reddit.com/r/voidlinux/comments/cpslmr/xbps_bug_results_in_missing_binsh/).
