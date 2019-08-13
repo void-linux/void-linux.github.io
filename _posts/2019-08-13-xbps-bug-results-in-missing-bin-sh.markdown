@@ -17,6 +17,8 @@ Run the following command as root:
 # xbps-install -Su
 ```
 
+Afterwards your system should update xbps and recreate `/bin/sh`
+
 #### Case 2: System has rebooted or no shell is opened anymore
 
 Restart your system
