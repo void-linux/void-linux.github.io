@@ -20,7 +20,7 @@ These are the steps to recover your system:
 Run the following command as root:
 
 ```
-# xbps-install -Su
+# xbps-install -y xbps && xbps-install -Su
 ```
 
 Afterwards your system should update xbps and recreate `/bin/sh`
@@ -103,7 +103,7 @@ Once you've got a shell execute the following commands:
 
 Afterwards the system should work as expected.
 
-Please use `xbps-install -Su` to fetch the newest xbps version that fixes this bug.
+Please use `xbps-install -y xbps && xbps-install -Su` to fetch the newest xbps version that fixes this bug.
 
 ### If it doesn't help
 
