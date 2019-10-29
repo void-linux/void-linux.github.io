@@ -1,4 +1,4 @@
-(function($, w, d) {
+(function ($, w, d) {
     "use strict";
 
     // Constants
@@ -12,7 +12,7 @@
 
     // Package column fields and headers
     const packageColumns = [
-        "anchor",
+        "name",
         "version",
         "revision",
         "repository",
@@ -145,10 +145,10 @@
         let notice = $("<tr>");
         return notice.append(
             $("<td>")
-            .addClass("toomany")
-            .attr("colspan", packageColumns.length)
-            .text("Too many results (over " + maxResults + "). ")
-            .append($("<a>").text("Show all.").click(() => showPackages(packages, true)))
+                .addClass("toomany")
+                .attr("colspan", packageColumns.length)
+                .text("Too many results (over " + maxResults + "). ")
+                .append($("<a>").text("Show all.").click(() => showPackages(packages, true)))
         );
     }
 
