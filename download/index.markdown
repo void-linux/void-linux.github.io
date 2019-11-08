@@ -87,6 +87,15 @@ Images prior to 2017-10-07 were signed with Juan RP's key:
 His public key is available at [http://alpha.de.repo.voidlinux.org/live/xtraeme.asc](http://alpha.de.repo.voidlinux.org/live/xtraeme.asc)
 or in any known `PGP key server`. Follow these steps to verify the integrity and its digital signature:
 
+~~~
+$ gpg --keyserver keys.gnupg.net --recv-keys 482F9368
+$ wget http://alpha.de.repo.voidlinux.org/live/current/sha256sums.txt{,.sig}
+$ LANG=C gpg --verify sha256sums.txt.sig
+gpg: Signature made Sun Feb  8 12:33:05 2015 CET using RSA key ID 482F9368
+gpg: Good signature from "Juan RP <xtraeme@gmail.com>" [unknown]
+gpg:                 aka "[jpeg image of size 3503]" [unknown]
+~~~
+
 Images after 2017-10-07 are signed with a dedicated Void Images key.
 
 - Signer: `Void Linux Image Signing Key <images@voidlinux.eu>`
@@ -97,16 +106,17 @@ This key is available
 at
 [http://alpha.de.repo.voidlinux.org/live/current/void_images.asc](http://alpha.de.repo.voidlinux.org/live/current/void_images.asc) or
 in most known `PGP key servers`.  Follow these steps to verify the
-integrity and signature.
+integrity and signature:
 
 ~~~
-$ gpg --recv-keys <KEY_ID>
+$ gpg --keyserver keys.gnupg.net --recv-keys B48282A4
 $ wget http://alpha.de.repo.voidlinux.org/live/current/sha256sums.txt{,.sig}
 $ LANG=C gpg --verify sha256sums.txt.sig
-gpg: Signature made Sun Feb  8 12:33:05 2015 CET using RSA key ID 482F9368
-gpg: Good signature from "Juan RP <xtraeme@gmail.com>" [unknown]
-gpg:                 aka "[jpeg image of size 3503]" [unknown]
+gpg: Signature made Mon Nov 19 00:39:33 2018 EET using RSA key ID B48282A4
+gpg: Good signature from "Void Linux Image Signing Key <images@voidlinux.eu>"
 ~~~
+
+
 
 The important line in the output above is "Good signature from [...]".
 Make sure that you have this line and that the "from" field matches
@@ -175,4 +185,4 @@ the filename need to be duplicated to `/etc/xbps.d/`.
 
 If you are operating a Tier 2 mirror and would like to be on this
 list, please either file a pull request or reach out to
-maldridge[at]voidlinux.eu.
+maldridge[at]voidlinux.org.
