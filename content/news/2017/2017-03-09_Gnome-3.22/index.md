@@ -1,0 +1,13 @@
++++
+title="Gnome 3.22 has landed!"
+date=2017-03-09
++++
+
+We're proud to announce that Gnome-3.22 has been merged.
+
+This is the first release that makes use of [elogind](https://github.com/elogind/elogind)
+instead of ConsoleKit2.
+
+Screenshots of Gnome-3.22 running on Void:
+
+[![gnome-3.22](gnome-3.22.jpg "gnome-3.22")](gnome-3.22.jpg)

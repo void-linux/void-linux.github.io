@@ -1,0 +1,325 @@
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Variables............Globally-available variables.
+ * Global-styles........Globally-available styles in :root.
+ *
+ * GENERIC
+ * remedy.css..........A remedy for the technical debt of CSS.
+   * reminders.css.....More specific fixes.
+ *
+ * BASE
+ * Links................Link styles.
+ * Content..............Primary content styles.
+ *
+ * OBJECTS
+ * Wrappers.............Wrapping and constraining elements.
+   * Flex-wrapper
+ *
+ * COMPONENTS
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Cards................Flexbox cards
+ * 
+ * TRUMPS
+ * visually-hidden......Hide an element, but keep it for screen readers.
+ *
+ * RESPONSIVE
+  * Screen-size.........Styles for different screen sizes.
+ */
+
+
+
+
+
+/*------------------------------------*\
+  #SETTINGS
+\*------------------------------------*/
+
+/**
+ * $Variables
+ * Globally-available variables.
+ */
+
+$fontStack: "Ubuntu", sans-serif;
+
+$primaryColor: #478061;
+$fontColor: #333;
+
+
+/**
+ * $Global-styles
+ * Globally-available styles in :root.
+ */
+:root {
+  --tiny: 0.5em;
+  --small: 0.8em;
+  --medium: 1em;
+
+  font-family: $fontStack;
+
+  color: $fontColor;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #GENERIC
+\*------------------------------------*/
+
+/**
+ * $remedy.css
+ * A remedy for the technical debt of CSS.
+ */
+@import "assets/remedy"; // assets/_remedy.css
+
+/**
+ * remedy.css
+ * More specific fixes.
+ */
+@import "assets/reminders"; // assets/_reminders.css
+
+
+
+
+
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+
+/**
+ * $Links
+ */
+
+a,
+a:link,
+a:visited {
+  color: $primaryColor;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+}
+
+a:focus {
+  color: #38b;
+}
+
+a svg {
+  fill: currentColor;
+}
+
+
+/**
+ * $Content
+ */
+
+main {
+  margin: 0 auto;
+  padding: var(--medium);
+  max-width: 1170px;
+}
+
+
+footer {
+  margin: var(--medium) auto;
+  max-width: 1170px;
+}
+
+footer p {
+  text-align: center;
+  font-size: var(--small);
+}
+
+
+code {
+  padding: 2px 4px;
+  border-radius: 4px;
+  background-color: #fdf6e3;
+  font-size: var(--small);
+  font-family: 'Ubuntu Mono', monospace;
+  color: #000;
+}
+
+pre {
+  width: 100%;
+  overflow: auto;
+  padding: var(--tiny);
+  margin: 0 0 var(--small);
+  font-size: 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+
+img, svg {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #OBJECTS
+\*------------------------------------*/
+
+/**
+ * $Wrappers
+ * Wrapping and constraining elements.
+ */
+
+
+/**
+ * Flex-wrapper
+ */
+
+.o-flex-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.o-flex-wrapper__center {
+  align-items: center;
+  justify-content: center;
+}
+
+.o-flex-wrapper--empty { flex-grow: 1; }
+
+
+
+
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+
+/**
+ * $Page-head
+ * The main page header.
+ */
+@import "assets/header"; // assets/_header.scss
+
+
+/**
+ * $Page-intro
+ * The main page header.
+ */
+.c-void-intro {
+  flex-basis: 80%;
+}
+
+.c-void-intro a {
+  margin-right: var(--medium);
+}
+
+
+.c-void-logo {
+  flex-grow: 1;
+  position: relative;
+  text-align: center;
+  width: 174px;
+  height: auto;
+}
+
+.c-void-logo__bg {
+  margin: 0 auto;
+  position: relative;
+  width: 143px;
+  transition: transform 2s ease;
+}
+
+.c-void-logo__bg:hover {
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+
+}
+
+.c-void-logo__text {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 174px;
+}
+
+
+
+/**
+ * $Cards
+ * Flexbox cards.
+ */
+
+.c-card {
+  flex: 1 0 30%;
+  margin: 0;
+  padding: 0 var(--medium);
+}
+
+.c-card__title {
+  margin-top: var(--medium);
+  font-size: 1.2em;
+  color: #000
+}
+
+.c-card__message {
+  margin: 0;
+  font-size: .9em;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #TRUMPS
+\*------------------------------------*/
+
+/**
+ * $visually-hidden
+ * Hide an element, but keep it for screen readers.
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+
+/**
+ * $Screen-size
+ * Styles for different screen sizes.
+ */
+@import "assets/screen"; // assets/_screen.scss

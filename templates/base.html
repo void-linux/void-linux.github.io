@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="canonical" href="{{ config.base_url }}">
+
+  {% block favicon %}
+  <link rel="icon" type="image/svg+xml" href="/images/void-logo.svg" sizes="any" />
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+  <link rel="shortcut icon" href="/favicon.ico">
+  {% endblock favicon %}
+
+  <title>{% block title %}{{ page.title }}{% endblock title %} - Void Linux</title>
+
+  {% block css %}
+  <link rel="stylesheet" href="{{ get_url(path="voidlinux.css", trailing_slash=false) }}">
+  {% endblock css %}
+
+  {% if config.generate_rss %}
+  <link rel="alternate" type="application/rss+xml" title="RSS"
+    href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
+  {% endif %}
+
+  {% block extra_head %}
+  <!-- user added information -->
+  {% endblock extra_head %}
+</head>
+
+<body>
+  <header>
+    {% block header %}
+    <nav class="void-navigation">
+      <input type="checkbox" id="void-navigation-toggle" class="visually-hidden" />
+      <label class="void-navigation-toggle__button" for="void-navigation-toggle"><svg xmlns="http://www.w3.org/2000/svg"
+          width="20" height="20" viewBox="0 0 20 20">
+          <path d="M1 3v2h18V3zm0 8h18V9H1zm0 6h18v-2H1z" /></svg></label>
+      <ul class="void-navigation-list">
+        {% for link in config.extra.voidnav_links %}
+        <li class="void-navigation-item"><a href="{{link.url}}">{{link.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {% endblock header %}
+  </header>
+
+
+  <main>{% block content %}{{ page.content }}{% endblock content %}</main>
+
+
+  <footer>
+    {% block footer %}
+    <p>Copyright 2019 <a href="https://github.com/orgs/void-linux/people">Void Linux contributors</a></p>
+
+    <p>Copyright 2008-2018 <a href="https://github.com/xtraeme">Juan RP</a> and contributors</p>
+
+    <p>Linux® is a registered trademark of Linus Torvalds (<a
+        href="http://www.linuxfoundation.org/programs/legal/trademark/attribution">info</a>)</p>
+    {% endblock footer %}
+  </footer>
+</body>
+
+</html>

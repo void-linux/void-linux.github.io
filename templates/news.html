@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}{{ section.title }}{% endblock title %}
+{% block content %}
+<h2>Recent articles (<a href="archive">see archive</a>)</h2>
+{% for page in paginator.pages %}
+<article class="c-article c-article--summary">
+  <p class="c-article__meta">{{ page.date | date(format="%B %d, %Y") }}</p>
+  <h3 class="c-article__title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h3>
+  {{ page.content | safe }}
+  <br><a href="{{ page.permalink }}">More »</a>
+  <hr>
+</article>
+{% endfor %}
+<div class="o-flex-wrapper c-pagination">
+  {% if paginator.previous %}
+  <a class="c-pagination__newer" href="{{  paginator.previous}}">« Newer articles</a>
+  {% endif %}
+  <div class="o-flex-wrapper--empty"></div>
+  {% if paginator.next %}
+  <a class="c-pagination__older" href="{{  paginator.next }}">Older articles »</a>
+  {% endif %}
+</div>
+{% endblock content %}

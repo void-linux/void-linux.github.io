@@ -1,0 +1,58 @@
+@media screen and (max-width: 768px) {
+  // Change from rows to columns
+  .o-flex-wrapper {
+    flex-direction: column;
+  }
+
+  .c-void-intro {
+    width: 100%;
+  }
+
+  .c-card {
+    padding: 0;
+  }
+
+  #void-navigation-toggle { display: block; }
+
+  .void-navigation-toggle__button {
+    display: inline-block;
+    margin: 9px 20px 0;
+    border: 1px solid;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    fill: #fff;
+  }
+
+  .void-navigation-toggle__button:hover,
+  #void-navigation-toggle:checked + .void-navigation-toggle__button {
+    background-color: currentColor;
+  }
+
+  .void-navigation-toggle__button > svg {
+    display: block;
+  }
+
+  .void-navigation-list {
+    visibility: hidden;
+    background-color: $primaryColor;
+    text-align: left;
+  }
+
+  .void-navigation-item {
+    display: block;
+  }
+
+  #void-navigation-toggle:checked ~ ul {
+    visibility: visible;
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid;
+    padding: var(--tiny) 0;
+  }
+
+
+  .c-pagination {
+    flex-direction: row;
+  }
+}

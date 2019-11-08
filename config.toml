@@ -1,0 +1,26 @@
+base_url = "https://voidlinux-zola.netlify.com"
+title = "Enter the Void"
+
+# Syntax Highlighting
+highlight_code = true
+highlight_theme = "solarized-light"
+
+# Enable rss feed at base_url/rss.xml
+generate_rss = true
+
+# Enable sass compilation
+compile_sass = true
+
+# We don't use any search engines so don't build an index
+build_search_index = false
+
+[extra]
+voidnav_links = [
+    {url = "/", title = "Home"},
+    {url = "/news/", title = "News"},
+    {url = "/download/", title = "Download"},
+    {url = "/packages/", title = "Packages"},
+    {url = "https://docs.voidlinux.org/", title = "Documentation"},
+    {url = "https://reddit.com/r/voidlinux", title = "Forum"},
+    {url = "https://github.com/void-linux", title = "GitHub"}
+]

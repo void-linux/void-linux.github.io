@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+{% block title %}{{ section.title }}{% endblock title %}
+{% block content %}
+
+{% block intro %}
+<section class="o-flex-wrapper o-flex-wrapper__center">
+  <div class="c-void-logo">
+    <img class="c-void-logo c-void-logo__bg o-rotate" alt="void logo" src="/images/void-logo.svg">
+    <img class="c-void-logo c-void-logo__text" alt="void logo" src="/images/void-logo-text.svg">
+  </div>
+  <div class="c-void-intro">
+    <h2>The Void (Linux) distribution</h2>
+    <p>Void is a general purpose operating system, based on the monolithic Linux® kernel. Its package system allows
+      you to quickly install, update and remove software; software is provided in binary packages or can be built
+      directly from sources with the help of the XBPS source packages collection.</p>
+
+    <p>It is available for the Intel x86®, ARM® and MIPS® processor architectures; Software packages can be built
+      natively or cross compiling through the XBPS source packages collection.</p>
+
+    <a class="" href="https://twitter.com/voidlinux" title="Void on Twitter">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20">
+        <path
+          d="M18 0H2a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-4 4a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 14 4zM6 4a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 6 4zm4 8c-2.61 0-4.83-.67-5.65-3h11.3c-.82 2.33-3.04 3-5.65 3z" />
+      </svg>
+    </a>
+
+    <a href="irc://irc.freenode.net/#voidlinux" title="Void on IRC">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20">
+        <path d="M17 4v7a2 2 0 0 1-2 2H4v1a2 2 0 0 0 2 2h10l4 4V6a2 2 0 0 0-2-2zM6 10H0v6z" />
+        <rect width="16" height="12" rx="2" />
+      </svg>
+    </a>
+
+    <a href="http://build.voidlinux.org/console" title="Void builder">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"
+        viewBox="0 0 20 20">
+        <g transform="translate(10 10)">
+          <path id="a" d="M1.5-10h-3l-1 6.5h5m0 7h-5l1 6.5h3" />
+          <use transform="rotate(45)" xlink:href="#a" />
+          <use transform="rotate(90)" xlink:href="#a" />
+          <use transform="rotate(135)" xlink:href="#a" />
+        </g>
+        <path d="M10 2.5a7.5 7.5 0 0 0 0 15 7.5 7.5 0 0 0 0-15v4a3.5 3.5 0 0 1 0 7 3.5 3.5 0 0 1 0-7" />
+      </svg>
+    </a>
+  </div>
+</section>
+{% endblock intro %}
+
+<hr>
+
+{% block description %}
+<section class="o-flex-wrapper">
+  <dl class="c-card">
+    <dt class="c-card__title">Not a fork!</dt>
+    <dd class="c-card__message">Void Linux is an independent distribution, developed entirely by volunteers. </dd>
+    <dd class="c-card__message">Unlike trillions of other existing distros, Void is not a modification of an
+      existing distribution. Void's package manager and build system have been written from scratch.</dd>
+  </dl>
+  <dl class="c-card">
+    <dt class="c-card__title">Rolling release</dt>
+    <dd class="c-card__message">Install once, update daily. Your system will always be up-to-date.</dd>
+    <dd class="c-card__message">Thanks to our <a href="http://build.voidlinux.org">continuous build system</a>, new
+      software is built into binary packages as soon as the changes are pushed to the <em>void-packages</em>
+      repository.
+    </dd>
+  </dl>
+  <dl class="c-card">
+    <dt class="c-card__title">runit</dt>
+    <dd class="c-card__message">We use <a href="http://smarden.org/runit/">runit</a> as the init system and service
+      supervisor.</dd>
+    <dd class="c-card__message">runit is a simple and effective approach to initialize the system with reliable
+      service supervision. See the <a href="/usage/runit">usage page</a> page for a brief introduction.</dd>
+  </dl>
+  <dl class="c-card">
+    <dt class="c-card__title">LibreSSL</dt>
+    <dd class="c-card__message">We were the first distribution to switch to <em>LibreSSL</em> by default, replacing
+      <em>OpenSSL</em>.
+    </dd>
+    <dd class="c-card__message">Due to the <a href="http://en.wikipedia.org/wiki/Heartbleed">Heartbleed</a> fiasco,
+      we believe that the <a href="http://www.openbsd.org">OpenBSD</a> project has qualified and
+      <em>pro-active</em> developers to provide a more secure alternative.</dd>
+  </dl>
+  <dl class="c-card">
+    <dt class="c-card__title">xbps</dt>
+    <dd class="c-card__message"><a href="https://github.com/void-linux/xbps">xbps</a> is the native system package
+      manager, written from scratch with a <em>2-clause BSD</em> license.</dd>
+    <dd class="c-card__message"><em>xbps</em> allows you to quickly install/update/remove software in your system and
+      features detection of <em>incompatible shared libraries</em> and <em>dependencies</em> while updating or
+      removing packages (among others). See the <a href="/usage/xbps/">usage page</a> for a brief introduction.
+    </dd>
+  </dl>
+  <dl class="c-card">
+    <dt class="c-card__title">xbps-src</dt>
+    <dd class="c-card__message"><a href="https://github.com/void-linux/void-packages">xbps-src</a> is the xbps
+      package builder, written from scratch with a <em>2-clause BSD</em> license.</dd>
+    <dd class="c-card__message">This builds the software in <em>containers</em> through the use of <em>Linux
+        namespaces</em>, providing isolation of processes and bind mounts (among others). No root required!</dd>
+    <dd class="c-card__message">Additionally, xbps-src can build natively or cross compile for the target machine,
+      and supports multiple <em>C libraries</em> (glibc and musl currently).</dd>
+  </dl>
+</section>
+{% endblock description %}
+
+<hr>
+
+{% block feeds %}
+<section class="o-flex-wrapper">
+  <div class="c-card">
+    <a class="twitter-timeline" data-chrome="noborders noscrollbar transparent" width="520" height="400"
+      href="https://twitter.com/VoidLinux" data-widget-id="621226324586328064">Tweets by @VoidLinux</a>
+    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+  </div>
+
+  <div class="c-card">
+    <h3>void-packages changes<a href="https://github.com/void-linux/void-packages/commits/master.atom"
+        title="Subscribe to void-packages">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20">
+          <path
+            d="M2.5 0v2.5c8.3 0 15 6.7 15 15H20C20 7.85 12.15 0 2.5 0zm0 5v2.5c5.525 0 10 4.475 10 10H15C15 10.6 9.4 5 2.5 5zm0 5v2.5c2.775 0 5 2.225 5 5H10c0-4.125-3.375-7.5-7.5-7.5zm0 5A2.507 2.507 0 0 0 0 17.5C0 18.875 1.125 20 2.5 20S5 18.875 5 17.5 3.875 15 2.5 15z" />
+        </svg>
+      </a></h3>
+    <script src="{{ get_url(path="scripts/voidcommits.js", trailing_slash=false) }}"></script>
+    <ul>
+      <script
+        src="https://api.github.com/repos/void-linux/void-packages/commits?page=1&amp;per_page=10&amp;callback=voidcommits&amp;sha=master"></script>
+    </ul>
+  </div>
+
+  <div class="c-card">
+    <h3>xbps changes<a href="https://github.com/void-linux/xbps/commits/master.atom" title="Subscribe to xbps">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20">
+          <path
+            d="M2.5 0v2.5c8.3 0 15 6.7 15 15H20C20 7.85 12.15 0 2.5 0zm0 5v2.5c5.525 0 10 4.475 10 10H15C15 10.6 9.4 5 2.5 5zm0 5v2.5c2.775 0 5 2.225 5 5H10c0-4.125-3.375-7.5-7.5-7.5zm0 5A2.507 2.507 0 0 0 0 17.5C0 18.875 1.125 20 2.5 20S5 18.875 5 17.5 3.875 15 2.5 15z" />
+        </svg>
+      </a></h3>
+    <script src="{{ get_url(path="scripts/voidcommits.js", trailing_slash=false) }}"></script>
+    <ul>
+      <script
+        src="https://api.github.com/repos/void-linux/xbps/commits?page=1&amp;per_page=10&amp;callback=voidcommits&amp;sha=master"></script>
+    </ul>
+
+  </div>
+</section>
+{% endblock feeds %}
+
+<hr>
+
+{% block news %}
+<section>
+  <h2>Recent Changes <a href="/rss.xml" title="Subscribe to the news"><svg xmlns="http://www.w3.org/2000/svg"
+        height="20" width="20">
+        <path
+          d="M2.5 0v2.5c8.3 0 15 6.7 15 15H20C20 7.85 12.15 0 2.5 0zm0 5v2.5c5.525 0 10 4.475 10 10H15C15 10.6 9.4 5 2.5 5zm0 5v2.5c2.775 0 5 2.225 5 5H10c0-4.125-3.375-7.5-7.5-7.5zm0 5A2.507 2.507 0 0 0 0 17.5C0 18.875 1.125 20 2.5 20S5 18.875 5 17.5 3.875 15 2.5 15z" />
+      </svg></a></h2>
+  {% set recent_changes = get_section(path="news/_index.md") %}
+  {% for page in recent_changes.pages | slice(end=2) %}
+  <article class="c-article">
+    <p>{{ page.date | date(format="%B %d, %Y") }}</p>
+    <a href="{{ page.permalink | safe }}">
+      <h3>{{ page.title }}</h3>
+    </a>
+    {{ page.content | safe }}
+    <a href="{{ page.permalink }}">More »</a>
+    <hr>
+  </article>
+  {% endfor %}
+</section>
+{% endblock news %}
+{% endblock content %}

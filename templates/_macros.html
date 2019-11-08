@@ -1,0 +1,32 @@
+{% macro toc() %}
+<aside>
+  <details class="c-toc" open>
+    <summary><strong>Table of Contents</strong></summary>
+    <ul class="c-toc__list">
+      {% for h2 in toc %}
+      <li class="c-toc__item">
+        <a href="#{{h2.id | safe}}">{{ h2.title | safe }}</a>
+        {% if h2.children %}
+        <ul class="c-toc__list c-toc__list--nested">
+          {% for h3 in h2.children %}
+          <li class="c-toc__item">
+            <a href="#{{h3.id | safe}}">{{ h3.title | safe }}</a>
+          </li>
+          {% if h3.children %}
+          <ul class="c-toc__list c-toc__list--nested">
+            {% for h4 in h3.children %}
+            <li class="c-toc__item">
+              <a href="#{{h4.id | safe}}">{{ h4.title | safe }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </details>
+</aside>
+{% endmacro toc %}

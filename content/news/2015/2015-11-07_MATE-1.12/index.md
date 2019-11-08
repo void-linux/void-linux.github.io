@@ -1,0 +1,11 @@
++++
+title="MATE Desktop 1.12 now available!"
+date=2015-11-07
++++
+
+The MATE Desktop Environment has been updated to 1.12 and we've made a full switch
+to GTK+3. It's now available for Void on x86/ARM with glibc and musl.
+
+A screenshot of Mate 1.12 running on Juan's system (CPU i5 3550, Intel HD4400, Mesa 11.0.4):
+
+[![mate-1.12](mate-1.12.jpg "mate-1.12")](mate-1.12.jpg)

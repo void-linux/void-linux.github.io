@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block extra_head %}
+<script src="{{ get_url(path="scripts/jquery.min.js", trailing_slash=false) }}"></script>
+{% endblock extra_head %}
+
+{% block content %}
+<h2>Find binary packages</h2>
+<p>Search for available binary packages in the official repodata index matching simple keywords.</p>
+<form id="voidSearch">
+  <select name="arch" id="voidSearch_archs">
+    <option value="x86_64">x86_64</option>
+  </select>
+  <input type="text" name="q" placeholder="Package or description" id="voidSearch_query" />
+  <button type="submit" id="voidSearch_submit">Search</button>
+</form>
+<table id="voidSearch_result">
+</table>
+
+<script src="{{ get_url(path="scripts/voidsearch.js", trailing_slash=false) }}" async></script>
+
+<h2>Latest package commits <a href="https://github.com/void-linux/void-packages/commits/master.atom"
+    title="Subscribe to xbps">
+    <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20">
+      <path
+        d="M2.5 0v2.5c8.3 0 15 6.7 15 15H20C20 7.85 12.15 0 2.5 0zm0 5v2.5c5.525 0 10 4.475 10 10H15C15 10.6 9.4 5 2.5 5zm0 5v2.5c2.775 0 5 2.225 5 5H10c0-4.125-3.375-7.5-7.5-7.5zm0 5A2.507 2.507 0 0 0 0 17.5C0 18.875 1.125 20 2.5 20S5 18.875 5 17.5 3.875 15 2.5 15z" />
+    </svg>
+  </a></h2>
+<ul>
+  <script src="{{ get_url(path="scripts/voidcommits.js", trailing_slash=false) }}"></script>
+  <script
+    src="https://api.github.com/repos/void-linux/void-packages/commits?page=1&amp;per_page=10&amp;callback=voidcommits&amp;sha=master"></script>
+</ul>
+{% endblock content %}

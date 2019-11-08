@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ section.title }}{% endblock title %}
+{% block content %}
+<h2>News Archive</h2>
+<ul>
+  {% set recent_changes = get_section(path="news/_index.md") %}
+  {% for page in recent_changes.pages %}
+  {% if page.date and not page.template %}
+  <li>
+    {{page.date}} - <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>
+{% endblock content %}
