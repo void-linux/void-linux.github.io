@@ -74,9 +74,44 @@ Connect to it in virtual terminal or via ssh and log in as *root*, password **vo
 ## Verifying file integrity and its digital signature
 
 The
-[sha256sums.txt](http://alpha.de.repo.voidlinux.org/live/current/sha256sums.txt)
+[sha256.txt](http://alpha.de.repo.voidlinux.org/live/current/sha256.txt)
 file contains the `SHA256` hashes to verify the integrity of the
 downloaded files; this file is digitally signed with a gpg key.
+
+Prior to using any image you're strongly encouraged to validate the
+signatures on the image to ensure they haven't been tampered with.
+The process for validating these keys depends when the image set you
+wish to verify was created.
+
+### Images after November 2019
+
+Images after November 2019 are signed using a signify key that is
+specific to the release.  If you're on Void already, you can obtain
+the keys from the void-release-keys package, which will be downloaded
+using your existing XBPS trust relationship with your mirror.  You
+will also need a copy of signify; on Void this is provided by the
+`outils` package.
+
+If you are not currently using Void Linux you will need to obtain a
+copy of signify by other means, and the appropriate signing key from
+our git repository
+[here](https://github.com/void-linux/void-packages/tree/master/srcpkgs/void-release-keys/files/).
+
+Once you've obtained the key, you can verify your image with the
+sha256.sig file.  An example is shown here verifying the GCP musl
+filesystem from the 20191109 release:
+
+```
+$ $ signify -C -p /etc/signify/void-release-20191109.pub -x sha256.sig void-GCP-musl-PLATFORMFS-20191109.tar.xz
+Signature Verified
+void-GCP-musl-PLATFORMFS-20191109.tar.xz: OK
+```
+
+If the verification process does not spit out the expected "OK" status
+then do not use it!  Please alert the Void linux team of where you got
+the image and how you verified it and we will follow up.
+
+### Images Prior to November 2019
 
 Images prior to 2017-10-07 were signed with Juan RP's key:
 
