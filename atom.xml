@@ -22,6 +22,11 @@ layout: nil
 		<id>http://voidlinux.org{{ post.id }}</id>
 		<published>{{ post.date | date_to_xmlschema }}</published>
 		<updated>{{ post.date | date_to_xmlschema }}</updated>
+		<content type="xhtml">
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				<p>{{ post.content }}</p>
+			</div>
+		</content>
 	</entry>
 {% endfor %}
 
