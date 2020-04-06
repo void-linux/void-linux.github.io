@@ -5,31 +5,31 @@ title: Enter the void - Downloads
 * TOC
 {:toc}
 
-## Download installable base live images (x86)
-
-***PLEASE NOTE: To install the desktop environment, DON'T choose "install from network" choose the local install. VERY IMPORTANT!***
-
-Currently there are installable live images for the **x86** and **x86\_64** architectures
-and there is support to make a local installation (with the included packages) or a network
-installation (packages are downloaded from official repository).
+## Download installable base live images and rootfs tarballs
 
 All **live images** and **rootfs tarballs** are available at:
 
-* [http://alpha.de.repo.voidlinux.org/live/current](http://alpha.de.repo.voidlinux.org/live/current)
+- [https://alpha.de.repo.voidlinux.org/live/current](https://alpha.de.repo.voidlinux.org/live/current)
 
-The x86\_64 images have these requirements:
+These files can also be downloaded from other mirrors, which are listed [in the documentation](https://docs.voidlinux.org/xbps/repositories/mirrors/index.html).
+Simply navigate to `live -> current` to find them.
 
-- EM64T CPU, 96MB RAM, 350MB disk, Ethernet/WiFi for network installation.
+The requirements for these images can be found [in the documentation](https://docs.voidlinux.org/installation/base-requirements.html).
+An internet connection via Ethernet or WiFi is required for network installation.
 
-The i686 images have these requirements:
+## Download installable base live images for x86
 
--  Pentium 4 CPU (SSE2), 96MB RAM, 350MB disk, Ethernet / WiFi for network installation.
+***PLEASE NOTE: To install the desktop environment, DON'T choose "install from network" choose the local install. VERY IMPORTANT!***
 
-Log in as **anon/root**, password **voidlinux**.
+Currently there are installable live images for the **i686** and **x86\_64** architectures
+and there is support to make a local installation (with the included packages) or a network
+installation (packages are downloaded from official repository).
 
-To start the installer just execute the *void-installer* utility with enough permissions (i.e *sudo*).
+Log in as `anon`/`root`, password `voidlinux`.
 
-Additional live images with *flavours* (an additional Desktop Environment with autologin) are also
+To start the installer just execute the `void-installer` utility with enough permissions (i.e., `sudo`).
+
+Additional live images with *flavors* (an additional Desktop Environment with autologin) are also
 available:
 
 - Enlightenment
@@ -39,37 +39,70 @@ available:
 - MATE
 - XFCE
 
+These images are named `void-live-ARCH-BUILD_DATE[-FLAVOR].iso`, where
+
+- `ARCH` is the architecture of the image, which can be:
+   - `x86_64`
+   - `x86_64-musl`
+   - `i686`
+- `BUILD_DATE` is the date the image was built
+- `FLAVOR` is optional, and specifies which flavor the image contains
+
 These images need at least 256 or 512 MB of RAM in order to work correctly.
 
 ## Download ready to boot images for ARM
 
-Install Void by using a *prepared image* or a *rootfs tarball* that can be written/unpacked onto the SD card.
-This method allows you to have a system ready to boot / use, once it's written / unpacked onto the target device.
+There are ready to boot images for several **ARM** devices. These images can be written onto an SD card (i.e. using `dd`)
+and they allow you to have a ready to boot system. These images are prepared for 2GB SD cards. Alternatively, use the
+rootfs tarballs if you want to customize the partitions and filesystems.
 
-The images are prepared for 2GB SD cards, alternatively use the **rootfs tarball** if you want
-to customize the partitions and filesystems.
+These images are named `void-DEVICE[-musl]-BUILD_DATE.img.xz`, where
 
-The list of supported platforms currently is:
+- `DEVICE` is the device for which the image was built, which can be:
+   - `beaglebone`: BeagleBone/BeagleBone Black (ARMv7, hard float)
+   - `cubieboard2`: Cubieboard2 (ARMv7, hard float)
+   - `odroid-c2`: Odroid U2/U3 (ARMv7, hard float)
+   - `rpi`: Raspberry Pi and Raspberry Pi Zero (ARMv6, hard float)
+   - `rpi2`: Raspberry Pi 2 (ARMv7, hard float)
+   - `rpi3`: Raspberry Pi 3 (AARCH64, hard float)
+   - `usbarmory`: USB Armory (ARMv7, hard float)
+- `-musl` is optional and indicates that the image uses the musl libc instead of glibc
+- `BUILD_DATE` is the date the image was built
 
-- BeagleBone/BeagleBone Black (ARMv7, hard float)
-   - [rootfs instructions](https://wiki.voidlinux.org/Beaglebone)
+Connect to it in virtual terminal or via ssh and log in as `root`, password `voidlinux`.
 
-- Cubieboard2 (ARMv7, hard float)
-   - [rootfs instructions](https://wiki.voidlinux.org/Cubieboard2_SD-Card)
+## Download rootfs tarballs
 
-- Odroid U2/U3 (ARMv7, hard float)
-   - [rootfs instructions](https://wiki.voidlinux.org/Odroid_U2)
+### Download rootfs tarballs for ARM
 
-- Raspberry Pi (ARMv6, hard float)
-   - [rootfs instructions](https://wiki.voidlinux.org/Raspberry_Pi)
+There are rootfs tarballs available for all the **ARM** devices which have ready to boot images,
+as well as generic devices.
 
-- Raspberry Pi 2 (ARMv7, hard float)
-   - [rootfs instructions](https://wiki.voidlinux.org/Raspberry_Pi)
+For the devices which have ready to boot images, the tarballs are named
+`void-DEVICE[-musl]-PLATFORMFS-BUILD_DATE.tar.xz`, where all items mean the same as they do for ready to
+boot images, and `PLATFORMFS` marks it as a tarball.
 
-- USB Armory (ARMv7, hard float)
-   - [rootfs instructions](https://wiki.voidlinux.org/USB_Armory)
+For generic devices, the tarballs are named `void-ARCH[-musl]-ROOTFS-BUILD_DATE.tar.xz`, where
 
-Connect to it in virtual terminal or via ssh and log in as *root*, password **voidlinux**.
+- `ARCH` is the architecture of the image, which can be:
+   - `armv6l`
+   - `armv7l`
+   - `aarch64`
+- `-musl` is optional and indicates that the image uses the musl libc instead of glibc
+- `BUILD_DATE` is the date the image was built
+
+Deprecated instructions for using the PLATFORMFS images can be found in these wiki pages:
+
+- [BeagleBone/BeagleBone Black](https://wiki.voidlinux.org/Beaglebone)
+- [Cubieboard2](https://wiki.voidlinux.org/Cubieboard2_SD-Card)
+- [Odroid U2/U3](https://wiki.voidlinux.org/Odroid_U2)
+- [Raspberry Pi, Raspberry Pi Zero and Raspberry Pi 2](https://wiki.voidlinux.org/Raspberry_Pi)
+- [USB Armory](https://wiki.voidlinux.org/USB_Armory)
+
+### Download rootfs tarballs for x86
+
+There are also rootfs tarballs available for **x86** architectures. They are named
+`void-ARCH-ROOTFS-BUILD_DATE.tar.xz`, where all items mean the same as they do for the live images.
 
 ## Verifying file integrity and its digital signature
 
@@ -102,7 +135,7 @@ sha256.sig file.  An example is shown here verifying the GCP musl
 filesystem from the 20191109 release:
 
 ```
-$ $ signify -C -p /etc/signify/void-release-20191109.pub -x sha256.sig void-GCP-musl-PLATFORMFS-20191109.tar.xz
+$ signify -C -p /etc/signify/void-release-20191109.pub -x sha256.sig void-GCP-musl-PLATFORMFS-20191109.tar.xz
 Signature Verified
 void-GCP-musl-PLATFORMFS-20191109.tar.xz: OK
 ```
@@ -134,14 +167,14 @@ at
 in most known `PGP key servers`.  Follow these steps to verify the
 integrity and signature.
 
-~~~
+```
 $ gpg --recv-keys <KEY_ID>
 $ wget http://alpha.de.repo.voidlinux.org/live/current/sha256sums.txt{,.sig}
 $ LANG=C gpg --verify sha256sums.txt.sig
 gpg: Signature made Sun Feb  8 12:33:05 2015 CET using RSA key ID 482F9368
 gpg: Good signature from "Juan RP <xtraeme@gmail.com>" [unknown]
 gpg:                 aka "[jpeg image of size 3503]" [unknown]
-~~~
+```
 
 The important line in the output above is "Good signature from [...]".
 Make sure that you have this line and that the "from" field matches
@@ -150,65 +183,9 @@ what you expect.
 Now that the signature has been verified, you should check the sha256 hash is valid for the file you've downloaded...
 use the sha256sum utility and compare it with what's stored in the `sha256sums.txt` file:
 
-~~~
+```
 $ LANG=C sha256sum -c sha256sums.txt 2>/dev/null|grep void-beaglebone-latest.img.xz
 void-beaglebone-latest.img.xz: OK
-$
-~~~
+```
 
 If the above command does not return `OK`, the downloaded file is corrupt or has been modified. Don't use it.
-
-
-## Mirrors
-
-Void Linux maintains mirrors in several geographic regions for you to
-use.  In normal use your traffic will be routed to the nearest mirror
-to you based on your IP Address.  If you would like to directly use a
-particular mirror you can set this manually.  This can also be handy
-if you are on a different continent than the primary mirror, or if you
-are not on the same continent as any officially managed mirrors.
-
-Our mirrors are separated into two categories.  Tier 1 mirrors sync
-directly from the build-master and will always have the latest packages
-available.  These repositories are maintained by the Void Linux
-Infrastructure Team.  In rare occasions we may permit a mirror that we
-don't manage to sync directly from our primary servers if there are
-extenuating circumstances.  Tier 2 mirrors sync from a nearby tier 1
-mirror when possible, but there is no guarantee of a mirror being
-nearby.  These mirrors are not managed by Void nor do they have any
-specific guarantees for staleness or completeness of packages.  Tier 2
-mirrors are free to sync only specific architectures and exclude
-sub-repositories (nonfree/multilib).
-
-To change your mirrors to use a different set, you must create files
-in `/etc/xbps.d` with the same names as those in `/usr/share/xbps.d`.
-Once you have created such files, replace
-`http://alpha.de.repo.voidlinux.org` with one of the servers below.
-If you wish to change this for all four repos on a 64-bit host you
-will need to edit 4 files.  Only the files containing 'repository' in
-the filename need to be duplicated to `/etc/xbps.d/`.
-
-### Tier 1 Mirrors
-
-  * http://alpha.de.repo.voidlinux.org (EU: Germany)
-  * http://beta.de.repo.voidlinux.org (EU: Germany)
-  * http://alpha.us.repo.voidlinux.org (USA: Kansas City)
-  * http://mirror.clarkson.edu/voidlinux/ (USA: New York)
-  * http://mirrors.servercentral.com/voidlinux/ (USA: Chicago)
-
-### Tier 2 Mirrors
-
-  * http://mirror.aarnet.edu.au/pub/voidlinux/ (AU: Canberra)
-  * http://ftp.swin.edu.au/voidlinux/ (AU: Melbourne)
-  * http://ftp.acc.umu.se/mirror/voidlinux/ (EU: Sweden)
-  * https://mirrors.dotsrc.org/voidlinux/ (EU: Denmark)
-  * http://www.gtlib.gatech.edu/pub/VoidLinux/ (USA: Atlanta)
-  * https://void.webconverger.org/ (APAN: Singapore)
-  * https://youngjin.io/voidlinux (APAN: South Korea)
-  * http://ftp.lysator.liu.se/pub/voidlinux (EU: Sweden)
-  * http://lysator7eknrfl47rlyxvgeamrv7ucefgrrlhk7rouv3sna25asetwid.onion/pub/voidlinux (EU: Sweden)
-  * https://mirrors.hushan.tech:44300/voidlinux (Asia: China)
-
-If you are operating a Tier 2 mirror and would like to be on this
-list, please either file a pull request or reach out to
-maldridge[at]voidlinux.eu.
