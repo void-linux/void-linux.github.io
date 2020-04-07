@@ -207,6 +207,7 @@ the filename need to be duplicated to `/etc/xbps.d/`.
   * https://youngjin.io/voidlinux (APAN: South Korea)
   * http://ftp.lysator.liu.se/pub/voidlinux (EU: Sweden)
   * http://lysator7eknrfl47rlyxvgeamrv7ucefgrrlhk7rouv3sna25asetwid.onion/pub/voidlinux (EU: Sweden)
+  * https://mirrors.hushan.tech:44300/voidlinux (Asia: China)
 
 If you are operating a Tier 2 mirror and would like to be on this
 list, please either file a pull request or reach out to
