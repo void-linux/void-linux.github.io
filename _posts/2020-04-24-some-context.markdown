@@ -5,11 +5,14 @@ layout: post
 
 ### Notice
 
-This article is being activey edited and ammended for both grammer and
+This article is being actively edited and amended for both grammar and
 to answer new questions as they come up.
 
   * 12:05 PST - Feedback from IRC for English, clarification of the
     timeline of xtraeme's resignation and subsequent ban.
+
+  * 12:17 PST - Correct innaccuracies in the musl section.  My
+    understanding of the bug was incorrect (@the-maldridge).
 
 ---
 
@@ -59,19 +62,23 @@ as it has.
 Being rolling release and not breaking things involves a lot of
 coordination.  Some of this coordination is baked into the software.
 For example, you can't update your system while large rebuilds are in
-progress because that would install incomparable versions of some
+progress because that would install incompatible versions of some
 libraries (we're working on improving the user experience around this
 though).
 
 Some of the recent changes that come to mind in no particular order:
 
-  * Pushing musl 1.2 with no coordination.  This is something we're
-    planning a lot of work around because updating the C library will
-    involve recompiling almost everything on musl against it.
+  * Pushing a musl update with no coordination.  This is something
+    we're planning a lot of work around because updating the C library
+    will involve recompiling almost everything on musl against it.
     Normally there's ABI compatibility, but for reasons far beyond the
-    scope of this article, musl 1.2 is different.  There is an ongoing
+    scope of this article, musl is different.  There is an ongoing
     dialog in #musl on freenode with some Alpine devs as well trying
     to determine the best way to do this upgrade.
+
+    Updated: The original version referenced 1.2 of musl.  This was
+    incorrect as the interactions that caused this problem are not
+    unique to this version.
 
   * Pushing glibc with no coordination.  We say the trouble that
     befell Arch when they did a glibc update that temporarily broke
