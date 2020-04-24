@@ -3,6 +3,16 @@ title: Some Context for Recent Events
 layout: post
 ---
 
+### Notice
+
+This article is being activey edited and ammended for both grammer and
+to answer new questions as they come up.
+
+  * 12:05 PST - Feedback from IRC for English, clarification of the
+    timeline of xtraeme's resignation and subsequent ban.
+
+---
+
 First a disclaimer.  This is written from my point of view
 (@the-maldridge), and while it may contain views and opinions of the
 project, you should assume these are my views.  This is posted here
@@ -31,11 +41,11 @@ have left a sour taste with me, but he still has his right to privacy
 like anyone else, and if he wishes to share details of his personal
 life that is his decision and his alone.
 
-## How will the project survive with out Xtraeme?
+## How will the project survive with out xtraeme?
 
 Short: Like we have before.
 
-Long: This is not the first time Xtraeme has left Void.  I wrote about
+Long: This is not the first time xtraeme has left Void.  I wrote about
 this on my personal site back in 2018, and you can read that full
 [article](https://michaelwashere.net/post/2018-11-28-enobdfl/) over
 there.  Running a project like Void means ensuring that there is no
@@ -44,7 +54,7 @@ short of perhaps some folks wanting to take some time off to recover
 from the events of the day, I fully expect the project will continue
 as it has.
 
-## The thread on GitHub mentioned Xtraeme has broken things in the past?
+## The thread on GitHub mentioned xtraeme has broken things in the past?
 
 Being rolling release and not breaking things involves a lot of
 coordination.  Some of this coordination is baked into the software.
@@ -69,15 +79,15 @@ Some of the recent changes that come to mind in no particular order:
     the change, the package was merged without discussion.
 
   * General problems related with single points of failure.  Though
-    this is not an issue now, there was a time where Xtraeme was the
+    this is not an issue now, there was a time where xtraeme was the
     single point of failure.  Through his personal inaction we lost
     the voidlinux.eu domain.  We had a lot of trouble getting the
     project back into a stable state, but through a significant amount
     of effort we recovered.  Though newer maintainers probably don't
     notice this, there are a lot of older developers and users who
-    remember when Xtraeme was all that Void was.  The project has
+    remember when xtraeme was all that Void was.  The project has
     grown significantly since then, and this is a change I'm not sure
-    Xtraeme ever fully adjusted to.
+    xtraeme ever fully adjusted to.
 
 ## I feel like you're not telling a lot of stuff, where can I get that context?
 
@@ -92,13 +102,14 @@ all of the initial discussion of onboarding and offboarding
 maintainers happens on private forums.  These discussions are pretty
 mundane, usually along the lines of "have they broken anything?" or
 "wow, this person does a lot of work really fast".  The discussions
-around Xtraeme unfortunately have been of the form "his conduct
+around xtraeme unfortunately have been of the form "his conduct
 towards others really isn't great, but I'm not comfortable approaching
 him."
 
-## Xtraeme is talking about making a profit off of Void/XBPS?
+## Does Void profit from xtraeme's work?
 
-I wish I knew where this profit was, and how I could get some.
+While Void and its users *benefit* from the work of all developers,
+including xtraeme, no profit is derived from this work.
 
 Void is an Open Source project, it always has been and will continue
 to be one.  You are free to use the code within the confines of the
@@ -106,7 +117,7 @@ license.  Since Void is permissively licensed, you are welcome to use
 it commercially as well, though please be a good citizen of the FOSS
 community and upstream your patches when practical.
 
-Should Xtraeme wish to change the license on his copy of XBPS, we will
+Should xtraeme wish to change the license on his copy of XBPS, we will
 evaluate the situation.
 
 Void does not accept donations.  We appreciate the efforts of those
@@ -119,6 +130,14 @@ from the project.  International tax law is a complicated beast, and
 as a project we're not comfortable accepting donations until we have
 the infrastructure in place to show where the money goes, and provide
 you with appropriate documentation.
+
+## Did xtraeme resign or was he banned?
+
+Timing is everything.  The ticket which expressed xtraeme's desire to
+resign was opened first, then over the next hour he lashed out at
+several project members.  The resignation was processed per his
+wishes, and per his conduct torwards others a ban was applied at the
+organization level.
 
 ## I want to talk to someone about this.
 
@@ -134,9 +153,9 @@ This is a really uncomfortable place to be in.  None of us want to
 start a Twitter war, and at the end of the day, Void is about working
 on software we all believe in.
 
-Void will continue.  We do appreciate the work that Xtraeme did to get
+Void will continue.  We do appreciate the work that xtraeme did to get
 us here, projects like Void need someone to have an idea and run with
-it, then convince others to join you.  Xtraeme was that early person
+it, then convince others to join you.  xtraeme was that early person
 with an idea, there's no denying this.  It's sad that this
 collaboration had to end this way.  I would be lying if I said this
 was a surprise to me, but I truly did not in my wildest imagination
@@ -144,7 +163,7 @@ expect it to play out like this.
 
 ### Enough of Politics, Diplomacy, and speaking as a project, what do YOU think about all this?
 
-The last 8 months since Xtraeme showed up again have been a roller
+The last 8 months since xtraeme showed up again have been a roller
 coaster.  Its been a stressful time and I've come very close to
 leaving the project several times.  I'm one of a handful of people who
 directly maintain the day to day infrastructure that builds and serves
@@ -155,10 +174,10 @@ I was in college and employed by a university that was running Void
 internally (sadly, they no longer do).  I had a lot more free time
 then, and Void was a lot less stressful to work on.
 
-Xtraeme is a talented C developer, there is no denying this and I
+xtraeme is a talented C developer, there is no denying this and I
 respect his work on XBPS.  It is certainly not without bugs, but
 no-one's code is.  I am personally upset that this is how this had to
-end.  I expected at some point Xtraeme would part ways with the
+end.  I expected at some point xtraeme would part ways with the
 project as his goals and those of the project have diverged.  I am
 upset that he felt the need to take out his frustration on
 contributors and maintainers, and that is why the decision was made to
