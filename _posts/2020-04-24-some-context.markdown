@@ -126,7 +126,7 @@ Sure, we live in interesting times, and talking to others is a great
 way to cope with unexpected change.  Feel free to chat on Void's
 official IRC channel `#voidlinux` on freenode.  You can also find us
 at `r/voidlinux` on Reddit.  We also maintain a mailing list which you
-can find on the website.  All our chat resources
+can find on the website.
 
 # What happens now?
 
