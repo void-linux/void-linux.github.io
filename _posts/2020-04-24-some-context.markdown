@@ -149,6 +149,9 @@ can find on the website.
 
 # What happens now?
 
+Remember these are my words (@the-maldridge) not necessarily those of
+the project.
+
 This is a really uncomfortable place to be in.  None of us want to
 start a Twitter war, and at the end of the day, Void is about working
 on software we all believe in.
