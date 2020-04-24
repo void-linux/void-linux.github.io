@@ -68,13 +68,15 @@ though).
 
 Some of the recent changes that come to mind in no particular order:
 
-  * Pushing a musl update with no coordination.  This is something
-    we're planning a lot of work around because updating the C library
-    will involve recompiling almost everything on musl against it.
-    Normally there's ABI compatibility, but for reasons far beyond the
-    scope of this article, musl is different.  There is an ongoing
-    dialog in #musl on freenode with some Alpine devs as well trying
-    to determine the best way to do this upgrade.
+  * Pushing a musl update with no coordination.  For context around
+    the change, see [this link](http://musl.libc.org/time64.html).
+
+    This is something we're planning a lot of work around because
+    updating the C library will involve recompiling almost everything
+    on musl against it.  Normally there's ABI compatibility, but for
+    reasons far beyond the scope of this article, musl is different.
+    There is an ongoing dialog in #musl on freenode with some Alpine
+    devs as well trying to determine the best way to do this upgrade.
 
     Updated: The original version referenced 1.2 of musl.  This was
     incorrect as the interactions that caused this problem are not
