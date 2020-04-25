@@ -82,7 +82,7 @@ Some of the recent changes that come to mind in no particular order:
     incorrect as the interactions that caused this problem are not
     unique to this version.
 
-  * Pushing glibc with no coordination.  We say the trouble that
+  * Pushing glibc with no coordination.  We saw the trouble that
     befell Arch when they did a glibc update that temporarily broke
     bash.  We'd hoped to avoid this same fate, but while discussing
     the change, the package was merged without discussion.
