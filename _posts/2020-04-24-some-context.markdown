@@ -13,6 +13,8 @@ to answer new questions as they come up.
 
   * 12:17 PST - Correct innaccuracies in the musl section.  My
     understanding of the bug was incorrect (@the-maldridge).
+    
+  * 2020-04-27 - Correct xtraeme's pronouns, spelling/grammar cleanup
 
 ---
 
@@ -39,12 +41,12 @@ situation developed.  I'm on the West coast of the US, so I woke up to
 a lot of this already in progress, but I also have a lot more
 historical context than what is easily find-able.  Keep in mind that
 out of respect for Juan's privacy, I am deliberately not revealing
-some information he chose to reveal to project maintainers.  He may
-have left a sour taste with me, but he still has his right to privacy
-like anyone else, and if he wishes to share details of his personal
-life that is his decision and his alone.
+some information they chose to reveal to project maintainers.  They
+may have left a sour taste with me, but they still have a right to
+privacy like anyone else, and if they wish to share details of their
+personal life, that is their decision and theirs alone.
 
-## How will the project survive with out xtraeme?
+## How will the project survive without xtraeme?
 
 Short: Like we have before.
 
@@ -82,17 +84,17 @@ Some of the recent changes that come to mind in no particular order:
     incorrect as the interactions that caused this problem are not
     unique to this version.
 
-  * Pushing glibc with no coordination.  We saw the trouble that
-    befell Arch when they did a glibc update that temporarily broke
-    bash.  We'd hoped to avoid this same fate, but while discussing
-    the change, the package was merged without discussion.
+  * Pushing a glibc update with no coordination.  We saw the trouble
+    that befell Arch when they did a glibc update that temporarily
+    broke bash.  We'd hoped to avoid this same fate, but while
+    discussing the change, the package was merged without discussion.
 
-  * General problems related with single points of failure.  Though
+  * General problems related to single points of failure.  Though
     this is not an issue now, there was a time where xtraeme was the
-    single point of failure.  Through his personal inaction we lost
+    single point of failure.  Through their personal inaction we lost
     the voidlinux.eu domain.  We had a lot of trouble getting the
     project back into a stable state, but through a significant amount
-    of effort we recovered.  Though newer maintainers probably don't
+    of effort, we recovered.  Though newer maintainers probably don't
     notice this, there are a lot of older developers and users who
     remember when xtraeme was all that Void was.  The project has
     grown significantly since then, and this is a change I'm not sure
@@ -111,9 +113,9 @@ all of the initial discussion of onboarding and offboarding
 maintainers happens on private forums.  These discussions are pretty
 mundane, usually along the lines of "have they broken anything?" or
 "wow, this person does a lot of work really fast".  The discussions
-around xtraeme unfortunately have been of the form "his conduct
+around xtraeme unfortunately have been of the form "their conduct
 towards others really isn't great, but I'm not comfortable approaching
-him."
+them."
 
 ## Does Void profit from xtraeme's work?
 
@@ -126,8 +128,8 @@ license.  Since Void is permissively licensed, you are welcome to use
 it commercially as well, though please be a good citizen of the FOSS
 community and upstream your patches when practical.
 
-Should xtraeme wish to change the license on his copy of XBPS, we will
-evaluate the situation.
+Should xtraeme wish to change the license of their copy of XBPS, we
+will evaluate the situation.
 
 Void does not accept donations.  We appreciate the efforts of those
 that reach out from time to time wishing to support the project
@@ -140,13 +142,13 @@ as a project we're not comfortable accepting donations until we have
 the infrastructure in place to show where the money goes, and provide
 you with appropriate documentation.
 
-## Did xtraeme resign or was he banned?
+## Did xtraeme resign, or were they banned?
 
 Timing is everything.  The ticket which expressed xtraeme's desire to
-resign was opened first, then over the next hour he lashed out at
-several project members.  The resignation was processed per his
-wishes, and per his conduct torwards others a ban was applied at the
-organization level.
+resign was opened first, then over the next hour they lashed out at
+several project members.  The resignation was processed per their
+wishes, and per their conduct torwards others, a ban was applied at
+the organization level.
 
 ## I want to talk to someone about this.
 
@@ -176,7 +178,7 @@ expect it to play out like this.
 ### Enough of Politics, Diplomacy, and speaking as a project, what do YOU think about all this?
 
 The last 8 months since xtraeme showed up again have been a roller
-coaster.  Its been a stressful time and I've come very close to
+coaster.  It's been a stressful time and I've come very close to
 leaving the project several times.  I'm one of a handful of people who
 directly maintain the day to day infrastructure that builds and serves
 Void, and that made me the receiving end of more than one rant.  I'm
@@ -186,11 +188,11 @@ I was in college and employed by a university that was running Void
 internally (sadly, they no longer do).  I had a lot more free time
 then, and Void was a lot less stressful to work on.
 
-xtraeme is a talented C developer, there is no denying this and I
-respect his work on XBPS.  It is certainly not without bugs, but
-no-one's code is.  I am personally upset that this is how this had to
+xtraeme is a talented C developer; there is no denying this, and I
+respect their work on XBPS.  It is certainly not without bugs, but
+no one's code is.  I am personally upset that this is how this had to
 end.  I expected at some point xtraeme would part ways with the
-project as his goals and those of the project have diverged.  I am
-upset that he felt the need to take out his frustration on
+project, as their goals and those of the project have diverged.  I am
+upset that they felt the need to take out their frustration on
 contributors and maintainers, and that is why the decision was made to
-ban him from the organization.
+ban them from the organization.
