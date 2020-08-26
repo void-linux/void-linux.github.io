@@ -78,6 +78,8 @@ These images are named `void-DEVICE[-musl]-BUILD_DATE.img.xz`, where
 
 Connect to it in virtual terminal or via ssh and log in as `root`, password `voidlinux`.
 
+General instructions for these images are available [in the documentation](https://docs.voidlinux.org/installation/guides/arm-devices/index.html).
+
 ## Download rootfs tarballs
 
 ### Download rootfs tarballs for ARM
@@ -98,12 +100,16 @@ For generic devices, the tarballs are named `void-ARCH[-musl]-ROOTFS-BUILD_DATE.
 - `-musl` is optional and indicates that the image uses the musl libc instead of glibc
 - `BUILD_DATE` is the date the image was built
 
-Deprecated instructions for using the PLATFORMFS images can be found in these wiki pages:
+General instructions for these images are available [in the documentation](https://docs.voidlinux.org/installation/guides/arm-devices/index.html).
+Specific instructions are available for the following platforms:
+
+- [Raspberry Pi, Raspberry Pi Zero, Raspberry Pi 2 and Raspberry Pi 3](https://docs.voidlinux.org/installation/guides/arm-devices/platforms.html#raspberry-pi)
+
+Deprecated instructions for the following platforms can be found in these wiki pages (you can help by porting them over to the [Void Handbook](https://github.com/void-linux/void-docs/blob/master/CONTRIBUTING.md)):
 
 - [BeagleBone/BeagleBone Black](https://wiki.voidlinux.org/Beaglebone)
 - [Cubieboard2](https://wiki.voidlinux.org/Cubieboard2_SD-Card)
 - [Odroid U2/U3](https://wiki.voidlinux.org/Odroid_U2)
-- [Raspberry Pi, Raspberry Pi Zero and Raspberry Pi 2](https://wiki.voidlinux.org/Raspberry_Pi)
 - [USB Armory](https://wiki.voidlinux.org/USB_Armory)
 
 ### Download rootfs tarballs for x86
