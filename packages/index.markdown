@@ -5,16 +5,19 @@ title: Enter the void - Packages
 
 <div>
 <h2>Find binary packages</h2>
- <p>Search for available binary packages in the official repodata index matching simple keywords.</p>
- <form id="voidSearch">
- <select name="arch" id="voidSearch_archs">
- <option value="x86_64">x86_64</option>
- </select>
- <input type="text" name="q" placeholder="Package or description" id="voidSearch_query"/>
- <button type="submit" id="voidSearch_submit">Search</button>
- </form>
- <table id="voidSearch_result">
- </table>
+<p>Search for available binary packages in the official repodata index matching simple keywords.</p>
+<form class="form-inline" id="voidSearch">
+ <div class="form-group">
+  <select name="arch" class="form-control" id="voidSearch_archs">
+   <option value="x86_64">x86_64</option>
+  </select>
+ </div>
+ <div class="form-group">
+  <input type="text" name="q" placeholder="Package or description" class="form-control" id="voidSearch_query"/>
+ </div>
+ <button type="submit" class="btn btn-green" id="voidSearch_submit">Search</button>
+</form>
+<table id="voidSearch_result"></table>
 
 <script src="/assets/js/voidsearch.js" async></script>
 
