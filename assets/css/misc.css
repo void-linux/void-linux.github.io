@@ -105,11 +105,6 @@ img, .video {
 	display: inline;
 
 }
-#voidSearch_query {
-	border:1px inset;
-	background:white;
-	padding:5pt;
-}
 #voidSearch_query.loading {
 	background-image:url(../img/loading.gif);
 	background-repeat:no-repeat;
@@ -167,4 +162,14 @@ img, .video {
 h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
 	padding-top:50px;
 	margin-top:-40px;
+}
+.btn-green {
+	color: #fff;
+	background-color: #478061;
+	border-color: #478061;
+}
+.btn-green:hover {
+	color: #fff;
+	background-color: black;
+	border-color: black;
 }
