@@ -3,6 +3,29 @@ title: Hacktoberfest and Void Linux
 layout: post
 ---
 
+*Update:* Unfortunately due to recent changes that significantly
+increase the effort required from Void, we can no longer promise that
+your changes will count towards the 4 PRs required for Hacktoberfest.
+
+Many maintainers use `git am` in a script to apply patches and batch
+them into build units that the buildbot can work on at a time.  This
+precludes the application of labels unless the maintainer separately
+opens a browser, logs into GitHub, and interacts with the PR there.
+While the `git am` method should technically work, we've noticed in
+the past that GitHub occasionally applies the wrong status to PRs
+using this method (ignores magic closing words).  We aren't currently
+aware why this works intermittently and we can't guarantee that a
+specific PR will satisfy the new requirements for Hacktoberfest.
+
+It's unfortunate that the rules were changed mid-run, as under the
+previous rules we could process contributions without disruptive
+alterations to our review process, and we could accept many first time
+contributors' work to low-risk packages.  You are of course still
+welcome to send your patches and they will be reviewed at the
+avaiability of the Void team.
+
+---
+
 It's the first day of October, the air is crisp in parts of the
 northern hemisphere, and it's time for
 [Hacktoberfest](https://hacktoberfest.digitalocean.com/) again.  This
