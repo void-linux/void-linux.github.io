@@ -11,3 +11,10 @@ snow:        1
 
 plugins:
   - jekyll-redirect-from
+
+collections:
+  platforms:
+    output: true
+
+download_mirror: https://alpha.de.repo.voidlinux.org/live/current
+download_build_date: 2019-11-09
