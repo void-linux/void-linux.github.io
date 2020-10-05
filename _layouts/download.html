@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="container">
+  {{ content }}
+
+  <ul class="tab-bar" id="tab-bar">
+    {% for platform in site.platforms %}
+    <li>
+      <a href="#{{  platform.name }}">{{ platform.name }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <div id="tab-content">
+    {% for platform in site.platforms %}
+    <div>
+      {{ platform.content }}
+      <noscript>
+        <hr />
+      </noscript>
+    </div>
+    {% endfor %}
+  </div>
+  <section id="tab-content"></section>
+</div>

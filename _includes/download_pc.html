@@ -1,0 +1,75 @@
+<div class="split-section">
+  <div>
+    <h3 id="{{ page.name }}">{{ page.name }}</h3>
+    {{ include.content | markdownify }}
+    <div class="alert alert-warning" role="alert">
+      To install the packages for the desktop environment, DON'T choose "install
+      from network" choose the "local install" option.
+    </div>
+  </div>
+  <div>
+    <div class="download-device-title">
+      <h4>base</h4>
+      <small>{{ site.download_build_date }}</small>
+    </div>
+    <ul class="inline-download-links">
+      <li>
+        <a
+          href="{{ site.download_mirror }}/void-live-{{ page.name }}-{{ site.download_build_date | date: '%Y%m%d' }}.iso"
+          >Live image</a
+        >
+        <span class="label label-default">glibc</span>
+      </li>
+      {% if page.supports_musl %}
+      <li>
+        <a
+          href="{{ site.download_mirror }}/void-live-{{ page.name }}-musl-{{ site.download_build_date | date: '%Y%m%d' }}.iso"
+          >Live image</a
+        >
+        <span class="label label-warning">musl</span>
+      </li>
+      {% endif %}
+      <li>
+        <a
+          href="{{ site.download_mirror }}/void-{{ page.name }}-ROOTFS-{{ site.download_build_date | date: '%Y%m%d' }}.tar.xz"
+          >rootfs tarball</a
+        >
+        <span class="label label-default">glibc</span>
+      </li>
+      {% if page.supports_musl %}
+      <li>
+        <a
+          href="{{ site.download_mirror }}/void-{{ page.name }}-musl-ROOTFS-{{ site.download_build_date | date: '%Y%m%d' }}.tar.xz"
+          >rootfs tarball</a
+        >
+        <span class="label label-warning">musl</span>
+      </li>
+      {% endif %}
+    </ul>
+
+    {% for flavor in page.flavors %}
+    <div class="download-device-title">
+      <h4>{{ flavor | downcase }}</h4>
+      <small>{{ site.download_build_date }}</small>
+    </div>
+    <ul class="inline-download-links">
+      <li>
+        <a
+          href="{{ site.download_mirror }}/void-live-{{ page.name }}-{{ site.download_build_date | date: '%Y%m%d' }}-{{ flavor | downcase }}.iso"
+          >Live image</a
+        >
+        <span class="label label-default">glibc</span>
+      </li>
+      {% if page.supports_musl %}
+      <li>
+        <a
+          href="{{ site.download_mirror }}/void-live-{{ page.name }}-musl-{{ site.download_build_date | date: '%Y%m%d' }}-{{ flavor | downcase }}.iso"
+          >Live image</a
+        >
+        <span class="label label-warning">musl</span>
+      </li>
+      {% endif %}
+    </ul>
+    {% endfor %}
+  </div>
+</div>

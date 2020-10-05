@@ -173,3 +173,91 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
 	background-color: black;
 	border-color: black;
 }
+
+.tab-bar {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #ddd;
+}
+.tab-bar li {
+  padding: 1em 2em;
+  cursor: pointer;
+  border-bottom: 2px solid white;
+  transition: border-color 0.4s;
+}
+.tab-bar li:hover {
+  border-bottom: 2px solid #ddd;
+}
+.tab-bar li.active {
+  font-weight: bold;
+  border-bottom: 2px solid #478061;
+}
+@media (max-width: 500px) {
+  .tab-bar li {
+    padding: 1em;
+  }
+}
+.tab-bar li a {
+  color: inherit;
+}
+.tab-bar li a:focus {
+  text-decoration: none;
+}
+
+.split-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+.split-section h3 {
+  margin-top: 20px;
+  padding-top: 0;
+}
+.split-section > div {
+  flex: 1;
+}
+.split-section > div:first-of-type {
+  padding-right: 4rem;
+}
+@media (max-width: 600px) {
+  .split-section {
+    flex-direction: column;
+  }
+  .split-section > div:first-of-type {
+    padding-right: 0;
+  }
+}
+
+.download-device-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.download-device-title h4 {
+  margin-top: 2rem;
+}
+
+.inline-download-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #ddd;
+}
+.inline-download-links:last-of-type {
+  border-bottom: none;
+}
+.inline-download-links li {
+  margin-right: 1.5em;
+  margin-bottom: 2rem;
+}
+.inline-download-links .label-warning {
+  background-color: #fdf6e3;
+  color: #535353;
+}
+.inline-download-links .label-default {
+  background-color: #ddd;
+  color: #535353;
+}

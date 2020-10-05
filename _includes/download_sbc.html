@@ -1,0 +1,49 @@
+<div class="split-section">
+  <div>
+    <h3 id="{{ page.name }}">{{ page.name }}</h3>
+    {{ include.content | markdownify }}
+  </div>
+  <div>
+    {% for device in page.devices %}
+    <div class="download-device-title">
+      <h4>
+        {{ device.name }}
+        {% if device.arch %}
+        ({{ device.arch }})
+        {% endif %}
+      </h4>
+      <small>{{ site.download_build_date }}</small>
+    </div>
+    <ul class="inline-download-links">
+      <li>
+        <a
+          href="{{ site.download_mirror }}/void-{{ device.name }}-{{ site.download_build_date | date: '%Y%m%d' }}.img.xz"
+          >Live image</a
+        >
+        <span class="label label-default">glibc</span>
+      </li>
+      <li>
+        <a
+          href="{{ site.download_mirror }}/void-{{ device.name }}-musl-{{ site.download_build_date | date: '%Y%m%d' }}.img.xz"
+          >Live image</a
+        >
+        <span class="label label-warning">musl</span>
+      </li>
+      <li>
+        <a
+          href="{{ site.download_mirror }}/void-{{ device.name }}-PLATFORMFS-{{ site.download_build_date | date: '%Y%m%d' }}.tar.xz"
+          >rootfs tarball</a
+        >
+        <span class="label label-default">glibc</span>
+      </li>
+      <li>
+        <a
+          href="{{ site.download_mirror }}/void-{{ device.name }}-musl-PLATFORMFS-{{ site.download_build_date | date: '%Y%m%d' }}.tar.xz"
+          >rootfs tarball</a
+        >
+        <span class="label label-warning">musl</span>
+      </li>
+    </ul>
+    {% endfor %}
+  </div>
+</div>
