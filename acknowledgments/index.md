@@ -33,3 +33,8 @@ Leah Neukirchen sponsors the aarch64 build machine.
 ## [Tj Vanderpoel](#)
 
 Tj Vanderpoel sponsors the musl build machine.
+
+## [Pulux](#)
+
+Pulux sponsors b-lej-de, which hosts [Void's monitoring
+infrastructure](https://grafana.s.voidlinux.org/).
