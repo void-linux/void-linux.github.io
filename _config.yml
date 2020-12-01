@@ -7,7 +7,7 @@ highlighter: rouge
 
 permalink:   /news/:year/:month/:title.html
 
-snow:        0
+snow:        1
 
 plugins:
   - jekyll-redirect-from
