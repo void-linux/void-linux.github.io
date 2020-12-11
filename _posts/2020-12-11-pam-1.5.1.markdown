@@ -1,0 +1,26 @@
+---
+title: Upcoming PAM upgrade requires review of custom configurations
+layout: post
+---
+
+Void Linux currently packages PAM version 1.3.0 and, until today, a standard
+PAM configuration that requires the `pam_tally` and `pam_lastlog`
+authentication modules. The `pam_tally` module was
+[deprecated in 1.4.0 and removed in 1.5.0](https://raw.githubusercontent.com/linux-pam/linux-pam/master/NEWS),
+and the `pam_lastlog` module is no longer built for musl systems. The Void team
+plans to [upgrade to PAM 1.5.1](https://github.com/void-linux/void-packages/pull/25506)
+by the end of the year.
+
+For the upgraded PAM to function properly, any `pam_tally` (and, for musl
+users, `pam_lastlog`) requirements must be removed from the configuration files
+in `/etc/pam.d`. An updated [`pam-base` package](https://github.com/void-linux/void-packages/commit/e065ac229d78c4a1819098c7bda45bbd717120ba)
+released today removes the `pam_tally` and `pam_lastlog` requirements from the
+standard configuration. If you have not modified the standard PAM
+configuration and have not enabled the XBPS `keepconf` option described in
+[`xbps.d(5)`](https://man.voidlinux.org/xbps.d.5), upgrading the `pam-base`
+package should be sufficient to adjust your configuration.
+
+Whether or not you have modified the PAM configuration, please make sure to
+upgrade `pam-base` and confirm that no configuration files in `/etc/pam.d`
+contain references to the `pam_tally` module (and `pam_lastlog` on musl)
+**before** upgrading to PAM 1.5.1 when it becomes available.
