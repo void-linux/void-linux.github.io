@@ -16,7 +16,7 @@ An internet connection via Ethernet or WiFi is required for network installation
 
 ### Verifying file integrity and its digital signature
 
-Prior to using any image you're strongly encouraged to validate the
-signatures on the image to ensure they haven't been tampered with.
-The process for validating these keys can be found [in the
-documentation](https://docs.voidlinux.org/installation/index.html#downloading-installation-media).
+It is strongly recommended to validate the integrity and authenticity of any
+downloaded image before using it, to ensure it hasn’t been tampered with.
+[Instructions on how to do that](https://docs.voidlinux.org/installation/index.html#verifying-images)
+are provided in the [Void Handbook](https://docs.voidlinux.org/).
