@@ -1,0 +1,43 @@
+---
+title: Upcoming glibc upgrade requires updates for other packages on 32-bit machines
+layout: post
+---
+
+**Note:** This only applies to users of Void's glibc version on 32-bit
+machines. If the command `xbps-uhelper arch` prints something other than
+`i686`, `armv7l` or `armv6l`, like `armv6l-musl`, you don't need to do
+anything.
+
+Void Linux currently packages glibc version 2.30, but is going to update to
+2.32 soon, together with the long awaited GCC 10. Since this new version makes
+use of new system calls, due to the ongoing time64 (support for times after
+2038 on 32-bit platforms) work on glibc, applications with restrictive seccomp
+filters that haven't been rebuilt for the new glibc version **will stop
+working**. Packages with such issues include:
+
+- `openssh`
+- `firefox`
+- `chromium`
+- `qt5-webengine` (and consequently dependants, such as `qutebrowser`)
+- `electron*` (and consequently dependants, such as `element-desktop`)
+
+We will be pushing updates to these packages *before* the glibc update, if
+possible, but it won't be possible for all of them. This includes `openssh`,
+which means you can be **locked out of your system** if that's what you use to
+access it and you perform a partial upgrade that only includes the `glibc`
+package.
+
+Therefore, even though Void enables partial upgrades, you should perform a full
+system upgrade when `glibc` appears in the `xbps-install -Su` list. Be sure to
+test these packages - for `openssh` this includes actually opening a session,
+since `sshd` itself runs without issue. If for some reason something in your
+system stops working, you can of course reinstall the old `glibc` package using
+[xdowngrade(1)](https://man.voidlinux.org/xtools.1) from the `xtools` package:
+
+```
+# xdowngrade /var/cache/xbps/glibc-2.30_2.x86_64.xbps /var/cache/xbps/glibc-locales-2.30_2.x86_64.xbps
+```
+
+If we missed some package with this issue, please let us know! You can [open an
+issue](https://github.com/void-linux/void-packages/issues/new) on GitHub or
+ping us in the `#voidlinux` channel on <https://freenode.net>.
