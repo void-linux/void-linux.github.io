@@ -111,35 +111,35 @@ img, .video {
 	background-position:center right;
 }
 
-#voidSearch_result {
+.void-search-results {
 	padding:10px;
 	margin:left;
 }
 
-#voidSearch_result td,
-#voidSearch_result th {
+.void-search-results td,
+.void-search-results th {
 	padding:5pt;
 }
-#voidSearch_result td.version,
-#voidSearch_result td.revision,
-#voidSearch_result td.size {
+.void-search-results td.version,
+.void-search-results td.revision,
+.void-search-results td.size {
 	padding:10px;
 	text-align:right;
 }
 
-#voidSearch_result tr td {
+.void-search-results tr td {
 	color:#555;
 }
 
-#voidSearch_result tr:hover td {
+.void-search-results tr:hover td {
 	color:#000;
 }
 
-#voidSearch_result tr:nth-child(even) {
+.void-search-results tr:nth-child(even) {
 	background:#ddd;
 }
 
-#voidSearch_result tr th {
+.void-search-results tr th {
 	background:transparent !important;
 }
 #donations {

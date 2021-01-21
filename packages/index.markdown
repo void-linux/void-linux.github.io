@@ -17,7 +17,8 @@ title: Enter the void - Packages
  </div>
  <button type="submit" class="btn btn-green" id="voidSearch_submit">Search</button>
 </form>
-<table id="voidSearch_result"></table>
+
+<table id="voidSearch_result" class="void-search-results"></table>
 
 <script src="/assets/js/voidsearch.js" async></script>
 
