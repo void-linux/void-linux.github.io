@@ -59,7 +59,7 @@
         $.getJSON(uri("/v1/query/" + archs.val(), { q: q }))
             .done((data) => {
                 packages = data.data || [];
-                showPackages(packages, false);
+                showPackages(packages, false, q);
             })
             .always(() => { query.removeClass("loading"); });
     }
@@ -75,8 +75,17 @@
         return tr;
     }
 
-    function showPackages(packages, showAll) {
+    function transformPackageForPackageCell(p) {
+        let ghSlug = p.name.replace(/-(?:32bit|dbg)$/, "");
+        p.anchor = "<a href=\"https://github.com/void-linux/void-packages/tree/master/srcpkgs/"
+            + ghSlug + "\" target=\"_blank\" title=\"View on GitHub\">" + p.name + "</a>";
+        p.filename_size = typeof(p.filename_size) == 'number' ? formatSize(p.filename_size) : p.filename_size;
+        return p;
+    }
+
+    function showPackages(packages, showAll, searchQuery = '') {
         packages = packages || [];
+        var packagesExactMatch = getPackagesExactMatch(packages, searchQuery);
         const tooMany = !showAll && packages.length > maxResults;
         if (tooMany) {
             packages = packages.slice(0, maxResults);
@@ -89,17 +98,37 @@
         table.append(
             header,
             packages.map((p) => {
-                let ghSlug = p.name.replace(/-(?:32bit|dbg)$/, "");
-                p.anchor = "<a href=\"https://github.com/void-linux/void-packages/tree/master/srcpkgs/"
-                    + ghSlug + "\" target=\"_blank\" title=\"View on GitHub\">" + p.name + "</a>";
-                p.filename_size = formatSize(p.filename_size);
-                return packageCell(p, "<td>");
+                return packageCell(transformPackageForPackageCell(p), "<td>");
             })
         );
 
         if (tooMany) {
             table.append(tooManyNotice());
         }
+
+        if (packagesExactMatch.length >= 1) {
+            $('#voidSearch_result tr:first').after(
+                packagesExactMatch.map((p) => {
+                    return packageCell(
+                        transformPackageForPackageCell(p),
+                        "<td style='background-color: #dff0d8; font-weight:bold'>"
+                    );
+                })
+            );
+        }
+
+    }
+
+    function getPackagesExactMatch(packages, searchQuery) {
+        if (searchQuery.trim() === "") {
+            return [];
+        }
+        packages = packages || [];
+        if (packages.length <= 1) {
+            return [];
+        }
+        searchQuery = searchQuery.trim().toLowerCase();
+        return packages.filter(p => p.name.toLowerCase() === searchQuery);
     }
 
     function setArchitectures(archNames) {
