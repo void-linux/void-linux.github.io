@@ -17,6 +17,7 @@ An internet connection via Ethernet or WiFi is required for network installation
 ### Verifying file integrity and its digital signature
 
 It is strongly recommended to validate the integrity and authenticity of any
-downloaded image before using it, to ensure it hasn’t been tampered with.
-[Instructions on how to do that](https://docs.voidlinux.org/installation/index.html#verifying-images)
+downloaded image or tarball before using it, to ensure it hasn’t been tampered
+with. [Instructions on how to do
+that](https://docs.voidlinux.org/installation/index.html#verifying-images)
 are provided in the [Void Handbook](https://docs.voidlinux.org/).
