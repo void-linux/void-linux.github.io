@@ -1,0 +1,93 @@
+---
+title: Switching back to OpenSSL
+layout: post
+---
+
+The Void Linux team is [switching back to
+OpenSSL](https://github.com/void-linux/void-packages/pull/21056) on March 5th,
+2021 (2021-03-05).
+
+For most users, there should be no noticeable change. If you have any packages
+installed that are no longer provided by Void, or your system has explicit
+dependencies on LibreSSL, you will of course need to take action to ensure your
+system continues to function after the switch.
+
+If you experience any issues, feel free to reach out to us! You can [open an
+issue](https://github.com/void-linux/void-packages/issues/new) on GitHub or
+ping us in the `#voidlinux` channel on <https://freenode.net>.
+
+---
+
+A discussion about switching to OpenSSL began in a Request For Comments (RFC)
+posted on April 12th, 2020, at
+[void-linux/void-packages#20935](https://github.com/void-linux/void-packages/issues/20935).
+Since then, a majority of Void maintainers have expressed support for the move.
+The main reasons for the switch are as listed in the RFC:
+
+- Because most software targets OpenSSL, Void will no longer have to maintain
+  (in some cases, very complex) patches to support LibreSSL. The complexity of
+  the OpenSSL API makes such patching burdensome and risky, with mistakes
+  potentially causing runtime errors or security issues - we have avoided
+  those, as far as we know, but this has required a lot of effort.
+- Extensive support for platform specific optimizations outside of x86.
+- Access to new standards and algorithms earlier, such as full TLS 1.3 support.
+
+As a result of the above, the switch to OpenSSL is expected to lessen the time
+and effort spent on packages that require an OpenSSL-like library. This is
+especially notable because most other distributions which used LibreSSL have
+dropped it, so there aren't as many people amongst whom to distribute the
+effort.
+
+- Alpine, which switched to LibreSSL temporarily, switched back to OpenSSL in
+  January 2019, with the [3.9.0
+  release](https://alpinelinux.org/posts/Alpine-3.9.0-released.html).
+- More recently, Gentoo, which used to offer LibreSSL as an option, has
+  [discontinued that
+  support](https://www.gentoo.org/support/news-items/2021-01-05-libressl-support-discontinued.html)
+  as well.
+
+For further context, LWN [covered the subject of LibreSSL on
+Linux](https://lwn.net/Articles/841664/) at the beginning of this year. The
+article also covers the attention and improvements that the OpenSSL project has
+received post-Heartbleed, which was one of the main reasons for Void's initial
+switch to LibreSSL.
+
+For an example of extra work caused by packages that expect OpenSSL, Void's
+version of Qt5 is heavily patched in order to properly support LibreSSL.
+Furthermore, the just released Qt6 would also need significant effort to be
+patched and maintained to use LibreSSL, without the possibility of such effort
+being upstreamed.
+
+At the same time, other software can have limited functionality or hit edge
+cases when using LibreSSL, due to not being thoroughly tested with it. One
+example is Python, which is limited in the ciphers available to running
+programs, since it depends on what the SSL library provides - they are even
+[considering dropping any support for LibreSSL in the
+future](https://www.python.org/dev/peps/pep-0644/#libressl-support). Another
+example is OpenVPN, which we have received bug reports for connection issues
+with LibreSSL
+([void-linux/void-packages#23413](https://github.com/void-linux/void-packages/issues/23413)).
+This required us to switch the package to use Mbed TLS by default, resulting in
+some limitations to the resulting package. With the switch to OpenSSL, the
+OpenVPN package will now be provided in the most widely deployed and tested
+configuration, so similar compatibility hiccups are unlikely to reappear.
+
+Unfortunately, this move has required us to drop some packages that rely on the
+OpenSSL 1.0.1 API; while LibreSSL maintains compatibility with this legacy API,
+modern OpenSSL has abandoned it.
+
+One great feature of LibreSSL not offered by OpenSSL is the `libtls` library,
+which aims to be a hard to misuse interface for communicating over the web
+safely, with sane defaults and hard to misuse. Some of the packages we ship
+depend on it, so work has been done to package a standalone version of it in
+[void-linux/void-packages#28732](https://github.com/void-linux/void-packages/pull/28732).
+
+The Void Linux team is grateful for the work of the OpenBSD community on
+[libressl-portable](https://github.com/libressl-portable/portable), we have
+greatly benefited from their work. Void continues to package other excellent
+OpenBSD software, including OpenSSH and signify, which is our tool of choice
+for signing live images.
+
+In conclusion, we expect our switch to OpenSSL to ease maintenance overhead,
+provide the same reliable experience to users, and improve functionality in
+select packages. Look forward to the update landing some time after March 5th!
