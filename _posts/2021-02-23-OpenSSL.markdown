@@ -78,8 +78,8 @@ modern OpenSSL has abandoned it.
 
 One great feature of LibreSSL not offered by OpenSSL is the `libtls` library,
 which aims to be a hard to misuse interface for communicating over the web
-safely, with sane defaults and hard to misuse. Some of the packages we ship
-depend on it, so work has been done to package a standalone version of it in
+safely, with sane defaults. Some of the packages we ship depend on it, so work
+has been done to package a standalone version of it in
 [void-linux/void-packages#28732](https://github.com/void-linux/void-packages/pull/28732).
 
 The Void Linux team is grateful for the work of the OpenBSD community on
