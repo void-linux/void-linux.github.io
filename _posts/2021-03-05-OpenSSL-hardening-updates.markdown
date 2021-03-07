@@ -1,5 +1,5 @@
 ---
-title: Friday in the Void: OpenSSL and Kernel Hardening
+title: "Friday in the Void: OpenSSL and Kernel Hardening"
 layout: post
 ---
 
