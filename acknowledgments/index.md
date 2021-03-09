@@ -23,16 +23,23 @@ available for builds.
 
 ## [Enno Boland IT](https://ebo.land)
 
-Enno Boland IT sponsors the glibc build machine, mail servers, and
+Enno Boland IT sponsors the musl build machine, mail servers, and
 root mirror.
 
 ## [Leah Neukirchen](http://leahneukirchen.org/)
 
 Leah Neukirchen sponsors the aarch64 build machine.
 
+## [Pullmoll](https://pullmoll.github.io) (a.k.a. Jürgen Buchmüller)
+
+Pullmoll sponsors the glibc build machine and shadow mirror, and
+wishes to dedicate their sponsorship as follows:
+
+Dedicated to Helga Buchmüller. Thank you for life.
+
 ## [Tj Vanderpoel](#)
 
-Tj Vanderpoel sponsors the musl build machine.
+Tj Vanderpoel sponsors a Tier 1 mirror in the USA.
 
 ## [Pulux](#)
 
