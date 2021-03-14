@@ -82,6 +82,11 @@ a:hover {
 	position:relative;
 	transition:transform 2s ease;
 }
+
+#davoid .fg.standard-mode {
+    content: url(/assets/img/void_fg.png);
+}
+
 #davoid .fg {
 	position:absolute;
 	top:50%;
@@ -293,9 +298,10 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
     background-color: white;
   }
   .alert-warning {
-    color: #ffd804;
+    font-weight: bold;
+    color: #ccc;
     background-color: inherit;
-    border-color: #888;
+    border: 2px solid #295340;
   }
   pre {
     background-color: #404040;
@@ -331,5 +337,8 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
   }
   .navbar {
     background-color: #295340;
+  }
+  #davoid .fg.standard-mode {
+    content: url(/assets/img/void_fg_dark.png);
   }
 }
