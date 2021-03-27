@@ -5,7 +5,7 @@ comments: true
 ---
 
 <center>
-	<img src="assets/img/pullmoll.png">
+	<img src="assets/img/pullmoll.png" alt="Picture of Pullmoll">
 </center>
 
 Today, we were informed that our long time contributor and maintainer Jürgen Buchmüller (pullmoll) has passed away.
