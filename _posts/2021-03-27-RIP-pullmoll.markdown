@@ -12,9 +12,9 @@ Today, we were informed that our long time contributor and maintainer Jürgen
 Buchmüller (pullmoll) has passed away.
 
 With boundless dedication, Jürgen was one of the most prolific contributors to
-the Void project and sponsored the project financially too.
+the Void project and sponsored the project financially, too.
 
-He investeded lots of his time in keeping gcc up to date, supplied tons of
+He invested lots of his time in keeping gcc up to date, supplied tons of
 patches to port packages to new compilers and platforms and also cared about
 simple updates of packages.
 
