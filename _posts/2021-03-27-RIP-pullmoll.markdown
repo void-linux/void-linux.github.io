@@ -10,7 +10,7 @@ comments: true
 
 Today, we were informed that our long time contributor and maintainer Jürgen Buchmüller (pullmoll) has passed away.
 
-With boundless dedication, Jürgen was one of the most prolofic contributors to the Void project.
+With boundless dedication, Jürgen was one of the most prolific contributors to the Void project.
 
 He was not only a dedicated and driven developer in the Void Linux project, he also was one of the friendliest and warmest person we had the pleasure to work with. Jürgen will be missed as a steady force and a calm and wise voice in discussions. Most of all, he will be remembered as a friend to all of us.
 
