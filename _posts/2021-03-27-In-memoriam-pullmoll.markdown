@@ -4,7 +4,7 @@ title: "In memoriam pullmoll"
 ---
 
 <center>
-	<img src="assets/img/pullmoll.png" alt="Picture of Pullmoll">
+	<img src="/assets/img/pullmoll.png" alt="Picture of Pullmoll">
 </center>
 
 Today, we were informed that our long time contributor and maintainer Jürgen
