@@ -14,9 +14,9 @@ Buchmüller (pullmoll) has passed away.
 With boundless dedication, Jürgen was one of the most prolific contributors to
 the Void project and sponsored the project financially, too.
 
-He invested lots of his time in keeping gcc up to date, supplied tons of
+He invested lots of his time in keeping GCC up to date and well tested, supplied tons of
 patches to port packages to new compilers and platforms and also took care of
-simple updates of packages.
+updating many packages, including several non-trivial ones, like OpenJDK and LibreOffice.
 
 He was not only a dedicated and driven developer in the Void Linux project, he
 also was one of the friendliest and warmest person we had the pleasure to work
