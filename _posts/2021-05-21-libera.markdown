@@ -1,0 +1,15 @@
+---
+title: IRC network switch to Libera
+layout: post
+---
+
+Given the recent [upheaval at Freenode](https://lwn.net/Articles/856543/), the
+Void Linux team has made the decision to switch to another IRC network. Our
+network of choice is [libera.chat](https://libera.chat), managed by former
+Freenode staff. When accessing `#voidlinux` and `#xbps`, be sure to use
+`irc.libera.chat`! We are excited to welcome you there, and hope this doesn't
+inconvenience anyone unduly. Be sure to let us know of any issues.
+
+Contacting us will remain the same: you can [open an
+issue](https://github.com/void-linux/void-packages/issues/new) on GitHub or
+ping us in the new `#voidlinux` channel on [libera.chat](https://libera.chat).
