@@ -9,6 +9,7 @@ permalink:   /news/:year/:month/:title.html
 
 snow:        0
 christmas:   0
+pride:       1
 
 plugins:
   - jekyll-redirect-from
