@@ -34,6 +34,7 @@
     let archs;
     let query;
     let form;
+    let params;
 
     let packages = [];
 
@@ -46,22 +47,44 @@
         archs = $("#voidSearch_archs");
         query = $("#voidSearch_query");
         form = $("#voidSearch");
-        form.submit(packageQuery);
+        form.submit(formPackageQuery);
+        params = new URLSearchParams(document.location.search.substring(1));
 
         $.getJSON(uri("/v1/archs"))
-            .done((data) => setArchitectures(data.data.sort()));
+            .done((data) => {
+                setArchitectures(data.data.sort());
+                initPackageQuery();
+            });
     }
 
-    function packageQuery(e) {
+    function initPackageQuery() {
+        // if there are query parameters arch and q, do a search for that query on that arch
+        const arch = archs.val();
+        const q = params.get("q");
+        if (q !== null && q !== "") {
+            query.val(q);
+            packageQuery(arch, q);
+        }
+    }
+
+    function formPackageQuery(e) {
         e.preventDefault();
-        query.addClass("loading");
+        const arch = archs.val();
         const q = query.val().trim();
-        $.getJSON(uri("/v1/query/" + archs.val(), { q: q }))
+        if (q !== null && q !== "") {
+            packageQuery(arch, q);
+        }
+    }
+
+    function packageQuery(arch, q) {
+        query.addClass("loading");
+        $.getJSON(uri("/v1/query/" + arch, { q: q }))
             .done((data) => {
                 packages = data.data || [];
                 showPackages(packages, false, q);
             })
             .always(() => { query.removeClass("loading"); });
+        history.replaceState(null, null, "?arch=" + arch + "&q=" + q);
     }
 
     function packageCell(pkg, cellType) {
@@ -132,8 +155,8 @@
     }
 
     function setArchitectures(archNames) {
-        // Get the current value of the select
-        const val = archs.val();
+        // Get the current value of the select from url params
+        let val = params.get("arch");
         let found = false;
         let seenX86_64 = false;
         archs.children().remove();
