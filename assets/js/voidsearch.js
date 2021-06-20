@@ -116,6 +116,7 @@
 
         table.children().remove();
         if (packages.length == 0) {
+            table.append(noResultsNotice());
             return;
         }
         table.append(
@@ -202,6 +203,17 @@
             .attr("colspan", packageColumns.length)
             .text("Too many results (over " + maxResults + "). ")
             .append($("<a>").text("Show all.").click(() => showPackages(packages, true)))
+        );
+    }
+
+    function noResultsNotice() {
+        let notice = $("<tr>");
+        return notice.append(
+            $("<td>")
+            .addClass("noresults")
+            .attr("colspan", packageColumns.length)
+            .attr("style", "font-weight:bold; padding-top: 10pt")
+            .text("No results found.")
         );
     }
 
