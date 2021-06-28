@@ -30,13 +30,6 @@ root mirror.
 
 Leah Neukirchen sponsors the aarch64 build machine.
 
-## [Pullmoll](https://pullmoll.github.io) (a.k.a. Jürgen Buchmüller)
-
-Pullmoll sponsors the glibc build machine and shadow mirror, and
-wishes to dedicate their sponsorship as follows:
-
-Dedicated to Helga Buchmüller. Thank you for life.
-
 ## [Tj Vanderpoel](#)
 
 Tj Vanderpoel sponsors a Tier 1 mirror in the USA.
@@ -45,3 +38,11 @@ Tj Vanderpoel sponsors a Tier 1 mirror in the USA.
 
 Pulux sponsors b-lej-de, which hosts [Void's monitoring
 infrastructure](https://grafana.s.voidlinux.org/).
+
+# Sponsor Emeritus
+
+## [Jürgen Buchmüller](#)
+
+In life, the late Jürgen Buchmüller (known online as pullmoll) generously
+sponsored the glibc builder and shadow mirror in the name of his mother, Helga
+Buchmüller.
