@@ -17,5 +17,12 @@ collections:
   platforms:
     output: true
 
+defaults:
+  - scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # automatically set is_post=true for all posts
+
 download_mirror: https://alpha.de.repo.voidlinux.org/live/current
 download_build_date: 2021-09-30
