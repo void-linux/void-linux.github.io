@@ -2,20 +2,14 @@
 name: arm platforms
 date: 1970-01-01 05:00:00
 devices:
-- name: beaglebone
-  arch: armv7
-- name: cubieboard2
-  arch: armv7
-- name: odroid-c2
-  arch: armv7
 - name: rpi
   arch: armv6
 - name: rpi2
   arch: armv7
 - name: rpi3
   arch: aarch64
-- name: usbarmory
-  arch: armv7
+- name: rpi4
+  arch: aarch64
 ---
 
 {% capture download_details %}
@@ -30,7 +24,6 @@ Deprecated instructions for the following platforms can be found in these wiki p
 - [BeagleBone/BeagleBone Black](https://wiki.voidlinux.org/Beaglebone)
 - [Cubieboard2](https://wiki.voidlinux.org/Cubieboard2_SD-Card)
 - [Odroid U2/U3](https://wiki.voidlinux.org/Odroid_U2)
-- [USB Armory](https://wiki.voidlinux.org/USB_Armory)
 {% endcapture %}
 
 {% include download_sbc.html content=download_details %}
