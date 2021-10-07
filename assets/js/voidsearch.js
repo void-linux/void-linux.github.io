@@ -135,7 +135,7 @@
                 packagesExactMatch.map((p) => {
                     return packageCell(
                         transformPackageForPackageCell(p),
-                        "<td style='background-color: #dff0d8; font-weight:bold'>"
+                        "<td class='exact'>"
                     );
                 })
             );

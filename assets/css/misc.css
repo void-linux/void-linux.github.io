@@ -132,6 +132,11 @@ img, .video {
 	text-align:right;
 }
 
+.void-search-results td.exact {
+  background:#dff0d8;
+  font-weight:bold;
+}
+
 .void-search-results tr td {
 	color:#555;
 }
@@ -344,8 +349,8 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
   .void-search-results tr:hover td {
     color:#62b086;
   }
-  .void-search-results tr:nth-child(2) td {
-    background:#295340 !important;
+  .void-search-results td.exact {
+    background:#295340;
   }
   .void-search-results tr:nth-child(even) {
     background:#111;
