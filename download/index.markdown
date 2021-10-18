@@ -22,5 +22,5 @@ with. [Instructions on how to do
 that](https://docs.voidlinux.org/installation/index.html#verifying-images)
 are provided in the [Void Handbook](https://docs.voidlinux.org/).
 
-It will be necessary to download the [checksum file]({{ site.download_mirror }}/sha256sums.txt)
+It will be necessary to download the [checksum file]({{ site.download_mirror }}/sha256sum.txt)
 and its [signature]({{ site.download_mirror }}/sha256sums.txt) for this step.
