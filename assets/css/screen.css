@@ -1,14 +1,17 @@
 body {
-	font-family: 'Ubuntu', sans-serif;
-	padding-top: 70px; /* For bootstrap fixed navbar
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  padding-top: 70px; /* For bootstrap fixed navbar
 	background-color: #111;
 	color: #ddd; */
 }
 
 code {
-	font-family: 'Ubuntu Mono', monospace;
-	background-color: #fdf6e3;
-	color: #000;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  background-color: #fdf6e3;
+  color: #000;
 }
 
 .navbar-inverse .navbar-nav > li > a {
