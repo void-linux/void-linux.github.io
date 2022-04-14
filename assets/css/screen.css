@@ -16,12 +16,6 @@ code {
 	color: #fff;
 }
 
-.navbar-sticky {
-	position: sticky;
-	top: 0;
-	border-radius: 0;
-}
-
 
 .vcenter {
 	display: inline-block;
