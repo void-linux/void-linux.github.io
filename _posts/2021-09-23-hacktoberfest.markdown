@@ -12,7 +12,7 @@ selection of packages and make sure your system remains up to date.
 
 Updating packages is very easy.  You can select a package from the
 list of [out of date
-packages](http://alpha.de.repo.voidlinux.org/void-updates/void-updates.txt)
+packages](http://repo-default.voidlinux.org/void-updates/void-updates.txt)
 and update it using the tools in the [void-packages
 repo](https://github.com/void-linux/void-packages).  The
 [manual](https://github.com/void-linux/void-packages/blob/master/Manual.md)

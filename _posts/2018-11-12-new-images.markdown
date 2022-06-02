@@ -38,5 +38,5 @@ chroot and are available for all architectures we currently compile
 for.
 
 You can find all images and rootfs tarballs at
-[https://alpha.de.repo.voidlinux.org/live/current](https://alpha.de.repo.voidlinux.org/live/current),
+[https://repo-default.voidlinux.org/live/current](https://repo-default.voidlinux.org/live/current),
 or in the /live/current directory on any mirror near you.

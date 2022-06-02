@@ -53,7 +53,7 @@ problems in the past with people adding packages and then abandoning
 them, so expect to meet significant resistance if you are a new
 contributor trying to add a package to the repo.  Updating packages is
 very easy.  You can select a package from the list of [out of date
-packages](http://alpha.de.repo.voidlinux.org/void-updates/void-updates.txt)
+packages](http://repo-default.voidlinux.org/void-updates/void-updates.txt)
 and update it using the tools in the [void-packages
 repo](https://github.com/void-linux/void-packages).  The
 [manual](https://github.com/void-linux/void-packages/blob/master/Manual.md)
