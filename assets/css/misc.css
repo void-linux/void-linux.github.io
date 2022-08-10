@@ -165,6 +165,7 @@ img, .video {
 .navbar {
 	background-color:#478061;
 	border:0;
+	z-index: 9999;
 }
 .nav li:hover {
 	background-color: black;
