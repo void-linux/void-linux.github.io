@@ -8,45 +8,6 @@
     </div>
   </div>
   <div>
-    <div class="download-device-title">
-      <h4>base</h4>
-      <small>{{ site.download_build_date }}</small>
-    </div>
-    <ul class="inline-download-links">
-      <li>
-        <a
-          href="{{ site.download_mirror }}/void-live-{{ page.name }}-{{ site.download_build_date | date: '%Y%m%d' }}.iso"
-          >Live image</a
-        >
-        <span class="label label-default">glibc</span>
-      </li>
-      {% if page.supports_musl %}
-      <li>
-        <a
-          href="{{ site.download_mirror }}/void-live-{{ page.name }}-musl-{{ site.download_build_date | date: '%Y%m%d' }}.iso"
-          >Live image</a
-        >
-        <span class="label label-warning">musl</span>
-      </li>
-      {% endif %}
-      <li>
-        <a
-          href="{{ site.download_mirror }}/void-{{ page.name }}-ROOTFS-{{ site.download_build_date | date: '%Y%m%d' }}.tar.xz"
-          >rootfs tarball</a
-        >
-        <span class="label label-default">glibc</span>
-      </li>
-      {% if page.supports_musl %}
-      <li>
-        <a
-          href="{{ site.download_mirror }}/void-{{ page.name }}-musl-ROOTFS-{{ site.download_build_date | date: '%Y%m%d' }}.tar.xz"
-          >rootfs tarball</a
-        >
-        <span class="label label-warning">musl</span>
-      </li>
-      {% endif %}
-    </ul>
-
     {% for flavor in page.flavors %}
     <div class="download-device-title">
       <h4>{{ flavor | downcase }}</h4>
@@ -68,6 +29,24 @@
         >
         <span class="label label-warning">musl</span>
       </li>
+      {% endif %}
+      {% if flavor == "base" %}
+      <li>
+        <a
+          href="{{ site.download_mirror }}/void-{{ page.name }}-ROOTFS-{{ site.download_build_date | date: '%Y%m%d' }}.tar.xz"
+          >rootfs tarball</a
+        >
+        <span class="label label-default">glibc</span>
+      </li>
+      {% if page.supports_musl %}
+      <li>
+        <a
+          href="{{ site.download_mirror }}/void-{{ page.name }}-musl-ROOTFS-{{ site.download_build_date | date: '%Y%m%d' }}.tar.xz"
+          >rootfs tarball</a
+        >
+        <span class="label label-warning">musl</span>
+      </li>
+      {% endif %}
       {% endif %}
     </ul>
     {% endfor %}
