@@ -356,3 +356,16 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
     background:#111;
   }
 }
+
+/* for is-void-dead-yet */
+#is-dead-title {
+  font-size: max(min(4rem, 4vw), 2rem);
+  text-align: center;
+}
+
+#is-dead-response {
+  font-size: min(8rem, 8vw);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
