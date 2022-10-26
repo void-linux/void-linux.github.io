@@ -13,7 +13,7 @@ served, and all of this infrastructure must be monitored and
 maintained.  On this page we'd like to thank the organizations and
 individuals that supply hardware for Void's use.
 
-## [23M GmbH](https://www.23m.com)
+## [23M GmbH](https://23m.com)
 
 23M sponsors a server for repo-de, our Tier 1 mirror located in
 central Germany.
