@@ -1,0 +1,15 @@
+---
+title: New utility for selecting XBPS mirrors
+layout: post
+---
+
+If you've ever had trouble [manually updating](https://docs.voidlinux.org/xbps/repositories/mirrors/changing.html#manual-method)
+the mirror XBPS uses, fear no more!
+You can now use the [`xmirror(1)`](https://man.voidlinux.org/xmirror.1) utility from the `xmirror`
+package to select a mirror, either interactively (by running `xmirror` with root privileges) or
+directly using `xmirror --set`.
+
+`xmirror` will make switching to the new [Fastly-sponsored mirror](https://voidlinux.org/news/2023/01/fastly-fast-forward.html)
+extremely easy to do.
+
+![screenshot of the main screen of xmirror in a terminal](/assets/img/xmirror.png)
