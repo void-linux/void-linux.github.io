@@ -1,0 +1,16 @@
+glibc builder
+musl builder
+aarch64 builder
+
+aarch64 builder -> glibc builder : rsync
+musl builder -> glibc builder : rsync
+
+glibc builder -> glibc builder : pkg-signer
+
+glibc builder -> shadow repo : rsync
+
+shadow repo -> repo-us : rsync
+shadow repo -> repo-fi : rsync
+shadow repo -> repo-de : rsync
+
+repo-fi -> repo-fastly : http
