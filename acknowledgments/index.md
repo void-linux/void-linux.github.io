@@ -31,6 +31,12 @@ available for builds.
 Enno Boland IT sponsors the musl build machine, mail servers, and
 root mirror.
 
+## [Fastly](https://www.fastly.com)
+
+Fastly sponsors repo-fastly, our globally-available CDN mirror.
+Their support has enabled us to improve the reliability and accessibility
+of package delivery worldwide.
+
 ## [Leah Neukirchen](http://leahneukirchen.org/)
 
 Leah Neukirchen sponsors the aarch64 build machine.
