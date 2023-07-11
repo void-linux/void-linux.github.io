@@ -25,4 +25,4 @@ defaults:
       is_post: true # automatically set is_post=true for all posts
 
 download_mirror: https://repo-default.voidlinux.org/live/current
-download_build_date: 2022-10-01
+download_build_date: 2023-06-28
