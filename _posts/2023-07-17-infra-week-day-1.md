@@ -1,5 +1,5 @@
 ---
-title: Infrastructure Week - Day 1: What is Infrastructure?
+title: "Infrastructure Week - Day 1: What is Infrastructure?"
 layout: post
 ---
 
