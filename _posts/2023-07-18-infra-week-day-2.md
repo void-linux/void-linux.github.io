@@ -1,5 +1,5 @@
 ---
-title: Infrastructure Week - Day 2: What Do We Do With Our Infrastructure?
+title: "Infrastructure Week - Day 2: What Do We Do With Our Infrastructure?"
 layout: post
 ---
 
