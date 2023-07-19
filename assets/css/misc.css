@@ -163,12 +163,25 @@ img, .video {
 	padding-right: 8em;
 }
 .navbar {
-	background-color:#478061;
-	border:0;
-	z-index: 1;
+  border: 0;
+  border-bottom: 1px grey dotted;
+  z-index: 1;
+  background-color: inherit;
 }
-.nav li:hover {
-	background-color: black;
+#void-collapsed-navbar {
+  display: flex !important;
+  justify-content: center;
+}
+.nav li a {
+  color: inherit;
+}
+.nav li a:hover {
+  box-shadow: inset 0 -2px 0 0 #295340;
+  background-color: transparent;
+}
+.nav li a:focus {
+  background-color: transparent;
+  color: inherit;
 }
 h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
 	padding-top:50px;
@@ -324,9 +337,6 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
   select::-ms-expand {
     display:none;
   }
-  .nav li:hover {
-    background-color: #222;
-  }
   .inline-download-links .label-default, .inline-download-links .label-warning {
     background-color: inherit;
   }
@@ -337,9 +347,6 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
   .inline-download-links .label-warning {
     border: 1px solid;
     color: #ffd804;
-  }
-  .navbar {
-    background-color: #295340;
   }
   #davoid .fg.standard-mode {
     content: url(/assets/img/void_fg_dark.png);
