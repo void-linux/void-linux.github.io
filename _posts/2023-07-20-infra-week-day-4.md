@@ -92,20 +92,20 @@ to serve under any name, so during an extended outage, the DNS entry
 for a given name can be changed and the traffic serviced by another
 mirror.  This allows us to present the illusion that the mirrors don't
 go down when we perform longer maintenance at the cost of some
-complexity in the DNS layer.  The mirrors don't just host sstatic
+complexity in the DNS layer.  The mirrors don't just host static
 content though.  We also serve the <https://man.voidlinux.org> site
 from the mirrors which involves a CGI executable and a collection of
 static man pages to be available.  The nginx frontends on each mirror
 are configured to first seek out their local services, but if those
-are unavailable they will reach across Void's private network to finda
-n instance of the service that is up.
+are unavailable they will reach across Void's private network to find an
+instance of the service that is up.
 
 This private network is a mesh of wireguard tunnels that span all our
 different machines and different providers.  You can think of it like
 a multi-cloud VPC which enables us to ignore a lot of the complexity
 that would otherwise manifest when operating in a multi-cloud design
-pattern.  Theprivate network also allows us to use distributed service
-instances while still fronting them trhough rlatively few points.
+pattern.  The private network also allows us to use distributed service
+instances while still fronting them through relatively few points.
 This improves security because very few people and places need access
 to the certificates for voidlinux.org, as opposed to the certificates
 having to be present on every machine.
@@ -126,10 +126,10 @@ somewhere else.  When the relocation is handled as a specific event
 rather than as the result of a machine going away, the service
 interruption is measured in seconds.
 
-## Design Choices and Tradeoffs
+## Design Choices and Trade-offs
 
-Of course there is no free lunch, and tehse choices come with
-tradeoffs.  Some of the design choices we've made have to do with the
+Of course there is no free lunch, and these choices come with
+trade-offs.  Some of the design choices we've made have to do with the
 difference in effort required to test a service locally and debug it
 remotely.  Containers help a lot with this process since its possible
 to run the exact same image with the exact same code in it as what is
@@ -143,7 +143,7 @@ problem, the infrastructure is checked into git and the old versions
 of the containers are retained, so we can easily roll back.
 
 We leverage the containers to make the workflows easier to debug in
-the genreal case, but of course the complexity doesn't go away.  Its
+the general case, but of course the complexity doesn't go away.  Its
 important to understand that container orchestrators don't remove
 complexity, quite to the contrary they increase it.  What they do is
 shift and concentrate the complexity from one group of people
@@ -151,12 +151,12 @@ shift and concentrate the complexity from one group of people
 shift allows for fewer people to need to have to care about the
 specifics of running applications or deploying servers, since they
 truly can say "well it works on my machine" and be reasonably
-confident that the samee container wil work when deployed on the
+confident that the same container will work when deployed on the
 fleet.
 
-The last major tradeoff that we make when deciding where to run
+The last major trade-off that we make when deciding where to run
 something is thinking about how hard it will be to move later if we
-decide we're unahppy with the provider.  Void is actually currently in
+decide we're unhappy with the provider.  Void is actually currently in
 the process of migrating our email server from one host to another at
 the time of writing due to IP reputation issues at our previous
 hosting provider.  In order to make it easier to perform the
