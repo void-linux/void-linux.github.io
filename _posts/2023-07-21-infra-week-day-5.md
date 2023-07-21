@@ -109,7 +109,7 @@ their functionality together.
 We primarily use containers to achieve this composeability.  Each
 container performs a single task or a well defined sub-process in a
 larger workflow.  For example we can look at the workflow required to
-serve <https://man.voidlinux.org/> In this workflow, a task runs
+serve <https://man.voidlinux.org/>. In this workflow, a task runs
 periodically to extract all man pages from all packages, then another
 process runs to copy those files to the mirrors, and finally a process
 runs to produce an HTTP response to a given man page request.  Notice
