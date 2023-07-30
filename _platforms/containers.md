@@ -10,7 +10,7 @@ All OCI container images are available on
 
 There are 3 images provided for each libc (`glibc` or `musl`):
 
-- `void-LIBC-full`: Large image based on the `base-minimal` package.
+- `void-LIBC-full`: Large image based on the `base-container` package.
   If you want something that is as close to a full void VM as possible,
   this is the image you want to start with. These images average 80-135MB.
 
