@@ -1,0 +1,27 @@
+<div class="split-section">
+  <div>
+    <h3 id="{{ page.name }}">{{ page.name }}</h3>
+    {{ include.content | markdownify }}
+  </div>
+  <div>
+    {% for flavor in page.flavors %}
+    <div class="download-device-title">
+      <h4>{{ flavor | default: 'base' | downcase }}</h4>
+    </div>
+    <ul class="inline-download-links">
+      <li>
+        <a
+          href="{{ site.container_url }}/void-glibc{% if flavor != '' %}-{{ flavor }}{% endif %}"
+          >void-glibc{% if flavor != '' %}-{{ flavor }}{% endif %}</a>
+        <span class="label label-default">glibc</span>
+      </li>
+      <li>
+        <a
+          href="{{ site.container_url }}/void-musl{% if flavor != '' %}-{{ flavor }}{% endif %}"
+          >void-musl{% if flavor != '' %}-{{ flavor }}{% endif %}</a>
+        <span class="label label-warning">musl</span>
+      </li>
+    </ul>
+    {% endfor %}
+  </div>
+</div>

@@ -2,7 +2,7 @@
 layout: download
 title: Enter the void - Downloads
 ---
-## Download installable base live images and rootfs tarballs
+## Download Void Linux
 
 All **live images** and **rootfs tarballs** are available at:
 
