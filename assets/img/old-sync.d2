@@ -1,0 +1,13 @@
+b-fsn-de: {
+    aarch64 builder -> _.a-fsn-de.package signer : rsync
+}
+a-fsn-de: {
+    glibc builder -> package signer
+    package signer -> _.a-hel-fi.shadow repo : rsync
+}
+a-hel-fi: {
+    musl builder -> _.a-fsn-de.package signer : rsync
+    shadow repo
+    shadow repo -> _.repo-fi : rsync
+    shadow repo -> _.repo-de : rsync
+}
