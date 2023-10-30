@@ -92,7 +92,7 @@ the Void operated mirrors.  This, as you might have guessed, is a CDN.
 As mentioned in the [Fast
 Forward](/news/2023/01/fastly-fast-forward.html) post, Void has
 generously been sponsored by Fastly, which has allowed us to provision
-a new repository URL that leverage's Fastly's global network to
+a new repository URL that leverages Fastly's global network to
 provide what should be the generally optimal mirror regardless of
 where in the world any particular end user exists.  The Fastly mirror
 does not sync, nor does it have a concept of file storage that we
