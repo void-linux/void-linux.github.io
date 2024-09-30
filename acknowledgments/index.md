@@ -18,14 +18,6 @@ individuals that supply hardware for Void's use.
 23M sponsors a server for repo-de, our Tier 1 mirror located in
 central Germany.
 
-## [DigitalOcean](https://www.digitalocean.com/)
-
-DigitalOcean sponsors a number of virtual machines which run various
-infrastructure needs that support the rest of the fleet.  Their
-support has enabled us to move non-build tasks off of build machines,
-improving the reliability of these services and the resources
-available for builds.
-
 ## [Enno Boland IT](https://ebo.land)
 
 Enno Boland IT sponsors the musl build machine, mail servers, and
