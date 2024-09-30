@@ -33,10 +33,6 @@ of package delivery worldwide.
 
 Leah Neukirchen sponsors the aarch64 build machine.
 
-## [Tj Vanderpoel](#)
-
-Tj Vanderpoel sponsors a Tier 1 mirror in the USA.
-
 ## [Pulux](#)
 
 Pulux sponsors b-lej-de, which hosts [Void's monitoring
