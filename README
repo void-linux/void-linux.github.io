@@ -1,1 +1,8 @@
 So, this is the Void Linux website. Visit https://voidlinux.org
+
+Running on Void:
+
+- `# xbps-install ruby-devel base-devel`
+- `$ rm Gemfile.lock`
+- `$ bundle install`
+- `$ bundle exec jekyll serve`
