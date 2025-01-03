@@ -6,20 +6,38 @@
   <div>
     {% for device in page.devices %}
     <div class="download-device-title">
-      <h4>{{ device }}</h4>
+      <h4>{{ device.name }}</h4>
       <small>{{ site.download_build_date }}</small>
     </div>
     <ul class="inline-download-links">
+      {% if device.name == "aarch64" %}
+      {% for flavor in device.flavors %}
       <li>
         <a
-          href="{{ site.download_mirror }}/void-{{ device }}-ROOTFS-{{ site.download_build_date | date: '%Y%m%d' }}.tar.xz"
+          href="{{ site.download_mirror }}/void-live-{{ device.name }}-{{ site.download_build_date | date: '%Y%m%d' }}-{{ flavor | downcase }}.iso"
+          >live image ({{ flavor | downcase }})</a
+        >
+        <span class="label label-default">glibc</span>
+      </li>
+      <li>
+        <a
+          href="{{ site.download_mirror }}/void-live-{{ device.name }}-musl-{{ site.download_build_date | date: '%Y%m%d' }}-{{ flavor | downcase }}.iso"
+          >live image ({{ flavor | downcase }})</a
+        >
+        <span class="label label-warning">musl</span>
+      </li>
+      {% endfor %}
+      {% endif %}
+      <li>
+        <a
+          href="{{ site.download_mirror }}/void-{{ device.name }}-ROOTFS-{{ site.download_build_date | date: '%Y%m%d' }}.tar.xz"
           >rootfs tarball</a
         >
         <span class="label label-default">glibc</span>
       </li>
       <li>
         <a
-          href="{{ site.download_mirror }}/void-{{ device }}-musl-ROOTFS-{{ site.download_build_date | date: '%Y%m%d' }}.tar.xz"
+          href="{{ site.download_mirror }}/void-{{ device.name }}-musl-ROOTFS-{{ site.download_build_date | date: '%Y%m%d' }}.tar.xz"
           >rootfs tarball</a
         >
         <span class="label label-warning">musl</span>
