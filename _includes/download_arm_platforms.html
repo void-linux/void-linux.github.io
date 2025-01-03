@@ -15,17 +15,35 @@
       <small>{{ site.download_build_date }}</small>
     </div>
     <ul class="inline-download-links">
+      {% if device.arch == "asahi" %}
+      {% for flavor in device.flavors %}
+      <li>
+        <a
+          href="{{ site.download_mirror }}/void-live-{{ device.arch }}-{{ site.download_build_date | date: '%Y%m%d' }}-{{ flavor | downcase }}.iso"
+          >live image ({{ flavor | downcase }})</a
+        >
+        <span class="label label-default">glibc</span>
+      </li>
+      <li>
+        <a
+          href="{{ site.download_mirror }}/void-live-{{ device.arch }}-musl-{{ site.download_build_date | date: '%Y%m%d' }}-{{ flavor | downcase }}.iso"
+          >live image ({{ flavor | downcase }})</a
+        >
+        <span class="label label-warning">musl</span>
+      </li>
+      {% endfor %}
+      {% else %}
       <li>
         <a
           href="{{ site.download_mirror }}/void-{{ device.name }}-{{ site.download_build_date | date: '%Y%m%d' }}.img.xz"
-          >Live image</a
+          >platform image</a
         >
         <span class="label label-default">glibc</span>
       </li>
       <li>
         <a
           href="{{ site.download_mirror }}/void-{{ device.name }}-musl-{{ site.download_build_date | date: '%Y%m%d' }}.img.xz"
-          >Live image</a
+          >platform image</a
         >
         <span class="label label-warning">musl</span>
       </li>
@@ -43,6 +61,7 @@
         >
         <span class="label label-warning">musl</span>
       </li>
+      {% endif %}
     </ul>
     {% endfor %}
   </div>
