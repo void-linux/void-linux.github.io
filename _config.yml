@@ -25,5 +25,5 @@ defaults:
       is_post: true # automatically set is_post=true for all posts
 
 download_mirror: https://repo-default.voidlinux.org/live/current
-download_build_date: 2024-03-14
+download_build_date: 2025-02-02
 container_url: https://github.com/void-linux/void-containers/pkgs/container
