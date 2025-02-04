@@ -1,5 +1,5 @@
 ---
-title: "Feburary 2025 Image Release: Arm64 Extravaganza"
+title: "February 2025 Image Release: Arm64 Extravaganza"
 layout: post
 ---
 
