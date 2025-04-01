@@ -1,4 +1,4 @@
-Supercharge your business computing with Void Enterprise! [See our announcement post](/2025/04/enterprise) to learn more.
+Supercharge your business computing with Void Enterprise! [See our announcement post](/news/2025/04/enterprise) to learn more.
 
 You can log into these images as `anon` or `root`, and the password is `voidlinux`.
 
