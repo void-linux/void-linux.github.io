@@ -1,0 +1,34 @@
+<div class="split-section">
+  <div>
+    <h3 id="{{ page.name }}">{{ page.name }}</h3>
+    {{ include.content | markdownify }}
+    <div class="alert alert-warning" role="alert">
+      To install the packages for the desktop environment, DON'T choose "install
+      from network" choose the "local install" option.
+    </div>
+  </div>
+  <div>
+    <div class="download-device-title">
+      <h4>enterprise</h4>
+      <small>{{ site.download_build_date }}</small>
+    </div>
+    <ul class="inline-download-links">
+      <li>
+        <a
+          href="{{ site.download_mirror }}/void-live-x86_64-20250401-enterprise.iso"
+          >live image</a
+        >
+        <span class="label label-default">glibc</span>
+      </li>
+      {% if page.supports_musl %}
+      <li>
+        <a
+          href="{{ site.download_mirror }}/void-live-x86_64-musl-20250401-enterprise.iso"
+          >live image</a
+        >
+        <span class="label label-warning">musl</span>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+</div>
