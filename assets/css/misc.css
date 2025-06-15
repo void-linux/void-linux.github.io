@@ -191,6 +191,7 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
   padding: 0;
   margin: 0;
   border-bottom: 1px solid #ddd;
+  overflow: auto;
 }
 .tab-bar li {
   padding: 1em 2em;
