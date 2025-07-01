@@ -23,6 +23,6 @@ Then log in using ssh:
 
 The default password is ```voidlinux```
 
-Check the [downloads](http://www.voidlinux.eu/download/) section to grab them!
+Check the [downloads](http://www.voidlinux.org/download/) section to grab them!
 
 - [http://inversepath.com/usbarmory](http://inversepath.com/usbarmory)

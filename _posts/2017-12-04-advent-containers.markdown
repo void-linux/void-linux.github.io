@@ -19,10 +19,10 @@ The `containers` package leverages the same kernel features as Docker and LXC, b
 To setup a small void container we run `xbps-install` with `pseudo` to populate a directory with a base system where files that are usually owned by root are owned by our user outside the namespace. Inside the namespace they will appear as if those files are owned by root.
 
 ```
-$ pseudo xbps-install -R https://repo.voidlinux.eu/current/ -MSr /tmp/void base-voidstrap
-[*] Updating `https://repo.voidlinux.eu/current//armv7l-repodata' ...
+$ pseudo xbps-install -R https://repo.voidlinux.org/current/ -MSr /tmp/void base-voidstrap
+[*] Updating `https://repo.voidlinux.org/current//armv7l-repodata' ...
 armv7l-repodata: 1140KB [avg rate: 9126MB/s]
-`https://repo.voidlinux.eu/current/' repository has been RSA signed by "Void Linux"
+`https://repo.voidlinux.org/current/' repository has been RSA signed by "Void Linux"
 Fingerprint: 60:ae:0c:d6:f0:95:17:80:bc:93:46:7a:89:af:a3:2d
 Do you want to import this public key? [Y/n] y
 
@@ -111,7 +111,7 @@ bash-4.4# ip link
 bash-4.4# sv s /var/service/*
 run: /var/service/udevd: (pid 41) 61s
 bash-4.4# xbps-install -Su
-[*] Updating `https://repo.voidlinux.eu/current/armv7l-repodata' ...
+[*] Updating `https://repo.voidlinux.org/current/armv7l-repodata' ...
 bash-4.4# ps auxf
 USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root        43  0.0  0.2   3136  2556 ?        S    16:43   0:00 /bin/bash

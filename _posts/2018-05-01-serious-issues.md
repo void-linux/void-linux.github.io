@@ -70,5 +70,5 @@ For now, just be aware that the engineering work to help mitigate our problems
 is underway. This engineering work is consuming the full resources of 2 senior
 contributors, and has unfortunately also led to longer PR review times..
 
-If you have any questions, you can contact us via [the forum](https://forum.voidlinux.eu),
+If you have any questions, you can contact us via [the forum](https://forum.voidlinux.org),
 [Twitter](https://twitter.com/VoidLinux), or [IRC](irc://irc.freenode.net/#voidlinux).

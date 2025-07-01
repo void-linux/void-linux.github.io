@@ -17,9 +17,9 @@ meaningful for 64bit platforms.
 
 The URL for those repositories:
 
-- http://repo.voidlinux.eu/current/multilib
-- http://repo.voidlinux.eu/current/multilib/nonfree
-- http://repo.voidlinux.eu/current/debug
+- http://repo.voidlinux.org/current/multilib
+- http://repo.voidlinux.org/current/multilib/nonfree
+- http://repo.voidlinux.org/current/debug
 
 Also available on any of the mirrors listed in the `xbps.conf` configuration file.
 

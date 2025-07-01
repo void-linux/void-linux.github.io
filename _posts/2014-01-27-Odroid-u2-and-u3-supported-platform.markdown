@@ -23,4 +23,4 @@ The Odroid U2/U3 are small low-cost devices with the following specifications:
 - Storage Slot 	Micro-SD slot, eMMC module connector
 - DC Input 5V / 2A input, Plug specification is inner diameter 0.8mm and outer diameter 2.5mm
 
-You can find the image for 2GB SD cards and the rootfs in the [downloads section](http://voidlinux.eu/download/)
+You can find the image for 2GB SD cards and the rootfs in the [downloads section](http://voidlinux.org/download/)

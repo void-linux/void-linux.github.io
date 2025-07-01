@@ -5,12 +5,12 @@ comments: true
 ---
 
 As a Linux user, you probably know how to use
-[strace(1)](https://man.voidlinux.eu/strace.1) to see what a
+[strace(1)](https://man.voidlinux.org/strace.1) to see what a
 *particular* process is doing.  However, getting a picture of what the
 whole system is doing is more difficult.
 
 If it's related to file access,
-[fatrace(1)](https://man.voidlinux.eu/fatrace.1) can be of great help
+[fatrace(1)](https://man.voidlinux.org/fatrace.1) can be of great help
 then.  fatrace uses the Linux fanotify API, which allows *global tracing*
 of all file operations.
 `CONFIG_FANOTIFY=y` is enabled on Void Linux by default.

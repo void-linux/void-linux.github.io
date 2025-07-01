@@ -24,7 +24,7 @@ first installable image was prepared and ran on native hardware.
 In September 2016, a virtual machine was dedicated to be the official
 aarch64 cross-builder, and now packages are officially provided (both
 for glibc and musl)---so far in the seperate repository:
-https://repo.voidlinux.eu/current/aarch64.
+https://repo.voidlinux.org/current/aarch64.
 
 We are still looking for [powerful native aarch64
 hardware](https://twitter.com/clandmeter/status/766215821257543680) to

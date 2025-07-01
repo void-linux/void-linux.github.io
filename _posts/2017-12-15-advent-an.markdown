@@ -10,7 +10,7 @@ For example, ELVIS has the same letters as LIVES,
 and THE MORSE CODE has the same letters as HERE COMES DOTS.
 
 How can we find such anagrams? With our computer! Today, we'll use the tool
-[an(6)](https://man.voidlinux.eu/an.6) for that.
+[an(6)](https://man.voidlinux.org/an.6) for that.
 
 By default, it will list all anagrams it finds, with the longest word first:
 

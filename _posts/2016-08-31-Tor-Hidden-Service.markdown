@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "We Love Your Privacy: repo.voidlinux.eu as tor hidden service"
+title: "We Love Your Privacy: repo.voidlinux.org as tor hidden service"
 comments: true
 ---
 
@@ -8,9 +8,9 @@ The Void Linux Community is pleased to announce that our main repository- and bu
 
 The onion addresses are:
 
-* [repo.voidlinux.eu](https://repo.voidlinux.eu):  
+* [repo.voidlinux.org](https://repo.voidlinux.org):  
   onion address: [fd6dqrupy3af4xwb.onion](http://fd6dqrupy3af4xwb.onion)
-* [build.voidlinux.eu](https://build.voidlinux.eu):  
+* [build.voidlinux.org](https://build.voidlinux.org):  
   onion address: [http://s7y2awkwau4nbdpu.onion](http://s7y2awkwau4nbdpu.onion)
 
 Feel free to test the onion addresses with xbps:

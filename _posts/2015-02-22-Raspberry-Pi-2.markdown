@@ -13,4 +13,4 @@ to `void-packages` and `void-mklive` to generate a working rootfs/image.
 As any other supported ARM platform, once booted, `dhcpcd`, `ntpd` and `sshd` are started
 automatically to be able to connect to it via `ssh` (log in as `root`, password `voidlinux`).
 
-Check the [downloads](http://www.voidlinux.eu/download/) section to grab them!
+Check the [downloads](http://www.voidlinux.org/download/) section to grab them!

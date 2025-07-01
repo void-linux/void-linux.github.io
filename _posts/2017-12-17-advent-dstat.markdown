@@ -5,13 +5,13 @@ comments: true
 ---
 
 There are many ways to see what's going on your system, such as
-[top(1)](https://man.voidlinux.eu/top.1),
-[htop(1)](https://man.voidlinux.eu/htop.1),
-[atop(1)](https://man.voidlinux.eu/atop.1).  However, these tools only
+[top(1)](https://man.voidlinux.org/top.1),
+[htop(1)](https://man.voidlinux.org/htop.1),
+[atop(1)](https://man.voidlinux.org/atop.1).  However, these tools only
 show the current state of the system, and it's not so easy to see how
 the data changes.
 
-[dstat(1)](https://man.voidlinux.eu/dstat.1) works differently: it
+[dstat(1)](https://man.voidlinux.org/dstat.1) works differently: it
 prints a line every second with some system stats you can configure.
 By default, it shows CPU usage, disk I/O, network traffic, paging,
 and context switches:

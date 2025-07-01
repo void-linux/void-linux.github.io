@@ -33,7 +33,7 @@ Luckily, there are the `zutils`, which provide some compression-aware
 general purpose Unix tools.  In Void Linux, they use a capital `Z` as
 command prefix, to avoid name clashes.
 
-[Zcat(1)](https://man.voidlinux.eu/Zcat.1) will decompress all
+[Zcat(1)](https://man.voidlinux.org/Zcat.1) will decompress all
 supported file formats on the fly:
 
 ```
@@ -43,7 +43,7 @@ Sat Dec  9 18:37:12 CET 2017
 Sat Dec  9 18:37:24 CET 2017
 ```
 
-Very useful is [Zgrep(1)](https://man.voidlinux.eu/Zgrep.1) to search
+Very useful is [Zgrep(1)](https://man.voidlinux.org/Zgrep.1) to search
 in compressed files:
 
 ```
@@ -52,12 +52,12 @@ date.bz2:Sat Dec  9 18:37:20 CET 2017
 date.xz:Sat Dec  9 18:37:24 CET 2017
 ```
 
-In contrast to the [zgrep(1)](https://man.voidlinux.eu/zcat.1) script
+In contrast to the [zgrep(1)](https://man.voidlinux.org/zcat.1) script
 of `gzip`, it supports the `-r` flag to recurse into directories,
 which is very useful if you want to search in all files in `/var/log`
 for example.
 
-`zutils` also contains [Zcmp(1)](https://man.voidlinux.eu/Zcmp.1) and
-[Zdiff(1)](https://man.voidlinux.eu/Zdiff.1) to compare files to each
-other, and [Ztest](https://man.voidlinux.eu/Ztest.1) to verify files
+`zutils` also contains [Zcmp(1)](https://man.voidlinux.org/Zcmp.1) and
+[Zdiff(1)](https://man.voidlinux.org/Zdiff.1) to compare files to each
+other, and [Ztest](https://man.voidlinux.org/Ztest.1) to verify files
 are not corrupted.

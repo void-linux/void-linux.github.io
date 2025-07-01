@@ -13,14 +13,14 @@ various Desktop Environments for testing. Those images are also known as `flavou
 
 Those images are generated automatically with the `void-mklive` script in 5 minutes
 and will be created periodically with updated packages thanks to our continuous
-package building available at [http://build.voidlinux.eu](http://build.voidlinux.eu).
+package building available at [http://build.voidlinux.org](http://build.voidlinux.org).
 
 The attached screenshot is my desktop with three `flavours` running at the same
 time via `QEMU`:
 
 [![xtraeme desktop](/assets/screenshots/live-flavours.jpg "xtraeme desktop")](/assets/screenshots/live-flavours.jpg)
 
-Check the [downloads](http://www.voidlinux.eu/download/) section to grab them!
+Check the [downloads](http://www.voidlinux.org/download/) section to grab them!
 
 Don't forget to help us improving `Void` with your donations and/or contributions
 to the `wiki`, `void-packages` or any available repository.

@@ -4,7 +4,7 @@ title: "The Advent of Void: Day 12: xpra"
 comments: true
 ---
 
-Here's our first tool using a GUI: [xpra(1)](https://man.voidlinux.eu/xpra.1) is
+Here's our first tool using a GUI: [xpra(1)](https://man.voidlinux.org/xpra.1) is
 a headless X-Server that allows remotely detaching and attaching its windows 
 from multiple platforms including X11, Windows, and Mac.
 

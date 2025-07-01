@@ -4,7 +4,7 @@ title: "The Advent of Void: Day 16: pv"
 comments: true
 ---
 
-A tool with many uses is [pv(1)](https://man.voidlinux.eu/pv.1), the
+A tool with many uses is [pv(1)](https://man.voidlinux.org/pv.1), the
 'pipe viewer'.  Essentially, you can put it between any pipe and
 you'll see statistics on its throughput.
 
@@ -29,10 +29,10 @@ Or copy a whole disk to a remote host, with a progress bar:
 
 `pv` has a few nifty flags, for example, it also can count
 *lines* instead of bytes.  So we can build a progress bar for
-a [find](https://man.voidlinux.eu/find.1)/[xargs](https://man.voidlinux.eu/xargs.1) call
+a [find](https://man.voidlinux.org/find.1)/[xargs](https://man.voidlinux.org/xargs.1) call
 (or rather,
-[lr](https://man.voidlinux.eu/lr.1)/
-[xe](https://man.voidlinux.eu/xe.1)):
+[lr](https://man.voidlinux.org/lr.1)/
+[xe](https://man.voidlinux.org/xe.1)):
 
 ```
 % find /tmp -name '*.png' | pv -l | xargs -P4 -n1 pngcrush -ow
