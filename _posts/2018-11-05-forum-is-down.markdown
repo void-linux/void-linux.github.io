@@ -18,7 +18,7 @@ channels:
     * We have `#voidlinux` and `#xbps` on freenode
     * `#voidlinux` is for general support
     * `#xbps` is for development discussion
-  * [The Wiki](http://wiki.voidlinux.eu)
+  * [The Wiki](http://wiki.voidlinux.org)
     * The wiki is currently in maintenence mode, help us replace it at
       [the docs repo](https://github.com/void-linux/void-docs/)
   * StackExchange

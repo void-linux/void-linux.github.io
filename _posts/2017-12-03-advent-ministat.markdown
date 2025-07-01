@@ -5,15 +5,15 @@ comments: true
 ---
 
 On day 3 we introduce you to the small statistics tool
-[ministat(1)](https://man.voidlinux.eu/ministat.1) that originates
+[ministat(1)](https://man.voidlinux.org/ministat.1) that originates
 from FreeBSD.
 
 When we sling around data on the command line, sometimes we want to
 compute some basic statistics on it.  While minimum, average and
 maximum are easily computed with
-[awk(1)](https://man.voidlinux.eu/awk.1), you probably forgot the
+[awk(1)](https://man.voidlinux.org/awk.1), you probably forgot the
 formula for more complicated statistics.  There is no need to pull out
-[R](https://man.voidlinux.eu/R.1) already, lets use ministat instead!
+[R](https://man.voidlinux.org/R.1) already, lets use ministat instead!
 
 For example, let's have a look at the
 [historical summer temperatures in Germany](ftp://ftp-cdc.dwd.de/pub/CDC/regional_averages_DE/seasonal/air_temperature_mean/regional_averages_tm_summer.txt).
@@ -45,7 +45,7 @@ the data distribution.  We have 137 measurements, and an average
 temperature of 16.1°C.
 
 To compare multiple datasets, we need to pass them as multiple input files.
-Luckily, [our shell](https://man.voidlinux.eu/zsh.1) has process substitution.
+Luckily, [our shell](https://man.voidlinux.org/zsh.1) has process substitution.
 Let's match the Bavarian measurements with the German average:
 
 ```

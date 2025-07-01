@@ -7,12 +7,12 @@ comments: true
 Accessing a remote server over an unstable or high latency connection ... can
 be ... a tedious ``CONNECTION TIMEOUT`` ... ``RECONNECT`` task.
 
-[mosh(1)](https://man.voidlinux.eu/mosh.1) stands for MObile SHell and provides
+[mosh(1)](https://man.voidlinux.org/mosh.1) stands for MObile SHell and provides
 a reliable command line connection that outlives network outages and roaming
 between different networks.
 
 The usage of mosh is pretty easy. On un-firewalled hosts just make sure the
-remote server runs an [sshd(8)](https://man.voidlinux.eu/sshd) deamon and
+remote server runs an [sshd(8)](https://man.voidlinux.org/sshd) deamon and
 has mosh installed. Then connecting to the server is as easy as:
 
 ```

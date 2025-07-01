@@ -13,7 +13,7 @@ to `void-packages` and `void-mklive` to generate the base platform package `beag
 As any other supported ARM platform, once booted, `dhcpcd`, `ntpd` and `sshd` are started
 automatically to be able to connect to it via `ssh` (log in as `root`, password `voidlinux`).
 
-Check the [downloads](http://www.voidlinux.eu/download/) section to grab them!
+Check the [downloads](http://www.voidlinux.org/download/) section to grab them!
 
 - [http://en.wikipedia.org/wiki/BeagleBoard#BeagleBone](http://en.wikipedia.org/wiki/BeagleBoard#BeagleBone)
 - [http://en.wikipedia.org/wiki/BeagleBoard#BeagleBone_Black](http://en.wikipedia.org/wiki/BeagleBoard#BeagleBone_Black)

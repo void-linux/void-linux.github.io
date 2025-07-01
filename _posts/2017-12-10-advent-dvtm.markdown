@@ -35,7 +35,7 @@ You know window managers, right? Like tiled window managers. There are plenty of
 
 
 
-[dvtm(1)](https://man.voidlinux.eu/dvtm.1) helps you to organize multiple shells
+[dvtm(1)](https://man.voidlinux.org/dvtm.1) helps you to organize multiple shells
 within the same screen without relying on such n00p-software as any form of
 graphical user interface.
 
@@ -61,4 +61,4 @@ by `V` followed by the tag digit.
 
 There are a lot more features in dvtm. You may read about them on the
 [dvtm website](http://www.brain-dump.org/projects/dvtm/#quickstart)
-or the [manpage](https://man.voidlinux.eu/dvtm.1)
+or the [manpage](https://man.voidlinux.org/dvtm.1)

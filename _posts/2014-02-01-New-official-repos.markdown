@@ -12,7 +12,7 @@ XBPS 0.31 already contains the updated xbps.conf file with the new repository lo
 
 The URLs for the new repositories are the following:
 
-- http://repo.voidlinux.eu/current
-- http://repo.voidlinux.eu/current/nonfree
+- http://repo.voidlinux.org/current
+- http://repo.voidlinux.org/current/nonfree
 
 Happy xbps'ing!

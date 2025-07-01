@@ -15,7 +15,7 @@ To install and run steam with Void on x86\_64, follow these steps:
 
 Uncomment the *nonfree* repository from `/etc/xbps/xbps.conf`:
 
-    http://repo.voidlinux.eu/current/nonfree
+    http://repo.voidlinux.org/current/nonfree
 
 And then install steam and required 32bit packages:
 

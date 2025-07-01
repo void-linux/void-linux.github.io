@@ -5,7 +5,7 @@ comments: true
 ---
 
 Folks that enjoy playing with numbers and riddles probably know
-[factor(1)](https://man.voidlinux.eu/factor.1), a small tool of
+[factor(1)](https://man.voidlinux.org/factor.1), a small tool of
 coreutils to factorize a number:
 
 ```
@@ -28,7 +28,7 @@ This works pretty well for numbers up to a certain size, but trying to
 check a 160-bit prime already takes a few seconds.
 
 Luckily, there is
-[Math::Prime::Util](https://man.voidlinux.eu/Math::Prime::Util),
+[Math::Prime::Util](https://man.voidlinux.org/Math::Prime::Util),
 a Perl library consisting of "utilities related to prime numbers,
 including fast sieves and factoring".  And it also contains two
 command line tools `primes.pl` and `factor.pl`, which are far more

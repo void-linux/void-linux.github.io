@@ -9,7 +9,7 @@ commands on all of them.  There are many tools for this job, starting
 from simple `for` loops on the shell to full-fledged configuration
 management systems such as Puppet or Chef.
 
-A good compromise is [shmux(1)](https://man.voidlinux.eu/shmux.1), the
+A good compromise is [shmux(1)](https://man.voidlinux.org/shmux.1), the
 *shell multiplexer*.
 
 For example, we can measure the uptimes of my servers,

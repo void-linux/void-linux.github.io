@@ -9,12 +9,12 @@ For a while now we have used github for our wiki. We wanted to make contributing
 to the wiki easier, and be able to make it look better. Since most users are
 familiar with [mediawiki](https://www.mediawiki.org/wiki/MediaWiki) that is
 what we went with. All of the existing content was imported into the new wiki,
-and it is live at [wiki.voidlinux.eu](https://wiki.voidlinux.eu). Searching and
+and it is live at [wiki.voidlinux.org](https://wiki.voidlinux.org). Searching and
 organization should be improved from the github experience. We look forward to
 seeing new contributors and your feedback.
 
 We are also taking this time to announce our new
-[forums](https://forum.voidlinux.eu). We hope to build a community here, users
+[forums](https://forum.voidlinux.org). We hope to build a community here, users
 can share screenshots, talk about their Void Linux setups, ask questions, and
 more.
 

@@ -26,4 +26,4 @@ Our list of supported ARM platforms continues growing:
 - RaspberryPi 2
 - USB Armory
 
-You can find all images and rootfs tarballs at [http://repo.voidlinux.eu/live/current](http://repo.voidlinux.eu/live/current)
+You can find all images and rootfs tarballs at [http://repo.voidlinux.org/live/current](http://repo.voidlinux.org/live/current)

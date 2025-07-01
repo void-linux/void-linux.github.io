@@ -14,7 +14,7 @@ they are just virtual yet just a command away:
 
 ![Screenshot of ponysay(1)](/assets/screenshots/xmas-ponysay.png)
 
-[ponysay](https://man.voidlinux.eu/ponysay.6) features over 400
+[ponysay](https://man.voidlinux.org/ponysay.6) features over 400
 illustrations of My Little Pony for your terminal.
 Look at all of them using
 

@@ -5,12 +5,12 @@ comments: true
 ---
 
 On Void, we have many clones of beloved
-[vi(1)](https://man.voidlinux.eu/vi.1p) such as
-[vim](https://man.voidlinux.eu/vim.1),
-[neovim](https://man.voidlinux.eu/nvim.1),
-[nvi](https://man.voidlinux.eu/nvi.1),
-[vile](https://man.voidlinux.eu/vile.1), busybox vi, and of course the
-original [ex-vi](https://man.voidlinux.eu/ex-vi.1).
+[vi(1)](https://man.voidlinux.org/vi.1p) such as
+[vim](https://man.voidlinux.org/vim.1),
+[neovim](https://man.voidlinux.org/nvim.1),
+[nvi](https://man.voidlinux.org/nvi.1),
+[vile](https://man.voidlinux.org/vile.1), busybox vi, and of course the
+original [ex-vi](https://man.voidlinux.org/ex-vi.1).
 
 But today, I want to talk about
 [neatvi](https://github.com/aligrudi/neatvi), a reimplementation from
@@ -24,7 +24,7 @@ of vim and friends,
 but it adds a few important features on top of plain vi,
 such as
 infinite undo/redo, basic syntax highlighting,
-and a partial implementation of [ex(1)](https://man.voidlinux.eu/ex.1p).
+and a partial implementation of [ex(1)](https://man.voidlinux.org/ex.1p).
 
 It's a nice editor for limited environments such as embedded devices
 or recovery systems, or for people that like unbloated software.

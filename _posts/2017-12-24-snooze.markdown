@@ -4,7 +4,7 @@ title: "The Advent of Void: Day 24: snooze"
 comments: true
 ---
 
-[cron(8)](http://man.voidlinux.eu/cron.8) is a nice tool, but it has
+[cron(8)](http://man.voidlinux.org/cron.8) is a nice tool, but it has
 some long-standing problems, among them:
 
 * The cron/crond design requires setuid. 
@@ -15,11 +15,11 @@ some long-standing problems, among them:
   you know about `%`?).
 
 A little, but flexible alternative is to use
-[snooze(1)](http://man.voidlinux.eu/snooze.1), which essentially just
+[snooze(1)](http://man.voidlinux.org/snooze.1), which essentially just
 waits for a particular time, and then executes a command.  To get
 recurring jobs ala cron, we can use this together with our [runit
-service supervision suite](https://www.voidlinux.eu/usage/runit/).
-If we wanted [at(1)](http://man.voidlinux.eu/at.1) instead, we
+service supervision suite](https://www.voidlinux.org/usage/runit/).
+If we wanted [at(1)](http://man.voidlinux.org/at.1) instead, we
 can just run snooze once.
 
 The time for snooze is given using the options

@@ -19,4 +19,4 @@ problem to update it.
 Additionally there's now a new flavour containing the latest [Cinnamon](http://cinnamon.linuxmint.com/)
 Desktop Environment.
 
-Check out the [Download](http://www.voidlinux.eu/download/) section to grab them.
+Check out the [Download](http://www.voidlinux.org/download/) section to grab them.

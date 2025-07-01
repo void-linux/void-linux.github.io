@@ -13,7 +13,7 @@ The first tool is `gcal`, a "a program for calculating and printing
 calendars", because we need to prepare our advent calendar, right?
 
 gcal is the GNU version of the trusty old
-[cal(1)](https://man.voidlinux.eu/cal.1), but that description doesn't
+[cal(1)](https://man.voidlinux.org/cal.1), but that description doesn't
 do it justice because it's probably one of the most powerful and
 flexible calendaring tools, supporting many different calendars and
 astronomical data.
@@ -97,6 +97,6 @@ Sun,  Dec 24th 2017:            (        @@@@@
 
 gcal also has good support for *resource files*, where you can
 configure your own holidays, dates and reminders (replacing many uses
-of [calendar(1)](https://man.voidlinux.eu/calendar.1] or
-[when(1)](https://man.voidlinux.eu/when.1)).  I recommend you to check
+of [calendar(1)](https://man.voidlinux.org/calendar.1] or
+[when(1)](https://man.voidlinux.org/when.1)).  I recommend you to check
 out the extensive info manual.

@@ -12,7 +12,7 @@ course, which recursively lists all files and aggregates sizes for
 directories.  But for a big disk, this results in a long, unwieldy and
 unfathomable list.
 
-[ncdu(1)](https://man.voidlinux.eu/ncdu.1) to the rescue!
+[ncdu(1)](https://man.voidlinux.org/ncdu.1) to the rescue!
 This ncurses program will display the disk usage data as a
 [nice menu](https://dev.yorhel.nl/ncdu/scr)
 that you can browse interactively; sorted by size of course.
