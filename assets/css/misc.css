@@ -1,3 +1,7 @@
+html {
+    scroll-padding-top: 69px;
+}
+
 @font-face {
 	font-family:'OpenS';
 	src: url('/assets/fonts/OpenSans-Regular-webfont.eot');
