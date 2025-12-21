@@ -185,37 +185,6 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
 	border-color: black;
 }
 
-.tab-bar {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  border-bottom: 1px solid #ddd;
-}
-.tab-bar li {
-  padding: 1em 2em;
-  cursor: pointer;
-  border-bottom: 2px solid white;
-  transition: border-color 0.4s;
-}
-.tab-bar li:hover {
-  border-bottom: 2px solid #ddd;
-}
-.tab-bar li.active {
-  font-weight: bold;
-  border-bottom: 2px solid #478061;
-}
-@media (max-width: 500px) {
-  .tab-bar li {
-    padding: 1em;
-  }
-}
-.tab-bar li a {
-  color: inherit;
-}
-.tab-bar li a:focus {
-  text-decoration: none;
-}
 
 .split-section {
   display: flex;
@@ -286,15 +255,6 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
   }
   hr {
     border-top: 1px solid #888;
-  }
-  .inline-download-links, .tab-bar {
-    border-bottom: 1px solid #888;
-  }
-  .tab-bar li {
-    border-bottom: 2px solid #aaa;
-  }
-  .tab-bar li:hover {
-    border-bottom: 2px solid #62b086;
   }
   code {
     background-color: inherit;
