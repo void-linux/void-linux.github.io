@@ -1,6 +1,6 @@
 <div class="split-section">
   <div>
-    <h3 id="{{ page.name }}">{{ page.name }}</h3>
+    <h3 id="{{ page.name | slugify }}"><a href="#{{ page.name | slugify }}">{{ page.name }}</a></h3>
     {{ include.content | markdownify }}
   </div>
   <div>

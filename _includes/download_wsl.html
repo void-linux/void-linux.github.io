@@ -4,21 +4,24 @@
     {{ include.content | markdownify }}
   </div>
   <div>
-    {% for flavor in page.flavors %}
+    {% for device in page.devices %}
     <div class="download-device-title">
-      <h4>{{ flavor | default: 'base' | downcase }}</h4>
+      <h4>{{ device.name }}</h4>
+      <small>{{ site.download_build_date }}</small>
     </div>
     <ul class="inline-download-links">
       <li>
         <a
-          href="{{ site.container_url }}/void-glibc{% if flavor != '' %}-{{ flavor }}{% endif %}"
-          >void-glibc{% if flavor != '' %}-{{ flavor }}{% endif %}</a>
+          href="{{ site.download_mirror }}/void-{{ device.name }}-{{ site.download_build_date | date: '%Y%m%d' }}.wsl"
+          >rootfs tarball</a
+        >
         <span class="label label-default">glibc</span>
       </li>
       <li>
         <a
-          href="{{ site.container_url }}/void-musl{% if flavor != '' %}-{{ flavor }}{% endif %}"
-          >void-musl{% if flavor != '' %}-{{ flavor }}{% endif %}</a>
+          href="{{ site.download_mirror }}/void-{{ device.name }}-musl-{{ site.download_build_date | date: '%Y%m%d' }}.wsl"
+          >rootfs tarball</a
+        >
         <span class="label label-warning">musl</span>
       </li>
     </ul>
