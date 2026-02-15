@@ -13,7 +13,7 @@ title: Enter the void - Packages
   </select>
  </div>
  <div class="form-group">
-  <input type="text" name="q" placeholder="Package or description" class="form-control" id="voidSearch_query"/>
+  <input type="text" name="q" placeholder="Package or description" class="form-control" id="voidSearch_query" autofocus/>
  </div>
  <button type="submit" class="btn btn-green" id="voidSearch_submit">Search</button>
 </form>

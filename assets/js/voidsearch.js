@@ -55,6 +55,14 @@
                 setArchitectures(data.data.sort());
                 initPackageQuery();
             });
+
+        // focus #voidSearch_query input on '/' keypress
+        $(d).on("keydown", (e) => {
+            if (e.key === "/" && !$("input:focus").length) {
+                e.preventDefault();
+                query.focus();
+            }
+        });
     }
 
     function initPackageQuery() {
